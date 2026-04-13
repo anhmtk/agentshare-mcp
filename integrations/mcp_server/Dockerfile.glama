@@ -1,0 +1,21 @@
+# Glama: paste this file into the server admin Dockerfile field (or copy contents).
+# Runs the stdio MCP client that calls the public AgentShare API — small image, fast build.
+#
+# Runtime env (set in Glama or docker run):
+#   API_KEY=<your test key>   — required for price tools (service_meta may work without)
+#   BASE_URL=https://agentshare.dev
+#
+# This is NOT the same as the repo-root Dockerfile (full FastAPI + crawlers for Railway).
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir "mcp>=1.0.0" "requests>=2.28.0" "pydantic>=2.0"
+
+COPY integrations/mcp_server/ /app/integrations/mcp_server/
+
+ENV PYTHONUNBUFFERED=1
+ENV BASE_URL=https://agentshare.dev
+
+CMD ["python", "integrations/mcp_server/server.py"]
