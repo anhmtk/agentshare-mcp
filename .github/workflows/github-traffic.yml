@@ -1,0 +1,68 @@
+# Aggregate Traffic API snapshot (Insights → Traffic). No per-visitor data.
+
+name: GitHub traffic snapshot
+
+on:
+  schedule:
+    - cron: "20 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const base = { owner, repo };
+
+            async function safeRequest(route) {
+              try {
+                return { ok: true, data: (await github.request(route, base)).data };
+              } catch (e) {
+                return { ok: false, error: String(e.message || e) };
+              }
+            }
+
+            const views = await safeRequest("GET /repos/{owner}/{repo}/traffic/views");
+            const clones = await safeRequest("GET /repos/{owner}/{repo}/traffic/clones");
+            const referrers = await safeRequest("GET /repos/{owner}/{repo}/traffic/popular/referrers");
+            const paths = await safeRequest("GET /repos/{owner}/{repo}/traffic/popular/paths");
+
+            const out = [];
+            out.push("## GitHub traffic snapshot");
+            out.push("");
+            out.push(`**Repository:** \`${owner}/${repo}\`  `);
+            out.push(`**Recorded (UTC):** ${new Date().toISOString()}`);
+            out.push("");
+            out.push(
+              "Aggregate metrics only. See **Insights → Traffic** on GitHub for the same area."
+            );
+            out.push("");
+
+            function block(title, result) {
+              out.push(`### ${title}`);
+              out.push("");
+              if (!result.ok) {
+                out.push(`*Error:* ${result.error}`);
+                out.push("");
+                return;
+              }
+              out.push("```json");
+              out.push(JSON.stringify(result.data, null, 2));
+              out.push("```");
+              out.push("");
+            }
+
+            block("Repository views (last ~14 days)", views);
+            block("Git clones", clones);
+            block("Popular referrers", referrers);
+            block("Popular paths", paths);
+
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out.join("\n"));

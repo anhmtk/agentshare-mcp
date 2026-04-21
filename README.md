@@ -83,6 +83,17 @@ Third-party indexes (search for **AgentShare** or your listing URL):
 
 ---
 
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+## GitHub — CI & repo traffic
+
+- **CI:** validates MCP package imports on push/PR — **Actions** → **CI**.
+- **Traffic:** GitHub shows aggregate views/clones only (**Insights → Traffic** for maintainers). Weekly **GitHub traffic snapshot** writes API results to the run **Summary** (same idea as Insights).
+
+---
+
 ### Scope (honest & forward-looking)
 
 AgentShare aggregates product and offer data from **connected marketplaces and affiliate sources**. Coverage and freshness vary by source; the API returns **freshness metadata** (e.g. `crawled_at`, `data_age_seconds`) so agents can judge reliability.
