@@ -2,7 +2,7 @@
 
 Expose Agent Price API as MCP tools for Cursor, Claude Desktop, etc.
 
-**Remote (Streamable HTTP):** `https://agentshare.dev/mcp` — send `X-API-Key` or `Authorization: Bearer` (see [docs/MCP_QUICKSTART.md](../../docs/MCP_QUICKSTART.md)).
+**Remote (Streamable HTTP):** `https://agentshare.dev/mcp` — send `X-API-Key` or `Authorization: Bearer` (see [MCP docs on agentshare.dev](https://agentshare.dev/docs)).
 
 ## Quick Start (stdio, local)
 
@@ -28,4 +28,4 @@ python integrations/mcp_server/server.py
 
 ## Cursor Setup
 
-See [docs/MCP_CURSOR_SETUP.md](../../docs/MCP_CURSOR_SETUP.md) for manual Cursor configuration steps.
+See [Cursor MCP setup](https://agentshare.dev/docs) (MCP section) for manual Cursor configuration steps.
