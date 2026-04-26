@@ -21,8 +21,15 @@ This repository holds the **stdio MCP server** used with Claude Desktop, Cursor,
 ## For AI agents (machine readable)
 
 - **[`AGENTS.md`](AGENTS.md)** — mission, tool names, auth, response envelope, copy-paste MCP JSON, and links to OpenAPI.
-- **[`openapi.json`](openapi.json)** — OpenAPI 3.0 spec for the **REST surface used by this MCP** (`/api/v1/search`, `/offers/*`, `/meta`). The **full** production spec (all routes) is always at **https://agentshare.dev/openapi.json**.
+- **[`llms.txt`](llms.txt)** — same essentials in a **short, crawl-friendly** single file (for LLM / GEO workflows).
+- **[`openapi.json`](openapi.json)** — OpenAPI 3.0 spec for the **REST surface used by this MCP** (`/api/v1/search`, `/offers/*`, `/meta`). The **full** production spec (all routes) is always at **https://agentshare.dev/openapi.json** (single source of truth; no duplicate docs repo).
 - **[`mcp-config.json`](mcp-config.json)** — ready-to-paste `mcpServers` block for **`npx mcp-remote`** (Claude Desktop / Cursor) pointing at the remote Streamable HTTP endpoint.
+
+---
+
+## Getting an API key
+
+To use this MCP server or the REST API, you need an API key. Visit [https://agentshare.dev/pricing](https://agentshare.dev/pricing) to get your free tier key (**100 requests / month** on the public free plan at time of writing — always confirm on the site).
 
 ---
 

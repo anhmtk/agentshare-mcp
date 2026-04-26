@@ -1,0 +1,61 @@
+# AgentShare MCP — `agentshare-mcp` (llms.txt)
+
+> Human and AI readers: this file mirrors the essentials of [`AGENTS.md`](./AGENTS.md). For full detail, use that file and the [README](https://github.com/anhmtk/agentshare-mcp#readme).
+
+## Mission
+
+Provide **structured, production-grade price and offer data** for AI agents via **MCP** (stdio or Streamable HTTP) and the underlying **REST** API at **https://agentshare.dev**. Implementation: `integrations/mcp_server/price_mcp.py`.
+
+## Core tools (MCP tool names)
+
+| Tool | Purpose | REST (called by the tool) |
+|------|-----------|---------------------------|
+| `search_products` | Search listings, compare | `GET /api/v1/search` |
+| `best_offer` | Single best in-stock offer | `GET /api/v1/offers/best` |
+| `best_offer_under_budget` | Best offer under max price | `GET /api/v1/offers/best-under-budget` |
+| `service_meta` | Capabilities, limits (key often optional) | `GET /api/v1/meta` |
+
+**Response format:** two text blocks — (1) one-line English summary, (2) JSON envelope: `status`, `data`, `meta`.
+
+## Reliability signals
+
+- **`freshness_status`** — e.g. `fresh` / `stale`; use to decide whether to warn or refresh.
+- **`data_age_seconds`** — age of underlying listing data (per offer or `meta`).
+
+*Operational signal:* public smoke runs have used on the order of **~200 requests** with **100% client-observed success**; this is not an SLA guarantee — always handle `error` in the envelope.
+
+## Authentication
+
+- **Priced tools & REST:** `X-API-Key: <key>` (or `Authorization: Bearer` where the client supports it).
+- **stdio server:** set `API_KEY` in env; optional `BASE_URL` (default `https://agentshare.dev`).
+
+**Get a key:** https://agentshare.dev/pricing
+
+## MCP config (remote, copy-paste)
+
+File [`mcp-config.json`](https://github.com/anhmtk/agentshare-mcp/blob/main/mcp-config.json) in this repo, or:
+
+```json
+{
+  "mcpServers": {
+    "agentshare": {
+      "command": "npx",
+      "args": [
+        "-y", "mcp-remote", "https://agentshare.dev/mcp",
+        "--header", "X-API-Key: YOUR_API_KEY"
+      ]
+    }
+  }
+}
+```
+
+**Endpoint:** `https://agentshare.dev/mcp` (Streamable HTTP).
+
+## OpenAPI
+
+- **MCP-focused subset in repo:** [`openapi.json`](https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/openapi.json)
+- **Full live API spec:** https://agentshare.dev/openapi.json
+
+## Trust
+
+Do not commit real keys. Terms / privacy: https://agentshare.dev/terms · https://agentshare.dev/privacy
