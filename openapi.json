@@ -1,0 +1,134 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Agent Price API (MCP-backed REST surface)",
+    "version": "1.0.0",
+    "description": "OpenAPI 3.0 document covering only the HTTP routes invoked by the MCP server in `integrations/mcp_server/price_mcp.py` (Remote MCP / stdio both call the same REST API). For the full production schema (all paths, webhooks, admin, etc.), use the canonical spec: https://agentshare.dev/openapi.json",
+    "contact": {
+      "name": "AgentShare",
+      "url": "https://agentshare.dev"
+    }
+  },
+  "externalDocs": {
+    "description": "Full canonical OpenAPI 3.1 (live production)",
+    "url": "https://agentshare.dev/openapi.json"
+  },
+  "servers": [
+    {
+      "url": "https://agentshare.dev",
+      "description": "Production (default BASE_URL in MCP)"
+    }
+  ],
+  "tags": [
+    { "name": "search", "description": "Product search" },
+    { "name": "offers", "description": "Best offer queries" },
+    { "name": "meta", "description": "Service discovery" }
+  ],
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    },
+    "schemas": {
+      "OkEnvelope": {
+        "type": "object",
+        "description": "Typical success body from the Agent Price API",
+        "properties": {
+          "status": { "type": "string", "enum": ["ok"] },
+          "data": { "type": "object", "additionalProperties": true },
+          "meta": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "May include freshness_status, data_age_seconds, total, request_id"
+          }
+        }
+      },
+      "ErrorBody": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "enum": ["error"] },
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": { "type": "string" },
+              "message": { "type": "string" },
+              "detail": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/v1/search": {
+      "get": {
+        "tags": ["search"],
+        "summary": "Search product listings (MCP: price_search)",
+        "operationId": "searchProductsMcp",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } },
+          { "name": "limit", "in": "query", "required": false, "schema": { "type": "integer", "minimum": 1, "maximum": 50, "default": 10 } }
+        ],
+        "security": [{ "ApiKeyAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "OK or structured error in body",
+            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
+          }
+        }
+      }
+    },
+    "/api/v1/offers/best": {
+      "get": {
+        "tags": ["offers"],
+        "summary": "Best single offer for query (MCP: best_offer)",
+        "operationId": "bestOfferMcp",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } }
+        ],
+        "security": [{ "ApiKeyAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "OK or structured error in body",
+            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
+          }
+        }
+      }
+    },
+    "/api/v1/offers/best-under-budget": {
+      "get": {
+        "tags": ["offers"],
+        "summary": "Best offer under max price (MCP: best_offer_under_budget)",
+        "operationId": "bestOfferUnderBudgetMcp",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } },
+          { "name": "max_price", "in": "query", "required": true, "schema": { "type": "number", "exclusiveMinimum": 0 } }
+        ],
+        "security": [{ "ApiKeyAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "OK or structured error in body",
+            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
+          }
+        }
+      }
+    },
+    "/api/v1/meta": {
+      "get": {
+        "tags": ["meta"],
+        "summary": "Service metadata (MCP: service_meta); key often optional on public deployments",
+        "operationId": "serviceMetaMcp",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "OK or structured error in body",
+            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
+          }
+        }
+      }
+    }
+  }
+}

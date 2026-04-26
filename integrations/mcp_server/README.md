@@ -2,6 +2,8 @@
 
 Expose Agent Price API as MCP tools for Cursor, Claude Desktop, etc.
 
+**AI agent onboarding (repo root):** see [`../../AGENTS.md`](../../AGENTS.md) and [`../../openapi.json`](../../openapi.json).
+
 **Remote (Streamable HTTP):** `https://agentshare.dev/mcp` — send `X-API-Key` or `Authorization: Bearer` (see [MCP docs on agentshare.dev](https://agentshare.dev/docs)).
 
 ## Quick Start (stdio, local)

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "agentshare": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://agentshare.dev/mcp",
+        "--header",
+        "X-API-Key: YOUR_API_KEY"
+      ]
+    }
+  }
+}
