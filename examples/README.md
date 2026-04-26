@@ -34,4 +34,4 @@ python rest_search.py "raspberry pi 5"
 node rest_search.mjs "raspberry pi 5"
 ```
 
-Full API reference: https://agentshare.dev/docs — MCP tools (`price_search`, …) map to these endpoints on the server side.
+Full API reference: https://agentshare.dev/docs — MCP tools (`search_products`, …) map to these endpoints on the server side.

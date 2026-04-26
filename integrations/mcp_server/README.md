@@ -18,7 +18,7 @@ python integrations/mcp_server/server.py
 
 | Tool | Auth | Description |
 |------|------|-------------|
-| `price_search` | Yes | Search product prices |
+| `search_products` | Yes | Search product prices |
 | `best_offer` | Yes | Cheapest offer for query |
 | `best_offer_under_budget` | Yes | Best offer within budget (VND) |
 | `service_meta` | No | API capabilities |

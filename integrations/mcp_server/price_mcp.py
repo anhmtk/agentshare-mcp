@@ -105,7 +105,7 @@ def create_price_mcp() -> FastMCP:
         "agent-price-api",
         instructions=(
             "AgentShare exposes marketplace price intelligence as structured JSON over REST and MCP. "
-            "Use price_search for multi-listing comparison; best_offer when the user wants a single "
+            "Use search_products for multi-listing comparison; best_offer when the user wants a single "
             "cheapest in-stock option; best_offer_under_budget when they specify a maximum price; "
             "service_meta for discovery without credentials. "
             "Each tool returns two text blocks: a one-line summary, then a JSON envelope "
@@ -132,7 +132,7 @@ def create_price_mcp() -> FastMCP:
         annotations=ANN_MARKETPLACE,
         structured_output=False,
     )
-    def price_search(
+    def search_products(
         query: Annotated[
             str,
             Field(
@@ -150,7 +150,7 @@ def create_price_mcp() -> FastMCP:
         ] = 10,
     ) -> list[TextContent]:
         raw = _call_api_dict("/api/v1/search", {"q": query, "limit": limit})
-        return tool_result_from_api_dict(raw, tool_name="price_search")
+        return tool_result_from_api_dict(raw, tool_name="search_products")
 
     @mcp.tool(
         title="Best single offer",
@@ -158,7 +158,7 @@ def create_price_mcp() -> FastMCP:
             "Return the single best current offer for a product intent: typically lowest price among "
             "in-stock listings the API trusts. "
             "Use when the user asks where to buy something cheapest, 'best deal', or one clear recommendation. "
-            "For side‑by‑side comparison of many listings, prefer price_search."
+            "For side‑by‑side comparison of many listings, prefer search_products."
         ),
         annotations=ANN_MARKETPLACE,
         structured_output=False,
@@ -181,7 +181,7 @@ def create_price_mcp() -> FastMCP:
             "Find the best offer for a product query with a maximum price ceiling. "
             "Use when the user gives a budget, 'under $X', 'below …', or 'no more than …'. "
             "Pass max_price in the same numeric unit the deployed API expects for that field (see API docs). "
-            "Do not use for open-ended comparison without a cap—use price_search or best_offer."
+            "Do not use for open-ended comparison without a cap—use search_products or best_offer."
         ),
         annotations=ANN_MARKETPLACE,
         structured_output=False,

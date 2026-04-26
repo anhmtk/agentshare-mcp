@@ -16,7 +16,7 @@ These are the **registered tool names** in this codebase. They map to REST as sh
 
 | Intent | MCP tool name | REST (behind the tool) |
 |--------|-----------------|------------------------|
-| Search products by keyword (multi-listing, comparison) | `price_search` | `GET /api/v1/search` |
+| Search products by keyword (multi-listing, comparison) | `search_products` | `GET /api/v1/search` |
 | Single best in-stock offer for a product intent | `best_offer` | `GET /api/v1/offers/best` |
 | Best offer under a max price (budget) | `best_offer_under_budget` | `GET /api/v1/offers/best-under-budget` |
 | Discovery: capabilities, limits, no paid tools required when deployment allows | `service_meta` | `GET /api/v1/meta` |
