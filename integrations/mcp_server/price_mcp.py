@@ -5,6 +5,7 @@ Tool handlers return list[TextContent]: (1) one-line summary, (2) JSON envelope 
 """
 from __future__ import annotations
 
+import asyncio
 import os
 from contextvars import ContextVar
 from pathlib import Path
@@ -62,13 +63,24 @@ def _call_api_dict(path: str, params: dict[str, Any] | None = None) -> dict[str,
     """
     Call Agent Price REST API; return the JSON object from the wire (success or error body).
 
-    Unchanged fetch logic — same URLs and headers as before.
+    Blocking I/O — must not run on the asyncio event loop when BASE_URL points at this same
+    process (Streamable HTTP MCP on uvicorn): FastMCP invokes sync tools directly on the loop,
+    which would deadlock a single worker until MCP_UPSTREAM_TIMEOUT_SEC. Tool handlers wrap
+    this in asyncio.to_thread.
     """
     base = os.getenv("BASE_URL", "https://agentshare.dev").rstrip("/")
     key = _effective_api_key()
-    headers = {"X-API-Key": key} if key else {}
+    headers: dict[str, str] = {"Accept": "application/json"}
+    if key:
+        headers["X-API-Key"] = key
+    timeout_sec = float(os.getenv("MCP_UPSTREAM_TIMEOUT_SEC", "120"))
     try:
-        r = requests.get(f"{base}{path}", params=params or {}, headers=headers, timeout=15)
+        r = requests.get(
+            f"{base}{path}",
+            params=params or {},
+            headers=headers,
+            timeout=timeout_sec,
+        )
         try:
             data = r.json()
         except requests.JSONDecodeError:
@@ -105,9 +117,13 @@ def create_price_mcp() -> FastMCP:
         "agent-price-api",
         instructions=(
             "AgentShare exposes marketplace price intelligence as structured JSON over REST and MCP. "
+            "Production path emphasizes the official AliExpress integration; other leading e-commerce "
+            "platforms will be linked when contractual and technical conditions are met. "
             "Use search_products for multi-listing comparison; best_offer when the user wants a single "
             "cheapest in-stock option; best_offer_under_budget when they specify a maximum price; "
             "service_meta for discovery without credentials. "
+            "Data scope (AI hardware, mini PCs, components, robotics, robot/RC batteries) is documented at "
+            "GET /coverage on the site — same sources as REST. "
             "Each tool returns two text blocks: a one-line summary, then a JSON envelope "
             "(status, data, meta). "
             "Authenticate HTTP MCP with X-API-Key or Authorization: Bearer. "
@@ -127,12 +143,17 @@ def create_price_mcp() -> FastMCP:
             "Search connected marketplaces and return structured offers (prices, sources, freshness). "
             "Use when the user wants to compare options, browse multiple listings, or explore a product "
             "category or model—not when they only need one definitive 'cheapest' pick (use best_offer). "
+            "Works for robotics parts, robot/drone batteries, and AI hardware — see /coverage for focus areas. "
             "Accepts free-text queries in any language."
         ),
         annotations=ANN_MARKETPLACE,
         structured_output=False,
     )
+<<<<<<< HEAD
     def search_products(
+=======
+    async def search_products(
+>>>>>>> 31819e8 (docs: README for Anthropic extension + align MCP tools (search_products, annotations))
         query: Annotated[
             str,
             Field(
@@ -149,7 +170,7 @@ def create_price_mcp() -> FastMCP:
             ),
         ] = 10,
     ) -> list[TextContent]:
-        raw = _call_api_dict("/api/v1/search", {"q": query, "limit": limit})
+        raw = await asyncio.to_thread(_call_api_dict, "/api/v1/search", {"q": query, "limit": limit})
         return tool_result_from_api_dict(raw, tool_name="search_products")
 
     @mcp.tool(
@@ -163,7 +184,7 @@ def create_price_mcp() -> FastMCP:
         annotations=ANN_MARKETPLACE,
         structured_output=False,
     )
-    def best_offer(
+    async def best_offer(
         query: Annotated[
             str,
             Field(
@@ -172,7 +193,7 @@ def create_price_mcp() -> FastMCP:
             ),
         ],
     ) -> list[TextContent]:
-        raw = _call_api_dict("/api/v1/offers/best", {"q": query})
+        raw = await asyncio.to_thread(_call_api_dict, "/api/v1/offers/best", {"q": query})
         return tool_result_from_api_dict(raw, tool_name="best_offer")
 
     @mcp.tool(
@@ -186,7 +207,7 @@ def create_price_mcp() -> FastMCP:
         annotations=ANN_MARKETPLACE,
         structured_output=False,
     )
-    def best_offer_under_budget(
+    async def best_offer_under_budget(
         query: Annotated[
             str,
             Field(description="Product or deal to find within the budget.", min_length=1),
@@ -202,7 +223,8 @@ def create_price_mcp() -> FastMCP:
             ),
         ],
     ) -> list[TextContent]:
-        raw = _call_api_dict(
+        raw = await asyncio.to_thread(
+            _call_api_dict,
             "/api/v1/offers/best-under-budget",
             {"q": query, "max_price": max_price},
         )
@@ -218,8 +240,8 @@ def create_price_mcp() -> FastMCP:
         annotations=ANN_SERVICE_META,
         structured_output=False,
     )
-    def service_meta() -> list[TextContent]:
-        raw = _call_api_dict("/api/v1/meta")
+    async def service_meta() -> list[TextContent]:
+        raw = await asyncio.to_thread(_call_api_dict, "/api/v1/meta")
         return tool_result_from_api_dict(raw, tool_name="service_meta")
 
     return mcp
