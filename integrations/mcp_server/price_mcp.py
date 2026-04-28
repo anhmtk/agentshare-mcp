@@ -28,7 +28,7 @@ ANN_SERVICE_META = ToolAnnotations(readOnlyHint=True, openWorldHint=False, idemp
 
 
 def _load_dotenv() -> None:
-    """Load .env from mcp_server dir or project root (same as legacy server.py)."""
+    """Load .env from mcp_server dir or project root."""
     here = Path(__file__).resolve().parent
     project_root = here.parent.parent
     for p in (here / ".env", project_root / ".env"):

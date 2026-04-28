@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """Launcher for Agent Price API MCP server (stdio). Run from project root: python integrations/mcp_server/run.py"""
 import sys
 from pathlib import Path

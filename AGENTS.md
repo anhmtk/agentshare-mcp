@@ -1,6 +1,6 @@
 # AgentShare — AI Agent Briefing
 
-**Repository:** [agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) — stdio MCP server that proxies [Agent Price API](https://agentshare.dev) tools. **Implementation path:** `integrations/mcp_server/` (see `price_mcp.py`).
+**Repository:** [agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) — reference **MCP tool** code and GEO/agent files for [Agent Price API](https://agentshare.dev). **Production MCP** is served at `https://agentshare.dev/mcp`; Claude Desktop ships as **`.mcpb`** (see **agent-price-api** `mcpb-bundle/`). **Implementation path:** `integrations/mcp_server/` (`price_mcp.py` mirrors the server app).
 
 ---
 
@@ -70,7 +70,7 @@ These are the **registered tool names** in this codebase. They map to REST as sh
 }
 ```
 
-Replace `YOUR_API_KEY` with your key. For **local stdio** (no `npx`), use `python` + `integrations/mcp_server/server.py` — see [README](README.md).
+Replace `YOUR_API_KEY` with your key. For **Claude Desktop**, prefer the **`.mcpb`** bundle; for **Cursor**, use **`node`** + `bridge.mjs` or optional **`python`** + `integrations/mcp_server/server.py` — see [README](README.md).
 
 **Streamable HTTP URL:** `https://agentshare.dev/mcp` (trailing slash optional for many clients).
 
@@ -89,5 +89,6 @@ Replace `YOUR_API_KEY` with your key. For **local stdio** (no `npx`), use `pytho
 |------|------|
 | `integrations/mcp_server/price_mcp.py` | Tool definitions and REST calls |
 | `integrations/mcp_server/mcp_tool_format.py` | Summary + JSON envelope, error mapping |
-| `integrations/mcp_server/server.py` | stdio entrypoint |
+| `integrations/mcp_server/server.py` | stdio entrypoint (optional; local Claude/Cursor) |
+| `integrations/mcp_server/run.py` | Launcher alias for `server.py` |
 | `examples/` | Minimal REST examples |

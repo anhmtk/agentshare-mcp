@@ -14,6 +14,8 @@ export API_KEY=your_key
 python integrations/mcp_server/server.py
 ```
 
+Prefer **`.mcpb`** or **Node bridge** for Claude when you do not need Python stdio — see [README](../../README.md).
+
 ## Tools
 
 | Tool | Auth | Description |
@@ -30,4 +32,4 @@ python integrations/mcp_server/server.py
 
 ## Cursor Setup
 
-See [Cursor MCP setup](https://agentshare.dev/docs) (MCP section) for manual Cursor configuration steps.
+See [Cursor MCP setup](https://agentshare.dev/docs) (MCP section) or repo [README](../../README.md).

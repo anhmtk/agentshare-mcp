@@ -8,7 +8,7 @@
 
 ## Description
 
-**AgentShare** provides **structured marketplace prices and offers for AI agents** via a JSON **REST API** and **MCP** ([Streamable HTTP](https://agentshare.dev/mcp/)). This repository contains the **stdio MCP server** (Python) used with Claude Desktop, Cursor, and other MCP clients, plus minimal REST examples. The production API, pricing, and full docs live at **https://agentshare.dev**.
+**AgentShare** provides **structured marketplace prices and offers for AI agents** via a JSON **REST API** and **MCP** ([Streamable HTTP](https://agentshare.dev/mcp/)). This repository holds **reference Python tool code** (`integrations/mcp_server/`), **GEO/agent docs** (`AGENTS.md`, `llms.txt`, …), and **REST examples**. The live **`/mcp`** implementation and **`.mcpb`** bundle are maintained in **[agent-price-api](https://github.com/anhmtk/agent-price-api)** (`mcpb-bundle/agentshare-price-mcp`).
 
 All MCP tools are **read-only**: they fetch data from the AgentShare API and do not modify your accounts or remote marketplace listings.
 
@@ -43,66 +43,27 @@ All MCP tools are **read-only**: they fetch data from the AgentShare API and do 
 
 ## Getting an API key
 
-To use this MCP server or the REST API, you need an API key. Visit [https://agentshare.dev/pricing](https://agentshare.dev/pricing) to get your free tier key (**100 requests / month** on the public free plan at time of writing — always confirm on the site).
+To use MCP or the REST API, you need an API key. Visit [https://agentshare.dev/pricing](https://agentshare.dev/pricing) to get your free tier key (**100 requests / month** on the public free plan at time of writing — always confirm on the site).
 
 ---
 
 ## Installation
 
-### Quick install (pip)
+**Recommended — Claude Desktop:** **`.mcpb`** from **[agent-price-api](https://github.com/anhmtk/agent-price-api)** → `mcpb-bundle/agentshare-price-mcp` → `mcpb pack`.
 
-```bash
-git clone https://github.com/anhmtk/agentshare-mcp.git
-cd agentshare-mcp
-pip install -r integrations/mcp_server/requirements.txt
-export API_KEY=your_api_key   # Windows: $env:API_KEY="..."
-# optional: export BASE_URL=https://agentshare.dev
-python integrations/mcp_server/server.py
-```
+**Cursor / IDE:** Node **`bridge.mjs`** (same as `.mcpb`) or **`npx mcp-remote`** with `--header X-API-Key:…` — see [`mcp-config.json`](mcp-config.json).
 
-Get a key: https://agentshare.dev/pricing
-
-### Claude Desktop (`claude_desktop_config.json`) — stdio
-
-Use a **local stdio** server (Python). Replace the path with the **absolute** path to `server.py` in *your* clone of this repo.
-
-```json
-{
-  "mcpServers": {
-    "agentshare": {
-      "command": "python",
-      "args": ["/ABSOLUTE/PATH/TO/agentshare-mcp/integrations/mcp_server/server.py"],
-      "env": {
-        "API_KEY": "your-api-key-here",
-        "BASE_URL": "https://agentshare.dev"
-      }
-    }
-  }
-}
-```
-
-- On Windows, prefer forward slashes in `args`, e.g. `D:/code/agentshare-mcp/integrations/mcp_server/server.py`.
-
-**Remote MCP (Streamable HTTP):** clients that support URL + API key headers can use `https://agentshare.dev/mcp/` with `X-API-Key` or `Authorization: Bearer`. Use **[`mcp-config.json`](mcp-config.json)** for **`npx mcp-remote`**. Details: [MCP Quickstart](https://agentshare.dev/docs) (section MCP).
-
-**Advanced — HTTP via `mcp-remote` (Node / npx):** if you use [`mcp-remote`](https://github.com/geelen/mcp-remote) to bridge HTTPS → stdio, pass your key with `--header` (see troubleshooting in [Cursor MCP setup](https://agentshare.dev/docs)); this repo does **not** publish an `npx agentshare-mcp` package.
-
-The official **Claude Desktop Extension** (`.mcpb`) uses a small Node **bridge** (see the **agent-price-api** repo, `mcpb-bundle/agentshare-price-mcp`) and does **not** rely on `mcp-remote`.
-
-### Clone & run stdio locally
+**Optional — Python stdio** (this repo), from clone root:
 
 ```bash
 pip install -r integrations/mcp_server/requirements.txt
 export API_KEY=your_api_key
-# optional: export BASE_URL=http://localhost:8000
 python integrations/mcp_server/server.py
 ```
 
-Same as `python integrations/mcp_server/run.py`. See [`integrations/mcp_server/README.md`](integrations/mcp_server/README.md) for tools and environment variables.
+Same as `python integrations/mcp_server/run.py`.
 
-### Claude Desktop Extension (`.mcpb`)
-
-A packaged extension (**AgentShare — Real-time Price & Offer MCP**) can be installed from the `.mcpb` built in the main **agent-price-api** repo (`mcpb-bundle/agentshare-price-mcp`). That bundle connects to `https://agentshare.dev/mcp` via a small Node bridge. See [MCP Quickstart](https://agentshare.dev/docs) on the site.
+**Glama:** use **`integrations/mcp_server/Dockerfile.glama`** (runs `server.py`).
 
 ---
 
@@ -112,11 +73,8 @@ A packaged extension (**AgentShare — Real-time Price & Offer MCP**) can be ins
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `API_KEY` | For price tools | — | Sent as `X-API-Key` to the API |
-| `BASE_URL` | No | `https://agentshare.dev` | API base URL (e.g. local dev) |
-| `MCP_UPSTREAM_TIMEOUT_SEC` | No | `120` | HTTP timeout for upstream API calls |
-
-**Remote MCP (Streamable HTTP):** clients that support URL + headers can call `https://agentshare.dev/mcp/` with `X-API-Key` or `Authorization: Bearer`. Details: [docs](https://agentshare.dev/docs) (MCP section).
+| `API_KEY` | For price tools (REST / some clients) | — | Sent as `X-API-Key` to the API |
+| `BASE_URL` | No | `https://agentshare.dev` | API base URL |
 
 ---
 
