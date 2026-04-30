@@ -1,0 +1,9 @@
+{
+  "name": "agentshare-price-mcp-bundle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP bundle wrapper for AgentShare Streamable HTTP (do not publish to npm)",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.25.3"
+  }
+}

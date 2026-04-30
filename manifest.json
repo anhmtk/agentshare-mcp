@@ -1,0 +1,74 @@
+{
+  "manifest_version": "0.3",
+  "name": "agentshare-price-mcp",
+  "display_name": "AgentShare - Real-time Price and Offer MCP",
+  "version": "1.0.3",
+  "description": "Search and compare marketplace offers for AI hardware and robotics-related products, with freshness metadata and transparent no-data reasons.",
+  "author": {
+    "name": "AgentShare",
+    "url": "https://github.com/anhmtk"
+  },
+  "homepage": "https://agentshare.dev",
+  "documentation": "https://agentshare.dev/docs",
+  "support": "https://github.com/anhmtk/agentshare-mcp/issues",
+  "keywords": [
+    "price",
+    "mcp",
+    "hardware",
+    "robotics",
+    "ai-agent",
+    "aliexpress"
+  ],
+  "license": "MIT",
+  "tools_generated": true,
+  "tools": [
+    {
+      "name": "search_products",
+      "description": "Search product listings; scope and sources match GET /coverage on agentshare.dev"
+    },
+    {
+      "name": "best_offer",
+      "description": "Find the single lowest in-stock price for a product intent"
+    },
+    {
+      "name": "best_offer_under_budget",
+      "description": "Find best offer within a price ceiling"
+    },
+    {
+      "name": "service_meta",
+      "description": "Get API coverage and service metadata"
+    }
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "server/bridge.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/bridge.mjs",
+        "https://agentshare.dev/mcp",
+        "--header",
+        "X-API-Key:${user_config.api_key}"
+      ]
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "AgentShare API Key",
+      "description": "Get your free key at https://agentshare.dev/pricing (100 req/month free)",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "privacy_policies": [
+    "https://agentshare.dev/privacy"
+  ]
+}
