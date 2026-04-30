@@ -12,6 +12,16 @@
 
 All MCP tools are **read-only**: they fetch data from the AgentShare API and do not modify your accounts or remote marketplace listings.
 
+### Reviewer quick note (public/private model)
+
+This repository is the **public extension wrapper** used for MCP listing and review.
+
+- **Public repo (`agentshare-mcp`)**: extension-facing artifacts (README/docs/examples, MCP-facing code, support links).
+- **Private production backend (`agent-price-api`)**: internal implementation details and operational code.
+- **Live runtime endpoint**: `https://agentshare.dev/mcp` (Streamable HTTP).
+- **Auth model**: API key (`X-API-Key` or `Authorization: Bearer`) as documented on `agentshare.dev`.
+- **Intent**: keep review assets public while protecting private backend internals.
+
 | | |
 |---|---|
 | **Site & docs** | https://agentshare.dev |
