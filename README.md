@@ -1,173 +1,88 @@
-# AgentShare
+<p align="center">
+  <img src="https://agentshare.dev/static/logo.png" alt="AgentShare" width="120">
+</p>
 
-![Production Ready](https://img.shields.io/badge/status-production--ready-brightgreen)
-[![MCP Server](https://img.shields.io/badge/MCP-Streamable%20HTTP-5C6BC0?style=flat)](https://agentshare.dev/mcp/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![REST API](https://img.shields.io/badge/API-agentshare.dev-20BE86?style=flat)](https://agentshare.dev/openapi.json)
-[![Docs](https://img.shields.io/badge/docs-agentshare.dev-5865F2?style=flat)](https://agentshare.dev/docs)
+<h1 align="center">AgentShare MCP Server</h1>
 
-## Description
+<p align="center">
+  The data layer for agent commerce — structured price and offer data for AI agents,
+  over MCP Streamable HTTP and REST.
+</p>
 
-**AgentShare** provides **structured marketplace prices and offers for AI agents** via a JSON **REST API** and **MCP** ([Streamable HTTP](https://agentshare.dev/mcp/)). This repository holds **reference Python tool code** (`integrations/mcp_server/`), **GEO/agent docs** (`AGENTS.md`, `llms.txt`, …), and **REST examples**. The live **`/mcp`** implementation and **`.mcpb`** bundle are maintained in **[agent-price-api](https://github.com/anhmtk/agent-price-api)** (`mcpb-bundle/agentshare-price-mcp`).
+<p align="center">
+  <a href="https://agentshare.dev"><strong>Website</strong></a> ·
+  <a href="https://agentshare.dev/docs"><strong>Docs</strong></a> ·
+  <a href="https://agentshare.dev/pricing"><strong>Pricing</strong></a> ·
+  <a href="https://agentshare.dev/signup"><strong>Get free API key</strong></a>
+</p>
 
-All MCP tools are **read-only**: they fetch data from the AgentShare API and do not modify your accounts or remote marketplace listings.
+---
 
-### Reviewer quick note (public/private model)
+## What it does
 
-This repository is the **public extension wrapper** used for MCP listing and review.
+Exposes the [AgentShare Price API](https://agentshare.dev) as **four MCP tools** any MCP-compatible client (Claude Desktop, Cursor, Continue.dev, …) can call directly:
 
-- **Public repo (`agentshare-mcp`)**: extension-facing artifacts (README/docs/examples, MCP-facing code, support links).
-- **Private production backend (`agent-price-api`)**: internal implementation details and operational code.
-- **Live runtime endpoint**: `https://agentshare.dev/mcp` (Streamable HTTP).
-- **Auth model**: API key (`X-API-Key` or `Authorization: Bearer`) as documented on `agentshare.dev`.
-- **Intent**: keep review assets public while protecting private backend internals.
-
-| | |
+| Tool | Returns |
 |---|---|
-| **Site & docs** | https://agentshare.dev |
-| **MCP endpoint (remote)** | `https://agentshare.dev/mcp/` |
-| **Discovery** | [`/agent.json`](https://agentshare.dev/agent.json) · [`/mcp.json`](https://agentshare.dev/mcp.json) · [`llm.txt`](https://agentshare.dev/llm.txt) / [`llms.txt`](https://agentshare.dev/llms.txt) |
+| `search_products` | Multi-source price comparison for a product query |
+| `best_offer` | The single cheapest in-stock offer for a query |
+| `best_offer_under_budget` | Cheapest offer under a max price |
+| `service_meta` | Live coverage, freshness, and pricing metadata |
+
+Backed by the same JSON contract as `https://agentshare.dev/api/v1/*` — every response includes `freshness_status`, `data_status`, `trust_*` signals so agents can reason about staleness.
 
 ---
 
-## For AI agents (machine readable)
+## Quick install
 
-- **[`AGENTS.md`](AGENTS.md)** — mission, tool names, auth, response envelope, copy-paste MCP JSON, and links to OpenAPI.
-- **[`llms.txt`](llms.txt)** — same essentials in a **short, crawl-friendly** single file (for LLM / GEO workflows).
-- **[`openapi.json`](openapi.json)** — OpenAPI 3.0 spec for the **REST surface used by this MCP** (`/api/v1/search`, `/offers/*`, `/meta`). The **full** production spec (all routes) is always at **https://agentshare.dev/openapi.json** (single source of truth; no duplicate docs repo).
-- **[`mcp-config.json`](mcp-config.json)** — ready-to-paste `mcpServers` block for **`npx mcp-remote`** (Claude Desktop / Cursor) pointing at the remote Streamable HTTP endpoint.
+### Claude Desktop / Cursor / any Streamable-HTTP MCP client
 
----
+Add to your MCP config (e.g. `~/.cursor/mcp.json` or Claude Desktop config):
 
-## Features
+\`\`\`json
+{
+  "mcpServers": {
+    "agentshare": {
+      "url": "https://agentshare.dev/mcp",
+      "headers": {
+        "X-API-Key": "YOUR_AGENTSHARE_KEY"
+      }
+    }
+  }
+}
+\`\`\`
 
-- **`search_products`** — Multi-listing product search with prices, sources, and freshness metadata (`readOnlyHint: true`).
-- **`best_offer`** — Single best in-stock-style offer for a product intent (`readOnlyHint: true`).
-- **`best_offer_under_budget`** — Best offer under a price ceiling (`readOnlyHint: true`).
-- **`service_meta`** — API capabilities and limits; safe for discovery (`readOnlyHint: true`).
-- **Official AliExpress integration** on the production API; additional leading marketplaces are added when partnerships and policy allow.
-- **Freshness metadata** in responses (e.g. `data_age_seconds`, `freshness_status`) for agent reasoning.
-- **Affiliate-ready URLs** where configured; see Terms and Privacy on the site.
+Get a free key (100 requests/month, no card): https://agentshare.dev/signup
 
----
+### Local stdio (Python)
 
-## Getting an API key
-
-To use MCP or the REST API, you need an API key. Visit [https://agentshare.dev/pricing](https://agentshare.dev/pricing) to get your free tier key (**100 requests / month** on the public free plan at time of writing — always confirm on the site).
-
----
-
-## Installation
-
-**Recommended — Claude Desktop:** **`.mcpb`** from **[agent-price-api](https://github.com/anhmtk/agent-price-api)** → `mcpb-bundle/agentshare-price-mcp` → `mcpb pack`.
-
-**Cursor / IDE:** Node **`bridge.mjs`** (same as `.mcpb`) or **`npx mcp-remote`** with `--header X-API-Key:…` — see [`mcp-config.json`](mcp-config.json).
-
-**Optional — Python stdio** (this repo), from clone root:
-
-```bash
-pip install -r integrations/mcp_server/requirements.txt
-export API_KEY=your_api_key
-python integrations/mcp_server/server.py
-```
-
-Same as `python integrations/mcp_server/run.py`.
-
-**Glama:** use **`integrations/mcp_server/Dockerfile.glama`** (runs `server.py`).
+\`\`\`bash
+git clone https://github.com/anhmtk/agentshare-mcp.git
+cd agentshare-mcp
+pip install -r requirements.txt
+export AGENTSHARE_API_KEY=your_key_here
+python -m integrations.mcp_server.server
+\`\`\`
 
 ---
 
-## Configuration
+## Discovery files (for AI search)
 
-### Environment variables
-
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `API_KEY` | For price tools (REST / some clients) | — | Sent as `X-API-Key` to the API |
-| `BASE_URL` | No | `https://agentshare.dev` | API base URL |
-
----
-
-## Examples
-
-### Example 1: Search for product prices
-
-**User prompt:** “Find me the current price of a Raspberry Pi 5 in Vietnam.”
-
-**Expected behavior:** The assistant uses the **`search_products`** tool. The AgentShare API returns listings from connected sources with prices and freshness metadata.
-
-**Expected output:** A list of offers with source identifier, price (typically in **VND** in API payloads), stock hints when available, and **freshness** fields so the agent can caveat recency.
-
-### Example 2: Best single offer
-
-**User prompt:** “What’s the cheapest NVIDIA Jetson Orin Nano I can buy right now?”
-
-**Expected behavior:** The assistant uses **`best_offer`**. The API returns the single lowest-priced offer the service selects as best, with link and metadata.
-
-**Expected output:** One primary offer: marketplace/source, price, URL, and freshness/stock context where available.
-
-### Example 3: Budget-constrained search
-
-**User prompt:** “I have 2 million VND. Show me the best mini PC I can get.”
-
-**Expected behavior:** The assistant uses **`best_offer_under_budget`** with `max_price=2000000` (VND scale for the deployed API).
-
-**Expected output:** The best offer within budget, or a clear **no match** / **out of budget** style result with reasoning fields from the JSON.
+| URL | Purpose |
+|---|---|
+| https://agentshare.dev/agent.json | Agent-native discovery manifest |
+| https://agentshare.dev/llm.txt | LLM-readable summary |
+| https://agentshare.dev/openapi.json | OpenAPI 3 schema |
+| https://agentshare.dev/.well-known/mcp.json | MCP endpoint announcement |
+| https://agentshare.dev/coverage | Data coverage spec (categories we cover well) |
 
 ---
 
-## Privacy Policy (extension & API use)
+## Read more
 
-This MCP client requires an **AgentShare API key**. For **Claude Desktop Extensions (`.mcpb`)**, the key is stored in **Claude Desktop’s secure storage** and sent only to **https://agentshare.dev** (or your `BASE_URL`) as **`X-API-Key`** for authenticated endpoints.
-
-**Data collection**
-
-- This repository’s MCP server **does not** add its own analytics or telemetry beyond what your MCP host provides.
-- **Search queries and API parameters** are sent to AgentShare to retrieve results.
-- AgentShare may log requests for **rate limiting, billing, abuse prevention, and operations** as described on the site.
-
-**Data sharing**
-
-- Data is processed by **AgentShare** to fulfill the API request. AgentShare does not sell personal data from the API for marketing. Details are in the full policy below.
-
-**Retention & full policy**
-
-- Log retention and categories (e.g. API logs) are defined in the **published** privacy policy. **Authoritative text:** **https://agentshare.dev/privacy**
-
-**Terms**
-
-- **https://agentshare.dev/terms**
-
----
-
-## Support
-
-- **Issues:** [GitHub Issues](https://github.com/anhmtk/agentshare-mcp/issues)
-- **Email:** admin@agentshare.dev
-- **Website / docs:** https://agentshare.dev · https://agentshare.dev/docs
-
----
-
-## Code examples (REST)
-
-The [`examples/`](examples/) folder has small scripts that call the public JSON API (`GET /api/v1/search`, …). Useful for testing a key before wiring MCP.
-
----
-
-## MCP directories & listings
-
-Production discovery (no auth):
-
-| Resource | URL |
-|----------|-----|
-| `mcp.json` | https://agentshare.dev/mcp.json |
-| `agent.json` | https://agentshare.dev/agent.json |
-| Server card | https://agentshare.dev/.well-known/mcp/server-card.json |
-
-Third-party indexes (search for **AgentShare** or your listing URL):
-
-- [Smithery](https://smithery.ai/) — MCP server registry  
-- [Glama](https://glama.ai/) — MCP / AI gateway directory  
+- 📖 Blog: [Your API ranks on Google. But does it rank for AI agents?](https://dev.to/anhmtk/your-api-ranks-on-google-but-does-it-rank-for-ai-agents-1hg)
+- 🧭 Data scope: https://agentshare.dev/coverage — AI hardware, mini PCs, components, robotics, robot/RC power.
+- 🛂 Trust + freshness: https://agentshare.dev/docs#data-quality
 
 ---
 
@@ -175,15 +90,6 @@ Third-party indexes (search for **AgentShare** or your listing URL):
 
 MIT — see [LICENSE](LICENSE).
 
-### Scope (honest & forward-looking)
-
-AgentShare aggregates product and offer data from **connected marketplaces and affiliate sources**. Coverage and freshness vary by source; the API returns **freshness metadata** (e.g. `crawled_at`, `data_age_seconds`, `freshness_status`) so agents can judge reliability.
-
-**Direction:** expand toward **global e‑commerce** as integrations mature. Current product focus: **`GET /coverage`** — https://agentshare.dev/coverage
-
 ---
 
-## GitHub — CI & repo traffic
-
-- **CI:** validates MCP package imports on push/PR — **Actions** → **CI**.
-- **Traffic:** **Insights → Traffic** (maintainers). Weekly snapshots may be posted to run **Summary** from **github-traffic** workflow.
+*Built solo from Vietnam 🇻🇳 by [@anhmtk](https://github.com/anhmtk).*
