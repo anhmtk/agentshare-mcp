@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://agentshare.dev/static/logo.png" alt="AgentShare" width="120">
+  <a href="https://agentshare.dev">
+    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — Price API + MCP for AI agents" width="520">
+  </a>
 </p>
 
 <h1 align="center">AgentShare MCP Server</h1>
