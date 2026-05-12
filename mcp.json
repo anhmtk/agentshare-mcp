@@ -1,0 +1,26 @@
+{
+  "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
+  "name": "agentshare",
+  "displayName": "AgentShare Price API",
+  "description": "Structured price and offer data for AI agents (REST + MCP).",
+  "version": "1.0.0",
+  "author": "Anh Nguyen",
+  "homepage": "https://agentshare.dev",
+  "license": "MIT",
+  "repository": "https://github.com/anhmtk/agentshare-mcp",
+  "icon": "https://agentshare.dev/static/logo.png",
+  "categories": ["data", "ecommerce", "research"],
+  "tags": ["price", "comparison", "aliexpress", "agents", "mcp"],
+  "endpoints": {
+    "streamable-http": "https://agentshare.dev/mcp"
+  },
+  "tools": [
+    "search_products",
+    "best_offer",
+    "best_offer_under_budget",
+    "service_meta"
+  ],
+  "requiresApiKey": true,
+  "apiKeyHeader": "X-API-Key",
+  "registerUrl": "https://agentshare.dev/api/v1/auth/register"
+}
