@@ -1,97 +1,111 @@
+<!--
+AI_DISCOVERY: AgentShare MCP public reference repository.
+canonical_service=https://agentshare.dev
+agent_json=https://agentshare.dev/agent.json
+mcp_url=https://agentshare.dev/mcp
+structured_index=https://github.com/anhmtk/agentshare-mcp/blob/main/AI_DISCOVERY.json
+llms_txt=https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt
+for_agents_json=GET https://agentshare.dev/for-agents Accept:application/json
+managed_agents_template=https://agentshare.dev/api/v1/examples?template=managed-agent
+antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
+-->
+
 <p align="center">
   <a href="https://agentshare.dev">
     <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — Price API + MCP for AI agents" width="520">
   </a>
 </p>
 
-<h1 align="center">AgentShare MCP Server</h1>
+<h1 align="center">AgentShare MCP — public reference</h1>
 
 <p align="center">
-  The data layer for agent commerce — structured price and offer data for AI agents,
-  over MCP Streamable HTTP and REST.
+  <strong>For AI agents:</strong>
+  <a href="https://agentshare.dev/agent.json"><code>agent.json</code></a> ·
+  <a href="./AI_DISCOVERY.json"><code>AI_DISCOVERY.json</code></a> ·
+  <a href="./llms.txt"><code>llms.txt</code></a> ·
+  <a href="./AGENTS.md"><code>AGENTS.md</code></a>
+</p>
+
+<p align="center">
+  Commerce &amp; price infrastructure for autonomous agents — MCP Streamable HTTP + REST.
 </p>
 
 <p align="center">
   <a href="https://agentshare.dev"><strong>Website</strong></a> ·
+  <a href="https://agentshare.dev/for-agents"><strong>For Agents</strong></a> ·
   <a href="https://agentshare.dev/docs"><strong>Docs</strong></a> ·
-  <a href="https://agentshare.dev/pricing"><strong>Pricing</strong></a> ·
-  <a href="https://agentshare.dev/signup"><strong>Get free API key</strong></a>
+  <a href="https://agentshare.dev/signup"><strong>API key</strong></a>
 </p>
 
 ---
 
-## What it does
+## AI agents — start here
 
-Exposes the [AgentShare Price API](https://agentshare.dev) as **four MCP tools** any MCP-compatible client (Claude Desktop, Cursor, Continue.dev, …) can call directly:
+| Resource | URL |
+|----------|-----|
+| **Authoritative contract** | https://agentshare.dev/agent.json |
+| **Structured GitHub index** | [AI_DISCOVERY.json](./AI_DISCOVERY.json) |
+| **LLM summary** | [llms.txt](./llms.txt) |
+| **Agent briefing** | [AGENTS.md](./AGENTS.md) |
+| **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
+| **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
+| **MCP endpoint** | https://agentshare.dev/mcp |
+| **MCP server card (6 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
-| Tool | Returns |
-|---|---|
-| `search_products` | Multi-source price comparison for a product query |
-| `best_offer` | The single cheapest in-stock offer for a query |
-| `best_offer_under_budget` | Cheapest offer under a max price |
-| `service_meta` | Live coverage, freshness, and pricing metadata |
-
-Backed by the same JSON contract as `https://agentshare.dev/api/v1/*` — every response includes `freshness_status`, `data_status`, `trust_*` signals so agents can reason about staleness.
+This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.
 
 ---
 
-## Quick install
+## MCP tools (6)
 
-### Claude Desktop / Cursor / any Streamable-HTTP MCP client
+| Tool | Purpose |
+|------|---------|
+| `search_products` | Multi-source price comparison |
+| `best_offer` | Single cheapest in-stock offer |
+| `best_offer_under_budget` | Best offer under max price |
+| `product_detail` | Full product by id from search |
+| `commerce_quote` | ACP / agent-buyer listings envelope |
+| `service_meta` | Capabilities, limits, coverage |
 
-Add to your MCP config (e.g. `~/.cursor/mcp.json` or Claude Desktop config):
+Responses include `data_status`, freshness, and trust metadata — see https://agentshare.dev/docs
 
-\`\`\`json
+---
+
+## Quick connect (MCP)
+
+```json
 {
   "mcpServers": {
     "agentshare": {
       "url": "https://agentshare.dev/mcp",
-      "headers": {
-        "X-API-Key": "YOUR_AGENTSHARE_KEY"
-      }
+      "headers": { "X-API-Key": "YOUR_AGENTSHARE_KEY" }
     }
   }
 }
-\`\`\`
+```
 
-Get a free key (100 requests/month, no card): https://agentshare.dev/signup
+Free key (~100 req/month): https://agentshare.dev/signup
 
-### Local stdio (Python)
-
-\`\`\`bash
-git clone https://github.com/anhmtk/agentshare-mcp.git
-cd agentshare-mcp
-pip install -r requirements.txt
-export AGENTSHARE_API_KEY=your_key_here
-python -m integrations.mcp_server.server
-\`\`\`
+See [mcp-config.json](./mcp-config.json) and [server/bridge.mjs](./server/bridge.mjs) for Node bridge.
 
 ---
 
-## Discovery files (for AI search)
+## Antigravity & Gemini (2026)
 
-| URL | Purpose |
-|---|---|
-| https://agentshare.dev/agent.json | Agent-native discovery manifest |
-| https://agentshare.dev/llm.txt | LLM-readable summary |
-| https://agentshare.dev/openapi.json | OpenAPI 3 schema |
-| https://agentshare.dev/.well-known/mcp.json | MCP endpoint announcement |
-| https://agentshare.dev/coverage | Data coverage spec (categories we cover well) |
+- **Antigravity skill:** `agentshare-price-intelligence` — https://agentshare.dev/.well-known/antigravity-skills.json  
+- **Gemini Managed Agents:** https://agentshare.dev/api/v1/examples?template=managed-agent  
+
+Aligned with Google I/O 2026 agentic stack (Antigravity 2.0, SDK, Gemini 3.5 Flash tool loops).
 
 ---
 
-## Read more
+## Coverage
 
-- 📖 Blog: [Your API ranks on Google. But does it rank for AI agents?](https://dev.to/anhmtk/your-api-ranks-on-google-but-does-it-rank-for-ai-agents-1hg)
-- 🧭 Data scope: https://agentshare.dev/coverage — AI hardware, mini PCs, components, robotics, robot/RC power.
-- 🛂 Trust + freshness: https://agentshare.dev/docs#data-quality
+AI hardware, robotics, mini PCs, robot/RC power — https://agentshare.dev/coverage
 
 ---
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
-
----
-
-*Built solo from Vietnam 🇻🇳 by [@anhmtk](https://github.com/anhmtk).*
+MIT — [LICENSE](./LICENSE)

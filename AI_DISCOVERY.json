@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "kind": "agentshare_github_ai_discovery",
+  "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
+  "name": "AgentShare",
+  "type": "commerce_price_mcp",
+  "summary": "Structured marketplace prices and offers for autonomous AI agents — MCP Streamable HTTP + REST. AI hardware, robotics, mini PCs, robot/RC power. Production AliExpress API path.",
+  "canonical_urls": {
+    "website": "https://agentshare.dev",
+    "agent_json": "https://agentshare.dev/agent.json",
+    "discovery_index": "https://agentshare.dev/.well-known/discovery.json",
+    "for_agents_html": "https://agentshare.dev/for-agents",
+    "for_agents_json": "https://agentshare.dev/for-agents",
+    "for_agents_json_accept": "GET https://agentshare.dev/for-agents with header Accept: application/json (omit text/html)",
+    "openapi": "https://agentshare.dev/openapi.json",
+    "mcp_streamable_http": "https://agentshare.dev/mcp",
+    "mcp_server_card": "https://agentshare.dev/.well-known/mcp/server-card.json",
+    "mcp_catalog_json": "https://agentshare.dev/mcp.json",
+    "examples": "https://agentshare.dev/api/v1/examples",
+    "managed_agent_template": "https://agentshare.dev/api/v1/examples?template=managed-agent",
+    "commerce_quote": "https://agentshare.dev/api/v1/agent/commerce/quote",
+    "coverage": "https://agentshare.dev/coverage",
+    "signup": "https://agentshare.dev/signup",
+    "pricing": "https://agentshare.dev/pricing",
+    "antigravity_skills_manifest": "https://agentshare.dev/.well-known/antigravity-skills.json",
+    "antigravity_skill_md": "https://agentshare.dev/integrations/antigravity/agentshare-price-intelligence/SKILL.md"
+  },
+  "github_repository": {
+    "url": "https://github.com/anhmtk/agentshare-mcp",
+    "role": "Public MCP client reference + AI discovery files (llms.txt, AGENTS.md). Backend implementation is private.",
+    "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt",
+    "agents_md": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AGENTS.md",
+    "this_file": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json"
+  },
+  "authentication": {
+    "type": "api_key",
+    "header": "X-API-Key",
+    "alternate": "Authorization: Bearer",
+    "key_format": "agshp_*",
+    "register": "POST https://agentshare.dev/api/v1/auth/register",
+    "free_tier_hint": "approximately 100 requests per calendar month"
+  },
+  "mcp_tools": [
+    {
+      "name": "search_products",
+      "intent": "compare_multiple_listings",
+      "rest": "GET /api/v1/search"
+    },
+    {
+      "name": "best_offer",
+      "intent": "single_cheapest_in_stock",
+      "rest": "GET /api/v1/offers/best"
+    },
+    {
+      "name": "best_offer_under_budget",
+      "intent": "best_deal_under_max_price",
+      "rest": "GET /api/v1/offers/best-under-budget"
+    },
+    {
+      "name": "product_detail",
+      "intent": "drill_down_by_product_id",
+      "rest": "GET /api/v1/products/{id}"
+    },
+    {
+      "name": "commerce_quote",
+      "intent": "acp_agent_buyer_listings_envelope",
+      "rest": "POST /api/v1/agent/commerce/quote"
+    },
+    {
+      "name": "service_meta",
+      "intent": "capabilities_and_limits",
+      "rest": "GET /api/v1/meta"
+    }
+  ],
+  "integrations_2026": {
+    "google_antigravity": {
+      "skill_name": "agentshare-price-intelligence",
+      "install_manifest": "https://agentshare.dev/.well-known/antigravity-skills.json",
+      "context": "Google I/O 2026 agent-first stack: Antigravity 2.0, Antigravity SDK, Gemini 3.5 Flash for tool loops"
+    },
+    "gemini_managed_agents": {
+      "template_url": "https://agentshare.dev/api/v1/examples?template=managed-agent",
+      "mcp_url": "https://agentshare.dev/mcp"
+    }
+  },
+  "when_to_use": [
+    "procurement_agent_needs_structured_prices",
+    "shopping_agent_compare_ai_hardware_or_robotics_parts",
+    "autonomous_agent_needs_acp_commerce_quote",
+    "mcp_client_needs_price_tools_with_freshness_metadata"
+  ],
+  "reliability_fields": [
+    "data_status",
+    "freshness_status",
+    "data_age_seconds",
+    "trust_hit_rate",
+    "coverage_tier"
+  ],
+  "keywords_for_retrieval": [
+    "AgentShare",
+    "agentshare.dev",
+    "price API for AI agents",
+    "MCP commerce",
+    "procurement agent API",
+    "AliExpress agent API",
+    "Antigravity skill price",
+    "Gemini Managed Agents MCP",
+    "OpenClaw Virtuals commerce data"
+  ]
+}

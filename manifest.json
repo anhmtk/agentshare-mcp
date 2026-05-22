@@ -2,8 +2,8 @@
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
   "display_name": "AgentShare - Real-time Price and Offer MCP",
-  "version": "1.0.3",
-  "description": "Search and compare marketplace offers for AI hardware and robotics-related products, with freshness metadata and transparent no-data reasons.",
+  "version": "1.0.4",
+  "description": "Six MCP tools: search, best offer, budget offer, product detail, ACP commerce_quote, meta. For autonomous agents, Antigravity, Gemini Managed Agents.",
   "author": {
     "name": "AgentShare",
     "url": "https://github.com/anhmtk"
@@ -33,6 +33,14 @@
     {
       "name": "best_offer_under_budget",
       "description": "Find best offer within a price ceiling"
+    },
+    {
+      "name": "product_detail",
+      "description": "Full product and per-source prices by numeric id from search"
+    },
+    {
+      "name": "commerce_quote",
+      "description": "ACP agent-buyer quote envelope (agentshare.price.v1)"
     },
     {
       "name": "service_meta",

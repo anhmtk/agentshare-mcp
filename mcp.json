@@ -1,16 +1,26 @@
 {
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
-  "displayName": "AgentShare Price API",
-  "description": "Structured price and offer data for AI agents (REST + MCP).",
-  "version": "1.0.0",
-  "author": "Anh Nguyen",
+  "displayName": "AgentShare Price & Commerce API",
+  "description": "Structured marketplace prices and ACP commerce quotes for autonomous AI agents. Six MCP tools. Streamable HTTP.",
+  "version": "1.1.0",
+  "author": "AgentShare",
   "homepage": "https://agentshare.dev",
   "license": "MIT",
   "repository": "https://github.com/anhmtk/agentshare-mcp",
   "icon": "https://agentshare.dev/static/logo.png",
-  "categories": ["data", "ecommerce", "research"],
-  "tags": ["price", "comparison", "aliexpress", "agents", "mcp"],
+  "categories": ["data", "ecommerce", "agents", "commerce"],
+  "tags": [
+    "price",
+    "mcp",
+    "ai-agent",
+    "procurement",
+    "antigravity",
+    "gemini",
+    "aliexpress",
+    "robotics",
+    "commerce_quote"
+  ],
   "endpoints": {
     "streamable-http": "https://agentshare.dev/mcp"
   },
@@ -18,9 +28,21 @@
     "search_products",
     "best_offer",
     "best_offer_under_budget",
+    "product_detail",
+    "commerce_quote",
     "service_meta"
   ],
   "requiresApiKey": true,
   "apiKeyHeader": "X-API-Key",
-  "registerUrl": "https://agentshare.dev/api/v1/auth/register"
+  "registerUrl": "https://agentshare.dev/signup",
+  "discovery": {
+    "agent_json": "https://agentshare.dev/agent.json",
+    "discovery_index": "https://agentshare.dev/.well-known/discovery.json",
+    "for_agents": "https://agentshare.dev/for-agents",
+    "server_card": "https://agentshare.dev/.well-known/mcp/server-card.json",
+    "managed_agent_template": "https://agentshare.dev/api/v1/examples?template=managed-agent",
+    "antigravity_skills": "https://agentshare.dev/.well-known/antigravity-skills.json",
+    "github_ai_discovery": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json",
+    "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt"
+  }
 }

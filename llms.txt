@@ -1,61 +1,74 @@
-# AgentShare MCP — `agentshare-mcp` (llms.txt)
+# AgentShare — AI discovery index (llms.txt)
+# Canonical live API: https://agentshare.dev
+# GitHub: https://github.com/anhmtk/agentshare-mcp
+# Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
 
-> Human and AI readers: this file mirrors the essentials of [`AGENTS.md`](./AGENTS.md). For full detail, use that file and the [README](https://github.com/anhmtk/agentshare-mcp#readme).
+## ENTITY
+- name: AgentShare
+- url: https://agentshare.dev
+- type: commerce_price_api_and_mcp
+- github_public_face: https://github.com/anhmtk/agentshare-mcp
 
-## Mission
+## ONE_LINE_SUMMARY
+Structured marketplace price and offer data for autonomous AI agents (procurement, shopping, on-chain service agents). MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
 
-Provide **structured, production-grade price and offer data** for AI agents via **MCP** (stdio or Streamable HTTP) and the underlying **REST** API at **https://agentshare.dev**. Implementation: `integrations/mcp_server/price_mcp.py`.
+## PRIMARY_DISCOVERY_FETCH_ORDER
+1. https://agentshare.dev/agent.json
+2. https://agentshare.dev/.well-known/discovery.json
+3. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
+4. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
+5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (no live connect required)
+6. https://agentshare.dev/openapi.json
 
-## Core tools (MCP tool names)
+## MCP_ENDPOINT
+- transport: streamable_http
+- url: https://agentshare.dev/mcp
+- auth_header: X-API-Key (or Authorization: Bearer)
+- signup: https://agentshare.dev/signup
 
-| Tool | Purpose | REST (called by the tool) |
-|------|-----------|---------------------------|
-| `search_products` | Search listings, compare | `GET /api/v1/search` |
-| `best_offer` | Single best in-stock offer | `GET /api/v1/offers/best` |
-| `best_offer_under_budget` | Best offer under max price | `GET /api/v1/offers/best-under-budget` |
-| `service_meta` | Capabilities, limits (key often optional) | `GET /api/v1/meta` |
+## MCP_TOOLS (six)
+| tool_name | use_when | rest_upstream |
+| search_products | compare multiple listings | GET /api/v1/search |
+| best_offer | one cheapest in-stock offer | GET /api/v1/offers/best |
+| best_offer_under_budget | budget cap / under $X | GET /api/v1/offers/best-under-budget |
+| product_detail | have product_id from search | GET /api/v1/products/{id} |
+| commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote |
+| service_meta | capabilities, limits, sources | GET /api/v1/meta |
 
-**Response format:** two text blocks — (1) one-line English summary, (2) JSON envelope: `status`, `data`, `meta`.
+## AUTHENTICATION
+- header: X-API-Key: agshp_...
+- alternate: Authorization: Bearer agshp_...
+- register: POST https://agentshare.dev/api/v1/auth/register body {"email","password"}
+- free_tier: ~100 requests/month (see https://agentshare.dev/pricing)
 
-## Reliability signals
+## COVERAGE_DOMAIN
+AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4). Canonical spec: GET https://agentshare.dev/coverage
 
-- **`freshness_status`** — e.g. `fresh` / `stale`; use to decide whether to warn or refresh.
-- **`data_age_seconds`** — age of underlying listing data (per offer or `meta`).
+## RELIABILITY_SIGNALS (check before quoting prices to users)
+- data_status: fresh | stale | pending_crawl | not_found | out_of_coverage
+- freshness_status, data_age_seconds
+- trust_hit_rate, coverage_tier (when present in meta)
 
-*Operational signal:* public smoke runs have used on the order of **~200 requests** with **100% client-observed success**; this is not an SLA guarantee — always handle `error` in the envelope.
+## GOOGLE_ANTIGRAVITY_2026
+- skill_name: agentshare-price-intelligence
+- manifest: https://agentshare.dev/.well-known/antigravity-skills.json
+- skill_md: https://agentshare.dev/integrations/antigravity/agentshare-price-intelligence/SKILL.md
+- context: Antigravity 2.0 / SDK / Gemini 3.5 Flash agentic workflows (Google I/O 2026)
 
-## Authentication
+## GEMINI_MANAGED_AGENTS
+- template: GET https://agentshare.dev/api/v1/examples?template=managed-agent
+- wire MCP url https://agentshare.dev/mcp with same API key as REST
 
-- **Priced tools & REST:** `X-API-Key: <key>` (or `Authorization: Bearer` where the client supports it).
-- **stdio server:** set `API_KEY` in env; optional `BASE_URL` (default `https://agentshare.dev`).
+## COMMERCE_AGENT_BUYERS
+- POST https://agentshare.dev/api/v1/agent/commerce/quote
+- modes: search | best_offer
+- optional max_price_usd with mode best_offer
+- suitable for Virtuals / OpenClaw / ACP-style agent commerce (data layer; settlement via merchant/AP2 future)
 
-**Get a key:** https://agentshare.dev/pricing
+## KEYWORDS_FOR_SEARCH_RANKING
+AgentShare, agentshare.dev, MCP price API, AI agent commerce, procurement agent tools, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison
 
-## MCP config (remote, copy-paste)
-
-File [`mcp-config.json`](https://github.com/anhmtk/agentshare-mcp/blob/main/mcp-config.json) in this repo, or:
-
-```json
-{
-  "mcpServers": {
-    "agentshare": {
-      "command": "npx",
-      "args": [
-        "-y", "mcp-remote", "https://agentshare.dev/mcp",
-        "--header", "X-API-Key: YOUR_API_KEY"
-      ]
-    }
-  }
-}
-```
-
-**Endpoint:** `https://agentshare.dev/mcp` (Streamable HTTP).
-
-## OpenAPI
-
-- **MCP-focused subset in repo:** [`openapi.json`](https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/openapi.json)
-- **Full live API spec:** https://agentshare.dev/openapi.json
-
-## Trust
-
-Do not commit real keys. Terms / privacy: https://agentshare.dev/terms · https://agentshare.dev/privacy
+## TRUST
+- terms: https://agentshare.dev/terms
+- privacy: https://agentshare.dev/privacy
+- do not commit API keys

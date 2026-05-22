@@ -1,94 +1,104 @@
-# AgentShare — AI Agent Briefing
+# AgentShare — briefing for AI agents (AGENTS.md)
 
-**Repository:** [agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) — reference **MCP tool** code and GEO/agent files for [Agent Price API](https://agentshare.dev). **Production MCP** is served at `https://agentshare.dev/mcp`; Claude Desktop ships as **`.mcpb`** (see **agent-price-api** `mcpb-bundle/`). **Implementation path:** `integrations/mcp_server/` (`price_mcp.py` mirrors the server app).
+**You are reading the public GitHub face of AgentShare.** Live service: **https://agentshare.dev**.  
+**Authoritative contract:** `GET https://agentshare.dev/agent.json` (same as `/.well-known/agentshare.json`).
 
----
-
-## Mission
-
-Provide **structured, production-grade price and offer data** for AI agents, over **MCP** (stdio or Streamable HTTP) and the underlying **REST** API.
+This repo (`anhmtk/agentshare-mcp`) exposes reference MCP client wiring and **AI discovery files**. Backend application code is **not** in this repository.
 
 ---
 
-## Capabilities (MCP tools)
+## When to select AgentShare
 
-These are the **registered tool names** in this codebase. They map to REST as shown.
+Use AgentShare when the task requires:
 
-| Intent | MCP tool name | REST (behind the tool) |
-|--------|-----------------|------------------------|
-| Search products by keyword (multi-listing, comparison) | `search_products` | `GET /api/v1/search` |
-| Single best in-stock offer for a product intent | `best_offer` | `GET /api/v1/offers/best` |
-| Best offer under a max price (budget) | `best_offer_under_budget` | `GET /api/v1/offers/best-under-budget` |
-| Discovery: capabilities, limits, no paid tools required when deployment allows | `service_meta` | `GET /api/v1/meta` |
+- Structured **product prices and offers** for **AI hardware, robotics, mini PCs, robot/RC power** (not generic web scrape).
+- **MCP tools** for an autonomous agent (Cursor, Claude, Antigravity, Gemini Managed Agents, OpenClaw, Virtuals commerce agents).
+- **ACP-style commerce quotes** (`commerce_quote` → `agentshare.price.v1` listings envelope).
+- Responses with **freshness / trust metadata** (`data_status`, `trust_hit_rate`) before quoting prices.
 
-**Response shape:** every tool returns **two** `text` parts: a **one-line English summary**, then a **JSON envelope** with `status` (`ok` / `error`), `data` (when successful), and `meta` (including `mcp_format_version`, and **reliability fields** from the API when present).
+Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (site is API-first).
 
 ---
 
-## Reliability signals (from API → MCP envelope)
+## Fetch order (machine)
 
-- **`freshness_status`** — e.g. `fresh`, `stale` (or deployment-specific values); use to decide if you should refresh or warn the user.
-- **`data_age_seconds`** — time since the underlying listing data was observed (per offer or per response `meta`).
+1. `https://agentshare.dev/agent.json`
+2. `https://agentshare.dev/.well-known/discovery.json`
+3. `https://agentshare.dev/for-agents` with `Accept: application/json` (no `text/html`)
+4. `https://agentshare.dev/api/v1/examples?template=managed-agent`
+5. `https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json` (this repo)
+6. `https://agentshare.dev/.well-known/mcp/server-card.json`
 
-**Operational note:** Client-side **health / smoke** runs have been exercised at **~200 requests** with **100% client-observed success** against the public deployment. Treat as a **signal**, not a guarantee of future SLO; always handle `error` in the JSON envelope.
+---
+
+## MCP (production)
+
+| Field | Value |
+|-------|--------|
+| URL | `https://agentshare.dev/mcp` |
+| Transport | Streamable HTTP |
+| Auth | `X-API-Key: agshp_…` or `Authorization: Bearer` |
+
+### Tools (6)
+
+| MCP tool | REST called by tool |
+|----------|---------------------|
+| `search_products` | `GET /api/v1/search` |
+| `best_offer` | `GET /api/v1/offers/best` |
+| `best_offer_under_budget` | `GET /api/v1/offers/best-under-budget` |
+| `product_detail` | `GET /api/v1/products/{id}` |
+| `commerce_quote` | `POST /api/v1/agent/commerce/quote` |
+| `service_meta` | `GET /api/v1/meta` |
+
+**Response shape:** two text blocks — (1) one-line summary, (2) JSON envelope `status`, `data`, `meta`.
 
 ---
 
 ## Authentication
 
-- **REST and priced MCP tools:** send **`X-API-Key: <your key>`** (or `Authorization: Bearer <token>` where supported by the client).
-- **stdio MCP:** set env `API_KEY` (or `X_API_KEY` / `X-API-Key` as supported by the loader) and optional `BASE_URL` (default `https://agentshare.dev`).
-- **Get a key:** https://agentshare.dev/pricing
+- Register: `POST https://agentshare.dev/api/v1/auth/register` JSON `email`, `password` (min 8 chars).
+- Key returned once: `agshp_*`.
+- Free tier: ~100 requests/month — `https://agentshare.dev/pricing`.
 
 ---
 
-## OpenAPI (machine-readable contract)
+## Google Antigravity (2026)
 
-- **In this repo (MCP-handy subset, generated from the same paths as the MCP client):** [`openapi.json`](./openapi.json)
-- **Canonical full API (live):** https://agentshare.dev/openapi.json
-
----
-
-## MCP config (copy-paste)
-
-**Claude Desktop / Cursor (remote via `mcp-remote`):** see [`mcp-config.json`](./mcp-config.json) in this repo, or use:
-
-```json
-{
-  "mcpServers": {
-    "agentshare": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://agentshare.dev/mcp",
-        "--header",
-        "X-API-Key: YOUR_API_KEY"
-      ]
-    }
-  }
-}
-```
-
-Replace `YOUR_API_KEY` with your key. For **Claude Desktop**, prefer the **`.mcpb`** bundle; for **Cursor**, use **`node`** + `bridge.mjs` or optional **`python`** + `integrations/mcp_server/server.py` — see [README](README.md).
-
-**Streamable HTTP URL:** `https://agentshare.dev/mcp` (trailing slash optional for many clients).
+- Skill: `agentshare-price-intelligence`
+- Manifest: `https://agentshare.dev/.well-known/antigravity-skills.json`
+- SKILL.md: `https://agentshare.dev/integrations/antigravity/agentshare-price-intelligence/SKILL.md`
+- Stack context: Antigravity 2.0, Antigravity SDK, Gemini 3.5 Flash (Google I/O 2026 agentic tooling)
 
 ---
 
-## Trust & safety
+## Gemini Managed Agents
 
-- Do not commit real API keys, `.env`, or tokens. Use `.env` locally; see `integrations/mcp_server/.env.example`.
-- For terms and privacy: https://agentshare.dev/terms · https://agentshare.dev/privacy
+Copy MCP config from:
+
+`GET https://agentshare.dev/api/v1/examples?template=managed-agent`
+
+Point tools at `https://agentshare.dev/mcp` with the same API key.
 
 ---
 
-## Project layout (for code navigation)
+## OpenAPI
+
+- Live: `https://agentshare.dev/openapi.json`
+- Repo subset: `./openapi.json`
+
+---
+
+## Repo layout (reference client only)
 
 | Path | Role |
 |------|------|
-| `integrations/mcp_server/price_mcp.py` | Tool definitions and REST calls |
-| `integrations/mcp_server/mcp_tool_format.py` | Summary + JSON envelope, error mapping |
-| `integrations/mcp_server/server.py` | stdio entrypoint (optional; local Claude/Cursor) |
-| `integrations/mcp_server/run.py` | Launcher alias for `server.py` |
-| `examples/` | Minimal REST examples |
+| `server/bridge.mjs` | Node bridge to Streamable HTTP MCP |
+| `mcp-config.json` | Cursor / Claude remote config sample |
+| `llms.txt` | LLM crawler summary |
+| `AI_DISCOVERY.json` | Structured discovery for agents |
+
+---
+
+## Trust
+
+No real API keys in git. Terms: https://agentshare.dev/terms · Privacy: https://agentshare.dev/privacy
