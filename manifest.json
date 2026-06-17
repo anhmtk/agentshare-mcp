@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
   "display_name": "AgentShare - Real-time Price and Offer MCP",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "12 MCP tools (commerce + Polymarket + DEX Scout): search, offers, product detail, ACP commerce_quote, meta, Polymarket read-only, and DefiLlama DEX macro scout. For autonomous agents, Antigravity, Gemini Managed Agents.",
   "author": {
     "name": "AgentShare",
