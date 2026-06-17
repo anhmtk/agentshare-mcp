@@ -2,7 +2,7 @@
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
   "displayName": "AgentShare Price & Commerce API",
-  "description": "Structured marketplace prices and ACP commerce quotes for autonomous AI agents. Six MCP tools. Streamable HTTP.",
+  "description": "Structured marketplace prices and ACP commerce quotes for autonomous AI agents. 12 MCP tools (commerce + Polymarket + DEX Scout). Streamable HTTP.",
   "version": "1.1.0",
   "author": "AgentShare",
   "homepage": "https://agentshare.dev",
@@ -30,7 +30,13 @@
     "best_offer_under_budget",
     "product_detail",
     "commerce_quote",
-    "service_meta"
+    "service_meta",
+    "polymarket_markets",
+    "polymarket_market_detail",
+    "polymarket_top_movers",
+    "polymarket_brief",
+    "dex_overview",
+    "dex_top_movers"
   ],
   "requiresApiKey": true,
   "apiKeyHeader": "X-API-Key",

@@ -70,6 +70,36 @@
       "name": "service_meta",
       "intent": "capabilities_and_limits",
       "rest": "GET /api/v1/meta"
+    },
+    {
+      "name": "polymarket_markets",
+      "intent": "discover_prediction_markets",
+      "rest": "GET /api/v1/polymarket/markets"
+    },
+    {
+      "name": "polymarket_market_detail",
+      "intent": "market_detail_microstructure_proxy",
+      "rest": "GET /api/v1/polymarket/market/{market_id}"
+    },
+    {
+      "name": "polymarket_top_movers",
+      "intent": "trend_detection_top_movers_24h",
+      "rest": "GET /api/v1/polymarket/top-movers"
+    },
+    {
+      "name": "polymarket_brief",
+      "intent": "evidence_first_market_brief",
+      "rest": "GET /api/v1/polymarket/brief"
+    },
+    {
+      "name": "dex_overview",
+      "intent": "macro_dex_volume_rankings",
+      "rest": "GET /api/v1/dex/overview"
+    },
+    {
+      "name": "dex_top_movers",
+      "intent": "macro_dex_volume_change_movers",
+      "rest": "GET /api/v1/dex/top-movers"
     }
   ],
   "integrations_2026": {

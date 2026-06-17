@@ -39,7 +39,7 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 | Transport | Streamable HTTP |
 | Auth | `X-API-Key: agshp_…` or `Authorization: Bearer` |
 
-### Tools (6)
+### Tools (12)
 
 | MCP tool | REST called by tool |
 |----------|---------------------|
@@ -49,6 +49,12 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 | `product_detail` | `GET /api/v1/products/{id}` |
 | `commerce_quote` | `POST /api/v1/agent/commerce/quote` |
 | `service_meta` | `GET /api/v1/meta` |
+| `polymarket_markets` | `GET /api/v1/polymarket/markets` |
+| `polymarket_market_detail` | `GET /api/v1/polymarket/market/{market_id}` |
+| `polymarket_top_movers` | `GET /api/v1/polymarket/top-movers` |
+| `polymarket_brief` | `GET /api/v1/polymarket/brief` |
+| `dex_overview` | `GET /api/v1/dex/overview` |
+| `dex_top_movers` | `GET /api/v1/dex/top-movers` |
 
 **Response shape:** two text blocks — (1) one-line summary, (2) JSON envelope `status`, `data`, `meta`.
 

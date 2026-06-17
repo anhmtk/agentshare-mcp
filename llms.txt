@@ -26,7 +26,7 @@ Structured marketplace price and offer data for autonomous AI agents (procuremen
 - auth_header: X-API-Key (or Authorization: Bearer)
 - signup: https://agentshare.dev/signup
 
-## MCP_TOOLS (six)
+## MCP_TOOLS (twelve)
 | tool_name | use_when | rest_upstream |
 | search_products | compare multiple listings | GET /api/v1/search |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best |
@@ -34,6 +34,12 @@ Structured marketplace price and offer data for autonomous AI agents (procuremen
 | product_detail | have product_id from search | GET /api/v1/products/{id} |
 | commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote |
 | service_meta | capabilities, limits, sources | GET /api/v1/meta |
+| polymarket_markets | discover active markets | GET /api/v1/polymarket/markets |
+| polymarket_market_detail | microstructure proxy | GET /api/v1/polymarket/market/{market_id} |
+| polymarket_top_movers | biggest 24h movers | GET /api/v1/polymarket/top-movers |
+| polymarket_brief | evidence-first market brief | GET /api/v1/polymarket/brief |
+| dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview |
+| dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers |
 
 ## AUTHENTICATION
 - header: X-API-Key: agshp_...

@@ -23,7 +23,15 @@ Prefer **`.mcpb`** or **Node bridge** for Claude when you do not need Python std
 | `search_products` | Yes | Search product prices |
 | `best_offer` | Yes | Cheapest offer for query |
 | `best_offer_under_budget` | Yes | Best offer within budget (VND) |
+| `product_detail` | Yes | Product detail by id from search |
+| `commerce_quote` | Yes | ACP / agent-buyer listings envelope |
 | `service_meta` | No | API capabilities |
+| `polymarket_markets` | No | List active Polymarket markets (read-only) |
+| `polymarket_market_detail` | No | Polymarket market detail by market_id (read-only) |
+| `polymarket_top_movers` | No | Polymarket top movers (24h) (read-only) |
+| `polymarket_brief` | No | Evidence-first Polymarket brief (read-only) |
+| `dex_overview` | No | DEX protocol rankings by 24h volume (DefiLlama) |
+| `dex_top_movers` | No | DEX protocols with largest 1d volume-change % (DefiLlama) |
 
 ## Env
 

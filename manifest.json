@@ -2,8 +2,8 @@
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
   "display_name": "AgentShare - Real-time Price and Offer MCP",
-  "version": "1.0.4",
-  "description": "Six MCP tools: search, best offer, budget offer, product detail, ACP commerce_quote, meta. For autonomous agents, Antigravity, Gemini Managed Agents.",
+  "version": "1.0.5",
+  "description": "12 MCP tools (commerce + Polymarket + DEX Scout): search, offers, product detail, ACP commerce_quote, meta, Polymarket read-only, and DefiLlama DEX macro scout. For autonomous agents, Antigravity, Gemini Managed Agents.",
   "author": {
     "name": "AgentShare",
     "url": "https://github.com/anhmtk"
@@ -45,6 +45,30 @@
     {
       "name": "service_meta",
       "description": "Get API coverage and service metadata"
+    },
+    {
+      "name": "polymarket_markets",
+      "description": "List active Polymarket markets (read-only)"
+    },
+    {
+      "name": "polymarket_market_detail",
+      "description": "Polymarket market detail by market_id (read-only)"
+    },
+    {
+      "name": "polymarket_top_movers",
+      "description": "Top Polymarket movers (24h) (read-only)"
+    },
+    {
+      "name": "polymarket_brief",
+      "description": "Evidence-first Polymarket brief (verdict/risk/flags/citations)"
+    },
+    {
+      "name": "dex_overview",
+      "description": "DEX protocol rankings by 24h volume (DefiLlama)"
+    },
+    {
+      "name": "dex_top_movers",
+      "description": "DEX protocols with largest 1d volume-change % (DefiLlama)"
     }
   ],
   "server": {
