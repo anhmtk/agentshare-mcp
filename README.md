@@ -112,20 +112,6 @@ AI hardware, robotics, mini PCs, robot/RC power — https://agentshare.dev/cover
 
 ---
 
-## Live Traffic extension (Chrome / Edge) — draft
-
-Watch **AI agents & bots** hitting AgentShare in real time — toolbar popup + badge. GA4-style visibility for API/MCP traffic (not pageviews).
-
-| Resource | URL |
-|----------|-----|
-| **Source (MV3)** | [chrome-extension/](./chrome-extension/) |
-| **Public dashboard** | https://agentshare.dev/public/bot-traffic |
-| **Public API** | `GET https://agentshare.dev/api/v1/public/bot-traffic/stats` |
-
-Load unpacked: `chrome://extensions` → Developer mode → Load unpacked → `chrome-extension/` folder.
-
----
-
 ## License
 
 MIT — [LICENSE](./LICENSE)
