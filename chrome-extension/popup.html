@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentShare Live Traffic</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hdr">
+    <img src="icons/icon32.png" alt="" width="28" height="28" class="logo">
+    <div class="hdr-text">
+      <h1>Live Agent Traffic</h1>
+      <p class="sub" id="subtitle">API &amp; MCP hits on agentshare.dev</p>
+    </div>
+    <span class="live-dot" id="liveDot" title="Polling"></span>
+  </header>
+
+  <section class="metrics" aria-live="polite">
+    <div class="metric">
+      <span class="label">Requests</span>
+      <span class="value" id="metricTotal">—</span>
+      <span class="hint" id="metricWindow">last 15 min</span>
+    </div>
+    <div class="metric">
+      <span class="label">Auth agents</span>
+      <span class="value" id="metricKeys">—</span>
+      <span class="hint">unique keys</span>
+    </div>
+  </section>
+
+  <section class="breakdown" id="breakdown" aria-label="Traffic mix"></section>
+
+  <div class="panels">
+    <section class="panel">
+      <h2>Top intents</h2>
+      <ol id="listIntents" class="list"></ol>
+    </section>
+    <section class="panel">
+      <h2>Client types</h2>
+      <ol id="listClients" class="list"></ol>
+    </section>
+  </div>
+
+  <section class="panel panel-countries">
+    <h2>Countries (recent)</h2>
+    <div id="countryChips" class="chips"></div>
+  </section>
+
+  <p class="status" id="statusLine">Loading…</p>
+
+  <footer class="ftr">
+    <a href="https://agentshare.dev/public/bot-traffic" target="_blank" rel="noopener">Full map</a>
+    <span class="sep">·</span>
+    <a href="https://agentshare.dev/docs" target="_blank" rel="noopener">MCP docs</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/anhmtk/agentshare-mcp/issues" target="_blank" rel="noopener">Feedback</a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
