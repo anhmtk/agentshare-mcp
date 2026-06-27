@@ -1,0 +1,21 @@
+{
+  "name": "agentshare-mcp",
+  "description": "AgentShare public MCP plugins and reference configs",
+  "plugins": [
+    {
+      "name": "agentshare-commerce-mcp",
+      "source": "./agentshare-commerce-mcp",
+      "description": "Live marketplace prices for AI agents: search, best offer, budget deals & ACP commerce_quote.",
+      "version": "1.0.7",
+      "author": {
+        "name": "AgentShare"
+      },
+      "homepage": "https://agentshare.dev",
+      "repository": "https://github.com/anhmtk/agentshare-mcp",
+      "license": "MIT",
+      "keywords": ["mcp", "price-api", "e-commerce", "procurement", "agentshare"],
+      "category": "integration",
+      "logo": "agentshare-commerce-mcp/assets/icon.png"
+    }
+  ]
+}

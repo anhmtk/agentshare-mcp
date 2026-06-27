@@ -1,0 +1,16 @@
+{
+  "name": "agentshare-commerce-mcp",
+  "version": "1.0.7",
+  "private": true,
+  "description": "Cursor Marketplace plugin — AgentShare MCP Streamable HTTP bridge",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.25.3"
+  }
+}

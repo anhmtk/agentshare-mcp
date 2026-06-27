@@ -1,0 +1,30 @@
+{
+  "name": "agentshare-commerce-mcp",
+  "displayName": "AgentShare — AI Commerce Price MCP",
+  "description": "Live marketplace prices for AI agents: search, best offer, budget deals & ACP commerce_quote. Free tier at agentshare.dev.",
+  "version": "1.0.7",
+  "author": {
+    "name": "AgentShare",
+    "email": "support@agentshare.dev"
+  },
+  "publisher": "AgentShare",
+  "homepage": "https://agentshare.dev",
+  "repository": "https://github.com/anhmtk/agentshare-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "price-api",
+    "e-commerce",
+    "ai-agent",
+    "commerce",
+    "procurement",
+    "marketplace",
+    "agentshare",
+    "robotics",
+    "ai-hardware"
+  ],
+  "category": "integration",
+  "tags": ["mcp", "price", "procurement", "agents"],
+  "logo": "assets/icon.png",
+  "mcpServers": "./mcp.json"
+}

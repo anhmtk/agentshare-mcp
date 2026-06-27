@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "agentshare": {
+      "command": "node",
+      "args": [
+        "server/bridge.mjs",
+        "https://agentshare.dev/mcp",
+        "--header",
+        "X-API-Key:${AGENTSHARE_API_KEY}"
+      ],
+      "env": {
+        "AGENTSHARE_API_KEY": ""
+      }
+    }
+  }
+}

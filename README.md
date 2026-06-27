@@ -78,6 +78,32 @@ Responses include `data_status`, freshness, and trust metadata — see https://a
 
 ---
 
+## Cursor Marketplace plugin
+
+Official Cursor plugin scaffold: **[agentshare-commerce-mcp/](./agentshare-commerce-mcp/)**
+
+| Path | Purpose |
+|------|---------|
+| `agentshare-commerce-mcp/.cursor-plugin/plugin.json` | Cursor plugin manifest |
+| `agentshare-commerce-mcp/mcp.json` | MCP server wiring (`AGENTSHARE_API_KEY`) |
+| `agentshare-commerce-mcp/server/bridge.mjs` | Stdio ↔ Streamable HTTP bridge |
+| `.cursor-plugin/marketplace.json` | Multi-plugin index (repo root) |
+
+Local verify:
+
+```bash
+cd agentshare-commerce-mcp
+npm install --omit=dev
+npm run verify
+# optional live probe:
+# set AGENTSHARE_API_KEY=agshp_...   (Windows)
+npm run verify
+```
+
+Submit for review: https://cursor.com/marketplace/publish (repo: `https://github.com/anhmtk/agentshare-mcp`)
+
+---
+
 ## Quick connect (MCP)
 
 ```json
