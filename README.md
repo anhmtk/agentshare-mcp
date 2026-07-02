@@ -85,9 +85,25 @@ Official Cursor plugin scaffold: **[agentshare-commerce-mcp/](./agentshare-comme
 | Path | Purpose |
 |------|---------|
 | `agentshare-commerce-mcp/.cursor-plugin/plugin.json` | Cursor plugin manifest |
-| `agentshare-commerce-mcp/mcp.json` | MCP server wiring (`AGENTSHARE_API_KEY`) |
+| `agentshare-commerce-mcp/mcp.json` | MCP server wiring (Node bridge + `AGENTSHARE_API_KEY`) |
+| `agentshare-commerce-mcp/.mcp.json` | Open Plugins / cursor.directory auto-detect (Streamable HTTP URL) |
+| `.mcp.json` | Same at repo root for directory scanners |
 | `agentshare-commerce-mcp/server/bridge.mjs` | Stdio ↔ Streamable HTTP bridge |
 | `.cursor-plugin/marketplace.json` | Multi-plugin index (repo root) |
+
+**Discovery & listing (do these while Marketplace is closed):**
+
+| Guide | Action |
+|-------|--------|
+| [docs/CURSOR_DIRECTORY.md](./docs/CURSOR_DIRECTORY.md) | Submit [cursor.directory/mcp/new](https://cursor.directory/mcp/new) + [plugins/new](https://cursor.directory/plugins/new) |
+| [docs/AWESOME_MCP_PR.md](./docs/AWESOME_MCP_PR.md) | PR line for [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (E-Commerce) |
+| [docs/DISCORD_SHOWCASE.md](./docs/DISCORD_SHOWCASE.md) | Copy-paste MCP Discord showcase post |
+
+Generate Cursor one-click install link:
+
+```bash
+node scripts/cursor-deeplink.mjs
+```
 
 Local verify:
 
@@ -100,7 +116,7 @@ npm run verify
 npm run verify
 ```
 
-Submit for review: https://cursor.com/marketplace/publish (repo: `https://github.com/anhmtk/agentshare-mcp`)
+Cursor **Marketplace** org applications are reviewed selectively (2026); use **cursor.directory** for community listing — see [docs/CURSOR_DIRECTORY.md](./docs/CURSOR_DIRECTORY.md).
 
 ---
 

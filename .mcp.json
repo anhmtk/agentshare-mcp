@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "agentshare": {
+      "url": "https://agentshare.dev/mcp",
+      "headers": {
+        "X-API-Key": "${AGENTSHARE_API_KEY}"
+      }
+    }
+  }
+}

@@ -63,6 +63,7 @@ await new Promise((resolve) => {
 import fs from "node:fs";
 const required = [
   ".cursor-plugin/plugin.json",
+  ".mcp.json",
   "mcp.json",
   "server/bridge.mjs",
   "assets/icon.png",

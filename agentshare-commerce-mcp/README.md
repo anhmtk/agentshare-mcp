@@ -82,7 +82,7 @@ In **Customize → MCP → Add server** (when installing manually from Git clone
 | **Args** | `server/bridge.mjs` `https://agentshare.dev/mcp` `--header` `X-API-Key:agshp_YOUR_KEY` |
 | **Cwd** | Path to this `agentshare-commerce-mcp/` folder |
 
-Or set env **`AGENTSHARE_API_KEY`** and use the bundled `mcp.json` (see repo root `.cursor-plugin/marketplace.json`).
+Or set env **`AGENTSHARE_API_KEY`** and use the bundled `mcp.json` / `.mcp.json` (see repo root [docs/CURSOR_DIRECTORY.md](../../docs/CURSOR_DIRECTORY.md)).
 
 ### Verify installation
 
