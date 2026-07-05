@@ -1,8 +1,8 @@
 {
   "name": "agentshare-commerce-mcp",
   "displayName": "AgentShare — AI Commerce Price MCP",
-  "description": "Live marketplace prices for AI agents: search, best offer, budget deals & ACP commerce_quote. Free tier at agentshare.dev.",
-  "version": "1.0.7",
+  "description": "10 MCP tools: marketplace prices, ACP commerce_quote, DefiLlama DEX macro, Solana DEX brief, Meteora DLMM brief. Polymarket not on public catalog. Free tier at agentshare.dev.",
+  "version": "1.0.8",
   "author": {
     "name": "AgentShare",
     "email": "support@agentshare.dev"

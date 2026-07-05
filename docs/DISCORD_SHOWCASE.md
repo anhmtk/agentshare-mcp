@@ -10,10 +10,10 @@ Official MCP community Discord. Post **once** in an appropriate channel (`#showc
 Hi everyone — sharing AgentShare MCP for agent commerce / price intelligence.
 
 What it does:
-• search_products, best_offer, best_offer_under_budget, product_detail
-• commerce_quote — ACP-style agentshare.price.v1 envelope for procurement agents
-• service_meta + DEX macro tools (DefiLlama)
-• Structured responses with data_status / freshness / trust metadata (no fake prices)
+• Commerce: search_products, best_offer, best_offer_under_budget, product_detail, commerce_quote (ACP)
+• DeFi scout: dex_overview, dex_top_movers, solana_dex_brief, meteora_brief
+• service_meta for discovery
+• 10 tools on public MCP (v1.0.8) — Polymarket tools NOT on public catalog
 
 Connect:
 • Streamable HTTP: https://agentshare.dev/mcp (X-API-Key or Bearer)

@@ -2,6 +2,7 @@
 # Canonical live API: https://agentshare.dev
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
+# MCP catalog version: 1.0.8 (10 tools)
 
 ## ENTITY
 - name: AgentShare
@@ -10,14 +11,14 @@
 - github_public_face: https://github.com/anhmtk/agentshare-mcp
 
 ## ONE_LINE_SUMMARY
-Structured marketplace price and offer data for autonomous AI agents (procurement, shopping, on-chain service agents). MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
+Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for autonomous AI agents. MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
 
 ## PRIMARY_DISCOVERY_FETCH_ORDER
 1. https://agentshare.dev/agent.json
 2. https://agentshare.dev/.well-known/discovery.json
 3. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 4. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (no live connect required)
+5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (10 tools on public catalog)
 6. https://agentshare.dev/openapi.json
 
 ## MCP_ENDPOINT
@@ -25,8 +26,9 @@ Structured marketplace price and offer data for autonomous AI agents (procuremen
 - url: https://agentshare.dev/mcp
 - auth_header: X-API-Key (or Authorization: Bearer)
 - signup: https://agentshare.dev/signup
+- catalog_version: 1.0.8
 
-## MCP_TOOLS (twelve)
+## MCP_TOOLS (ten — public catalog)
 | tool_name | use_when | rest_upstream |
 | search_products | compare multiple listings | GET /api/v1/search |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best |
@@ -34,12 +36,13 @@ Structured marketplace price and offer data for autonomous AI agents (procuremen
 | product_detail | have product_id from search | GET /api/v1/products/{id} |
 | commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote |
 | service_meta | capabilities, limits, sources | GET /api/v1/meta |
-| polymarket_markets | discover active markets | GET /api/v1/polymarket/markets |
-| polymarket_market_detail | microstructure proxy | GET /api/v1/polymarket/market/{market_id} |
-| polymarket_top_movers | biggest 24h movers | GET /api/v1/polymarket/top-movers |
-| polymarket_brief | evidence-first market brief | GET /api/v1/polymarket/brief |
 | dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview |
 | dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers |
+| solana_dex_brief | Solana DEX ecosystem brief | GET /api/v1/agent/defi/solana/brief |
+| meteora_brief | Meteora DLMM pool brief (verdict, risk) | POST /api/v1/agent/defi/meteora/brief |
+
+## NOT_ON_PUBLIC_MCP
+Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_movers, polymarket_brief) are disabled on the public MCP catalog and anonymous discovery — legal review for Vietnam.
 
 ## AUTHENTICATION
 - header: X-API-Key: agshp_...
@@ -71,8 +74,12 @@ AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotic
 - optional max_price_usd with mode best_offer
 - suitable for Virtuals / OpenClaw / ACP-style agent commerce (data layer; settlement via merchant/AP2 future)
 
+## DEFI_SCOUT
+- solana_dex_brief: macro Solana DEX volume + highlights (DefiLlama)
+- meteora_brief: Meteora DLMM pool ranking, APR, SAFE/CAUTION/AVOID verdict
+
 ## KEYWORDS_FOR_SEARCH_RANKING
-AgentShare, agentshare.dev, MCP price API, AI agent commerce, procurement agent tools, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison
+AgentShare, agentshare.dev, MCP price API, AI agent commerce, procurement agent tools, Meteora DLMM MCP, Solana DEX brief, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison
 
 ## TRUST
 - terms: https://agentshare.dev/terms

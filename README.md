@@ -50,14 +50,16 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 | **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
 | **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
 | **MCP endpoint** | https://agentshare.dev/mcp |
-| **MCP server card (12 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **MCP server card (10 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
 This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.
 
 ---
 
-## MCP tools (12)
+## MCP tools (10) — catalog v1.0.8
+
+Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
 
 | Tool | Purpose |
 |------|---------|
@@ -67,12 +69,10 @@ This repository is the **public, lightweight face** on GitHub. Production API im
 | `product_detail` | Full product by id from search |
 | `commerce_quote` | ACP / agent-buyer listings envelope |
 | `service_meta` | Capabilities, limits, coverage |
-| `polymarket_markets` | List active Polymarket markets (read-only) |
-| `polymarket_market_detail` | Market detail: bid/ask proxy + spread (read-only) |
-| `polymarket_top_movers` | Largest 24h price-change proxy markets (read-only) |
-| `polymarket_brief` | Evidence-first Polymarket brief (verdict/risk/flags/citations) |
 | `dex_overview` | DEX protocol rankings by 24h volume (DefiLlama) |
 | `dex_top_movers` | DEX protocols with largest 1d volume-change % (DefiLlama) |
+| `solana_dex_brief` | Solana DEX ecosystem brief (Raydium, Orca, Meteora, …) |
+| `meteora_brief` | Meteora DLMM pool brief (verdict, risk_score, top pools) |
 
 Responses include `data_status`, freshness, and trust metadata — see https://agentshare.dev/docs
 

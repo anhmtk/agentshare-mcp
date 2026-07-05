@@ -19,7 +19,7 @@ Sign in with **GitHub** (same account as repo).
 | Field | Paste this |
 |-------|------------|
 | **Name** | `AgentShare` |
-| **Description** | `Live marketplace prices for AI agents: search, best offer, budget deals & ACP commerce_quote. Free tier at agentshare.dev.` |
+| **Description** | `10 MCP tools: marketplace prices, ACP commerce_quote, DefiLlama DEX, Solana & Meteora briefs. agentshare.dev — v1.0.8` |
 | **Link to install instructions** | `https://github.com/anhmtk/agentshare-mcp/blob/main/agentshare-commerce-mcp/README.md` |
 | **Cursor Deep Link** | See below |
 | **Logo** | Upload `agentshare-commerce-mcp/assets/icon.png` |

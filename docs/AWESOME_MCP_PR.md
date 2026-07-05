@@ -14,7 +14,7 @@
 4. Insert **one line** alphabetically after `[agentlux/agentlux-mcp]` and before `[BuyWhere/buywhere-mcp]`:
 
 ```markdown
-- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Marketplace price intelligence for AI agents: `search_products`, `best_offer`, `commerce_quote` (ACP/agentshare.price.v1), `product_detail`. Streamable HTTP at [agentshare.dev/mcp](https://agentshare.dev/mcp). Focus: AI hardware, robotics, procurement. Free tier 100 req/mo.
+- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Marketplace price intelligence + DeFi scout for AI agents: `search_products`, `best_offer`, `commerce_quote` (ACP), `solana_dex_brief`, `meteora_brief`. 10 tools at [agentshare.dev/mcp](https://agentshare.dev/mcp). AI hardware, robotics, procurement. Polymarket not on public catalog. Free tier 100 req/mo.
 ```
 
 5. Open PR with title:

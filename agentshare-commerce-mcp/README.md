@@ -2,6 +2,8 @@
 
 Connect Cursor to **live marketplace price intelligence** for AI agents. Search products, find the best offer, run budget-constrained procurement quotes, and drill into product details—all through MCP tools backed by [agentshare.dev](https://agentshare.dev).
 
+**Catalog version:** `1.0.8` · **10 tools** on the public MCP endpoint. Polymarket tools are **not** on the public catalog.
+
 **Free tier:** [Sign up](https://agentshare.dev/signup) for **100 API requests/month** (no credit card).
 
 ---
@@ -26,7 +28,16 @@ Connect Cursor to **live marketplace price intelligence** for AI agents. Search 
 | **`dex_overview`** | Rank decentralized exchange protocols by 24h volume (DefiLlama). |
 | **`dex_top_movers`** | DEX protocols with the largest absolute 1d volume change %. |
 
-### Response format (every price tool)
+### DeFi scout tools
+
+| Tool | Description |
+|------|-------------|
+| **`solana_dex_brief`** | Solana DEX ecosystem brief — Raydium, Orca, Meteora protocol-level volume, highlights, verdict (DefiLlama). |
+| **`meteora_brief`** | Meteora DLMM pool brief — top pools by fee/TVL, APR, `SAFE` / `CAUTION` / `AVOID` verdict with `risk_score`. |
+
+> **Note:** Polymarket prediction-market MCP tools are **disabled on the public catalog** (legal review for Vietnam). Do not expect `polymarket_*` tools when connected to production `/mcp`.
+
+### Response format (every tool)
 
 Each tool returns **two MCP text blocks**:
 
@@ -52,7 +63,7 @@ Agents can parse block 2 programmatically; humans read block 1 in the chat.
 2. Search for **AgentShare** or **AI Commerce Price MCP**.
 3. Click **Install**.
 4. When prompted, paste your **AgentShare API key** (`agshp_…` from [signup](https://agentshare.dev/signup)).
-5. Confirm MCP status is **Connected** and **8 tools** are listed.
+5. Confirm MCP status is **Connected** and **10 tools** are listed.
 
 ### Manual MCP setup (Customize → Add MCP server)
 
@@ -154,10 +165,12 @@ Recommend one pick and explain why (price + freshness).
 4) Summarize for a purchase approval memo (specs, price, link).
 ```
 
-### 4. Quick capability check
+### 4. DeFi brief (Solana / Meteora)
 
 ```text
-Call service_meta and list which commerce tools I should use for hardware price comparison vs single-SKU best price.
+Call solana_dex_brief with limit=5 and highlights_only=true. Summarize top protocols and any CAUTION flags.
+
+Then call meteora_brief with kind=top_pools, window=24h, sort_by=fee_tvl_ratio, limit=5. Return verdict and top pool addresses.
 ```
 
 ---
@@ -170,6 +183,7 @@ Call service_meta and list which commerce tools I should use for hardware price 
 | "Cheapest" / "where to buy" | `best_offer` or `commerce_quote` (`mode=best_offer`) |
 | "Under $X" / budget cap | `best_offer_under_budget` or `commerce_quote` + `max_price_usd` |
 | "Tell me more about listing #3" | `product_detail` with `product_id` from search |
+| "Solana DEX volume / Meteora pools" | `solana_dex_brief`, `meteora_brief` |
 | "What can this API do?" | `service_meta` |
 
 ---

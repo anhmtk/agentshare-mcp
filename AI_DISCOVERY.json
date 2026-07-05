@@ -1,10 +1,12 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "kind": "agentshare_github_ai_discovery",
   "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
   "name": "AgentShare",
   "type": "commerce_price_mcp",
-  "summary": "Structured marketplace prices and offers for autonomous AI agents — MCP Streamable HTTP + REST. AI hardware, robotics, mini PCs, robot/RC power. Production AliExpress API path.",
+  "mcp_catalog_version": "1.0.8",
+  "mcp_tool_count": 10,
+  "summary": "Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for autonomous AI agents — MCP Streamable HTTP + REST. AI hardware, robotics, mini PCs. Solana DEX + Meteora DLMM tools. Polymarket is not exposed on the public MCP catalog.",
   "canonical_urls": {
     "website": "https://agentshare.dev",
     "agent_json": "https://agentshare.dev/agent.json",
@@ -19,6 +21,8 @@
     "examples": "https://agentshare.dev/api/v1/examples",
     "managed_agent_template": "https://agentshare.dev/api/v1/examples?template=managed-agent",
     "commerce_quote": "https://agentshare.dev/api/v1/agent/commerce/quote",
+    "solana_dex_brief": "https://agentshare.dev/api/v1/agent/defi/solana/brief",
+    "meteora_brief": "https://agentshare.dev/api/v1/agent/defi/meteora/brief",
     "coverage": "https://agentshare.dev/coverage",
     "signup": "https://agentshare.dev/signup",
     "pricing": "https://agentshare.dev/pricing",
@@ -30,7 +34,8 @@
     "role": "Public MCP client reference + AI discovery files (llms.txt, AGENTS.md). Backend implementation is private.",
     "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt",
     "agents_md": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AGENTS.md",
-    "this_file": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json"
+    "this_file": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json",
+    "cursor_plugin": "https://github.com/anhmtk/agentshare-mcp/tree/main/agentshare-commerce-mcp"
   },
   "authentication": {
     "type": "api_key",
@@ -72,26 +77,6 @@
       "rest": "GET /api/v1/meta"
     },
     {
-      "name": "polymarket_markets",
-      "intent": "discover_prediction_markets",
-      "rest": "GET /api/v1/polymarket/markets"
-    },
-    {
-      "name": "polymarket_market_detail",
-      "intent": "market_detail_microstructure_proxy",
-      "rest": "GET /api/v1/polymarket/market/{market_id}"
-    },
-    {
-      "name": "polymarket_top_movers",
-      "intent": "trend_detection_top_movers_24h",
-      "rest": "GET /api/v1/polymarket/top-movers"
-    },
-    {
-      "name": "polymarket_brief",
-      "intent": "evidence_first_market_brief",
-      "rest": "GET /api/v1/polymarket/brief"
-    },
-    {
       "name": "dex_overview",
       "intent": "macro_dex_volume_rankings",
       "rest": "GET /api/v1/dex/overview"
@@ -100,8 +85,27 @@
       "name": "dex_top_movers",
       "intent": "macro_dex_volume_change_movers",
       "rest": "GET /api/v1/dex/top-movers"
+    },
+    {
+      "name": "solana_dex_brief",
+      "intent": "solana_dex_ecosystem_brief",
+      "rest": "GET /api/v1/agent/defi/solana/brief"
+    },
+    {
+      "name": "meteora_brief",
+      "intent": "meteora_dlmm_pool_brief",
+      "rest": "POST /api/v1/agent/defi/meteora/brief"
     }
   ],
+  "not_on_public_mcp": {
+    "polymarket_tools": [
+      "polymarket_markets",
+      "polymarket_market_detail",
+      "polymarket_top_movers",
+      "polymarket_brief"
+    ],
+    "reason": "Polymarket prediction-market tools are disabled on the public MCP catalog and anonymous discovery (legal review for Vietnam). Internal deployment may differ."
+  },
   "integrations_2026": {
     "google_antigravity": {
       "skill_name": "agentshare-price-intelligence",
@@ -111,12 +115,18 @@
     "gemini_managed_agents": {
       "template_url": "https://agentshare.dev/api/v1/examples?template=managed-agent",
       "mcp_url": "https://agentshare.dev/mcp"
+    },
+    "cursor_directory": {
+      "mcp_listing": "https://cursor.directory/mcp/new",
+      "plugin_listing": "https://cursor.directory/plugins/new",
+      "repo": "https://github.com/anhmtk/agentshare-mcp"
     }
   },
   "when_to_use": [
     "procurement_agent_needs_structured_prices",
     "shopping_agent_compare_ai_hardware_or_robotics_parts",
     "autonomous_agent_needs_acp_commerce_quote",
+    "defi_agent_needs_solana_dex_or_meteora_dlmm_brief",
     "mcp_client_needs_price_tools_with_freshness_metadata"
   ],
   "reliability_fields": [
@@ -133,6 +143,8 @@
     "MCP commerce",
     "procurement agent API",
     "AliExpress agent API",
+    "Meteora DLMM MCP",
+    "Solana DEX brief MCP",
     "Antigravity skill price",
     "Gemini Managed Agents MCP",
     "OpenClaw Virtuals commerce data"

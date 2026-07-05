@@ -1,23 +1,32 @@
 {
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
-  "display_name": "AgentShare - Real-time Price and Offer MCP",
-  "version": "1.0.6",
-  "description": "12 MCP tools (commerce + Polymarket + DEX Scout): search, offers, product detail, ACP commerce_quote, meta, Polymarket read-only, and DefiLlama DEX macro scout. For autonomous agents, Antigravity, Gemini Managed Agents.",
+  "display_name": "AgentShare — Agent Commerce & Price MCP",
+  "version": "1.0.8",
+  "description": "10 MCP tools for agent procurement and DeFi scout: commerce (search, offers, ACP quote), service meta, DefiLlama DEX macro (overview, movers), Solana DEX brief, and Meteora DLMM pool brief. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
   "author": {
     "name": "AgentShare",
-    "url": "https://github.com/anhmtk"
+    "url": "https://agentshare.dev"
   },
   "homepage": "https://agentshare.dev",
   "documentation": "https://agentshare.dev/docs",
   "support": "https://github.com/anhmtk/agentshare-mcp/issues",
   "keywords": [
     "price",
-    "mcp",
+    "ecommerce",
     "hardware",
-    "robotics",
+    "mcp",
     "ai-agent",
-    "aliexpress"
+    "robotics",
+    "aliexpress",
+    "procurement",
+    "commerce",
+    "affiliate",
+    "dex",
+    "defi",
+    "defillama",
+    "solana",
+    "meteora"
   ],
   "license": "MIT",
   "tools_generated": true,
@@ -40,27 +49,11 @@
     },
     {
       "name": "commerce_quote",
-      "description": "ACP agent-buyer quote envelope (agentshare.price.v1)"
+      "description": "ACP agent-buyer quote envelope (agentshare.price.v1) for procurement workflows"
     },
     {
       "name": "service_meta",
-      "description": "Get API coverage and service metadata"
-    },
-    {
-      "name": "polymarket_markets",
-      "description": "List active Polymarket markets (read-only)"
-    },
-    {
-      "name": "polymarket_market_detail",
-      "description": "Polymarket market detail by market_id (read-only)"
-    },
-    {
-      "name": "polymarket_top_movers",
-      "description": "Top Polymarket movers (24h) (read-only)"
-    },
-    {
-      "name": "polymarket_brief",
-      "description": "Evidence-first Polymarket brief (verdict/risk/flags/citations)"
+      "description": "Get API capabilities, limits, and coverage metadata"
     },
     {
       "name": "dex_overview",
@@ -69,6 +62,14 @@
     {
       "name": "dex_top_movers",
       "description": "DEX protocols with largest 1d volume-change % (DefiLlama)"
+    },
+    {
+      "name": "solana_dex_brief",
+      "description": "Solana DEX ecosystem brief: Raydium, Orca, Meteora protocol-level volume and verdict (DefiLlama)"
+    },
+    {
+      "name": "meteora_brief",
+      "description": "Meteora DLMM pool brief: top pools by fee/TVL, APR, verdict SAFE/CAUTION/AVOID with risk_score"
     }
   ],
   "server": {
@@ -88,7 +89,7 @@
     "api_key": {
       "type": "string",
       "title": "AgentShare API Key",
-      "description": "Get your free key at https://agentshare.dev/pricing (100 req/month free)",
+      "description": "Get your free key at https://agentshare.dev/signup (100 req/month free)",
       "sensitive": true,
       "required": true
     }
@@ -100,7 +101,5 @@
       "node": ">=18.0.0"
     }
   },
-  "privacy_policies": [
-    "https://agentshare.dev/privacy"
-  ]
+  "privacy_policies": ["https://agentshare.dev/privacy"]
 }

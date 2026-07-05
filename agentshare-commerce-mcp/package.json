@@ -1,8 +1,8 @@
 {
   "name": "agentshare-commerce-mcp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
-  "description": "Cursor Marketplace plugin — AgentShare MCP Streamable HTTP bridge",
+  "description": "Cursor Marketplace plugin — AgentShare MCP v1.0.8 (10 tools)",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"

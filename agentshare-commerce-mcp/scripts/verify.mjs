@@ -98,8 +98,8 @@ if (!cardRes.ok) {
 const card = await cardRes.json();
 const tools = card?.tools ?? card?.capabilities?.tools ?? [];
 const toolCount = Array.isArray(tools) ? tools.length : 0;
-if (toolCount < 6) {
-  fail(`expected >= 6 tools on server card, got ${toolCount}`);
+if (toolCount < 10) {
+  fail(`expected 10 tools on server card, got ${toolCount}`);
 }
 ok(`production server card (${toolCount} tools)`);
 
