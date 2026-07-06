@@ -34,7 +34,8 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
   <a href="https://agentshare.dev"><strong>Website</strong></a> ·
   <a href="https://agentshare.dev/for-agents"><strong>For Agents</strong></a> ·
   <a href="https://agentshare.dev/docs"><strong>Docs</strong></a> ·
-  <a href="https://agentshare.dev/signup"><strong>API key</strong></a>
+  <a href="https://agentshare.dev/signup"><strong>API key</strong></a> ·
+  <a href="https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed"><strong>Chrome extension</strong></a>
 </p>
 
 ---
@@ -75,6 +76,20 @@ Polymarket prediction-market tools are **not** on the public MCP catalog (legal 
 | `meteora_brief` | Meteora DLMM pool brief (verdict, risk_score, top pools) |
 
 Responses include `data_status`, freshness, and trust metadata — see https://agentshare.dev/docs
+
+---
+
+## Chrome extension (Agent Readiness + MCP Connect)
+
+Free browser extension — **ARS site scan** on any tab + **MCP Connect** (copy Cursor/Claude/VS Code config for `agentshare.dev/mcp`).
+
+| Resource | URL |
+|----------|-----|
+| **Chrome Web Store** | https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed |
+| **Docs** | [docs/CHROME_EXTENSION.md](./docs/CHROME_EXTENSION.md) |
+| **ARS spec** | https://agentshare.dev/docs#agent-readiness-score |
+
+Extension source is proprietary (private backend repo); this public repo documents the product for discovery.
 
 ---
 

@@ -91,6 +91,20 @@ Point tools at `https://agentshare.dev/mcp` with the same API key.
 
 ---
 
+## Chrome extension (Agent Readiness v0.4)
+
+For **site owners** auditing agent/crawler exposure (complements MCP for **developers**):
+
+- **Store:** https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed
+- **Docs:** https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md
+- **ARS spec:** https://agentshare.dev/docs#agent-readiness-score
+- **Site scan:** robots.txt, llms.txt, AI crawler table, MCP discovery files, GA4 blind spot
+- **MCP Connect tab:** copy Streamable HTTP config for Cursor, Claude Desktop, VS Code, Windsurf
+
+Extension source is proprietary (private backend repo); this public repo documents the product.
+
+---
+
 ## OpenAPI
 
 - Live: `https://agentshare.dev/openapi.json`
@@ -107,6 +121,7 @@ Point tools at `https://agentshare.dev/mcp` with the same API key.
 | `mcp-config.json` | Cursor / Claude remote config sample |
 | `llms.txt` | LLM crawler summary |
 | `AI_DISCOVERY.json` | Structured discovery for agents |
+| `docs/CHROME_EXTENSION.md` | Chrome extension (ARS + MCP Connect) |
 
 ---
 

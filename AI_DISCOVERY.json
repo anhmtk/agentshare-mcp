@@ -27,7 +27,9 @@
     "signup": "https://agentshare.dev/signup",
     "pricing": "https://agentshare.dev/pricing",
     "antigravity_skills_manifest": "https://agentshare.dev/.well-known/antigravity-skills.json",
-    "antigravity_skill_md": "https://agentshare.dev/integrations/antigravity/agentshare-price-intelligence/SKILL.md"
+    "antigravity_skill_md": "https://agentshare.dev/integrations/antigravity/agentshare-price-intelligence/SKILL.md",
+    "chrome_extension_store": "https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed",
+    "chrome_extension_docs": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md"
   },
   "github_repository": {
     "url": "https://github.com/anhmtk/agentshare-mcp",
@@ -120,6 +122,13 @@
       "mcp_listing": "https://cursor.directory/mcp/new",
       "plugin_listing": "https://cursor.directory/plugins/new",
       "repo": "https://github.com/anhmtk/agentshare-mcp"
+    },
+    "chrome_extension": {
+      "name": "AgentShare Agent Readiness",
+      "version": "0.4.0",
+      "store": "https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed",
+      "docs": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md",
+      "features": ["ars_site_scan", "mcp_connect_multi_platform", "mcp_discovery_probe"]
     }
   },
   "when_to_use": [
@@ -147,6 +156,9 @@
     "Solana DEX brief MCP",
     "Antigravity skill price",
     "Gemini Managed Agents MCP",
-    "OpenClaw Virtuals commerce data"
+    "OpenClaw Virtuals commerce data",
+    "Chrome extension agent readiness",
+    "Agent Readiness Score ARS",
+    "GA4 blind spot AI bots"
   ]
 }

@@ -49,6 +49,8 @@
     "managed_agent_template": "https://agentshare.dev/api/v1/examples?template=managed-agent",
     "antigravity_skills": "https://agentshare.dev/.well-known/antigravity-skills.json",
     "github_ai_discovery": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json",
-    "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt"
+    "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt",
+    "chrome_extension_store": "https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed",
+    "chrome_extension_docs": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md"
   }
 }
