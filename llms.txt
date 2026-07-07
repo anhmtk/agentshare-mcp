@@ -18,7 +18,7 @@ DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool 
 2. https://agentshare.dev/.well-known/discovery.json
 3. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 4. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (10 tools on public catalog)
+5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (11 tools on public catalog)
 6. https://agentshare.dev/openapi.json
 
 ## MCP_ENDPOINT
@@ -44,6 +44,16 @@ DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool 
 
 ## NOT_ON_PUBLIC_MCP
 Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_movers, polymarket_brief) are disabled on the public MCP catalog and anonymous discovery — legal review for Vietnam.
+
+## DISCLAIMERS (IMPORTANT)
+- Informational analytics only. Not financial, investment, or trading advice.
+- Users and autonomous agents are solely responsible for their own decisions and on-chain actions.
+- Vietnam notice: this service is not intended for users located in Vietnam. If you access from Vietnam (including via VPN), you assume all legal responsibility under local law.
+
+## MIEN_TRU_TRACH_NHIEM (VN)
+- Chỉ cung cấp dữ liệu/phân tích tham khảo. Không phải lời khuyên đầu tư/giao dịch.
+- Người dùng/agent tự chịu trách nhiệm cho mọi quyết định và hành động on-chain.
+- Lưu ý về Việt Nam: sản phẩm không nhắm tới người dùng tại Việt Nam. Nếu vẫn truy cập từ Việt Nam (kể cả qua VPN), bạn tự chịu hoàn toàn trách nhiệm pháp lý theo quy định địa phương.
 
 ## AUTHENTICATION
 - header: X-API-Key: agshp_...
