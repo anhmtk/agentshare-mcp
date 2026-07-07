@@ -2,16 +2,16 @@
 # Canonical live API: https://agentshare.dev
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
-# MCP catalog version: 1.0.8 (10 tools)
+# MCP catalog version: 1.0.9 (11 tools)
 
 ## ENTITY
 - name: AgentShare
 - url: https://agentshare.dev
-- type: commerce_price_api_and_mcp
+- type: solana_defi_intelligence_and_mcp
 - github_public_face: https://github.com/anhmtk/agentshare-mcp
 
 ## ONE_LINE_SUMMARY
-Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for autonomous AI agents. MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
+DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool detail (verdict/risk/momentum), Solana DEX brief, DefiLlama DEX scout — plus secondary marketplace price tools for procurement. MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
 
 ## PRIMARY_DISCOVERY_FETCH_ORDER
 1. https://agentshare.dev/agent.json
@@ -26,9 +26,9 @@ Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for au
 - url: https://agentshare.dev/mcp
 - auth_header: X-API-Key (or Authorization: Bearer)
 - signup: https://agentshare.dev/signup
-- catalog_version: 1.0.8
+- catalog_version: 1.0.9
 
-## MCP_TOOLS (ten — public catalog)
+## MCP_TOOLS (eleven — public catalog)
 | tool_name | use_when | rest_upstream |
 | search_products | compare multiple listings | GET /api/v1/search |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best |
@@ -40,6 +40,7 @@ Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for au
 | dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers |
 | solana_dex_brief | Solana DEX ecosystem brief | GET /api/v1/agent/defi/solana/brief |
 | meteora_brief | Meteora DLMM pool brief (verdict, risk) | POST /api/v1/agent/defi/meteora/brief |
+| meteora_pool_detail | Meteora DLMM pool detail (bin depth, curve proxy, price) | POST /api/v1/agent/defi/meteora/pool-detail |
 
 ## NOT_ON_PUBLIC_MCP
 Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_movers, polymarket_brief) are disabled on the public MCP catalog and anonymous discovery — legal review for Vietnam.

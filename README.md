@@ -27,7 +27,7 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 </p>
 
 <p align="center">
-  Commerce &amp; price infrastructure for autonomous agents — MCP Streamable HTTP + REST.
+  <strong>DeFi-first</strong> intelligence for autonomous Solana agents (Meteora DLMM) — plus a secondary commerce procurement module.
 </p>
 
 <p align="center">
@@ -51,14 +51,14 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 | **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
 | **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
 | **MCP endpoint** | https://agentshare.dev/mcp |
-| **MCP server card (10 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **MCP server card (11 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
 This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.
 
 ---
 
-## MCP tools (10) — catalog v1.0.8
+## MCP tools (11) — catalog v1.0.9
 
 Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
 
@@ -74,6 +74,7 @@ Polymarket prediction-market tools are **not** on the public MCP catalog (legal 
 | `dex_top_movers` | DEX protocols with largest 1d volume-change % (DefiLlama) |
 | `solana_dex_brief` | Solana DEX ecosystem brief (Raydium, Orca, Meteora, …) |
 | `meteora_brief` | Meteora DLMM pool brief (verdict, risk_score, top pools) |
+| `meteora_pool_detail` | Meteora DLMM pool detail (bin depth, liquidity curve proxy, current price) |
 
 Responses include `data_status`, freshness, and trust metadata — see https://agentshare.dev/docs
 
@@ -111,7 +112,7 @@ Official Cursor plugin scaffold: **[agentshare-commerce-mcp/](./agentshare-comme
 | Guide | Action |
 |-------|--------|
 | [docs/CURSOR_DIRECTORY.md](./docs/CURSOR_DIRECTORY.md) | Submit [cursor.directory/mcp/new](https://cursor.directory/mcp/new) + [plugins/new](https://cursor.directory/plugins/new) |
-| [docs/AWESOME_MCP_PR.md](./docs/AWESOME_MCP_PR.md) | PR line for [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (E-Commerce) |
+| [docs/AWESOME_MCP_PR.md](./docs/AWESOME_MCP_PR.md) | PR line for [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (prefer DeFi/Finance section if available; otherwise DeFi-first description) |
 | [docs/DISCORD_SHOWCASE.md](./docs/DISCORD_SHOWCASE.md) | Copy-paste MCP Discord showcase post |
 
 Generate Cursor one-click install link:

@@ -1,9 +1,9 @@
 {
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
-  "displayName": "AgentShare — Commerce, Price & DeFi Scout MCP",
-  "description": "10 MCP tools: marketplace price intelligence (search, offers, ACP commerce_quote), DefiLlama DEX macro, Solana DEX brief, Meteora DLMM pool brief. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
-  "version": "1.0.8",
+  "displayName": "AgentShare — Solana DeFi Intelligence + Commerce MCP",
+  "description": "11 MCP tools (DeFi-first): Meteora DLMM pool brief + pool detail (verdict/risk/momentum), Solana DEX brief, DefiLlama DEX scout; plus secondary commerce procurement tools. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
+  "version": "1.0.9",
   "author": "AgentShare",
   "homepage": "https://agentshare.dev",
   "license": "MIT",
@@ -27,16 +27,17 @@
     "streamable-http": "https://agentshare.dev/mcp"
   },
   "tools": [
+    "dex_overview",
+    "dex_top_movers",
+    "solana_dex_brief",
+    "meteora_brief",
+    "meteora_pool_detail",
     "search_products",
     "best_offer",
     "best_offer_under_budget",
     "product_detail",
     "commerce_quote",
-    "service_meta",
-    "dex_overview",
-    "dex_top_movers",
-    "solana_dex_brief",
-    "meteora_brief"
+    "service_meta"
   ],
   "requiresApiKey": true,
   "apiKeyHeader": "X-API-Key",

@@ -1,9 +1,9 @@
 {
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
-  "display_name": "AgentShare — Agent Commerce & Price MCP",
-  "version": "1.0.8",
-  "description": "10 MCP tools for agent procurement and DeFi scout: commerce (search, offers, ACP quote), service meta, DefiLlama DEX macro (overview, movers), Solana DEX brief, and Meteora DLMM pool brief. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
+  "display_name": "AgentShare — Solana DeFi Intelligence + Commerce MCP",
+  "version": "1.0.9",
+  "description": "11 MCP tools (DeFi-first): Meteora DLMM brief + pool detail (verdict/risk/momentum), Solana DEX brief, DefiLlama DEX scout; plus secondary commerce procurement tools. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
   "author": {
     "name": "AgentShare",
     "url": "https://agentshare.dev"
@@ -32,6 +32,26 @@
   "tools_generated": true,
   "tools": [
     {
+      "name": "dex_overview",
+      "description": "DEX protocol rankings by 24h volume (DefiLlama)"
+    },
+    {
+      "name": "dex_top_movers",
+      "description": "DEX protocols with largest 1d volume-change % (DefiLlama)"
+    },
+    {
+      "name": "solana_dex_brief",
+      "description": "Solana DEX ecosystem brief: Raydium, Orca, Meteora protocol-level volume and verdict (DefiLlama)"
+    },
+    {
+      "name": "meteora_brief",
+      "description": "Meteora DLMM pool brief: ranked pools, momentum_score, verdict SAFE/CAUTION/AVOID"
+    },
+    {
+      "name": "meteora_pool_detail",
+      "description": "Meteora DLMM pool detail: bin depth, liquidity curve proxy, current price"
+    },
+    {
       "name": "search_products",
       "description": "Search product listings; scope and sources match GET /coverage on agentshare.dev"
     },
@@ -55,22 +75,7 @@
       "name": "service_meta",
       "description": "Get API capabilities, limits, and coverage metadata"
     },
-    {
-      "name": "dex_overview",
-      "description": "DEX protocol rankings by 24h volume (DefiLlama)"
-    },
-    {
-      "name": "dex_top_movers",
-      "description": "DEX protocols with largest 1d volume-change % (DefiLlama)"
-    },
-    {
-      "name": "solana_dex_brief",
-      "description": "Solana DEX ecosystem brief: Raydium, Orca, Meteora protocol-level volume and verdict (DefiLlama)"
-    },
-    {
-      "name": "meteora_brief",
-      "description": "Meteora DLMM pool brief: top pools by fee/TVL, APR, verdict SAFE/CAUTION/AVOID with risk_score"
-    }
+
   ],
   "server": {
     "type": "node",
