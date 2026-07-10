@@ -38,6 +38,18 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
   <a href="https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed"><strong>Chrome extension</strong></a>
 </p>
 
+<p align="center">
+  <a href="https://glama.ai/mcp/servers/anhmtk/agentshare-mcp">
+    <img width="380" height="200" src="https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/card.svg" alt="agentshare-mcp MCP server" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://glama.ai/mcp/servers/anhmtk/agentshare-mcp">
+    <img src="https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg" alt="Glama score" />
+  </a>
+</p>
+
 ---
 
 ## AI agents — start here
