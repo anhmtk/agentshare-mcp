@@ -79,13 +79,14 @@ AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotic
 - template: GET https://agentshare.dev/api/v1/examples?template=managed-agent
 - wire MCP url https://agentshare.dev/mcp with same API key as REST
 
-## CHROME_EXTENSION (Agent Readiness v0.4)
-- product: AgentShare Agent Readiness — ARS site scan + MCP Connect (multi-platform copy for Cursor/Claude/VS Code)
+## CHROME_EXTENSION (Agent Readiness v0.5)
+- product: AgentShare Agent Readiness — ARS site scan + Prompt Injection Scan + MCP Connect
 - chrome_web_store: https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed
 - docs: https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md
 - ars_spec: https://agentshare.dev/docs#agent-readiness-score
-- scans: robots.txt, llms.txt, AI crawlers, public MCP discovery (server-card.json, .mcp.json), GA4 blind spot callout
-- privacy: client-side scan; no upload to AgentShare servers in v0.4
+- prompt_injection_fix_guide: https://agentshare.dev/docs#prompt-injection-fix-guide
+- scans: robots.txt, llms.txt, AI crawlers, public MCP discovery (server-card.json, .mcp.json), client-side DOM prompt injection heuristics, GA4 blind spot callout
+- privacy: client-side scan; no upload to AgentShare servers in v0.5
 
 ## COMMERCE_AGENT_BUYERS
 - POST https://agentshare.dev/api/v1/agent/commerce/quote
@@ -98,7 +99,7 @@ AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotic
 - meteora_brief: Meteora DLMM pool ranking, APR, SAFE/CAUTION/AVOID verdict
 
 ## KEYWORDS_FOR_SEARCH_RANKING
-AgentShare, agentshare.dev, MCP price API, AI agent commerce, procurement agent tools, Meteora DLMM MCP, Solana DEX brief, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison, Chrome extension agent readiness, ARS llms.txt robots.txt, GA4 blind spot bots
+AgentShare, agentshare.dev, MCP price API, AI agent commerce, procurement agent tools, Meteora DLMM MCP, Solana DEX brief, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison, Chrome extension agent readiness, prompt injection scan, ARS llms.txt robots.txt, GA4 blind spot bots
 
 ## TRUST
 - terms: https://agentshare.dev/terms

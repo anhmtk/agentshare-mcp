@@ -80,15 +80,16 @@ Responses include `data_status`, freshness, and trust metadata — see https://a
 
 ---
 
-## Chrome extension (Agent Readiness + MCP Connect)
+## Chrome extension (Agent Readiness + Prompt Injection Scan + MCP Connect)
 
-Free browser extension — **ARS site scan** on any tab + **MCP Connect** (copy Cursor/Claude/VS Code config for `agentshare.dev/mcp`).
+Free browser extension — **ARS site scan** + **Prompt Injection Scan** (client-side DOM) + **MCP Connect** (copy Cursor/Claude/VS Code config for `agentshare.dev/mcp`).
 
 | Resource | URL |
 |----------|-----|
 | **Chrome Web Store** | https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed |
 | **Docs** | [docs/CHROME_EXTENSION.md](./docs/CHROME_EXTENSION.md) |
 | **ARS spec** | https://agentshare.dev/docs#agent-readiness-score |
+| **Prompt Injection Fix Guide** | https://agentshare.dev/docs#prompt-injection-fix-guide |
 
 Extension source is proprietary (private backend repo); this public repo documents the product for discovery.
 

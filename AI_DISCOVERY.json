@@ -125,10 +125,17 @@
     },
     "chrome_extension": {
       "name": "AgentShare Agent Readiness",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "store": "https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed",
       "docs": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md",
-      "features": ["ars_site_scan", "mcp_connect_multi_platform", "mcp_discovery_probe"]
+      "ars_spec": "https://agentshare.dev/docs#agent-readiness-score",
+      "prompt_injection_fix_guide": "https://agentshare.dev/docs#prompt-injection-fix-guide",
+      "features": [
+        "ars_site_scan",
+        "prompt_injection_dom_scan",
+        "mcp_connect_multi_platform",
+        "mcp_discovery_probe"
+      ]
     }
   },
   "when_to_use": [
@@ -159,6 +166,7 @@
     "OpenClaw Virtuals commerce data",
     "Chrome extension agent readiness",
     "Agent Readiness Score ARS",
+    "prompt injection scan Chrome extension",
     "GA4 blind spot AI bots"
   ]
 }
