@@ -1,52 +1,274 @@
 {
-  "openapi": "3.0.3",
+  "openapi": "3.0.0",
   "info": {
-    "title": "Agent Price API (MCP-backed REST surface)",
+    "title": "AgentShare Price & Intelligence API",
     "version": "1.0.0",
-    "description": "OpenAPI 3.0 document covering only the HTTP routes invoked by the MCP server in `integrations/mcp_server/price_mcp.py` (Remote MCP / stdio both call the same REST API). For the full production schema (all paths, webhooks, admin, etc.), use the canonical spec: https://agentshare.dev/openapi.json",
+    "description": "Agent-first API for e-commerce price intelligence and DeFi market data, monetised via Circle Gateway x402 nanopayments (pay-per-query, gasless USDC settlement).\n\n## Payment\nAll protected endpoints return **HTTP 402** with a `PAYMENT-REQUIRED` header on first request. Buyers using `@circle-fin/x402-batching` (GatewayClient) handle the payment flow automatically.\n\n## Categories\n- **Commerce** — Multi-source product search, best-offer, quote (AliExpress, Geekbuying, Temu, …)\n- **DeFi Intelligence** _(coming soon)_ — Solana DEX briefs, Meteora DLMM pool analytics, Jupiter swap quotes",
     "contact": {
       "name": "AgentShare",
       "url": "https://agentshare.dev"
+    },
+    "license": {
+      "name": "Apache-2.0"
+    },
+    "x-x402": {
+      "facilitator": "https://gateway-api-testnet.circle.com",
+      "asset": "USDC",
+      "settlement": "Circle Gateway batched (gasless)",
+      "networks": ["eip155:84532"]
     }
-  },
-  "externalDocs": {
-    "description": "Full canonical OpenAPI 3.1 (live production)",
-    "url": "https://agentshare.dev/openapi.json"
   },
   "servers": [
     {
-      "url": "https://agentshare.dev",
-      "description": "Production (default BASE_URL in MCP)"
+      "url": "https://circle-agent-marketplace-production.up.railway.app",
+      "description": "Production (Base Sepolia testnet settlement)"
+    },
+    {
+      "url": "http://localhost:4020",
+      "description": "Local development"
     }
   ],
   "tags": [
-    { "name": "search", "description": "Product search" },
-    { "name": "offers", "description": "Best offer queries" },
-    { "name": "meta", "description": "Service discovery" }
+    {
+      "name": "Commerce",
+      "description": "E-commerce product search and price comparison across international marketplaces"
+    },
+    {
+      "name": "DeFi Intelligence",
+      "description": "Solana DEX analytics, Meteora DLMM pool briefs, and swap quotes (coming soon)"
+    },
+    {
+      "name": "System",
+      "description": "Health check and service metadata"
+    }
   ],
-  "components": {
-    "securitySchemes": {
-      "ApiKeyAuth": {
-        "type": "apiKey",
-        "in": "header",
-        "name": "X-API-Key"
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["System"],
+        "operationId": "healthCheck",
+        "summary": "Health check",
+        "description": "Public endpoint — no payment required. Returns service status and configuration.",
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
       }
     },
+    "/api/v1/search": {
+      "get": {
+        "tags": ["Commerce"],
+        "operationId": "searchProducts",
+        "summary": "Search products across marketplaces",
+        "description": "Search for products (Mini PC, Raspberry Pi, Nvidia Jetson, Orange Pi, etc.) across AliExpress and other international marketplaces.\n\n**x402 Payment:** $0.001 USDC per query via Circle Gateway.",
+        "x-x402-price": "$0.001",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "example": "mini pc" },
+            "description": "Search keyword"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "integer", "default": 5, "minimum": 1, "maximum": 50 },
+            "description": "Max number of results to return"
+          },
+          {
+            "name": "currency",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string", "default": "USD", "enum": ["USD", "VND", "EUR"] },
+            "description": "Price currency"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful search with payment receipt",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaidSearchResponse"
+                },
+                "example": {
+                  "status": "ok",
+                  "payment": {
+                    "verified": true,
+                    "payer": "0x6692cd35E665e1E674742aC098935FC76dEBB0e5",
+                    "amount": "1000",
+                    "network": "eip155:84532",
+                    "transaction": "313fc1f7-34ff-4d97-9636-e32a473bb179"
+                  },
+                  "data": {
+                    "status": "ok",
+                    "results": [
+                      {
+                        "title": "Raspberry Pi 4 Model B 8GB",
+                        "price": 405.0,
+                        "price_usd": 405.0,
+                        "currency": "USD",
+                        "source": "aliexpress",
+                        "url": "https://aliexpress.com/item/..."
+                      }
+                    ],
+                    "meta": {
+                      "total": 15,
+                      "query": "mini pc",
+                      "billing": {
+                        "model": "free",
+                        "x402_ready": true,
+                        "endpoint_id": "search_products",
+                        "price_usd": 0.001
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment required — retry with PAYMENT-SIGNATURE header",
+            "headers": {
+              "PAYMENT-REQUIRED": {
+                "description": "Base64-encoded JSON with x402Version, resource, and accepts[] array",
+                "schema": { "type": "string" }
+              }
+            }
+          },
+          "502": {
+            "description": "Upstream API error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/best-offer": {
+      "get": {
+        "tags": ["Commerce"],
+        "operationId": "bestOffer",
+        "summary": "Find the single cheapest in-stock offer",
+        "description": "Returns the best-price offer for a product query across all tracked marketplaces.\n\n**x402 Payment:** $0.001 USDC per query via Circle Gateway.",
+        "x-x402-price": "$0.001",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "example": "nvidia jetson" },
+            "description": "Product search keyword"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Best offer found",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PaidDataResponse" }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment required"
+          }
+        }
+      }
+    },
+    "/api/v1/product/{id}": {
+      "get": {
+        "tags": ["Commerce"],
+        "operationId": "productDetail",
+        "summary": "Get full product details and per-source prices",
+        "description": "Retrieve detailed product information including prices from all tracked sources.\n\n**x402 Payment:** $0.001 USDC per query via Circle Gateway.",
+        "x-x402-price": "$0.001",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "Product ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product details with payment receipt",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PaidDataResponse" }
+              }
+            }
+          },
+          "402": {
+            "description": "Payment required"
+          },
+          "404": {
+            "description": "Product not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
     "schemas": {
-      "OkEnvelope": {
+      "HealthResponse": {
         "type": "object",
-        "description": "Typical success body from the Agent Price API",
+        "properties": {
+          "status": { "type": "string", "example": "ok" },
+          "service": { "type": "string", "example": "agentshare-x402-seller" },
+          "chain": { "type": "string", "example": "all Gateway-supported" },
+          "facilitator": { "type": "string", "example": "https://gateway-api-testnet.circle.com" },
+          "price": { "type": "string", "example": "$0.001" }
+        }
+      },
+      "PaymentReceipt": {
+        "type": "object",
+        "description": "Circle Gateway settlement receipt attached to every paid response",
+        "properties": {
+          "verified": { "type": "boolean" },
+          "payer": { "type": "string", "description": "Buyer wallet address" },
+          "amount": { "type": "string", "description": "Amount in USDC atomic units" },
+          "network": { "type": "string", "description": "CAIP-2 network identifier", "example": "eip155:84532" },
+          "transaction": { "type": "string", "description": "Circle Gateway transaction ID" }
+        }
+      },
+      "PaidSearchResponse": {
+        "type": "object",
         "properties": {
           "status": { "type": "string", "enum": ["ok"] },
-          "data": { "type": "object", "additionalProperties": true },
-          "meta": {
+          "payment": { "$ref": "#/components/schemas/PaymentReceipt" },
+          "data": {
             "type": "object",
-            "additionalProperties": true,
-            "description": "May include freshness_status, data_age_seconds, total, request_id"
+            "description": "Upstream API response (product results + meta)"
           }
         }
       },
-      "ErrorBody": {
+      "PaidDataResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "enum": ["ok"] },
+          "payment": { "$ref": "#/components/schemas/PaymentReceipt" },
+          "data": {
+            "type": "object",
+            "description": "Upstream API response"
+          }
+        }
+      },
+      "ErrorResponse": {
         "type": "object",
         "properties": {
           "status": { "type": "string", "enum": ["error"] },
@@ -54,78 +276,8 @@
             "type": "object",
             "properties": {
               "code": { "type": "string" },
-              "message": { "type": "string" },
-              "detail": { "type": "string" }
+              "message": { "type": "string" }
             }
-          }
-        }
-      }
-    }
-  },
-  "paths": {
-    "/api/v1/search": {
-      "get": {
-        "tags": ["search"],
-        "summary": "Search product listings (MCP: search_products)",
-        "operationId": "searchProductsMcp",
-        "parameters": [
-          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } },
-          { "name": "limit", "in": "query", "required": false, "schema": { "type": "integer", "minimum": 1, "maximum": 50, "default": 10 } }
-        ],
-        "security": [{ "ApiKeyAuth": [] }],
-        "responses": {
-          "200": {
-            "description": "OK or structured error in body",
-            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
-          }
-        }
-      }
-    },
-    "/api/v1/offers/best": {
-      "get": {
-        "tags": ["offers"],
-        "summary": "Best single offer for query (MCP: best_offer)",
-        "operationId": "bestOfferMcp",
-        "parameters": [
-          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } }
-        ],
-        "security": [{ "ApiKeyAuth": [] }],
-        "responses": {
-          "200": {
-            "description": "OK or structured error in body",
-            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
-          }
-        }
-      }
-    },
-    "/api/v1/offers/best-under-budget": {
-      "get": {
-        "tags": ["offers"],
-        "summary": "Best offer under max price (MCP: best_offer_under_budget)",
-        "operationId": "bestOfferUnderBudgetMcp",
-        "parameters": [
-          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1 } },
-          { "name": "max_price", "in": "query", "required": true, "schema": { "type": "number", "exclusiveMinimum": 0 } }
-        ],
-        "security": [{ "ApiKeyAuth": [] }],
-        "responses": {
-          "200": {
-            "description": "OK or structured error in body",
-            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
-          }
-        }
-      }
-    },
-    "/api/v1/meta": {
-      "get": {
-        "tags": ["meta"],
-        "summary": "Service metadata (MCP: service_meta); key often optional on public deployments",
-        "operationId": "serviceMetaMcp",
-        "security": [],
-        "responses": {
-          "200": {
-            "description": "OK or structured error in body",
-            "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "#/components/schemas/OkEnvelope" }, { "$ref": "#/components/schemas/ErrorBody" }] } } }
           }
         }
       }
