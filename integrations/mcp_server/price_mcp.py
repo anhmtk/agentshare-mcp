@@ -149,11 +149,7 @@ def create_price_mcp() -> FastMCP:
         annotations=ANN_MARKETPLACE,
         structured_output=False,
     )
-<<<<<<< HEAD
-    def search_products(
-=======
     async def search_products(
->>>>>>> 31819e8 (docs: README for Anthropic extension + align MCP tools (search_products, annotations))
         query: Annotated[
             str,
             Field(
