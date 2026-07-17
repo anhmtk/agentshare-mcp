@@ -74,8 +74,7 @@
     {
       "name": "service_meta",
       "description": "Get API capabilities, limits, and coverage metadata"
-    },
-
+    }
   ],
   "server": {
     "type": "node",
