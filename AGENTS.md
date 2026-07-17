@@ -5,7 +5,7 @@
 
 This repo (`anhmtk/agentshare-mcp`) exposes reference MCP client wiring and **AI discovery files**. Backend application code is **not** in this repository.
 
-**MCP catalog version:** `1.0.8` · **Public tools:** `10` (Polymarket tools are **not** on the public MCP catalog).
+**MCP catalog version:** `1.0.9` · **Public tools:** `11` (Polymarket tools are **not** on the public MCP catalog).
 
 ---
 
@@ -42,10 +42,11 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 |-------|--------|
 | URL | `https://agentshare.dev/mcp` |
 | Transport | Streamable HTTP |
-| Auth | `X-API-Key: agshp_…` or `Authorization: Bearer` |
-| Tool count (public) | 10 |
+| Auth | Dual-auth: `X-API-Key` / `Authorization: Bearer` **or** x402 (`PAYMENT-SIGNATURE` after HTTP 402 on gated routes) |
+| x402 discovery | `https://agentshare.dev/.well-known/x402` |
+| Tool count (public) | 11 |
 
-### Tools (10)
+### Tools (11)
 
 | MCP tool | REST called by tool |
 |----------|---------------------|
@@ -59,16 +60,25 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 | `dex_top_movers` | `GET /api/v1/dex/top-movers` |
 | `solana_dex_brief` | `GET /api/v1/agent/defi/solana/brief` |
 | `meteora_brief` | `POST /api/v1/agent/defi/meteora/brief` |
+| `meteora_pool_detail` | `POST /api/v1/agent/defi/meteora/pool-detail` |
 
 **Response shape:** two text blocks — (1) one-line summary, (2) JSON envelope `status`, `data`, `meta`.
 
+**x402 pricing:**
+- `meteora_brief` is a hot dual-auth path with **dynamic x402 pricing** (`$0.01–$0.30`, base `$0.03`).
+- Without API key, gated routes return HTTP 402 + `PAYMENT-REQUIRED`.
+- Marketing/docs/discovery/onboarding paths remain free.
+
 ---
 
-## Authentication
+## Authentication (dual-auth)
 
-- Register: `POST https://agentshare.dev/api/v1/auth/register` JSON `email`, `password` (min 8 chars).
-- Key returned once: `agshp_*`.
-- Free tier: ~100 requests/month — `https://agentshare.dev/pricing`.
+- Register API key: `POST https://agentshare.dev/api/v1/auth/register` JSON `email`, `password` (min 8 chars).
+- API key format: `agshp_*`.
+- Mode A (API key): `X-API-Key` / `Authorization: Bearer`.
+- Mode B (x402): no key → gated routes return HTTP 402 + `PAYMENT-REQUIRED`; client retries with `PAYMENT-SIGNATURE` (USDC via Circle Gateway).
+- x402 discovery: `https://agentshare.dev/.well-known/x402`.
+- Pricing: `https://agentshare.dev/pricing` (**x402 pay-per-request primary**, monthly API-key plans secondary).
 
 ---
 

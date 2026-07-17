@@ -15,17 +15,20 @@ DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool 
 
 ## PRIMARY_DISCOVERY_FETCH_ORDER
 1. https://agentshare.dev/agent.json
-2. https://agentshare.dev/.well-known/discovery.json
-3. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
-4. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-5. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (11 tools on public catalog)
-6. https://agentshare.dev/openapi.json
+2. https://agentshare.dev/.well-known/x402 — x402 seller discovery (endpoints, dual-auth, live prices)
+3. https://agentshare.dev/.well-known/discovery.json
+4. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
+5. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
+6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (11 tools on public catalog)
+7. https://agentshare.dev/openapi.json
+8. https://agentshare.dev/pricing — agent-first: x402 pay-per-request primary; monthly API-key plans secondary
 
 ## MCP_ENDPOINT
 - transport: streamable_http
 - url: https://agentshare.dev/mcp
-- auth_header: X-API-Key (or Authorization: Bearer)
+- auth: dual — X-API-Key / Authorization: Bearer OR (REST) x402 PAYMENT-SIGNATURE after HTTP 402
 - signup: https://agentshare.dev/signup
+- x402_discovery: https://agentshare.dev/.well-known/x402
 - catalog_version: 1.0.9
 
 ## MCP_TOOLS (eleven — public catalog)
@@ -39,7 +42,7 @@ DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool 
 | dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview |
 | dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers |
 | solana_dex_brief | Solana DEX ecosystem brief | GET /api/v1/agent/defi/solana/brief |
-| meteora_brief | Meteora DLMM pool brief (verdict, risk) | POST /api/v1/agent/defi/meteora/brief |
+| meteora_brief | Meteora DLMM pool brief (verdict, risk) — #1 hot path; x402 dynamic $0.01–$0.30 | POST /api/v1/agent/defi/meteora/brief |
 | meteora_pool_detail | Meteora DLMM pool detail (bin depth, curve proxy, price) | POST /api/v1/agent/defi/meteora/pool-detail |
 
 ## NOT_ON_PUBLIC_MCP
@@ -55,11 +58,22 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - Người dùng/agent tự chịu trách nhiệm cho mọi quyết định và hành động on-chain.
 - Lưu ý về Việt Nam: sản phẩm không nhắm tới người dùng tại Việt Nam. Nếu vẫn truy cập từ Việt Nam (kể cả qua VPN), bạn tự chịu hoàn toàn trách nhiệm pháp lý theo quy định địa phương.
 
-## AUTHENTICATION
-- header: X-API-Key: agshp_...
-- alternate: Authorization: Bearer agshp_...
-- register: POST https://agentshare.dev/api/v1/auth/register body {"email","password"}
-- free_tier: ~100 requests/month (see https://agentshare.dev/pricing)
+## AUTHENTICATION (dual-auth — prefer x402 for autonomous agents)
+- mode_a_api_key: X-API-Key: agshp_... OR Authorization: Bearer agshp_...
+- mode_b_x402: no key → gated REST returns HTTP 402 + PAYMENT-REQUIRED; retry with PAYMENT-SIGNATURE (USDC via Circle Gateway)
+- discovery: GET https://agentshare.dev/.well-known/x402
+- pricing_page: https://agentshare.dev/pricing (x402 pay-per-request is primary; monthly plans secondary)
+- register_api_key: POST https://agentshare.dev/api/v1/auth/register body {"email","password"}
+- free_tier_api_key: ~100 requests/month (secondary human option)
+- free_paths: marketing/docs/discovery/onboarding stay free (/, /docs, /agent.json, /api/v1/protocol, /.well-known/*, …)
+
+## X402_PAY_PER_REQUEST (primary for agents)
+- facilitator: Circle Gateway (batched USDC; testnet Base Sepolia eip155:84532 for pilot)
+- commerce_pilot: search / offers/best ~$0.001 USDC; commerce_quote ~$0.002
+- meteora_brief: dynamic $0.01–$0.30 (base $0.03; quiet market discounts; hot momentum/fee-velocity + demand surge up to 10×)
+- dual_auth: valid API key skips x402; without key, PAYMENT-SIGNATURE required on gated paths
+- live_price: stamped in 402 PAYMENT-REQUIRED and response meta.billing.price_usd_live (dynamic endpoints)
+- compact_json: REST ?format=compact / Accept: application/vnd.agentshare.compact+json; MCP prefers limit 3–5
 
 ## COVERAGE_DOMAIN
 AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4). Canonical spec: GET https://agentshare.dev/coverage

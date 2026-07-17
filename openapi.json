@@ -2,8 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "AgentShare Price & Intelligence API",
-    "version": "1.0.0",
-    "description": "Agent-first API for e-commerce price intelligence and DeFi market data, monetised via Circle Gateway x402 nanopayments (pay-per-query, gasless USDC settlement).\n\n## Payment\nAll protected endpoints return **HTTP 402** with a `PAYMENT-REQUIRED` header on first request. Buyers using `@circle-fin/x402-batching` (GatewayClient) handle the payment flow automatically.\n\n## Categories\n- **Commerce** — Multi-source product search, best-offer, quote (AliExpress, Geekbuying, Temu, …)\n- **DeFi Intelligence** _(coming soon)_ — Solana DEX briefs, Meteora DLMM pool analytics, Jupiter swap quotes",
+    "version": "1.1.0",
+    "description": "Agent-first API for e-commerce price intelligence and DeFi market data, monetised via Circle Gateway x402 nanopayments (pay-per-query, gasless USDC settlement).\n\nCanonical production: https://agentshare.dev (dual-auth API key or x402). This OpenAPI file is kept as the Circle seller pilot subset.\n\nPricing posture (live): x402 pay-per-request primary; monthly API-key plans secondary.\n\n## Payment\nAll protected endpoints return **HTTP 402** with a `PAYMENT-REQUIRED` header on first request. Buyers using `@circle-fin/x402-batching` (GatewayClient) handle the payment flow automatically.\n\n## Categories\n- **Commerce** — Multi-source product search, best-offer, quote (AliExpress, Geekbuying, Temu, …)\n- **DeFi Intelligence** — live on canonical `https://agentshare.dev`",
     "contact": {
       "name": "AgentShare",
       "url": "https://agentshare.dev"

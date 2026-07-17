@@ -92,6 +92,23 @@ Responses include `data_status`, freshness, and trust metadata — see https://a
 
 ---
 
+## Auth & x402 (live)
+
+AgentShare runs **dual-auth** on gated routes:
+
+- **API key mode:** `X-API-Key` / `Authorization: Bearer`
+- **x402 mode:** no key → HTTP 402 + `PAYMENT-REQUIRED`, then retry with `PAYMENT-SIGNATURE`
+
+Discovery: https://agentshare.dev/.well-known/x402
+
+Notable pricing:
+- `POST /api/v1/agent/defi/meteora/brief` (hot path): **dynamic `$0.01–$0.30`** (base `$0.03`)
+- Commerce pilot paths: `search`/`offers/best` around `$0.001`, `commerce_quote` around `$0.002`
+
+Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing
+
+---
+
 ## Chrome extension (Agent Readiness + Prompt Injection Scan + MCP Connect)
 
 Free browser extension — **ARS site scan** + **Prompt Injection Scan** (client-side DOM) + **MCP Connect** (copy Cursor/Claude/VS Code config for `agentshare.dev/mcp`).
@@ -162,7 +179,9 @@ Cursor **Marketplace** org applications are reviewed selectively (2026); use **c
 }
 ```
 
-Free key (~100 req/month): https://agentshare.dev/signup
+Get API key (secondary human plan): https://agentshare.dev/signup
+
+Prefer autonomous-agent payment via x402: https://agentshare.dev/.well-known/x402
 
 See [mcp-config.json](./mcp-config.json) and [server/bridge.mjs](./server/bridge.mjs) for Node bridge.
 

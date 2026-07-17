@@ -4,13 +4,14 @@
   "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
   "name": "AgentShare",
   "type": "commerce_price_mcp",
-  "mcp_catalog_version": "1.0.8",
-  "mcp_tool_count": 10,
+  "mcp_catalog_version": "1.0.9",
+  "mcp_tool_count": 11,
   "summary": "Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for autonomous AI agents — MCP Streamable HTTP + REST. AI hardware, robotics, mini PCs. Solana DEX + Meteora DLMM tools. Polymarket is not exposed on the public MCP catalog.",
   "canonical_urls": {
     "website": "https://agentshare.dev",
     "agent_json": "https://agentshare.dev/agent.json",
     "discovery_index": "https://agentshare.dev/.well-known/discovery.json",
+    "x402_discovery": "https://agentshare.dev/.well-known/x402",
     "for_agents_html": "https://agentshare.dev/for-agents",
     "for_agents_json": "https://agentshare.dev/for-agents",
     "for_agents_json_accept": "GET https://agentshare.dev/for-agents with header Accept: application/json (omit text/html)",
@@ -40,12 +41,18 @@
     "cursor_plugin": "https://github.com/anhmtk/agentshare-mcp/tree/main/agentshare-commerce-mcp"
   },
   "authentication": {
-    "type": "api_key",
-    "header": "X-API-Key",
-    "alternate": "Authorization: Bearer",
-    "key_format": "agshp_*",
+    "type": "dual_auth",
+    "mode_api_key": {
+      "header": "X-API-Key",
+      "alternate": "Authorization: Bearer",
+      "key_format": "agshp_*"
+    },
+    "mode_x402": {
+      "flow": "no key -> HTTP 402 PAYMENT-REQUIRED -> retry with PAYMENT-SIGNATURE",
+      "discovery": "https://agentshare.dev/.well-known/x402"
+    },
     "register": "POST https://agentshare.dev/api/v1/auth/register",
-    "free_tier_hint": "approximately 100 requests per calendar month"
+    "free_tier_hint": "~100 requests/month for API-key plan (secondary; x402 pay-per-request is primary)"
   },
   "mcp_tools": [
     {
@@ -96,7 +103,13 @@
     {
       "name": "meteora_brief",
       "intent": "meteora_dlmm_pool_brief",
-      "rest": "POST /api/v1/agent/defi/meteora/brief"
+      "rest": "POST /api/v1/agent/defi/meteora/brief",
+      "x402_pricing": "dynamic_usdc_0.01_to_0.30_base_0.03"
+    },
+    {
+      "name": "meteora_pool_detail",
+      "intent": "meteora_dlmm_pool_detail",
+      "rest": "POST /api/v1/agent/defi/meteora/pool-detail"
     }
   ],
   "not_on_public_mcp": {
@@ -152,6 +165,15 @@
     "trust_hit_rate",
     "coverage_tier"
   ],
+  "x402": {
+    "ready": true,
+    "pricing_page": "https://agentshare.dev/pricing",
+    "notes": [
+      "gated routes support dual-auth API key OR x402",
+      "marketing/discovery/onboarding routes remain free",
+      "meteora_brief is hot path with dynamic price"
+    ]
+  },
   "keywords_for_retrieval": [
     "AgentShare",
     "agentshare.dev",
