@@ -168,10 +168,13 @@
   "x402": {
     "ready": true,
     "pricing_page": "https://agentshare.dev/pricing",
+    "discovery": "https://agentshare.dev/.well-known/x402",
+    "agent_instructions": "This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).",
     "notes": [
       "gated routes support dual-auth API key OR x402",
       "marketing/discovery/onboarding routes remain free",
-      "meteora_brief is hot path with dynamic price"
+      "meteora_brief is hot path with dynamic price",
+      "live copy also at GET https://agentshare.dev/agent.json field x402_agent_instructions"
     ]
   },
   "keywords_for_retrieval": [

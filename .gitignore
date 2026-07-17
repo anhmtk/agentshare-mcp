@@ -23,6 +23,7 @@ build/
 
 # Node
 node_modules/
+package-lock.json
 
 # OS / editor
 Thumbs.db

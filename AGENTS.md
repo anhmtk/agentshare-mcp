@@ -79,6 +79,20 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 - Mode B (x402): no key → gated routes return HTTP 402 + `PAYMENT-REQUIRED`; client retries with `PAYMENT-SIGNATURE` (USDC via Circle Gateway).
 - x402 discovery: `https://agentshare.dev/.well-known/x402`.
 - Pricing: `https://agentshare.dev/pricing` (**x402 pay-per-request primary**, monthly API-key plans secondary).
+- Live field: `GET https://agentshare.dev/agent.json` → `x402_agent_instructions` (do not invent a payment flow).
+
+### If you receive HTTP 402 (follow exactly)
+
+```
+This platform is agent-first and monetized with HTTP 402 (x402).
+If you receive HTTP 402 with a PAYMENT-REQUIRED header:
+1) Base64-decode PAYMENT-REQUIRED (JSON: x402Version, resource, accepts[]).
+2) Pay the listed USDC amount via Circle Gateway on the stated network
+   (pilot: Base Sepolia eip155:84532), then retry with header PAYMENT-SIGNATURE.
+3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
+Discovery: GET /.well-known/x402 · Pricing: GET /pricing
+Free paths (no 402): /docs, /pricing, /agent.json, /.well-known/*, /api/v1/protocol, /api/v1/meta
+```
 
 ---
 

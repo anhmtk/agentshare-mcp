@@ -66,6 +66,10 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - register_api_key: POST https://agentshare.dev/api/v1/auth/register body {"email","password"}
 - free_tier_api_key: ~100 requests/month (secondary human option)
 - free_paths: marketing/docs/discovery/onboarding stay free (/, /docs, /agent.json, /api/v1/protocol, /.well-known/*, …)
+- agent_json_field: x402_agent_instructions (same text as below — do not invent a flow)
+
+## X402_AGENT_INSTRUCTIONS (verbatim — follow exactly)
+This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
 
 ## X402_PAY_PER_REQUEST (primary for agents)
 - facilitator: Circle Gateway (batched USDC; testnet Base Sepolia eip155:84532 for pilot)

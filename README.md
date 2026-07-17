@@ -99,13 +99,25 @@ AgentShare runs **dual-auth** on gated routes:
 - **API key mode:** `X-API-Key` / `Authorization: Bearer`
 - **x402 mode:** no key → HTTP 402 + `PAYMENT-REQUIRED`, then retry with `PAYMENT-SIGNATURE`
 
-Discovery: https://agentshare.dev/.well-known/x402
+Discovery: https://agentshare.dev/.well-known/x402 · live instructions field: https://agentshare.dev/agent.json → `x402_agent_instructions`
 
 Notable pricing:
 - `POST /api/v1/agent/defi/meteora/brief` (hot path): **dynamic `$0.01–$0.30`** (base `$0.03`)
 - Commerce pilot paths: `search`/`offers/best` around `$0.001`, `commerce_quote` around `$0.002`
 
 Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing
+
+### If you receive HTTP 402 (agents — follow exactly)
+
+```
+This platform is agent-first and monetized with HTTP 402 (x402).
+If you receive HTTP 402 with a PAYMENT-REQUIRED header:
+1) Base64-decode PAYMENT-REQUIRED (JSON: x402Version, resource, accepts[]).
+2) Pay the listed USDC amount via Circle Gateway on the stated network
+   (pilot: Base Sepolia eip155:84532), then retry with header PAYMENT-SIGNATURE.
+3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
+Discovery: GET /.well-known/x402 · Pricing: GET /pricing
+```
 
 ---
 
