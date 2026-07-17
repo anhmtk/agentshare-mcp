@@ -103,6 +103,7 @@ Discovery: https://agentshare.dev/.well-known/x402 · live instructions field: h
 
 Notable pricing:
 - `POST /api/v1/agent/defi/meteora/brief` (hot path): **dynamic `$0.01–$0.30`** (base `$0.03`)
+- Dynamic pricing applies based on market volatility and resource velocity — **always check `PAYMENT-REQUIRED` for the exact real-time quote** (also in `meta.billing.price_usd_live`)
 - Commerce pilot paths: `search`/`offers/best` around `$0.001`, `commerce_quote` around `$0.002`
 
 Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing
@@ -116,6 +117,8 @@ If you receive HTTP 402 with a PAYMENT-REQUIRED header:
 2) Pay the listed USDC amount via Circle Gateway on the stated network
    (pilot: Base Sepolia eip155:84532), then retry with header PAYMENT-SIGNATURE.
 3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
+Dynamic pricing (meteora_brief): $0.01–$0.30 USDC from market volatility + fee/demand velocity.
+PAYMENT-REQUIRED is the live quote — never hard-code a fixed price.
 Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 ```
 

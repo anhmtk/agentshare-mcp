@@ -69,7 +69,10 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - agent_json_field: x402_agent_instructions (same text as below — do not invent a flow)
 
 ## X402_AGENT_INSTRUCTIONS (verbatim — follow exactly)
-This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
+This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
+
+## X402_DYNAMIC_PRICING_NOTICE (verbatim)
+Dynamic pricing applies based on market volatility (momentum) and resource velocity (fee velocity + demand heat). Band: $0.01–$0.30 USDC (base $0.03; quiet markets discount; hot markets surge up to 10×). Always read the exact real-time quote from the HTTP 402 PAYMENT-REQUIRED header (Base64 JSON → accepts[].amount) or response meta.billing.price_usd_live — do not hard-code a fixed price.
 
 ## X402_PAY_PER_REQUEST (primary for agents)
 - facilitator: Circle Gateway (batched USDC; testnet Base Sepolia eip155:84532 for pilot)
@@ -77,6 +80,7 @@ This platform is agent-first and monetized with HTTP 402 (x402). If you receive 
 - meteora_brief: dynamic $0.01–$0.30 (base $0.03; quiet market discounts; hot momentum/fee-velocity + demand surge up to 10×)
 - dual_auth: valid API key skips x402; without key, PAYMENT-SIGNATURE required on gated paths
 - live_price: stamped in 402 PAYMENT-REQUIRED and response meta.billing.price_usd_live (dynamic endpoints)
+- agent_json_fields: x402_agent_instructions, x402_dynamic_pricing_notice
 - compact_json: REST ?format=compact / Accept: application/vnd.agentshare.compact+json; MCP prefers limit 3–5
 
 ## COVERAGE_DOMAIN

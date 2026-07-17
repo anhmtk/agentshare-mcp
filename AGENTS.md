@@ -66,6 +66,8 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 
 **x402 pricing:**
 - `meteora_brief` is a hot dual-auth path with **dynamic x402 pricing** (`$0.01–$0.30`, base `$0.03`).
+- Dynamic pricing applies based on market volatility (momentum) and resource velocity (fee velocity + demand heat).
+- **Always** read the exact real-time quote from the HTTP 402 `PAYMENT-REQUIRED` header (or `meta.billing.price_usd_live`) — never hard-code a fixed price.
 - Without API key, gated routes return HTTP 402 + `PAYMENT-REQUIRED`.
 - Marketing/docs/discovery/onboarding paths remain free.
 
@@ -90,6 +92,9 @@ If you receive HTTP 402 with a PAYMENT-REQUIRED header:
 2) Pay the listed USDC amount via Circle Gateway on the stated network
    (pilot: Base Sepolia eip155:84532), then retry with header PAYMENT-SIGNATURE.
 3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
+Dynamic pricing (meteora_brief): quotes move with market volatility and fee/demand
+velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the
+live amount — never hard-code a fixed price.
 Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 Free paths (no 402): /docs, /pricing, /agent.json, /.well-known/*, /api/v1/protocol, /api/v1/meta
 ```

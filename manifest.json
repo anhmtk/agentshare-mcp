@@ -45,7 +45,7 @@
     },
     {
       "name": "meteora_brief",
-      "description": "Meteora DLMM pool brief: ranked pools, momentum_score, verdict SAFE/CAUTION/AVOID"
+      "description": "Meteora DLMM pool brief: ranked pools, momentum_score, verdict SAFE/CAUTION/AVOID. Dynamic x402 $0.01–$0.30 — check PAYMENT-REQUIRED for live quote."
     },
     {
       "name": "meteora_pool_detail",
