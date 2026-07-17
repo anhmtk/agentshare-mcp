@@ -88,20 +88,52 @@ if (!mcp.mcpServers?.agentshare?.args?.includes("server/bridge.mjs")) {
 }
 ok("plugin.json + mcp.json schema");
 
-// 6) Live server card (public, no key)
-const cardRes = await fetch("https://agentshare.dev/.well-known/mcp/server-card.json", {
-  headers: { Accept: "application/json" },
-});
-if (!cardRes.ok) {
-  fail(`server card HTTP ${cardRes.status}`);
+// 6) Live server card (public, no key) — retry; soft-skip transient 5xx in CI
+async function fetchServerCard(retries = 3) {
+  let lastStatus = 0;
+  for (let i = 0; i < retries; i++) {
+    try {
+      const cardRes = await fetch("https://agentshare.dev/.well-known/mcp/server-card.json", {
+        headers: { Accept: "application/json", "User-Agent": "agentshare-mcp-verify/1.0" },
+      });
+      lastStatus = cardRes.status;
+      if (cardRes.ok) {
+        return { ok: true, card: await cardRes.json() };
+      }
+      if (cardRes.status < 500) {
+        return { ok: false, status: cardRes.status, fatal: true };
+      }
+    } catch (e) {
+      lastStatus = 0;
+      process.stderr.write(`WARN: server card fetch error (attempt ${i + 1}): ${e}\n`);
+    }
+    await new Promise((r) => setTimeout(r, 1500 * (i + 1)));
+  }
+  return { ok: false, status: lastStatus, fatal: false };
 }
-const card = await cardRes.json();
-const tools = card?.tools ?? card?.capabilities?.tools ?? [];
-const toolCount = Array.isArray(tools) ? tools.length : 0;
-if (toolCount < 10) {
-  fail(`expected 10 tools on server card, got ${toolCount}`);
+
+const cardProbe = await fetchServerCard();
+if (!cardProbe.ok) {
+  const soft =
+    process.env.CI === "true" ||
+    process.env.SKIP_LIVE_VERIFY === "1" ||
+    process.env.SKIP_LIVE_VERIFY === "true";
+  if (!cardProbe.fatal && soft) {
+    process.stdout.write(
+      `SKIP: production server card HTTP ${cardProbe.status || "error"} (transient; CI soft-skip)\n`,
+    );
+  } else {
+    fail(`server card HTTP ${cardProbe.status || "error"}`);
+  }
+} else {
+  const card = cardProbe.card;
+  const tools = card?.tools ?? card?.capabilities?.tools ?? [];
+  const toolCount = Array.isArray(tools) ? tools.length : 0;
+  if (toolCount < 10) {
+    fail(`expected >=10 tools on server card, got ${toolCount}`);
+  }
+  ok(`production server card (${toolCount} tools)`);
 }
-ok(`production server card (${toolCount} tools)`);
 
 // 7) Optional: MCP POST initialize with API key
 const apiKey = (process.env.AGENTSHARE_API_KEY || process.env.API_KEY || "").trim();
