@@ -1,0 +1,26 @@
+{
+  "endpoint_id": "dex_overview",
+  "note": "SAMPLE ONLY — illustrative DefiLlama-style overview shape.",
+  "request": {
+    "method": "GET",
+    "path": "/api/v1/dex/overview",
+    "query": { "chain": "solana", "limit": 5 }
+  },
+  "chain": "solana",
+  "protocols": [
+    { "name": "Raydium", "volume_24h_usd": 1200000000, "change_1d_pct": 4.2 },
+    { "name": "Orca", "volume_24h_usd": 450000000, "change_1d_pct": -1.1 },
+    { "name": "Meteora", "volume_24h_usd": 380000000, "change_1d_pct": 8.5 },
+    { "name": "Phoenix", "volume_24h_usd": 90000000, "change_1d_pct": 0.4 },
+    { "name": "Lifinity", "volume_24h_usd": 70000000, "change_1d_pct": -0.8 }
+  ],
+  "meta": {
+    "freshness": { "as_of": "2026-07-26T00:00:00Z" },
+    "multi_chain_roadmap": [
+      "solana (active depth)",
+      "base (payment rail today; DeFi analytics upcoming)",
+      "other EVM / L1 venues as coverage ships"
+    ],
+    "disclaimer": "Informational only — not financial advice."
+  }
+}

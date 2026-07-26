@@ -1,0 +1,30 @@
+{
+  "endpoint_id": "service_meta",
+  "note": "SAMPLE ONLY — capability / discovery envelope for agents.",
+  "service": "AgentShare — Multi-Chain DeFi Intelligence",
+  "base_url": "https://agentshare.dev",
+  "focus": {
+    "primary_today": "solana_defi",
+    "venues_today": ["meteora_dlmm", "solana_dex_macro"],
+    "payment": {
+      "dual_auth": ["X-API-Key", "x402_PAYMENT-SIGNATURE"],
+      "settle_network_today": "eip155:8453",
+      "asset": "USDC"
+    }
+  },
+  "discovery": {
+    "agent_json": "https://agentshare.dev/agent.json",
+    "openapi": "https://agentshare.dev/openapi.json",
+    "well_known_x402": "https://agentshare.dev/.well-known/x402",
+    "mcp": "https://agentshare.dev/mcp",
+    "huggingface_space": "https://huggingface.co/spaces/anhmtk/agentshare-multi-chain-defi"
+  },
+  "tools_sample": [
+    "meteora_brief",
+    "meteora_pool_detail",
+    "solana_dex_brief",
+    "dex_overview",
+    "dex_top_movers",
+    "service_meta"
+  ]
+}

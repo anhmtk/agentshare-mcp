@@ -1,0 +1,55 @@
+{
+  "endpoint_id": "meteora_brief",
+  "note": "SAMPLE ONLY — illustrative shape; not live pool quotes.",
+  "request": {
+    "method": "POST",
+    "path": "/api/v1/agent/defi/meteora/brief",
+    "body": { "limit": 3, "window": "5m", "format": "compact" }
+  },
+  "pools": [
+    {
+      "pool_address": "SAMPLE1111111111111111111111111111111111111",
+      "pair": "SOL-USDC",
+      "venue": "meteora_dlmm",
+      "chain": "solana",
+      "momentum_score": 0.72,
+      "fee_velocity": 0.41,
+      "verdict": "SAFE",
+      "window": "5m"
+    },
+    {
+      "pool_address": "SAMPLE2222222222222222222222222222222222222",
+      "pair": "JUP-SOL",
+      "venue": "meteora_dlmm",
+      "chain": "solana",
+      "momentum_score": 0.55,
+      "fee_velocity": 0.28,
+      "verdict": "CAUTION",
+      "window": "5m"
+    },
+    {
+      "pool_address": "SAMPLE3333333333333333333333333333333333333",
+      "pair": "BONK-SOL",
+      "venue": "meteora_dlmm",
+      "chain": "solana",
+      "momentum_score": 0.22,
+      "fee_velocity": 0.09,
+      "verdict": "AVOID",
+      "window": "5m"
+    }
+  ],
+  "meta": {
+    "freshness": {
+      "as_of": "2026-07-26T00:00:00Z",
+      "window": "5m"
+    },
+    "billing": {
+      "endpoint_id": "meteora_brief",
+      "rail": "x402_or_api_key",
+      "price_scheme": "dynamic",
+      "price_usd_band": { "min": 0.01, "max": 0.3 },
+      "note": "Live quote is in HTTP 402 PAYMENT-REQUIRED accepts[].amount (USDC atomic)."
+    },
+    "disclaimer": "Informational only — not financial advice."
+  }
+}
