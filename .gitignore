@@ -30,3 +30,6 @@ Thumbs.db
 .DS_Store
 .idea/
 .vscode/
+
+# Private pitch / grant drafts (not for public MCP repo)
+docs/superteam/
