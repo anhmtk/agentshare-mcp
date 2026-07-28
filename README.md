@@ -124,6 +124,33 @@ Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 
 ---
 
+## MCP registry for builders and autonomous agents
+
+AgentShare also runs a **curated MCP Registry** at https://agentshare.dev/registry
+
+- Browse verified listings: `GET https://agentshare.dev/api/v1/registry/entries`
+- Human submit page: https://agentshare.dev/registry#submit
+- Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`
+- Agent key mint (tiny x402 or full API key): `POST https://agentshare.dev/api/v1/registry/agent-key`
+
+### Agent submit flow
+
+1. Call `POST https://agentshare.dev/api/v1/registry/agent-key`
+2. Authenticate either with:
+   - a normal `X-API-Key`, or
+   - **x402**: no key → receive HTTP 402 → pay tiny USDC amount → retry with `PAYMENT-SIGNATURE`
+3. Receive a short-lived scoped key with scope `registry:submit`
+4. Use that key on `POST /api/v1/registry/submit`
+5. Listing stays `pending_review` until AgentShare approves it
+
+Approved listings get:
+
+- a public detail page (`/registry/{id}`)
+- owner analytics (opens, referrers, countries, client types)
+- quick-share actions for X, LinkedIn, Facebook, GitHub README snippets, and copy-link
+
+---
+
 ## Chrome extension (Agent Readiness + Prompt Injection Scan + MCP Connect)
 
 Free browser extension — **ARS site scan** + **Prompt Injection Scan** (client-side DOM) + **MCP Connect** (copy Cursor/Claude/VS Code config for `agentshare.dev/mcp`).

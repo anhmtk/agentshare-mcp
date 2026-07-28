@@ -24,6 +24,10 @@
     "commerce_quote": "https://agentshare.dev/api/v1/agent/commerce/quote",
     "solana_dex_brief": "https://agentshare.dev/api/v1/agent/defi/solana/brief",
     "meteora_brief": "https://agentshare.dev/api/v1/agent/defi/meteora/brief",
+    "mcp_registry": "https://agentshare.dev/registry",
+    "mcp_registry_entries": "https://agentshare.dev/api/v1/registry/entries",
+    "mcp_registry_submit": "https://agentshare.dev/api/v1/registry/submit",
+    "mcp_registry_agent_key": "https://agentshare.dev/api/v1/registry/agent-key",
     "coverage": "https://agentshare.dev/coverage",
     "signup": "https://agentshare.dev/signup",
     "pricing": "https://agentshare.dev/pricing",
@@ -52,7 +56,32 @@
       "discovery": "https://agentshare.dev/.well-known/x402"
     },
     "register": "POST https://agentshare.dev/api/v1/auth/register",
-    "free_tier_hint": "~100 requests/month for API-key plan (secondary; x402 pay-per-request is primary)"
+    "free_tier_hint": "~100 requests/month for API-key plan (secondary; x402 pay-per-request is primary)",
+    "registry_submit_scoped_key": {
+      "mint_endpoint": "POST https://agentshare.dev/api/v1/registry/agent-key",
+      "auth": "full_api_key_or_tiny_x402_payment",
+      "scope": "registry:submit",
+      "submit_endpoint": "POST https://agentshare.dev/api/v1/registry/submit"
+    }
+  },
+  "mcp_registry": {
+    "landing": "https://agentshare.dev/registry",
+    "entries_json": "https://agentshare.dev/api/v1/registry/entries",
+    "summary_json": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
+    "detail_url_pattern": "https://agentshare.dev/registry/{id}",
+    "submit_review_policy": "all listings are editor-reviewed before publish",
+    "agent_submit_flow": [
+      "POST /api/v1/registry/agent-key",
+      "pay tiny x402 amount or use a full API key",
+      "receive scoped registry:submit key",
+      "POST /api/v1/registry/submit",
+      "check /registry/status/{token} until approved"
+    ],
+    "approved_listing_features": [
+      "public_detail_page",
+      "owner_analytics_opens_referrers_countries_clients",
+      "share_actions_x_linkedin_facebook_github_copy_link"
+    ]
   },
   "mcp_tools": [
     {

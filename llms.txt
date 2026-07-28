@@ -68,6 +68,20 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - free_paths: marketing/docs/discovery/onboarding stay free (/, /docs, /agent.json, /api/v1/protocol, /.well-known/*, …)
 - agent_json_field: x402_agent_instructions (same text as below — do not invent a flow)
 
+## MCP_REGISTRY_FOR_BUILDERS_AND_AGENTS
+- landing: https://agentshare.dev/registry
+- entries_json: https://agentshare.dev/api/v1/registry/entries
+- summary_json: https://agentshare.dev/api/v1/public/mcp-registry/summary
+- human_submit_page: https://agentshare.dev/registry#submit
+- agent_submit_api: POST https://agentshare.dev/api/v1/registry/submit
+- agent_submit_key: POST https://agentshare.dev/api/v1/registry/agent-key
+- agent_submit_key_auth: full API key OR tiny x402 payment on that endpoint
+- agent_submit_scope: registry:submit
+- approval: every submission remains pending_review until AgentShare approves it
+- approved_listing_public_url_pattern: https://agentshare.dev/registry/{id}
+- approved_listing_owner_stats: GET https://agentshare.dev/api/v1/mcp/stats/{id}?token={submission_token}
+- approved_listing_share_actions: X, LinkedIn, Facebook, GitHub README snippet, copy-link
+
 ## X402_AGENT_INSTRUCTIONS (verbatim — follow exactly)
 This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
 
