@@ -1,4 +1,5 @@
 # MCP server for Agent Price API
 # pip install mcp requests
-mcp>=1.0.0
+# mcp 2.x removed mcp.server.fastmcp — keep 1.x for this reference server.
+mcp>=1.0.0,<2
 requests>=2.28.0
