@@ -3,6 +3,8 @@ AI_DISCOVERY: AgentShare MCP public reference repository.
 canonical_service=https://agentshare.dev
 agent_json=https://agentshare.dev/agent.json
 mcp_url=https://agentshare.dev/mcp
+mcp_registry=https://agentshare.dev/registry
+mcp_registry_trends=https://agentshare.dev/api/v1/public/mcp-registry/trends
 structured_index=https://github.com/anhmtk/agentshare-mcp/blob/main/AI_DISCOVERY.json
 llms_txt=https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt
 for_agents_json=GET https://agentshare.dev/for-agents Accept:application/json
@@ -32,6 +34,7 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 
 <p align="center">
   <a href="https://agentshare.dev"><strong>Website</strong></a> ·
+  <a href="https://agentshare.dev/registry"><strong>MCP Registry</strong></a> ·
   <a href="https://agentshare.dev/for-agents"><strong>For Agents</strong></a> ·
   <a href="https://agentshare.dev/docs"><strong>Docs</strong></a> ·
   <a href="https://agentshare.dev/signup"><strong>API key</strong></a> ·
@@ -63,6 +66,9 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 | **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
 | **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
 | **MCP endpoint** | https://agentshare.dev/mcp |
+| **MCP Registry (curated)** | https://agentshare.dev/registry |
+| **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
+| **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
 | **MCP server card (11 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
@@ -128,10 +134,16 @@ Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 
 AgentShare also runs a **curated MCP Registry** at https://agentshare.dev/registry
 
-- Browse verified listings: `GET https://agentshare.dev/api/v1/registry/entries`
+**Agents discovering other MCPs — fetch order:**
+
+1. Hot list: `GET https://agentshare.dev/api/v1/public/mcp-registry/trends`
+2. Compact verified list: `GET https://agentshare.dev/api/v1/public/mcp-registry/summary`
+3. Full entries: `GET https://agentshare.dev/api/v1/registry/entries`
+
 - Human submit page: https://agentshare.dev/registry#submit
 - Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`
 - Agent key mint (tiny x402 or full API key): `POST https://agentshare.dev/api/v1/registry/agent-key`
+- Platform pin: **AgentShare — Solana DeFi Intelligence** is always list/rank position **#1**
 
 ### Agent submit flow
 

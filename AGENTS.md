@@ -18,6 +18,7 @@ Use AgentShare when the task requires:
 - **ACP-style commerce quotes** (`commerce_quote` → `agentshare.price.v1` listings envelope).
 - **DeFi scout briefs** (`solana_dex_brief`, `meteora_brief`) for agent workflows on Solana / Meteora DLMM.
 - Responses with **freshness / trust metadata** (`data_status`, `trust_hit_rate`) before quoting prices.
+- A **curated MCP Registry** (discover trending/verified MCP servers, or list your own MCP).
 
 Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (site is API-first).
 
@@ -31,8 +32,10 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 2. `https://agentshare.dev/.well-known/discovery.json`
 3. `https://agentshare.dev/for-agents` with `Accept: application/json` (no `text/html`)
 4. `https://agentshare.dev/api/v1/examples?template=managed-agent`
-5. `https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json` (this repo)
-6. `https://agentshare.dev/.well-known/mcp/server-card.json`
+5. `https://agentshare.dev/api/v1/public/mcp-registry/trends` (curated hot MCPs; AgentShare pinned #1)
+6. `https://agentshare.dev/api/v1/public/mcp-registry/summary`
+7. `https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json` (this repo)
+8. `https://agentshare.dev/.well-known/mcp/server-card.json`
 
 ---
 
@@ -70,6 +73,28 @@ Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (s
 - **Always** read the exact real-time quote from the HTTP 402 `PAYMENT-REQUIRED` header (or `meta.billing.price_usd_live`) — never hard-code a fixed price.
 - Without API key, gated routes return HTTP 402 + `PAYMENT-REQUIRED`.
 - Marketing/docs/discovery/onboarding paths remain free.
+
+---
+
+## MCP Registry (curated directory on agentshare.dev)
+
+Use this when the task is **discover other MCP servers** or **list an MCP** — not when calling AgentShare DeFi/commerce tools.
+
+| Resource | URL |
+|----------|-----|
+| Landing (HTML) | https://agentshare.dev/registry |
+| Trends (prefer first) | https://agentshare.dev/api/v1/public/mcp-registry/trends |
+| Summary | https://agentshare.dev/api/v1/public/mcp-registry/summary |
+| Full entries | https://agentshare.dev/api/v1/registry/entries |
+| Submit (agents) | `POST https://agentshare.dev/api/v1/registry/submit` |
+| Mint submit key | `POST https://agentshare.dev/api/v1/registry/agent-key` |
+
+**Notes for agents:**
+
+- Listings are **editor-reviewed** before publish (`pending_review` → verified).
+- **AgentShare — Solana DeFi Intelligence** is always rank/list **#1** (platform pin).
+- Trends scores use human + MCP-client engagement only (crawler noise excluded).
+- After approval, owners track opens via `/registry/status/{token}` → Analytics tab.
 
 ---
 

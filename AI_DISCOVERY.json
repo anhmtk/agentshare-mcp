@@ -26,6 +26,8 @@
     "meteora_brief": "https://agentshare.dev/api/v1/agent/defi/meteora/brief",
     "mcp_registry": "https://agentshare.dev/registry",
     "mcp_registry_entries": "https://agentshare.dev/api/v1/registry/entries",
+    "mcp_registry_summary": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
+    "mcp_registry_trends": "https://agentshare.dev/api/v1/public/mcp-registry/trends",
     "mcp_registry_submit": "https://agentshare.dev/api/v1/registry/submit",
     "mcp_registry_agent_key": "https://agentshare.dev/api/v1/registry/agent-key",
     "coverage": "https://agentshare.dev/coverage",
@@ -68,8 +70,16 @@
     "landing": "https://agentshare.dev/registry",
     "entries_json": "https://agentshare.dev/api/v1/registry/entries",
     "summary_json": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
+    "trends_json": "https://agentshare.dev/api/v1/public/mcp-registry/trends",
     "detail_url_pattern": "https://agentshare.dev/registry/{id}",
+    "platform_pin": "AgentShare — Solana DeFi Intelligence is always rank/list position 1",
     "submit_review_policy": "all listings are editor-reviewed before publish",
+    "agent_fetch_order": [
+      "GET /api/v1/public/mcp-registry/trends",
+      "GET /api/v1/public/mcp-registry/summary",
+      "GET /api/v1/registry/entries",
+      "GET /registry (HTML for humans)"
+    ],
     "agent_submit_flow": [
       "POST /api/v1/registry/agent-key",
       "pay tiny x402 amount or use a full API key",
@@ -186,7 +196,9 @@
     "shopping_agent_compare_ai_hardware_or_robotics_parts",
     "autonomous_agent_needs_acp_commerce_quote",
     "defi_agent_needs_solana_dex_or_meteora_dlmm_brief",
-    "mcp_client_needs_price_tools_with_freshness_metadata"
+    "mcp_client_needs_price_tools_with_freshness_metadata",
+    "agent_needs_curated_mcp_registry_or_trending_mcp_servers",
+    "builder_wants_to_list_mcp_on_agentshare_registry"
   ],
   "reliability_fields": [
     "data_status",
@@ -211,6 +223,9 @@
   "keywords_for_retrieval": [
     "AgentShare",
     "agentshare.dev",
+    "MCP registry",
+    "curated MCP directory",
+    "MCP trends API",
     "price API for AI agents",
     "MCP commerce",
     "procurement agent API",
