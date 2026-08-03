@@ -78,6 +78,7 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 | **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
 | **MCP server card (11 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **Coverage (honest scope)** | https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme · [DEFI_POSITIONING.md](./docs/DEFI_POSITIONING.md) |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
 This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.

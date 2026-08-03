@@ -103,7 +103,10 @@ Dynamic pricing applies based on market volatility (momentum) and resource veloc
 - compact_json: REST ?format=compact / Accept: application/vnd.agentshare.compact+json; MCP prefers limit 3–5
 
 ## COVERAGE_DOMAIN
-AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4). Canonical spec: GET https://agentshare.dev/coverage
+Commerce focus: AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4).
+DeFi + commerce scope map (human HTML / agent JSON): https://agentshare.dev/coverage · https://agentshare.dev/coverage?format=json
+Honest DeFi positioning (GitHub mirror): https://github.com/anhmtk/agentshare-mcp/blob/main/docs/DEFI_POSITIONING.md
+Validation: OpenClaw paper trade ongoing — heuristics can be wrong; not financial advice; read meta.freshness.
 
 ## RELIABILITY_SIGNALS (check before quoting prices to users)
 - data_status: fresh | stale | pending_crawl | not_found | out_of_coverage

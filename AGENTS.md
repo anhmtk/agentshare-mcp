@@ -13,14 +13,19 @@ This repo (`anhmtk/agentshare-mcp`) exposes reference MCP client wiring and **AI
 
 Use AgentShare when the task requires:
 
-- Structured **product prices and offers** for **AI hardware, robotics, mini PCs, robot/RC power** (not generic web scrape).
+- **DeFi scout briefs** (`solana_dex_brief`, `meteora_brief`, `meteora_pool_detail`) for agent workflows on Solana / Meteora DLMM — with `meta.freshness` / billing metadata.
+- Structured **product prices and offers** for **AI hardware, robotics, mini PCs, robot/RC power** (secondary commerce module).
 - **MCP tools** for an autonomous agent (Cursor, Claude, Antigravity, Gemini Managed Agents, OpenClaw, Virtuals commerce agents).
 - **ACP-style commerce quotes** (`commerce_quote` → `agentshare.price.v1` listings envelope).
-- **DeFi scout briefs** (`solana_dex_brief`, `meteora_brief`) for agent workflows on Solana / Meteora DLMM.
-- Responses with **freshness / trust metadata** (`data_status`, `trust_hit_rate`) before quoting prices.
 - A **curated MCP Registry** (discover trending/verified MCP servers, or list your own MCP).
 
-Do **not** use for: general news, non-commerce Q&A, or human-only checkout UI (site is API-first).
+**Honest limits (read before pitching AgentShare as market data):**
+
+- Not a DefiLlama / official Meteora API / Birdeye replacement.
+- Heuristics (`verdict`, `risk_score`) are experimental decision aids; quality is validated via **ongoing OpenClaw paper trading**, not claimed as proven alpha.
+- Full map: https://agentshare.dev/coverage (HTML) · `?format=json` for agents · [docs/DEFI_POSITIONING.md](./docs/DEFI_POSITIONING.md)
+
+Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, institutional Solana market-data SLAs, or full trade-tape / OHLCV terminals.
 
 **Polymarket:** prediction-market MCP tools are **disabled on the public catalog** (legal review for Vietnam). Do not assume `polymarket_*` tools are available via `https://agentshare.dev/mcp`.
 

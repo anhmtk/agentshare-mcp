@@ -31,6 +31,8 @@
     "mcp_registry_submit": "https://agentshare.dev/api/v1/registry/submit",
     "mcp_registry_agent_key": "https://agentshare.dev/api/v1/registry/agent-key",
     "coverage": "https://agentshare.dev/coverage",
+    "coverage_json": "https://agentshare.dev/coverage?format=json",
+    "defi_positioning_md": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/DEFI_POSITIONING.md",
     "signup": "https://agentshare.dev/signup",
     "pricing": "https://agentshare.dev/pricing",
     "antigravity_skills_manifest": "https://agentshare.dev/.well-known/antigravity-skills.json",
@@ -200,6 +202,21 @@
     "agent_needs_curated_mcp_registry_or_trending_mcp_servers",
     "builder_wants_to_list_mcp_on_agentshare_registry"
   ],
+  "when_not_to_use": [
+    "need_birdeye_class_ohlcv_or_full_trade_tape",
+    "need_defillama_or_meteora_official_api_replacement_only",
+    "need_proven_trading_alpha_sla"
+  ],
+  "defi_positioning": {
+    "human_page": "https://agentshare.dev/coverage",
+    "json": "https://agentshare.dev/coverage?format=json",
+    "github_mirror": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/DEFI_POSITIONING.md",
+    "validation": {
+      "method": "openclaw_paper_trade",
+      "status": "ongoing",
+      "note": "Heuristics are experimental decision aids; continuously paper-traded and iterated. Not financial advice."
+    }
+  },
   "reliability_fields": [
     "data_status",
     "freshness_status",
