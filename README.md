@@ -13,12 +13,33 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 -->
 
 <p align="center">
-  <a href="https://agentshare.dev">
-    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — Price API + MCP for AI agents" width="520">
+  <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">
+    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — Solana DeFi intelligence for AI agents" width="520">
   </a>
 </p>
 
 <h1 align="center">AgentShare MCP — public reference</h1>
+
+<p align="center">
+  <strong>DeFi-first</strong> Solana intelligence for AI agents (Meteora DLMM briefs, DEX scout) — REST + MCP + curated registry.
+</p>
+
+<!-- Primary CTAs: one job each. UTM tracks GitHub README → agentshare.dev. -->
+<p align="center">
+  <a href="https://agentshare.dev/docs?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme#mcp"><strong>Connect MCP →</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://agentshare.dev/registry?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme"><strong>Browse Registry →</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://agentshare.dev/signup?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Get API key</a>
+  ·
+  <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Website</a>
+  ·
+  <a href="https://agentshare.dev/for-agents?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">For Agents</a>
+  ·
+  <a href="https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Chrome extension</a>
+</p>
 
 <p align="center">
   <strong>For AI agents:</strong>
@@ -26,19 +47,6 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
   <a href="./AI_DISCOVERY.json"><code>AI_DISCOVERY.json</code></a> ·
   <a href="./llms.txt"><code>llms.txt</code></a> ·
   <a href="./AGENTS.md"><code>AGENTS.md</code></a>
-</p>
-
-<p align="center">
-  <strong>DeFi-first</strong> intelligence for autonomous Solana agents (Meteora DLMM) — plus a secondary commerce procurement module.
-</p>
-
-<p align="center">
-  <a href="https://agentshare.dev"><strong>Website</strong></a> ·
-  <a href="https://agentshare.dev/registry"><strong>MCP Registry</strong></a> ·
-  <a href="https://agentshare.dev/for-agents"><strong>For Agents</strong></a> ·
-  <a href="https://agentshare.dev/docs"><strong>Docs</strong></a> ·
-  <a href="https://agentshare.dev/signup"><strong>API key</strong></a> ·
-  <a href="https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed"><strong>Chrome extension</strong></a>
 </p>
 
 <p align="center">
@@ -66,7 +74,7 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 | **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
 | **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
 | **MCP endpoint** | https://agentshare.dev/mcp |
-| **MCP Registry (curated)** | https://agentshare.dev/registry |
+| **MCP Registry (curated)** | https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme |
 | **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
 | **MCP server card (11 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
@@ -94,7 +102,7 @@ Polymarket prediction-market tools are **not** on the public MCP catalog (legal 
 | `meteora_brief` | Meteora DLMM pool brief (verdict, risk_score, top pools) |
 | `meteora_pool_detail` | Meteora DLMM pool detail (bin depth, liquidity curve proxy, current price) |
 
-Responses include `data_status`, freshness, and trust metadata — see https://agentshare.dev/docs
+Responses include `data_status`, freshness, and trust metadata — see [Docs](https://agentshare.dev/docs?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme).
 
 ---
 
@@ -112,7 +120,7 @@ Notable pricing:
 - Dynamic pricing applies based on market volatility and resource velocity — **always check `PAYMENT-REQUIRED` for the exact real-time quote** (also in `meta.billing.price_usd_live`)
 - Commerce pilot paths: `search`/`offers/best` around `$0.001`, `commerce_quote` around `$0.002`
 
-Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing
+Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
 
 ### If you receive HTTP 402 (agents — follow exactly)
 
@@ -132,7 +140,8 @@ Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 
 ## MCP registry for builders and autonomous agents
 
-AgentShare also runs a **curated MCP Registry** at https://agentshare.dev/registry
+AgentShare also runs a **curated MCP Registry** at
+[agentshare.dev/registry](https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme).
 
 **Agents discovering other MCPs — fetch order:**
 
@@ -140,7 +149,7 @@ AgentShare also runs a **curated MCP Registry** at https://agentshare.dev/regist
 2. Compact verified list: `GET https://agentshare.dev/api/v1/public/mcp-registry/summary`
 3. Full entries: `GET https://agentshare.dev/api/v1/registry/entries`
 
-- Human submit page: https://agentshare.dev/registry#submit
+- Human submit page: https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#submit
 - Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`
 - Agent key mint (tiny x402 or full API key): `POST https://agentshare.dev/api/v1/registry/agent-key`
 - Platform pin: **AgentShare — Solana DeFi Intelligence** is always list/rank position **#1**
@@ -169,10 +178,10 @@ Free browser extension — **ARS site scan** + **Prompt Injection Scan** (client
 
 | Resource | URL |
 |----------|-----|
-| **Chrome Web Store** | https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed |
+| **Chrome Web Store** | https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme |
 | **Docs** | [docs/CHROME_EXTENSION.md](./docs/CHROME_EXTENSION.md) |
-| **ARS spec** | https://agentshare.dev/docs#agent-readiness-score |
-| **Prompt Injection Fix Guide** | https://agentshare.dev/docs#prompt-injection-fix-guide |
+| **ARS spec** | https://agentshare.dev/docs?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#agent-readiness-score |
+| **Prompt Injection Fix Guide** | https://agentshare.dev/docs?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#prompt-injection-fix-guide |
 
 Extension source is proprietary (private backend repo); this public repo documents the product for discovery.
 
@@ -233,7 +242,7 @@ Cursor **Marketplace** org applications are reviewed selectively (2026); use **c
 }
 ```
 
-Get API key (secondary human plan): https://agentshare.dev/signup
+Get API key (secondary human plan): https://agentshare.dev/signup?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
 
 Prefer autonomous-agent payment via x402: https://agentshare.dev/.well-known/x402
 
@@ -262,7 +271,8 @@ Aligned with Google I/O 2026 agentic stack (Antigravity 2.0, SDK, Gemini 3.5 Fla
 
 ## Coverage
 
-AI hardware, robotics, mini PCs, robot/RC power — https://agentshare.dev/coverage
+AI hardware, robotics, mini PCs, robot/RC power —
+https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
 
 ---
 
