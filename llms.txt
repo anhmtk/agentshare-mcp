@@ -52,14 +52,12 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_movers, polymarket_brief) are disabled on the public MCP catalog and anonymous discovery — legal review for Vietnam.
 
 ## DISCLAIMERS (IMPORTANT)
-- Informational analytics only. Not financial, investment, or trading advice.
-- Users and autonomous agents are solely responsible for their own decisions and on-chain actions.
-- Vietnam notice: this service is not intended for users located in Vietnam. If you access from Vietnam (including via VPN), you assume all legal responsibility under local law.
+- Informational only — not financial advice. Agents/users own their decisions (incl. on-chain).
+- Vietnam notice: service not intended for users located in Vietnam (incl. VPN → you assume local legal responsibility).
+- Full terms: https://agentshare.dev/terms
 
 ## MIEN_TRU_TRACH_NHIEM (VN)
-- Chỉ cung cấp dữ liệu/phân tích tham khảo. Không phải lời khuyên đầu tư/giao dịch.
-- Người dùng/agent tự chịu trách nhiệm cho mọi quyết định và hành động on-chain.
-- Lưu ý về Việt Nam: sản phẩm không nhắm tới người dùng tại Việt Nam. Nếu vẫn truy cập từ Việt Nam (kể cả qua VPN), bạn tự chịu hoàn toàn trách nhiệm pháp lý theo quy định địa phương.
+- Chỉ phân tích tham khảo — không phải lời khuyên đầu tư. Agent/user tự chịu trách nhiệm. Không nhắm tới user tại Việt Nam.
 
 ## AUTHENTICATION (dual-auth — prefer x402 for autonomous agents)
 - mode_a_api_key: X-API-Key: agshp_... OR Authorization: Bearer agshp_...
