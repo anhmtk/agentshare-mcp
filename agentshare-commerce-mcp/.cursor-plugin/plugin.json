@@ -1,7 +1,7 @@
 {
   "name": "agentshare-commerce-mcp",
-  "displayName": "AgentShare — AI Commerce Price MCP",
-  "description": "10 MCP tools: marketplace prices, ACP commerce_quote, DefiLlama DEX macro, Solana DEX brief, Meteora DLMM brief. Polymarket not on public catalog. Free tier at agentshare.dev.",
+  "displayName": "AgentShare — Agent-paid API MCP",
+  "description": "11 MCP tools on agent-paid rails: dual-auth / x402, commerce procurement (search, best_offer, commerce_quote), secondary Solana/Meteora demos. Start building at agentshare.dev/signup.",
   "version": "1.0.8",
   "author": {
     "name": "AgentShare",
@@ -13,6 +13,9 @@
   "license": "MIT",
   "keywords": [
     "mcp",
+    "agent-paid",
+    "x402",
+    "dual-auth",
     "price-api",
     "e-commerce",
     "ai-agent",
@@ -24,7 +27,7 @@
     "ai-hardware"
   ],
   "category": "integration",
-  "tags": ["mcp", "price", "procurement", "agents"],
+  "tags": ["mcp", "agent-paid", "x402", "procurement", "agents"],
   "logo": "assets/icon.png",
   "mcpServers": "./mcp.json"
 }

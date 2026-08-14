@@ -1,10 +1,10 @@
-# AgentShare — AI Commerce Price MCP
+# AgentShare — Agent-paid API MCP (Cursor plugin)
 
-Connect Cursor to **live marketplace price intelligence** for AI agents. Search products, find the best offer, run budget-constrained procurement quotes, and drill into product details—all through MCP tools backed by [agentshare.dev](https://agentshare.dev).
+Connect Cursor to **agent-paid API access** on [agentshare.dev](https://agentshare.dev): dual-auth (API key or x402), commerce procurement tools, and secondary Solana/Meteora DeFi demos — all through MCP.
 
-**Catalog version:** `1.0.8` · **10 tools** on the public MCP endpoint. Polymarket tools are **not** on the public catalog.
+**Catalog version:** `1.0.9` · **11 tools** on the public MCP endpoint. Polymarket tools are **not** on the public catalog.
 
-**Free tier:** [Sign up](https://agentshare.dev/signup) for **100 API requests/month** (no credit card).
+**Start building:** [agentshare.dev/signup](https://agentshare.dev/signup) for free-tier dual-auth credentials, or settle **x402** per request with no key.
 
 ---
 
@@ -28,7 +28,7 @@ Connect Cursor to **live marketplace price intelligence** for AI agents. Search 
 | **`dex_overview`** | Rank decentralized exchange protocols by 24h volume (DefiLlama). |
 | **`dex_top_movers`** | DEX protocols with the largest absolute 1d volume change %. |
 
-### DeFi scout tools
+### DeFi scout tools (secondary demos)
 
 | Tool | Description |
 |------|-------------|
@@ -62,8 +62,8 @@ Agents can parse block 2 programmatically; humans read block 1 in the chat.
 1. Open **Cursor** → **Customize** (left sidebar) → **Plugins** or **MCP**.
 2. Search for **AgentShare** or **AI Commerce Price MCP**.
 3. Click **Install**.
-4. When prompted, paste your **AgentShare API key** (`agshp_…` from [signup](https://agentshare.dev/signup)).
-5. Confirm MCP status is **Connected** and **10 tools** are listed.
+4. When prompted, paste your **AgentShare API key** (`agshp_…` from [signup](https://agentshare.dev/signup) — start building agent-paid APIs).
+5. Confirm MCP status is **Connected** and tools are listed.
 
 ### Manual MCP setup (Customize → Add MCP server)
 

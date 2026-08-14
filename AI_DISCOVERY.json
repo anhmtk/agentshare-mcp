@@ -3,10 +3,11 @@
   "kind": "agentshare_github_ai_discovery",
   "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
   "name": "AgentShare",
-  "type": "commerce_price_mcp",
+  "type": "agent_paid_api_mcp",
   "mcp_catalog_version": "1.0.9",
   "mcp_tool_count": 11,
-  "summary": "Structured marketplace prices, ACP commerce quotes, and DeFi scout briefs for autonomous AI agents — MCP Streamable HTTP + REST. AI hardware, robotics, mini PCs. Solana DEX + Meteora DLMM tools. Polymarket is not exposed on the public MCP catalog.",
+  "primary_focus": "agent_paid_rails",
+  "summary": "Agent-paid API for autonomous agents: dual-auth (API key or x402), free discovery, MCP Streamable HTTP + REST. Secondary: commerce procurement (AI hardware, robotics) and Solana/Meteora DeFi demos. Polymarket is not exposed on the public MCP catalog.",
   "canonical_urls": {
     "website": "https://agentshare.dev",
     "agent_json": "https://agentshare.dev/agent.json",
@@ -60,7 +61,7 @@
       "discovery": "https://agentshare.dev/.well-known/x402"
     },
     "register": "POST https://agentshare.dev/api/v1/auth/register",
-    "free_tier_hint": "~100 requests/month for API-key plan (secondary; x402 pay-per-request is primary)",
+    "free_tier_hint": "~100 requests/month free-tier dual-auth credentials (start at /signup); x402 pay-per-request is primary for autonomous agents",
     "registry_submit_scoped_key": {
       "mint_endpoint": "POST https://agentshare.dev/api/v1/registry/agent-key",
       "auth": "full_api_key_or_tiny_x402_payment",
@@ -74,7 +75,7 @@
     "summary_json": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
     "trends_json": "https://agentshare.dev/api/v1/public/mcp-registry/trends",
     "detail_url_pattern": "https://agentshare.dev/registry/{id}",
-    "platform_pin": "AgentShare — Solana DeFi Intelligence is always rank/list position 1",
+    "platform_pin": "AgentShare — Agent-paid API is always rank/list position 1",
     "submit_review_policy": "all listings are editor-reviewed before publish",
     "agent_fetch_order": [
       "GET /api/v1/public/mcp-registry/trends",
@@ -194,10 +195,11 @@
     }
   },
   "when_to_use": [
+    "agent_needs_dual_auth_or_x402_paid_api_access",
     "procurement_agent_needs_structured_prices",
     "shopping_agent_compare_ai_hardware_or_robotics_parts",
     "autonomous_agent_needs_acp_commerce_quote",
-    "defi_agent_needs_solana_dex_or_meteora_dlmm_brief",
+    "defi_demo_agent_needs_solana_dex_or_meteora_dlmm_brief",
     "mcp_client_needs_price_tools_with_freshness_metadata",
     "agent_needs_curated_mcp_registry_or_trending_mcp_servers",
     "builder_wants_to_list_mcp_on_agentshare_registry"
@@ -228,18 +230,22 @@
     "ready": true,
     "pricing_page": "https://agentshare.dev/pricing",
     "discovery": "https://agentshare.dev/.well-known/x402",
-    "agent_instructions": "This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).",
+    "agent_instructions": "This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (live settleable: Base mainnet eip155:8453 — always confirm accepts[].network), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief secondary demo): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).",
     "dynamic_pricing_notice": "Dynamic pricing applies based on market volatility (momentum) and resource velocity (fee velocity + demand heat). Band: $0.01–$0.30 USDC (base $0.03; quiet markets discount; hot markets surge up to 10×). Always read the exact real-time quote from the HTTP 402 PAYMENT-REQUIRED header (Base64 JSON → accepts[].amount) or response meta.billing.price_usd_live — do not hard-code a fixed price.",
     "notes": [
       "gated routes support dual-auth API key OR x402",
       "marketing/discovery/onboarding routes remain free",
-      "meteora_brief is hot path with dynamic price — check PAYMENT-REQUIRED for live quote",
+      "primary product is agent-paid rails; commerce highlighted secondary; DeFi tools are demos",
+      "meteora_brief is a secondary DeFi demo with dynamic price — check PAYMENT-REQUIRED for live quote",
       "live copy also at GET https://agentshare.dev/agent.json fields x402_agent_instructions and x402_dynamic_pricing_notice"
     ]
   },
   "keywords_for_retrieval": [
     "AgentShare",
     "agentshare.dev",
+    "agent-paid API",
+    "dual-auth",
+    "x402",
     "MCP registry",
     "curated MCP directory",
     "MCP trends API",

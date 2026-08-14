@@ -1,11 +1,11 @@
 {
   "name": "agentshare-mcp",
-  "description": "AgentShare public MCP plugins and reference configs",
+  "description": "AgentShare public MCP plugins — agent-paid API reference configs",
   "plugins": [
     {
       "name": "agentshare-commerce-mcp",
       "source": "./agentshare-commerce-mcp",
-      "description": "10 MCP tools: commerce, DefiLlama DEX, Solana DEX brief, Meteora DLMM brief. Polymarket not on public catalog.",
+      "description": "Agent-paid MCP: commerce procurement + secondary Solana/Meteora demos. Dual-auth / x402. Polymarket not on public catalog.",
       "version": "1.0.8",
       "author": {
         "name": "AgentShare"
@@ -13,7 +13,7 @@
       "homepage": "https://agentshare.dev",
       "repository": "https://github.com/anhmtk/agentshare-mcp",
       "license": "MIT",
-      "keywords": ["mcp", "price-api", "e-commerce", "procurement", "agentshare"],
+      "keywords": ["mcp", "agent-paid", "x402", "commerce", "procurement", "agentshare"],
       "category": "integration",
       "logo": "agentshare-commerce-mcp/assets/icon.png"
     }

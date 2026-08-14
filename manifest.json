@@ -1,9 +1,9 @@
 {
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
-  "display_name": "AgentShare — Solana DeFi Intelligence + Commerce MCP",
+  "display_name": "AgentShare — Agent-paid API + MCP",
   "version": "1.0.9",
-  "description": "11 MCP tools (DeFi-first): Meteora DLMM brief + pool detail (verdict/risk/momentum), Solana DEX brief, DefiLlama DEX scout; plus secondary commerce procurement tools. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
+  "description": "11 MCP tools on agent-paid rails (dual-auth API key or x402): commerce procurement (search, best_offer, commerce_quote) plus secondary Solana/Meteora DeFi demos. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
   "author": {
     "name": "AgentShare",
     "url": "https://agentshare.dev"
@@ -12,15 +12,18 @@
   "documentation": "https://agentshare.dev/docs",
   "support": "https://github.com/anhmtk/agentshare-mcp/issues",
   "keywords": [
+    "agent-paid",
+    "x402",
+    "dual-auth",
+    "mcp",
+    "ai-agent",
+    "commerce",
+    "procurement",
     "price",
     "ecommerce",
     "hardware",
-    "mcp",
-    "ai-agent",
     "robotics",
     "aliexpress",
-    "procurement",
-    "commerce",
     "affiliate",
     "dex",
     "defi",
@@ -93,7 +96,7 @@
     "api_key": {
       "type": "string",
       "title": "AgentShare API Key",
-      "description": "Get your free key at https://agentshare.dev/signup (100 req/month free)",
+      "description": "Start building at https://agentshare.dev/signup (free-tier dual-auth) or settle x402 per request",
       "sensitive": true,
       "required": true
     }

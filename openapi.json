@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "AgentShare Price & Intelligence API",
+    "title": "AgentShare Agent-paid API",
     "version": "1.1.0",
-    "description": "Agent-first API for e-commerce price intelligence and DeFi market data, monetised via Circle Gateway x402 nanopayments (pay-per-query, gasless USDC settlement).\n\nCanonical production: https://agentshare.dev (dual-auth API key or x402). This OpenAPI file is kept as the Circle seller pilot subset.\n\nPricing posture (live): x402 pay-per-request primary; monthly API-key plans secondary.\n\n## Payment\nAll protected endpoints return **HTTP 402** with a `PAYMENT-REQUIRED` header on first request. Buyers using `@circle-fin/x402-batching` (GatewayClient) handle the payment flow automatically.\n\n## Categories\n- **Commerce** — Multi-source product search, best-offer, quote (AliExpress, Geekbuying, Temu, …)\n- **DeFi Intelligence** — live on canonical `https://agentshare.dev`",
+    "description": "Agent-paid API for autonomous agents: dual-auth (API key or x402), free discovery, MCP. Secondary modules: commerce procurement and Solana/Meteora DeFi demos. Monetised via Circle Gateway x402 nanopayments (pay-per-query, gasless USDC settlement).\n\nCanonical production: https://agentshare.dev. This OpenAPI file is kept as the Circle seller pilot subset — prefer live /.well-known/x402 and agent.json for settleable networks.\n\nPricing posture (live): x402 pay-per-request primary; monthly API-key plans secondary.\n\n## Payment\nAll protected endpoints return **HTTP 402** with a `PAYMENT-REQUIRED` header on first request. Buyers using `@circle-fin/x402-batching` (GatewayClient) handle the payment flow automatically.\n\n## Categories\n- **Agent-paid rails** — dual-auth, discovery, billing envelope\n- **Commerce** — Multi-source product search, best-offer, quote (AliExpress, Geekbuying, Temu, …)\n- **DeFi demos (secondary)** — live on canonical `https://agentshare.dev`",
     "contact": {
       "name": "AgentShare",
       "url": "https://agentshare.dev"
@@ -21,7 +21,7 @@
   "servers": [
     {
       "url": "https://circle-agent-marketplace-production.up.railway.app",
-      "description": "Production (Base Sepolia testnet settlement)"
+      "description": "Circle pilot host (see live agentshare.dev for Base mainnet settlement)"
     },
     {
       "url": "http://localhost:4020",
@@ -34,8 +34,8 @@
       "description": "E-commerce product search and price comparison across international marketplaces"
     },
     {
-      "name": "DeFi Intelligence",
-      "description": "Solana DEX analytics, Meteora DLMM pool briefs, and swap quotes (coming soon)"
+      "name": "DeFi demos (secondary)",
+      "description": "Solana DEX analytics and Meteora DLMM pool briefs — secondary demos, not the company backbone"
     },
     {
       "name": "System",

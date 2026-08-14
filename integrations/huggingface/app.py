@@ -129,25 +129,26 @@ def service_meta() -> str:
 
 
 INTRO = """
-# AgentShare — Solana DeFi Intelligence for AI Agents
+# AgentShare — Agent-paid API for AI Agents
 
-Live tools from **[agentshare.dev](https://agentshare.dev)** — Meteora DLMM briefs, Solana DEX scout, x402-ready APIs.
+Live tools from **[agentshare.dev](https://agentshare.dev)** — dual-auth (API key or x402), commerce procurement, and secondary Solana/Meteora DeFi demos.
 
 | | |
 |---|---|
 | Docs | https://agentshare.dev/docs |
+| Start building | https://agentshare.dev/signup |
 | MCP (production) | https://agentshare.dev/mcp |
 | x402 discovery | https://agentshare.dev/.well-known/x402 |
 | x402scan | https://www.x402scan.com/server/65b3e822-068a-4e51-a8bb-2ade6d5f0b32 |
 | GitHub | https://github.com/anhmtk/agentshare-mcp |
 
-This Space exposes the same DeFi tools over **Gradio MCP** (`mcp_server=True`).
+This Space exposes AgentShare tools over **Gradio MCP** (`mcp_server=True`).
 Add it from [Hugging Face MCP settings](https://huggingface.co/settings/mcp) when the MCP badge is visible.
 
-**Space secret:** set `AGENTSHARE_API_KEY` (free key at https://agentshare.dev/get-key) so tool calls succeed without a browser wallet.
+**Space secret:** set `AGENTSHARE_API_KEY` (https://agentshare.dev/signup) so tool calls succeed without a browser wallet.
 """
 
-with gr.Blocks(title="AgentShare Solana DeFi") as demo:
+with gr.Blocks(title="AgentShare Agent-paid API") as demo:
     gr.Markdown(INTRO)
     with gr.Tab("Meteora brief"):
         lim = gr.Slider(1, 20, value=5, step=1, label="limit")

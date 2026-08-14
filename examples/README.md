@@ -10,9 +10,9 @@ Minimal scripts that call **https://agentshare.dev**.
 
 ---
 
-## API key path (quota plans)
+## Dual-auth path (API key or x402)
 
-1. Create a key: https://agentshare.dev/pricing  
+1. Start building: https://agentshare.dev/signup (or settle x402 with no key — see `/.well-known/x402`)  
 2. Export (do **not** commit real keys):
 
 ```bash

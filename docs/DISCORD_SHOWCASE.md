@@ -7,21 +7,22 @@ Official MCP community Discord. Post **once** in an appropriate channel (`#showc
 ## Short post (recommended)
 
 ```text
-Hi everyone — sharing AgentShare MCP for agent commerce / price intelligence.
+Hi everyone — sharing AgentShare MCP: agent-paid API access for autonomous agents.
 
 What it does:
+• Primary: dual-auth (API key or x402) + MCP Streamable HTTP + free discovery
 • Commerce: search_products, best_offer, best_offer_under_budget, product_detail, commerce_quote (ACP)
-• DeFi scout: dex_overview, dex_top_movers, solana_dex_brief, meteora_brief
+• Secondary DeFi demos: dex_overview, solana_dex_brief, meteora_brief (+ pool detail)
 • service_meta for discovery
-• 10 tools on public MCP (v1.0.8) — Polymarket tools NOT on public catalog
+• 11 tools on public MCP (v1.0.9) — Polymarket tools NOT on public catalog
 
 Connect:
-• Streamable HTTP: https://agentshare.dev/mcp (X-API-Key or Bearer)
+• Streamable HTTP: https://agentshare.dev/mcp (X-API-Key / Bearer or settle x402)
 • Repo: https://github.com/anhmtk/agentshare-mcp
 • Glama: https://glama.ai/mcp/servers/anhmtk/agentshare-mcp
-• Free tier: 100 req/mo — https://agentshare.dev/signup
+• Start building: https://agentshare.dev/signup
 
-Would love feedback from anyone building shopping/procurement agents. Happy to help with integration.
+Would love feedback from anyone building agent-paid / procurement agents. Happy to help with integration.
 ```
 
 ---
@@ -29,7 +30,7 @@ Would love feedback from anyone building shopping/procurement agents. Happy to h
 ## Ultra-short (#general, if rules allow)
 
 ```text
-Built AgentShare MCP — live marketplace prices for AI agents (search, best_offer, commerce_quote/ACP). 
+Built AgentShare MCP — agent-paid API (dual-auth / x402) + commerce tools for AI agents.
 https://agentshare.dev/mcp | https://github.com/anhmtk/agentshare-mcp | on Glama. Feedback welcome!
 ```
 
@@ -38,8 +39,8 @@ https://agentshare.dev/mcp | https://github.com/anhmtk/agentshare-mcp | on Glama
 ## When someone asks “MCP for product prices / e-commerce”
 
 ```text
-We run AgentShare — MCP + REST for marketplace price search, best offer, and ACP commerce_quote.
-Hosted at https://agentshare.dev/mcp (needs free agshp_ API key).
+We run AgentShare — agent-paid MCP + REST: marketplace price search, best offer, and ACP commerce_quote on dual-auth rails (API key or x402).
+Hosted at https://agentshare.dev/mcp. Start building: https://agentshare.dev/signup
 Good for AI hardware / robotics procurement agents. Open source bridge: github.com/anhmtk/agentshare-mcp
 ```
 
@@ -52,6 +53,7 @@ Good for AI hardware / robotics procurement agents. Open source bridge: github.c
 | One showcase post, then engage in replies | Repost the same pitch daily |
 | Answer specific questions with links + example prompts | Paste affiliate-heavy walls of text |
 | Point to README install + cursor.directory when live | Claim official Cursor Marketplace listing (use directory instead) |
+| Lead with agent-paid / dual-auth / x402 | Pitch as “DeFi-first Solana intelligence company” |
 
 Example agent prompt to share when asked:
 

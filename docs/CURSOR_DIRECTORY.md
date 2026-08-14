@@ -6,7 +6,7 @@ Cursor Marketplace is **limited** for new publishers (2026). Cursor team directs
 
 - Public repo: `https://github.com/anhmtk/agentshare-mcp`
 - Root **`.mcp.json`** and **`agentshare-commerce-mcp/.mcp.json`** (Streamable HTTP)
-- Free API key: [agentshare.dev/signup](https://agentshare.dev/signup) (`agshp_…`)
+- Start building: [agentshare.dev/signup](https://agentshare.dev/signup) (`agshp_…` dual-auth credentials) or settle x402
 
 ---
 
@@ -19,7 +19,7 @@ Sign in with **GitHub** (same account as repo).
 | Field | Paste this |
 |-------|------------|
 | **Name** | `AgentShare` |
-| **Description** | `10 MCP tools: marketplace prices, ACP commerce_quote, DefiLlama DEX, Solana & Meteora briefs. agentshare.dev — v1.0.8` |
+| **Description** | `Agent-paid API MCP: dual-auth/x402, commerce_quote + procurement tools, secondary Solana/Meteora demos. agentshare.dev — 11 tools` |
 | **Link to install instructions** | `https://github.com/anhmtk/agentshare-mcp/blob/main/agentshare-commerce-mcp/README.md` |
 | **Cursor Deep Link** | See below |
 | **Logo** | Upload `agentshare-commerce-mcp/assets/icon.png` |

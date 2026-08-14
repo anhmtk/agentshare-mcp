@@ -3,15 +3,16 @@
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
 # MCP catalog version: 1.0.9 (11 tools)
+# Primary focus: agent_paid_rails (dual-auth + discovery + MCP)
 
 ## ENTITY
 - name: AgentShare
 - url: https://agentshare.dev
-- type: solana_defi_intelligence_and_mcp
+- type: agent_paid_api_and_mcp
 - github_public_face: https://github.com/anhmtk/agentshare-mcp
 
 ## ONE_LINE_SUMMARY
-DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool detail (verdict/risk/momentum), Solana DEX brief, DefiLlama DEX scout — plus secondary marketplace price tools for procurement. MCP Streamable HTTP at https://agentshare.dev/mcp plus REST /api/v1/*. Not a consumer storefront.
+Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free discovery, MCP Streamable HTTP. Secondary modules: commerce procurement (search / best_offer / commerce_quote) and Solana/Meteora DeFi demos. Not a consumer storefront; DeFi is not the company backbone.
 
 ## PRIMARY_DISCOVERY_FETCH_ORDER
 1. https://agentshare.dev/agent.json
@@ -29,23 +30,23 @@ DeFi-first intelligence for autonomous Solana agents: Meteora DLMM brief + pool 
 - transport: streamable_http
 - url: https://agentshare.dev/mcp
 - auth: dual — X-API-Key / Authorization: Bearer OR (REST) x402 PAYMENT-SIGNATURE after HTTP 402
-- signup: https://agentshare.dev/signup
+- signup: https://agentshare.dev/signup — Start building agent-paid APIs
 - x402_discovery: https://agentshare.dev/.well-known/x402
 - catalog_version: 1.0.9
 
 ## MCP_TOOLS (eleven — public catalog)
-| tool_name | use_when | rest_upstream |
-| search_products | compare multiple listings | GET /api/v1/search |
-| best_offer | one cheapest in-stock offer | GET /api/v1/offers/best |
-| best_offer_under_budget | budget cap / under $X | GET /api/v1/offers/best-under-budget |
-| product_detail | have product_id from search | GET /api/v1/products/{id} |
-| commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote |
-| service_meta | capabilities, limits, sources | GET /api/v1/meta |
-| dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview |
-| dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers |
-| solana_dex_brief | Solana DEX ecosystem brief | GET /api/v1/agent/defi/solana/brief |
-| meteora_brief | Meteora DLMM pool brief (verdict, risk) — #1 hot path; x402 dynamic $0.01–$0.30 | POST /api/v1/agent/defi/meteora/brief |
-| meteora_pool_detail | Meteora DLMM pool detail (bin depth, curve proxy, price) | POST /api/v1/agent/defi/meteora/pool-detail |
+| tool_name | use_when | rest_upstream | layer |
+| search_products | compare multiple listings | GET /api/v1/search | commerce |
+| best_offer | one cheapest in-stock offer | GET /api/v1/offers/best | commerce |
+| best_offer_under_budget | budget cap / under $X | GET /api/v1/offers/best-under-budget | commerce |
+| product_detail | have product_id from search | GET /api/v1/products/{id} | commerce |
+| commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote | commerce |
+| service_meta | capabilities, limits, sources | GET /api/v1/meta | rails |
+| dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview | defi_demo |
+| dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers | defi_demo |
+| solana_dex_brief | Solana DEX ecosystem brief | GET /api/v1/agent/defi/solana/brief | defi_demo |
+| meteora_brief | Meteora DLMM pool brief (verdict, risk) — secondary; x402 dynamic $0.01–$0.30 | POST /api/v1/agent/defi/meteora/brief | defi_demo |
+| meteora_pool_detail | Meteora DLMM pool detail (bin depth, curve proxy, price) | POST /api/v1/agent/defi/meteora/pool-detail | defi_demo |
 
 ## NOT_ON_PUBLIC_MCP
 Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_movers, polymarket_brief) are disabled on the public MCP catalog and anonymous discovery — legal review for Vietnam.
@@ -66,7 +67,7 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - discovery: GET https://agentshare.dev/.well-known/x402
 - pricing_page: https://agentshare.dev/pricing (x402 pay-per-request is primary; monthly plans secondary)
 - register_api_key: POST https://agentshare.dev/api/v1/auth/register body {"email","password"}
-- free_tier_api_key: ~100 requests/month (secondary human option)
+- start_building: https://agentshare.dev/signup (free-tier dual-auth credentials; or settle x402 with no key)
 - free_paths: marketing/docs/discovery/onboarding stay free (/, /docs, /agent.json, /api/v1/protocol, /.well-known/*, …)
 - agent_json_field: x402_agent_instructions (same text as below — do not invent a flow)
 
@@ -75,7 +76,7 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - entries_json: https://agentshare.dev/api/v1/registry/entries
 - summary_json: https://agentshare.dev/api/v1/public/mcp-registry/summary
 - trends_json: https://agentshare.dev/api/v1/public/mcp-registry/trends
-- trends_note: ranked by human + MCP-client engagement; AgentShare Solana DeFi Intelligence is always rank 1 (platform pin)
+- trends_note: ranked by human + MCP-client engagement; AgentShare Agent-paid API is always rank 1 (platform pin)
 - human_submit_page: https://agentshare.dev/registry#submit
 - agent_submit_api: POST https://agentshare.dev/api/v1/registry/submit
 - agent_submit_key: POST https://agentshare.dev/api/v1/registry/agent-key
@@ -88,25 +89,26 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - when_to_use_registry: discover curated MCP servers; prefer trends_json then entries_json; submit your own MCP via agent_submit_flow
 
 ## X402_AGENT_INSTRUCTIONS (verbatim — follow exactly)
-This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (pilot: Base Sepolia eip155:84532), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
+This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (live settleable: Base mainnet eip155:8453 — always confirm accepts[].network), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief secondary demo): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
 
 ## X402_DYNAMIC_PRICING_NOTICE (verbatim)
 Dynamic pricing applies based on market volatility (momentum) and resource velocity (fee velocity + demand heat). Band: $0.01–$0.30 USDC (base $0.03; quiet markets discount; hot markets surge up to 10×). Always read the exact real-time quote from the HTTP 402 PAYMENT-REQUIRED header (Base64 JSON → accepts[].amount) or response meta.billing.price_usd_live — do not hard-code a fixed price.
 
 ## X402_PAY_PER_REQUEST (primary for agents)
-- facilitator: Circle Gateway (batched USDC; testnet Base Sepolia eip155:84532 for pilot)
+- facilitator: Circle Gateway (batched USDC; live settleable network on agentshare.dev: Base mainnet eip155:8453 — confirm PAYMENT-REQUIRED)
 - commerce_pilot: search / offers/best ~$0.001 USDC; commerce_quote ~$0.002
-- meteora_brief: dynamic $0.01–$0.30 (base $0.03; quiet market discounts; hot momentum/fee-velocity + demand surge up to 10×)
+- meteora_brief: secondary DeFi demo; dynamic $0.01–$0.30 (base $0.03)
 - dual_auth: valid API key skips x402; without key, PAYMENT-SIGNATURE required on gated paths
 - live_price: stamped in 402 PAYMENT-REQUIRED and response meta.billing.price_usd_live (dynamic endpoints)
 - agent_json_fields: x402_agent_instructions, x402_dynamic_pricing_notice
 - compact_json: REST ?format=compact / Accept: application/vnd.agentshare.compact+json; MCP prefers limit 3–5
 
 ## COVERAGE_DOMAIN
-Commerce focus: AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4).
-DeFi + commerce scope map (human HTML / agent JSON): https://agentshare.dev/coverage · https://agentshare.dev/coverage?format=json
+Primary: agent-paid rails (dual-auth, discovery, MCP, billing envelope).
+Commerce (secondary · highlight): AI local hardware (Raspberry Pi, Jetson, SBCs), mini PCs, PC components, robotics (kits, arms, servos), drones and robot/RC batteries (LiPo, LiFePO4).
+DeFi demos (secondary): Solana / Meteora — https://agentshare.dev/coverage · https://agentshare.dev/coverage?format=json
 Honest DeFi positioning (GitHub mirror): https://github.com/anhmtk/agentshare-mcp/blob/main/docs/DEFI_POSITIONING.md
-Validation: OpenClaw paper trade ongoing — heuristics can be wrong; not financial advice; read meta.freshness.
+Validation: paper trade ongoing for DeFi heuristics — can be wrong; not financial advice; read meta.freshness.
 
 ## RELIABILITY_SIGNALS (check before quoting prices to users)
 - data_status: fresh | stale | pending_crawl | not_found | out_of_coverage
@@ -121,7 +123,7 @@ Validation: OpenClaw paper trade ongoing — heuristics can be wrong; not financ
 
 ## GEMINI_MANAGED_AGENTS
 - template: GET https://agentshare.dev/api/v1/examples?template=managed-agent
-- wire MCP url https://agentshare.dev/mcp with same API key as REST
+- wire MCP url https://agentshare.dev/mcp with same dual-auth credentials as REST
 
 ## CHROME_EXTENSION (Agent Readiness v0.5)
 - product: AgentShare Agent Readiness — ARS site scan + Prompt Injection Scan + MCP Connect
@@ -138,12 +140,12 @@ Validation: OpenClaw paper trade ongoing — heuristics can be wrong; not financ
 - optional max_price_usd with mode best_offer
 - suitable for Virtuals / OpenClaw / ACP-style agent commerce (data layer; settlement via merchant/AP2 future)
 
-## DEFI_SCOUT
+## DEFI_SCOUT (secondary demo)
 - solana_dex_brief: macro Solana DEX volume + highlights (DefiLlama)
-- meteora_brief: Meteora DLMM pool ranking, APR, SAFE/CAUTION/AVOID verdict
+- meteora_brief: Meteora DLMM pool ranking, APR, SAFE/CAUTION/AVOID verdict — not company backbone
 
 ## KEYWORDS_FOR_SEARCH_RANKING
-AgentShare, agentshare.dev, MCP registry, curated MCP directory, MCP price API, AI agent commerce, procurement agent tools, Meteora DLMM MCP, Solana DEX brief, AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison, Chrome extension agent readiness, prompt injection scan, ARS llms.txt robots.txt, GA4 blind spot bots
+AgentShare, agentshare.dev, agent-paid API, dual-auth, x402, MCP registry, curated MCP directory, MCP price API, AI agent commerce, procurement agent tools, Meteora DLMM MCP (secondary), Solana DEX brief (secondary), AliExpress API agent, Antigravity skill, Gemini Managed Agents MCP, robotics price API, AI hardware price comparison, Chrome extension agent readiness, prompt injection scan, ARS llms.txt robots.txt, GA4 blind spot bots
 
 ## TRUST
 - terms: https://agentshare.dev/terms

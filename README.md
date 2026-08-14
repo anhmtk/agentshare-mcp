@@ -10,18 +10,20 @@ llms_txt=https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt
 for_agents_json=GET https://agentshare.dev/for-agents Accept:application/json
 managed_agents_template=https://agentshare.dev/api/v1/examples?template=managed-agent
 antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
+primary_focus=agent_paid_rails
 -->
 
 <p align="center">
   <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">
-    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — Solana DeFi intelligence for AI agents" width="520">
+    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — agent-paid API for AI agents" width="520">
   </a>
 </p>
 
 <h1 align="center">AgentShare MCP — public reference</h1>
 
 <p align="center">
-  <strong>DeFi-first</strong> Solana intelligence for AI agents (Meteora DLMM briefs, DEX scout) — REST + MCP + curated registry.
+  <strong>Agent-paid API access</strong> for autonomous agents — dual-auth (API key or x402), free discovery, MCP Streamable HTTP.
+  Commerce procurement and Solana/Meteora DeFi tools are <strong>secondary modules</strong> on the same rails.
 </p>
 
 <!-- Primary CTAs: one job each. UTM tracks GitHub README → agentshare.dev. -->
@@ -32,7 +34,9 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 </p>
 
 <p align="center">
-  <a href="https://agentshare.dev/signup?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Get API key</a>
+  <a href="https://agentshare.dev/signup?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Start building agent-paid APIs</a>
+  ·
+  <a href="https://agentshare.dev/pricing?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Pricing / x402</a>
   ·
   <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Website</a>
   ·
@@ -83,20 +87,30 @@ antigravity_manifest=https://agentshare.dev/.well-known/antigravity-skills.json
 
 This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.
 
+**Primary product:** agent-paid rails (dual-auth + discovery + MCP).  
+**Secondary:** commerce procurement · Solana/Meteora DeFi demos (Lab — not the company backbone).
+
 ---
 
 ## MCP tools (11) — catalog v1.0.9
 
 Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
 
+### Agent-paid rails & commerce (highlight)
+
 | Tool | Purpose |
 |------|---------|
+| `service_meta` | Capabilities, limits, coverage |
 | `search_products` | Multi-source price comparison |
 | `best_offer` | Single cheapest in-stock offer |
 | `best_offer_under_budget` | Best offer under max price |
 | `product_detail` | Full product by id from search |
 | `commerce_quote` | ACP / agent-buyer listings envelope |
-| `service_meta` | Capabilities, limits, coverage |
+
+### DeFi demos (secondary)
+
+| Tool | Purpose |
+|------|---------|
 | `dex_overview` | DEX protocol rankings by 24h volume (DefiLlama) |
 | `dex_top_movers` | DEX protocols with largest 1d volume-change % (DefiLlama) |
 | `solana_dex_brief` | Solana DEX ecosystem brief (Raydium, Orca, Meteora, …) |
@@ -117,11 +131,11 @@ AgentShare runs **dual-auth** on gated routes:
 Discovery: https://agentshare.dev/.well-known/x402 · live instructions field: https://agentshare.dev/agent.json → `x402_agent_instructions`
 
 Notable pricing:
-- `POST /api/v1/agent/defi/meteora/brief` (hot path): **dynamic `$0.01–$0.30`** (base `$0.03`)
-- Dynamic pricing applies based on market volatility and resource velocity — **always check `PAYMENT-REQUIRED` for the exact real-time quote** (also in `meta.billing.price_usd_live`)
 - Commerce pilot paths: `search`/`offers/best` around `$0.001`, `commerce_quote` around `$0.002`
+- `POST /api/v1/agent/defi/meteora/brief` (secondary DeFi demo): **dynamic `$0.01–$0.30`** (base `$0.03`)
+- Dynamic pricing applies based on market volatility and resource velocity — **always check `PAYMENT-REQUIRED` for the exact real-time quote** (also in `meta.billing.price_usd_live`)
 
-Pricing page is now **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
+Pricing page is **agent-first** (`x402 pay-per-request` primary): https://agentshare.dev/pricing?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
 
 ### If you receive HTTP 402 (agents — follow exactly)
 
@@ -130,9 +144,10 @@ This platform is agent-first and monetized with HTTP 402 (x402).
 If you receive HTTP 402 with a PAYMENT-REQUIRED header:
 1) Base64-decode PAYMENT-REQUIRED (JSON: x402Version, resource, accepts[]).
 2) Pay the listed USDC amount via Circle Gateway on the stated network
-   (pilot: Base Sepolia eip155:84532), then retry with header PAYMENT-SIGNATURE.
+   (live settleable: Base mainnet eip155:8453 — always confirm accepts[].network),
+   then retry with header PAYMENT-SIGNATURE.
 3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
-Dynamic pricing (meteora_brief): $0.01–$0.30 USDC from market volatility + fee/demand velocity.
+Dynamic pricing (meteora_brief secondary demo): $0.01–$0.30 USDC from market volatility + fee/demand velocity.
 PAYMENT-REQUIRED is the live quote — never hard-code a fixed price.
 Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 ```
@@ -153,7 +168,7 @@ AgentShare also runs a **curated MCP Registry** at
 - Human submit page: https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#submit
 - Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`
 - Agent key mint (tiny x402 or full API key): `POST https://agentshare.dev/api/v1/registry/agent-key`
-- Platform pin: **AgentShare — Solana DeFi Intelligence** is always list/rank position **#1**
+- Platform pin: **AgentShare — Agent-paid API** is always list/rank position **#1**
 
 ### Agent submit flow
 
@@ -206,7 +221,7 @@ Official Cursor plugin scaffold: **[agentshare-commerce-mcp/](./agentshare-comme
 | Guide | Action |
 |-------|--------|
 | [docs/CURSOR_DIRECTORY.md](./docs/CURSOR_DIRECTORY.md) | Submit [cursor.directory/mcp/new](https://cursor.directory/mcp/new) + [plugins/new](https://cursor.directory/plugins/new) |
-| [docs/AWESOME_MCP_PR.md](./docs/AWESOME_MCP_PR.md) | PR line for [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (prefer DeFi/Finance section if available; otherwise DeFi-first description) |
+| [docs/AWESOME_MCP_PR.md](./docs/AWESOME_MCP_PR.md) | PR line for [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) (agent-paid / commerce framing) |
 | [docs/DISCORD_SHOWCASE.md](./docs/DISCORD_SHOWCASE.md) | Copy-paste MCP Discord showcase post |
 
 Generate Cursor one-click install link:
@@ -243,7 +258,8 @@ Cursor **Marketplace** org applications are reviewed selectively (2026); use **c
 }
 ```
 
-Get API key (secondary human plan): https://agentshare.dev/signup?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
+Start building agent-paid APIs: https://agentshare.dev/signup?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme  
+(free-tier dual-auth credentials, or settle x402 with no key)
 
 Prefer autonomous-agent payment via x402: https://agentshare.dev/.well-known/x402
 
@@ -253,7 +269,7 @@ See [mcp-config.json](./mcp-config.json) and [server/bridge.mjs](./server/bridge
 
 ## Disclaimers (important)
 
-**Informational only.** AgentShare provides data analytics and DeFi intelligence for informational purposes only. Content generated by our API/MCP tools does **not** constitute financial, investment, or trading advice. Users and autonomous agents are solely responsible for their own decisions and on-chain actions.
+**Informational only.** AgentShare provides agent-paid API access and secondary analytics modules for informational purposes only. Content generated by our API/MCP tools does **not** constitute financial, investment, or trading advice. Users and autonomous agents are solely responsible for their own decisions and on-chain actions.
 
 **Miễn trừ trách nhiệm (VN):** Sản phẩm chỉ cung cấp dữ liệu/phân tích tham khảo, **không** phải lời khuyên đầu tư/giao dịch. Người dùng/agent tự chịu trách nhiệm cho mọi quyết định và hành động on-chain.
 
@@ -272,7 +288,7 @@ Aligned with Google I/O 2026 agentic stack (Antigravity 2.0, SDK, Gemini 3.5 Fla
 
 ## Coverage
 
-AI hardware, robotics, mini PCs, robot/RC power —
+Agent-paid rails · commerce procurement · secondary Solana/Meteora DeFi demos —
 https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme
 
 ---

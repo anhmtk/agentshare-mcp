@@ -1,7 +1,7 @@
-# PR: awesome-mcp-servers (E-Commerce)
+# PR: awesome-mcp-servers (E-Commerce / Agents)
 
 **Target repo:** [github.com/punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)  
-**Section:** `### 🛒 E-Commerce`  
+**Section:** `### 🛒 E-Commerce` (or Agents / Payments if a better fit)  
 **Prerequisite:** Server listed on [Glama](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) with passing score badge.
 
 ---
@@ -14,13 +14,13 @@
 4. Insert **one line** alphabetically after `[agentlux/agentlux-mcp]` and before `[BuyWhere/buywhere-mcp]`:
 
 ```markdown
-- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Marketplace price intelligence + DeFi scout for AI agents: `search_products`, `best_offer`, `commerce_quote` (ACP), `solana_dex_brief`, `meteora_brief`. 10 tools at [agentshare.dev/mcp](https://agentshare.dev/mcp). AI hardware, robotics, procurement. Polymarket not on public catalog. Free tier 100 req/mo.
+- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Agent-paid API MCP (dual-auth / x402): `search_products`, `best_offer`, `commerce_quote` (ACP), plus secondary Solana/Meteora demos. 11 tools at [agentshare.dev/mcp](https://agentshare.dev/mcp). Start building: [agentshare.dev/signup](https://agentshare.dev/signup).
 ```
 
 5. Open PR with title:
 
 ```text
-Add anhmtk/agentshare-mcp (AgentShare commerce price MCP) 🤖🤖🤖
+Add anhmtk/agentshare-mcp (AgentShare agent-paid MCP) 🤖🤖🤖
 ```
 
 The `🤖🤖🤖` suffix opts into [fast-track for agent PRs](https://github.com/punkpeye/awesome-mcp-servers/blob/main/CONTRIBUTING.md) (optional).
