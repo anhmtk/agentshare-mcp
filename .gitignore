@@ -33,3 +33,6 @@ Thumbs.db
 
 # Private pitch / grant drafts (not for public MCP repo)
 docs/superteam/
+
+# Local Circle seller form helpers (private; not for public MCP face)
+integrations/circle/
