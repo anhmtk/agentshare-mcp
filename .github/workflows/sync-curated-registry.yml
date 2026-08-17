@@ -1,0 +1,44 @@
+# Mirror verified MCP Hub listings into docs/CURATED_REGISTRY.md
+#
+# Source of truth: https://agentshare.dev/api/v1/registry/entries
+# Does NOT modify mcp.json / product MCP catalog.
+
+name: Sync curated registry
+
+on:
+  schedule:
+    # Daily 07:40 UTC
+    - cron: "40 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-curated-registry
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate docs/CURATED_REGISTRY.md
+        run: python scripts/sync_curated_registry.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- docs/CURATED_REGISTRY.md; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/CURATED_REGISTRY.md
+          git commit -m "chore(registry): sync curated MCP listings from agentshare.dev"
+          git push

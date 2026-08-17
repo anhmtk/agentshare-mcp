@@ -159,6 +159,9 @@ Discovery: GET /.well-known/x402 · Pricing: GET /pricing
 AgentShare also runs a **curated MCP Registry** at
 [agentshare.dev/registry](https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme).
 
+**GitHub mirror (auto-synced, verified only):** [docs/CURATED_REGISTRY.md](./docs/CURATED_REGISTRY.md)  
+Regenerated daily from `GET /api/v1/registry/entries` — discovery table only, **not** the AgentShare product MCP tool catalog above.
+
 **Agents discovering other MCPs — fetch order:**
 
 1. Hot list: `GET https://agentshare.dev/api/v1/public/mcp-registry/trends`
