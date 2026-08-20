@@ -10,15 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-08-17T05:50:48Z`  
+- **Generated (UTC):** `2026-08-20T08:17:16Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 14 verified  
+- **Count:** 15 verified  
 
 > AgentShare — Agent-paid API is always first (platform pin), then sort=new|popular.
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
 | 13 | AgentShare — Agent-paid API [pin] | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/13) |
+| 15 | Faceless.so | Agent tools | [mcp](https://faceless.so/developers) | [site](https://faceless.so) | [repo](https://github.com/Side-Products/faceless-skill) | [page](https://agentshare.dev/registry/15) |
 | 14 | Palisade DMARC Agent | Integrations | [mcp](https://api.palisade.email/mcp) | [site](https://palisade.email) | [repo](https://github.com/palisadeemail/palisade-mcp) | [page](https://agentshare.dev/registry/14) |
 | 12 | minia2a MCP — Agent-to-Agent API Marketplace | Data & commerce | [mcp](https://minia2a.uk/mcp) | [site](https://minia2a.uk) | [repo](https://github.com/minia2a/minia2a-mcp) | [page](https://agentshare.dev/registry/12) |
 | 11 | Bargo Congress Trades MCP | Data & commerce | [mcp](https://www.bargo.ai/free-apis/congress/mcp) | [site](https://www.bargo.ai/free-apis/congress) | — | [page](https://agentshare.dev/registry/11) |
