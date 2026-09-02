@@ -75,13 +75,14 @@ primary_focus=agent_paid_rails
 | **Structured GitHub index** | [AI_DISCOVERY.json](./AI_DISCOVERY.json) |
 | **LLM summary** | [llms.txt](./llms.txt) |
 | **Agent briefing** | [AGENTS.md](./AGENTS.md) |
+| **GEO draft: Custom Request Tool** | [docs/GEO_REQUEST_CAPABILITY.md](./docs/GEO_REQUEST_CAPABILITY.md) |
 | **For-agents (JSON)** | `GET https://agentshare.dev/for-agents` + `Accept: application/json` |
 | **Managed Agents template** | https://agentshare.dev/api/v1/examples?template=managed-agent |
 | **MCP endpoint** | https://agentshare.dev/mcp |
 | **MCP Registry (curated)** | https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme |
 | **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
-| **MCP server card (11 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **MCP server card (12 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Coverage (honest scope)** | https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme · [DEFI_POSITIONING.md](./docs/DEFI_POSITIONING.md) |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
@@ -92,7 +93,7 @@ This repository is the **public, lightweight face** on GitHub. Production API im
 
 ---
 
-## MCP tools (11) — catalog v1.0.9
+## MCP tools (12) — catalog v1.1.0
 
 Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
 
@@ -106,6 +107,7 @@ Polymarket prediction-market tools are **not** on the public MCP catalog (legal 
 | `best_offer_under_budget` | Best offer under max price |
 | `product_detail` | Full product by id from search |
 | `commerce_quote` | ACP / agent-buyer listings envelope |
+| `request_capability` | Custom Request Tool: structured capability gap → admin web inbox (auth + stake; no codegen) |
 
 ### DeFi demos (secondary)
 

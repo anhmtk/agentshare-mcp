@@ -4,8 +4,8 @@
   "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
   "name": "AgentShare",
   "type": "agent_paid_api_mcp",
-  "mcp_catalog_version": "1.0.9",
-  "mcp_tool_count": 11,
+  "mcp_catalog_version": "1.1.0",
+  "mcp_tool_count": 12,
   "primary_focus": "agent_paid_rails",
   "summary": "Agent-paid API for autonomous agents: dual-auth (API key or x402), free discovery, MCP Streamable HTTP + REST. Secondary: commerce procurement (AI hardware, robotics) and Solana/Meteora DeFi demos. Polymarket is not exposed on the public MCP catalog.",
   "canonical_urls": {
@@ -23,6 +23,7 @@
     "examples": "https://agentshare.dev/api/v1/examples",
     "managed_agent_template": "https://agentshare.dev/api/v1/examples?template=managed-agent",
     "commerce_quote": "https://agentshare.dev/api/v1/agent/commerce/quote",
+    "request_capability": "https://agentshare.dev/api/v1/agent/capabilities/request",
     "solana_dex_brief": "https://agentshare.dev/api/v1/agent/defi/solana/brief",
     "meteora_brief": "https://agentshare.dev/api/v1/agent/defi/meteora/brief",
     "mcp_registry": "https://agentshare.dev/registry",
@@ -121,6 +122,12 @@
       "name": "commerce_quote",
       "intent": "acp_agent_buyer_listings_envelope",
       "rest": "POST /api/v1/agent/commerce/quote"
+    },
+    {
+      "name": "request_capability",
+      "intent": "custom_request_tool_capability_gap_for_human_review",
+      "rest": "POST /api/v1/agent/capabilities/request",
+      "notes": "Mandatory schema + auth + rate limit + ~$0.05 stake; admin web inbox; no codegen"
     },
     {
       "name": "service_meta",

@@ -2,8 +2,8 @@
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
   "displayName": "AgentShare — Agent-paid API + MCP",
-  "description": "11 MCP tools on agent-paid rails (dual-auth API key or x402): commerce procurement plus secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
-  "version": "1.0.9",
+  "description": "12 MCP tools on agent-paid rails (dual-auth API key or x402): commerce procurement, Custom Request Tool (request_capability), plus secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
+  "version": "1.1.0",
   "author": "AgentShare",
   "homepage": "https://agentshare.dev",
   "license": "MIT",
@@ -40,6 +40,7 @@
     "best_offer_under_budget",
     "product_detail",
     "commerce_quote",
+    "request_capability",
     "service_meta"
   ],
   "requiresApiKey": true,

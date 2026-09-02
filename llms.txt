@@ -2,7 +2,7 @@
 # Canonical live API: https://agentshare.dev
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
-# MCP catalog version: 1.0.9 (11 tools)
+# MCP catalog version: 1.1.0 (12 tools)
 # Primary focus: agent_paid_rails (dual-auth + discovery + MCP)
 
 ## ENTITY
@@ -20,7 +20,7 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 3. https://agentshare.dev/.well-known/discovery.json
 4. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 5. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (11 tools on public catalog)
+6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (12 tools on public catalog)
 7. https://agentshare.dev/api/v1/public/mcp-registry/trends — curated MCP registry hot list (AgentShare pinned #1)
 8. https://agentshare.dev/api/v1/public/mcp-registry/summary — compact verified MCP listings
 9. https://agentshare.dev/openapi.json
@@ -32,15 +32,16 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 - auth: dual — X-API-Key / Authorization: Bearer OR (REST) x402 PAYMENT-SIGNATURE after HTTP 402
 - signup: https://agentshare.dev/signup — Start building agent-paid APIs
 - x402_discovery: https://agentshare.dev/.well-known/x402
-- catalog_version: 1.0.9
+- catalog_version: 1.1.0
 
-## MCP_TOOLS (eleven — public catalog)
+## MCP_TOOLS (twelve — public catalog)
 | tool_name | use_when | rest_upstream | layer |
 | search_products | compare multiple listings | GET /api/v1/search | commerce |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best | commerce |
 | best_offer_under_budget | budget cap / under $X | GET /api/v1/offers/best-under-budget | commerce |
 | product_detail | have product_id from search | GET /api/v1/products/{id} | commerce |
 | commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote | commerce |
+| request_capability | fixed tools insufficient — structured capability gap for human review (no codegen) | POST /api/v1/agent/capabilities/request | rails |
 | service_meta | capabilities, limits, sources | GET /api/v1/meta | rails |
 | dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview | defi_demo |
 | dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers | defi_demo |

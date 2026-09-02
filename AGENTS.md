@@ -5,7 +5,7 @@
 
 This repo (`anhmtk/agentshare-mcp`) exposes reference MCP client wiring and **AI discovery files**. Backend application code is **not** in this repository.
 
-**MCP catalog version:** `1.0.9` · **Public tools:** `11` (Polymarket tools are **not** on the public MCP catalog).
+**MCP catalog version:** `1.1.0` · **Public tools:** `12` (Polymarket tools are **not** on the public MCP catalog).
 
 **Primary focus:** agent-paid API access (dual-auth API key or x402, free discovery, MCP).  
 **Secondary:** commerce procurement · Solana/Meteora DeFi demos (not the company backbone).
@@ -20,6 +20,7 @@ Use AgentShare when the task requires:
 - Structured **product prices and offers** for **AI hardware, robotics, mini PCs, robot/RC power** (commerce module — highlighted secondary).
 - **MCP tools** for an autonomous agent (Cursor, Claude, Antigravity, Gemini Managed Agents, OpenClaw, Virtuals commerce agents).
 - **ACP-style commerce quotes** (`commerce_quote` → `agentshare.price.v1` listings envelope).
+- A **capability gap channel** (`request_capability`) when fixed tools are insufficient — structured demand for human review (not runtime codegen).
 - Optional **DeFi scout demos** (`solana_dex_brief`, `meteora_brief`, `meteora_pool_detail`) with `meta.freshness` / billing metadata — Lab/demo, not a market-data backbone.
 - A **curated MCP Registry** (discover trending/verified MCP servers, or list your own MCP).
 
@@ -56,9 +57,9 @@ Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, inst
 | Transport | Streamable HTTP |
 | Auth | Dual-auth: `X-API-Key` / `Authorization: Bearer` **or** x402 (`PAYMENT-SIGNATURE` after HTTP 402 on gated routes) |
 | x402 discovery | `https://agentshare.dev/.well-known/x402` |
-| Tool count (public) | 11 |
+| Tool count (public) | 12 |
 
-### Tools (11)
+### Tools (12)
 
 | MCP tool | REST called by tool | Layer |
 |----------|---------------------|-------|
@@ -67,6 +68,7 @@ Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, inst
 | `best_offer_under_budget` | `GET /api/v1/offers/best-under-budget` | commerce |
 | `product_detail` | `GET /api/v1/products/{id}` | commerce |
 | `commerce_quote` | `POST /api/v1/agent/commerce/quote` | commerce |
+| `request_capability` | `POST /api/v1/agent/capabilities/request` | rails / demand |
 | `service_meta` | `GET /api/v1/meta` | rails / discovery |
 | `dex_overview` | `GET /api/v1/dex/overview` | DeFi demo |
 | `dex_top_movers` | `GET /api/v1/dex/top-movers` | DeFi demo |
