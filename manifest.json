@@ -2,8 +2,8 @@
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
   "display_name": "AgentShare — Agent-paid API + MCP",
-  "version": "1.0.9",
-  "description": "11 MCP tools on agent-paid rails (dual-auth API key or x402): commerce procurement (search, best_offer, commerce_quote) plus secondary Solana/Meteora DeFi demos. Polymarket tools are not on the public MCP catalog. Live at https://agentshare.dev/mcp via Streamable HTTP.",
+  "version": "1.1.0",
+  "description": "14 MCP tools on agent-paid rails (dual-auth API key or x402): commerce, request_capability, Market experiment (market_browse / market_list), plus secondary Solana/Meteora DeFi demos. Polymarket is not on the public catalog. Live at https://agentshare.dev/mcp.",
   "author": {
     "name": "AgentShare",
     "url": "https://agentshare.dev"
@@ -73,6 +73,18 @@
     {
       "name": "commerce_quote",
       "description": "ACP agent-buyer quote envelope (agentshare.price.v1) for procurement workflows"
+    },
+    {
+      "name": "request_capability",
+      "description": "Custom Request Tool: structured capability gap for human admin review (auth + stake; no codegen)"
+    },
+    {
+      "name": "market_browse",
+      "description": "Browse Market classifieds (live HTTPS URLs, bids, likes). Experiment, not escrow."
+    },
+    {
+      "name": "market_list",
+      "description": "List a live web/app URL on Market ($1 x402 or API key). Returns manage_token once."
     },
     {
       "name": "service_meta",

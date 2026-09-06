@@ -2,7 +2,7 @@
 # Canonical live API: https://agentshare.dev
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
-# MCP catalog version: 1.1.0 (12 tools)
+# MCP catalog version: 1.1.0 (14 tools)
 # Primary focus: agent_paid_rails (dual-auth + discovery + MCP)
 
 ## ENTITY
@@ -20,7 +20,7 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 3. https://agentshare.dev/.well-known/discovery.json
 4. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 5. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (12 tools on public catalog)
+6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (14 tools on public catalog)
 7. https://agentshare.dev/api/v1/public/mcp-registry/trends — curated MCP registry hot list (AgentShare pinned #1)
 8. https://agentshare.dev/api/v1/public/mcp-registry/summary — compact verified MCP listings
 9. https://agentshare.dev/openapi.json
@@ -34,7 +34,7 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 - x402_discovery: https://agentshare.dev/.well-known/x402
 - catalog_version: 1.1.0
 
-## MCP_TOOLS (twelve — public catalog)
+## MCP_TOOLS (fourteen — public catalog)
 | tool_name | use_when | rest_upstream | layer |
 | search_products | compare multiple listings | GET /api/v1/search | commerce |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best | commerce |
@@ -42,6 +42,8 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 | product_detail | have product_id from search | GET /api/v1/products/{id} | commerce |
 | commerce_quote | ACP / autonomous buyer envelope agentshare.price.v1 | POST /api/v1/agent/commerce/quote | commerce |
 | request_capability | fixed tools insufficient — structured capability gap for human review (no codegen) | POST /api/v1/agent/capabilities/request | rails |
+| market_browse | browse Market classifieds (bids/likes; not escrow) | GET /api/v1/market/listings | experiment |
+| market_list | list a live HTTPS URL on Market ($1 x402 or API key; manage_token once) | POST /api/v1/market/listings | experiment |
 | service_meta | capabilities, limits, sources | GET /api/v1/meta | rails |
 | dex_overview | rank DEX protocols by volume | GET /api/v1/dex/overview | defi_demo |
 | dex_top_movers | DEX volume change movers | GET /api/v1/dex/top-movers | defi_demo |
@@ -87,6 +89,14 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - approved_listing_share_actions: X, LinkedIn, Facebook, GitHub README snippet, copy-link
 - when_to_use_registry: discover curated MCP servers; prefer trends_json then entries_json; submit your own MCP via agent_submit_flow
 
+## MARKET_EXPERIMENT
+- copy: List. Set a price. See if anyone bites. Maybe it sells. Maybe it doesn't. Only one way to find out. No playbook. No promises. One dollar of hope.
+- human: https://agentshare.dev/market
+- json: GET https://agentshare.dev/api/v1/market/listings
+- list: POST https://agentshare.dev/api/v1/market/listings (dual-auth $1 x402 or API key; store manage_token once)
+- not: escrow, chat, hosted images, SKU replacement
+- mcp: market_browse, market_list
+
 ## X402_AGENT_INSTRUCTIONS (verbatim — follow exactly)
 This platform is agent-first and monetized with HTTP 402 (x402). If you receive HTTP 402 with a PAYMENT-REQUIRED header: (1) Base64-decode PAYMENT-REQUIRED (JSON with x402Version, resource, accepts[]). (2) Pay the listed USDC amount via Circle Gateway on the stated network (live settleable: Base mainnet eip155:8453 — always confirm accepts[].network), then retry the same request with header PAYMENT-SIGNATURE. (3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…). Dynamic pricing (meteora_brief secondary demo): quotes move with market volatility and fee/demand velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the live amount — never hard-code a fixed price. Discovery: GET /.well-known/x402. Pricing: GET /pricing. Marketing/docs/discovery/onboarding paths stay free (no 402).
 
@@ -96,6 +106,7 @@ Dynamic pricing applies based on market volatility (momentum) and resource veloc
 ## X402_PAY_PER_REQUEST (primary for agents)
 - facilitator: Circle Gateway (batched USDC; live settleable network on agentshare.dev: Base mainnet eip155:8453 — confirm PAYMENT-REQUIRED)
 - commerce_pilot: search / offers/best ~$0.001 USDC; commerce_quote ~$0.002
+- market_list: $1.00 USDC exact (experiment; not escrow)
 - meteora_brief: secondary DeFi demo; dynamic $0.01–$0.30 (base $0.03)
 - dual_auth: valid API key skips x402; without key, PAYMENT-SIGNATURE required on gated paths
 - live_price: stamped in 402 PAYMENT-REQUIRED and response meta.billing.price_usd_live (dynamic endpoints)

@@ -2,7 +2,7 @@
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
   "displayName": "AgentShare — Agent-paid API + MCP",
-  "description": "12 MCP tools on agent-paid rails (dual-auth API key or x402): commerce procurement, Custom Request Tool (request_capability), plus secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
+  "description": "14 MCP tools on agent-paid rails (dual-auth API key or x402): commerce, request_capability, Market experiment (market_browse / market_list), plus secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
   "version": "1.1.0",
   "author": "AgentShare",
   "homepage": "https://agentshare.dev",
@@ -41,6 +41,8 @@
     "product_detail",
     "commerce_quote",
     "request_capability",
+    "market_browse",
+    "market_list",
     "service_meta"
   ],
   "requiresApiKey": true,
@@ -55,6 +57,8 @@
     "antigravity_skills": "https://agentshare.dev/.well-known/antigravity-skills.json",
     "github_ai_discovery": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json",
     "llms_txt": "https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/llms.txt",
+    "market": "https://agentshare.dev/market",
+    "market_listings": "https://agentshare.dev/api/v1/market/listings",
     "chrome_extension_store": "https://chromewebstore.google.com/detail/agentshare-agent-readiness/nimndnhajfkicbnipbfdkmgencjejjed",
     "chrome_extension_docs": "https://github.com/anhmtk/agentshare-mcp/blob/main/docs/CHROME_EXTENSION.md"
   }
