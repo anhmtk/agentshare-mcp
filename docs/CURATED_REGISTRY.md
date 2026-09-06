@@ -10,15 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-03T12:14:50Z`  
+- **Generated (UTC):** `2026-09-06T11:44:47Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 19 verified  
+- **Count:** 20 verified  
 
 > AgentShare — Agent-paid API is always first (platform pin), then sort=new|popular.
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
 | 13 | AgentShare — Agent-paid API [pin] | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/13) |
+| 21 | Agent Control MCP — agent payments control + storefront | Agent tools | [mcp](https://agent-control.net/api/v1/mcp) | [site](https://agent-control.net) | [repo](https://github.com/Cobra-bit-prog/agent-guard) | [page](https://agentshare.dev/registry/21) |
 | 19 | China Sourcing Audit | Agent tools | [mcp](https://lu7897859-tech.github.io/.well-known/mcp.json) | [site](https://lu7897859-tech.github.io/) | [repo](https://github.com/lu7897859-tech/launch-torch) | [page](https://agentshare.dev/registry/19) |
 | 18 | Magic Hour MCP | Agent tools | [mcp](https://mcp.magichour.ai/) | [site](https://magichour.ai/mcp?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_distribution) | [repo](https://github.com/magichourhq/magic-hour-mcp) | [page](https://agentshare.dev/registry/18) |
 | 17 | AgentServices MCP — paid API layer for AI agents | Data & commerce | [mcp](https://agentservices.to/mcp) | [site](https://agentservices.to) | [repo](https://github.com/vbkotecha/agentservices-api) | [page](https://agentshare.dev/registry/17) |
