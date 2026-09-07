@@ -10,15 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-06T11:44:47Z`  
+- **Generated (UTC):** `2026-09-07T13:40:35Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 20 verified  
+- **Count:** 23 verified  
 
-> AgentShare — Agent-paid API is always first (platform pin), then sort=new|popular.
+> No platform pin. sort=new (newest) or sort=popular (opens).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
-| 13 | AgentShare — Agent-paid API [pin] | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/13) |
+| 24 | FrameThrower MCP | Agent tools | [mcp](https://framethrower.ai/api/mcp) | [site](https://framethrower.ai) | [repo](https://github.com/framethrower-ai/framethrower-mcp) | [page](https://agentshare.dev/registry/24) |
+| 23 | The AI Daily MCP — ranked AI news & enterprise AI cost estimates | Data & commerce | [mcp](https://theaidaily.in/mcp) | [site](https://theaidaily.in) | — | [page](https://agentshare.dev/registry/23) |
+| 22 | Hashnet MCP | Agent tools | [mcp](https://hol.org/mcp) | [site](https://hol.org/mcp) | [repo](https://github.com/hashgraph-online/hashnet-mcp-js) | [page](https://agentshare.dev/registry/22) |
 | 21 | Agent Control MCP — agent payments control + storefront | Agent tools | [mcp](https://agent-control.net/api/v1/mcp) | [site](https://agent-control.net) | [repo](https://github.com/Cobra-bit-prog/agent-guard) | [page](https://agentshare.dev/registry/21) |
 | 19 | China Sourcing Audit | Agent tools | [mcp](https://lu7897859-tech.github.io/.well-known/mcp.json) | [site](https://lu7897859-tech.github.io/) | [repo](https://github.com/lu7897859-tech/launch-torch) | [page](https://agentshare.dev/registry/19) |
 | 18 | Magic Hour MCP | Agent tools | [mcp](https://mcp.magichour.ai/) | [site](https://magichour.ai/mcp?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_distribution) | [repo](https://github.com/magichourhq/magic-hour-mcp) | [page](https://agentshare.dev/registry/18) |
@@ -26,6 +28,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 16 | AI Agents Archive | Agent tools | [mcp](https://aiagentsarchive.com/mcp) | [site](https://aiagentsarchive.com) | [repo](https://github.com/panagot/Ai-Agents-Archive) | [page](https://agentshare.dev/registry/16) |
 | 15 | Faceless.so | Agent tools | [mcp](https://faceless.so/developers) | [site](https://faceless.so) | [repo](https://github.com/Side-Products/faceless-skill) | [page](https://agentshare.dev/registry/15) |
 | 14 | Palisade DMARC Agent | Integrations | [mcp](https://api.palisade.email/mcp) | [site](https://palisade.email) | [repo](https://github.com/palisadeemail/palisade-mcp) | [page](https://agentshare.dev/registry/14) |
+| 13 | AgentShare — Agent-paid API | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/13) |
 | 12 | minia2a MCP — Agent-to-Agent API Marketplace | Data & commerce | [mcp](https://minia2a.uk/mcp) | [site](https://minia2a.uk) | [repo](https://github.com/minia2a/minia2a-mcp) | [page](https://agentshare.dev/registry/12) |
 | 11 | Bargo Congress Trades MCP | Data & commerce | [mcp](https://www.bargo.ai/free-apis/congress/mcp) | [site](https://www.bargo.ai/free-apis/congress) | — | [page](https://agentshare.dev/registry/11) |
 | 10 | BeachFinder | Data & commerce | [mcp](https://getbeachfinder.com/mcp) | [site](https://getbeachfinder.com/ai-search) | [repo](https://github.com/troulin-a11y/BeachFinder-mcp) | [page](https://agentshare.dev/registry/10) |
