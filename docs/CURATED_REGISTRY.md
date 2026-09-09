@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-08T12:17:30Z`  
+- **Generated (UTC):** `2026-09-09T12:28:48Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 24 verified  
+- **Count:** 25 verified  
 
 > No platform pin. sort=new (newest) or sort=popular (opens).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 26 | Motomarks | Agent tools | [mcp](https://motomarks.io/api/mcp) | [site](https://motomarks.io) | [repo](https://github.com/motomarks/motomarks-mcp) | [page](https://agentshare.dev/registry/26) |
 | 25 | EasyGroupFlights MCP | Integrations | [mcp](https://mcp.easygroupflights.com/mcp) | [site](https://easygroupflights.com/) | [repo](https://github.com/codeblockssk/easygroupflights-mcp) | [page](https://agentshare.dev/registry/25) |
 | 24 | FrameThrower MCP | Agent tools | [mcp](https://framethrower.ai/api/mcp) | [site](https://framethrower.ai) | [repo](https://github.com/framethrower-ai/framethrower-mcp) | [page](https://agentshare.dev/registry/24) |
 | 23 | The AI Daily MCP — ranked AI news & enterprise AI cost estimates | Data & commerce | [mcp](https://theaidaily.in/mcp) | [site](https://theaidaily.in) | — | [page](https://agentshare.dev/registry/23) |
