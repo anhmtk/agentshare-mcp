@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-10T12:22:08Z`  
+- **Generated (UTC):** `2026-09-11T12:20:44Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 27 verified  
+- **Count:** 28 verified  
 
 > No platform pin. sort=new (newest) or sort=popular (opens).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
 | 28 | HYPERneobroker | Agent tools | [mcp](https://mcp.hyperneobroker.com/mcp) | [site](https://mcp.hyperneobroker.com) | — | [page](https://agentshare.dev/registry/28) |
 | 27 | Entergram Telegram MCP | Integrations | [mcp](https://mcp.entergram.com/mcp) | [site](https://www.entergram.com/telegram-mcp) | [repo](https://github.com/EntergramCRM/Telegram-MCP) | [page](https://agentshare.dev/registry/27) |
 | 26 | Motomarks | Agent tools | [mcp](https://motomarks.io/api/mcp) | [site](https://motomarks.io) | [repo](https://github.com/motomarks/motomarks-mcp) | [page](https://agentshare.dev/registry/26) |
