@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-11T12:20:44Z`  
+- **Generated (UTC):** `2026-09-12T11:43:17Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 28 verified  
+- **Count:** 30 verified  
 
 > No platform pin. sort=new (newest) or sort=popular (opens).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/england-works-watch) | [page](https://agentshare.dev/registry/32) |
+| 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
 | 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
 | 28 | HYPERneobroker | Agent tools | [mcp](https://mcp.hyperneobroker.com/mcp) | [site](https://mcp.hyperneobroker.com) | — | [page](https://agentshare.dev/registry/28) |
 | 27 | Entergram Telegram MCP | Integrations | [mcp](https://mcp.entergram.com/mcp) | [site](https://www.entergram.com/telegram-mcp) | [repo](https://github.com/EntergramCRM/Telegram-MCP) | [page](https://agentshare.dev/registry/27) |
