@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-12T11:43:17Z`  
+- **Generated (UTC):** `2026-09-15T06:07:18Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 30 verified  
+- **Count:** 31 verified  
 
-> No platform pin. sort=new (newest) or sort=popular (opens).
+> Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
 | 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/england-works-watch) | [page](https://agentshare.dev/registry/32) |
 | 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
 | 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |

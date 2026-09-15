@@ -21,7 +21,7 @@ Agent-paid API for autonomous agents: dual-auth (API key or x402 USDC), free dis
 4. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 5. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
 6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (14 tools on public catalog)
-7. https://agentshare.dev/api/v1/public/mcp-registry/trends — curated MCP registry hot list (AgentShare pinned #1)
+7. https://agentshare.dev/api/v1/public/mcp-registry/trends — curated MCP registry hot list (engagement rank; no free platform pin)
 8. https://agentshare.dev/api/v1/public/mcp-registry/summary — compact verified MCP listings
 9. https://agentshare.dev/openapi.json
 10. https://agentshare.dev/pricing — agent-first: x402 pay-per-request primary; monthly API-key plans secondary
@@ -77,7 +77,9 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - entries_json: https://agentshare.dev/api/v1/registry/entries
 - summary_json: https://agentshare.dev/api/v1/public/mcp-registry/summary
 - trends_json: https://agentshare.dev/api/v1/public/mcp-registry/trends
-- trends_note: ranked by human + MCP-client engagement; AgentShare Agent-paid API is always rank 1 (platform pin)
+- trends_note: ranked by human + MCP-client engagement; no free platform pin
+- featured_packs_url: GET https://agentshare.dev/api/v1/registry/feature/packs
+- featured_purchase: POST https://agentshare.dev/api/v1/registry/feature/{week|month|year} JSON {"token":"<submission_token>"} — dual-auth (API key or x402); same packs for humans and agents; experiment week $3 / month $9 / year $49; max 3 concurrent Featured slots; renew stacks; status JSON featured.expires_soon within 72h
 - human_submit_page: https://agentshare.dev/registry#submit
 - agent_submit_api: POST https://agentshare.dev/api/v1/registry/submit
 - agent_submit_key: POST https://agentshare.dev/api/v1/registry/agent-key
@@ -87,7 +89,7 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - approved_listing_public_url_pattern: https://agentshare.dev/registry/{id}
 - approved_listing_owner_stats: GET https://agentshare.dev/api/v1/mcp/stats/{id}?token={submission_token}
 - approved_listing_share_actions: X, LinkedIn, Facebook, GitHub README snippet, copy-link
-- when_to_use_registry: discover curated MCP servers; prefer trends_json then entries_json; submit your own MCP via agent_submit_flow
+- when_to_use_registry: discover curated MCP servers; prefer trends_json then entries_json; submit your own MCP via agent_submit_flow; optional paid Featured after approval
 
 ## MARKET_EXPERIMENT
 - copy: List. Set a price. See if anyone bites. Maybe it sells. Maybe it doesn't. Only one way to find out. No playbook. No promises. One dollar of hope.

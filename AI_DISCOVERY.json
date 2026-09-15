@@ -78,12 +78,20 @@
     "summary_json": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
     "trends_json": "https://agentshare.dev/api/v1/public/mcp-registry/trends",
     "detail_url_pattern": "https://agentshare.dev/registry/{id}",
-    "platform_pin": "AgentShare — Agent-paid API is always rank/list position 1",
+    "platform_pin": "No free platform pin. AgentShare's own MCP ranks like any other verified listing.",
+    "featured_packs_url": "https://agentshare.dev/api/v1/registry/feature/packs",
+    "featured_purchase_urls": {
+      "week": "https://agentshare.dev/api/v1/registry/feature/week",
+      "month": "https://agentshare.dev/api/v1/registry/feature/month",
+      "year": "https://agentshare.dev/api/v1/registry/feature/year"
+    },
+    "featured_flow": "After approval, POST featured_purchase_urls.{week|month|year} with JSON {\"token\":\"<submission_token>\"}. Dual-auth (API key or x402) for humans and agents. Experiment: week $3 / 7d, month $9 / 30d, year $49 / 365d. Max 3 concurrent Featured slots; renew stacks; poll status → data.featured.expires_soon within 72h.",
     "submit_review_policy": "all listings are editor-reviewed before publish",
     "agent_fetch_order": [
       "GET /api/v1/public/mcp-registry/trends",
       "GET /api/v1/public/mcp-registry/summary",
       "GET /api/v1/registry/entries",
+      "GET /api/v1/registry/feature/packs",
       "GET /registry (HTML for humans)"
     ],
     "agent_submit_flow": [
@@ -91,12 +99,14 @@
       "pay tiny x402 amount or use a full API key",
       "receive scoped registry:submit key",
       "POST /api/v1/registry/submit",
-      "check /registry/status/{token} until approved"
+      "check /registry/status/{token} until approved",
+      "optional: POST /api/v1/registry/feature/{week|month|year} with submission token (dual-auth)"
     ],
     "approved_listing_features": [
       "public_detail_page",
       "owner_analytics_opens_referrers_countries_clients",
-      "share_actions_x_linkedin_facebook_github_copy_link"
+      "share_actions_x_linkedin_facebook_github_copy_link",
+      "optional_paid_featured_placement"
     ]
   },
   "mcp_tools": [

@@ -43,7 +43,7 @@ Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, inst
 2. `https://agentshare.dev/.well-known/discovery.json`
 3. `https://agentshare.dev/for-agents` with `Accept: application/json` (no `text/html`)
 4. `https://agentshare.dev/api/v1/examples?template=managed-agent`
-5. `https://agentshare.dev/api/v1/public/mcp-registry/trends` (curated hot MCPs; AgentShare pinned #1)
+5. `https://agentshare.dev/api/v1/public/mcp-registry/trends` (curated hot MCPs by engagement; no free platform pin)
 6. `https://agentshare.dev/api/v1/public/mcp-registry/summary`
 7. `https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json` (this repo)
 8. `https://agentshare.dev/.well-known/mcp/server-card.json`
@@ -100,13 +100,16 @@ Use this when the task is **discover other MCP servers** or **list an MCP** — 
 | Trends (prefer first) | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | Summary | https://agentshare.dev/api/v1/public/mcp-registry/summary |
 | Full entries | https://agentshare.dev/api/v1/registry/entries |
+| Featured packs | `GET https://agentshare.dev/api/v1/registry/feature/packs` |
+| Buy Featured | `POST https://agentshare.dev/api/v1/registry/feature/{week\|month\|year}` |
 | Submit (agents) | `POST https://agentshare.dev/api/v1/registry/submit` |
 | Mint submit key | `POST https://agentshare.dev/api/v1/registry/agent-key` |
 
 **Notes for agents:**
 
 - Listings are **editor-reviewed** before publish (`pending_review` → verified).
-- **AgentShare — Agent-paid API** is always rank/list **#1** (platform pin).
+- **No free platform pin.** AgentShare’s own MCP ranks like any other verified listing.
+- Optional paid **Featured** (scarce Hub slots): same packs for humans and agents — dual-auth API key or x402. Body `{"token":"<submission_token>"}`. Experiment: week $3 / 7d, month $9 / 30d, year $49 / 365d. Max 3 concurrent slots; renew stacks from `featured_until`. Poll status → `data.featured.expires_soon` within 72h of expiry.
 - Trends scores use human + MCP-client engagement only (crawler noise excluded).
 - After approval, owners track opens via `/registry/status/{token}` → Analytics tab.
 

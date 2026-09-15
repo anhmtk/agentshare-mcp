@@ -177,7 +177,8 @@ Regenerated daily from `GET /api/v1/registry/entries` — discovery table only, 
 - Human submit page: https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#submit
 - Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`
 - Agent key mint (tiny x402 or full API key): `POST https://agentshare.dev/api/v1/registry/agent-key`
-- Platform pin: **AgentShare — Agent-paid API** is always list/rank position **#1**
+- **No free platform pin** — AgentShare’s own MCP ranks like any other verified listing
+- Optional paid **Featured** (scarce Hub slots, humans + agents): `GET /api/v1/registry/feature/packs` then `POST /api/v1/registry/feature/{week|month|year}` with `{"token":"<submission_token>"}` (API key or x402). Experiment: week $3 · month $9 · year $49
 
 ### Agent submit flow
 

@@ -96,13 +96,14 @@ def render_markdown(entries: list[dict], meta: dict) -> str:
         hub = (e.get("urls") or {}).get("html") if isinstance(e.get("urls"), dict) else None
         if not hub and eid != "":
             hub = f"{REGISTRY_HTML}/{eid}"
-        pin_mark = " [pin]" if e.get("pinned") else ""
+        # pinned mirrors paid Featured on the live Hub (no free platform pin).
+        feat_mark = " [Featured]" if (e.get("featured") or e.get("pinned")) else ""
         lines.append(
             "| "
             + " | ".join(
                 [
                     str(eid),
-                    f"{name}{pin_mark}",
+                    f"{name}{feat_mark}",
                     cat,
                     _md_link("mcp", mcp) if mcp else "—",
                     _md_link("site", web) if web else "—",
