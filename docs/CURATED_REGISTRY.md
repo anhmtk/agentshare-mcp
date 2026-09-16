@@ -10,16 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-15T06:07:18Z`  
+- **Generated (UTC):** `2026-09-16T12:49:41Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 31 verified  
+- **Count:** 32 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
 | 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
-| 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/england-works-watch) | [page](https://agentshare.dev/registry/32) |
+| 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/ChanghuLiu/england-works-watch) | [page](https://agentshare.dev/registry/32) |
 | 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
 | 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
 | 28 | HYPERneobroker | Agent tools | [mcp](https://mcp.hyperneobroker.com/mcp) | [site](https://mcp.hyperneobroker.com) | — | [page](https://agentshare.dev/registry/28) |
