@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-16T12:49:41Z`  
+- **Generated (UTC):** `2026-09-18T12:22:08Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 32 verified  
+- **Count:** 33 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
 | 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
 | 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
 | 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/ChanghuLiu/england-works-watch) | [page](https://agentshare.dev/registry/32) |
