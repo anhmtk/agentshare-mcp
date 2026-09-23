@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-21T14:32:03Z`  
+- **Generated (UTC):** `2026-09-23T13:00:00Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 37 verified  
+- **Count:** 39 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 42 | AurasPay Merchant MCP | Data & commerce | [mcp](https://mcp.auraspay.com/api/mcp) | [site](https://auraspay.com/mcp) | — | [page](https://agentshare.dev/registry/42) |
+| 41 | Agent Embassy | Agent tools | [mcp](https://agent-embassy.fly.dev/mcp) | [site](https://agent-embassy.fly.dev) | — | [page](https://agentshare.dev/registry/41) |
 | 40 | MindMap AI | Agent tools | [mcp](https://mindmapai.app/mcp) | [site](http://mindmapai.app) | [repo](https://github.com/MindMap-AI/mcp) | [page](https://agentshare.dev/registry/40) |
 | 38 | GigSoul x402 | Agent tools | [mcp](https://api.gigsoul.com/mcp) | [site](https://gigsoul.com/x402) | [repo](https://github.com/gigsoul-org/gigsoul-x402) | [page](https://agentshare.dev/registry/38) |
 | 37 | Vend API Merchant | Data & commerce | [mcp](https://extract.paypercall.dev/mcp) | [site](https://paypercall.dev) | [repo](https://github.com/PANDeveloper001/vend) | [page](https://agentshare.dev/registry/37) |
