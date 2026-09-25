@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-24T12:53:34Z`  
+- **Generated (UTC):** `2026-09-25T12:57:44Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 40 verified  
+- **Count:** 41 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 44 | Clera | Integrations | [mcp](https://mcp.getclera.com) | [site](https://www.getclera.com/mcp) | [repo](https://github.com/getclera/mcp) | [page](https://agentshare.dev/registry/44) |
 | 43 | SalesTouch | Integrations | [mcp](https://www.salestouch.io/api/mcp) | [site](https://www.salestouch.io) | [repo](https://github.com/antoineDsh/salestouch) | [page](https://agentshare.dev/registry/43) |
 | 42 | AurasPay Merchant MCP | Data & commerce | [mcp](https://mcp.auraspay.com/api/mcp) | [site](https://auraspay.com/mcp) | — | [page](https://agentshare.dev/registry/42) |
 | 41 | Agent Embassy | Agent tools | [mcp](https://agent-embassy.fly.dev/mcp) | [site](https://agent-embassy.fly.dev) | — | [page](https://agentshare.dev/registry/41) |
