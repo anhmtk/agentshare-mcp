@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-26T12:27:09Z`  
+- **Generated (UTC):** `2026-09-27T13:17:28Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 42 verified  
+- **Count:** 43 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 46 | Exchange.news Offers | Data & commerce | [mcp](https://exchange.news/api/mcp) | [site](https://exchange.news/developers/) | — | [page](https://agentshare.dev/registry/46) |
 | 45 | LinkedBoost | Integrations | [mcp](https://mcp.linkedboost.ai/mcp) | [site](https://linkedboost.ai/) | — | [page](https://agentshare.dev/registry/45) |
 | 44 | Clera | Integrations | [mcp](https://mcp.getclera.com) | [site](https://www.getclera.com/mcp) | [repo](https://github.com/getclera/mcp) | [page](https://agentshare.dev/registry/44) |
 | 43 | SalesTouch | Integrations | [mcp](https://www.salestouch.io/api/mcp) | [site](https://www.salestouch.io) | [repo](https://github.com/antoineDsh/salestouch) | [page](https://agentshare.dev/registry/43) |
