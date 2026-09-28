@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-27T13:17:28Z`  
+- **Generated (UTC):** `2026-09-28T15:57:02Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 43 verified  
 
@@ -23,7 +23,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 44 | Clera | Integrations | [mcp](https://mcp.getclera.com) | [site](https://www.getclera.com/mcp) | [repo](https://github.com/getclera/mcp) | [page](https://agentshare.dev/registry/44) |
 | 43 | SalesTouch | Integrations | [mcp](https://www.salestouch.io/api/mcp) | [site](https://www.salestouch.io) | [repo](https://github.com/antoineDsh/salestouch) | [page](https://agentshare.dev/registry/43) |
 | 42 | AurasPay Merchant MCP | Data & commerce | [mcp](https://mcp.auraspay.com/api/mcp) | [site](https://auraspay.com/mcp) | — | [page](https://agentshare.dev/registry/42) |
-| 41 | Agent Embassy | Agent tools | [mcp](https://agent-embassy.fly.dev/mcp) | [site](https://agent-embassy.fly.dev) | — | [page](https://agentshare.dev/registry/41) |
+| 41 | Agent Embassy | Agent tools | [mcp](https://aemb.pro/mcp) | [site](https://aemb.pro) | — | [page](https://agentshare.dev/registry/41) |
 | 40 | MindMap AI | Agent tools | [mcp](https://mindmapai.app/mcp) | [site](http://mindmapai.app) | [repo](https://github.com/MindMap-AI/mcp) | [page](https://agentshare.dev/registry/40) |
 | 38 | GigSoul x402 | Agent tools | [mcp](https://api.gigsoul.com/mcp) | [site](https://gigsoul.com/x402) | [repo](https://github.com/gigsoul-org/gigsoul-x402) | [page](https://agentshare.dev/registry/38) |
 | 37 | Vend API Merchant | Data & commerce | [mcp](https://extract.paypercall.dev/mcp) | [site](https://paypercall.dev) | [repo](https://github.com/PANDeveloper001/vend) | [page](https://agentshare.dev/registry/37) |
