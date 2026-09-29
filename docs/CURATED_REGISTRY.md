@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-28T15:57:02Z`  
+- **Generated (UTC):** `2026-09-29T14:20:34Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 43 verified  
+- **Count:** 45 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 48 | Ads Lighthouse MCP | Analytics | [mcp](https://adslighthouse.com/api/v1/mcp) | [site](https://adslighthouse.com/mcp) | — | [page](https://agentshare.dev/registry/48) |
+| 47 | Jithox | Agent tools | [mcp](https://jithox.com/api/mcp) | [site](https://jithox.com) | [repo](https://github.com/victor-emmanuel-c/jithox-mcp) | [page](https://agentshare.dev/registry/47) |
 | 46 | Exchange.news Offers | Data & commerce | [mcp](https://exchange.news/api/mcp) | [site](https://exchange.news/developers/) | — | [page](https://agentshare.dev/registry/46) |
 | 45 | LinkedBoost | Integrations | [mcp](https://mcp.linkedboost.ai/mcp) | [site](https://linkedboost.ai/) | — | [page](https://agentshare.dev/registry/45) |
 | 44 | Clera | Integrations | [mcp](https://mcp.getclera.com) | [site](https://www.getclera.com/mcp) | [repo](https://github.com/getclera/mcp) | [page](https://agentshare.dev/registry/44) |
