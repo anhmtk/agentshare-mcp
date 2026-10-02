@@ -10,14 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-09-30T14:13:43Z`  
+- **Generated (UTC):** `2026-10-02T14:07:45Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 46 verified  
+- **Count:** 42 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 52 | VERITY | Agent tools | [mcp](https://verity.basechainlabs.com/api/mcp) | [site](https://verity.basechainlabs.com) | [repo](https://github.com/Clawdio777/verity) | [page](https://agentshare.dev/registry/52) |
+| 51 | AEONOS | Agent tools | [mcp](https://aeonos.basechainlabs.com/api/mcp) | [site](https://aeonos.basechainlabs.com) | [repo](https://github.com/Clawdio777/aeonos) | [page](https://agentshare.dev/registry/51) |
+| 50 | Fungsi.id MCP | Data & commerce | [mcp](https://api.fungsi.id/mcp) | [site](https://fungsi.id/) | — | [page](https://agentshare.dev/registry/50) |
 | 49 | Argorant MCP | Agent tools | [mcp](https://mcp.argorant.com/mcp) | [site](https://argorant.com) | [repo](https://github.com/argorant/argorant-mcp) | [page](https://agentshare.dev/registry/49) |
 | 48 | Ads Lighthouse MCP | Analytics | [mcp](https://adslighthouse.com/api/v1/mcp) | [site](https://adslighthouse.com/mcp) | — | [page](https://agentshare.dev/registry/48) |
 | 47 | Jithox | Agent tools | [mcp](https://jithox.com/api/mcp) | [site](https://jithox.com) | [repo](https://github.com/victor-emmanuel-c/jithox-mcp) | [page](https://agentshare.dev/registry/47) |
@@ -57,13 +60,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 10 | BeachFinder | Data & commerce | [mcp](https://getbeachfinder.com/mcp) | [site](https://getbeachfinder.com/ai-search) | [repo](https://github.com/troulin-a11y/BeachFinder-mcp) | [page](https://agentshare.dev/registry/10) |
 | 9 | DEX Scout (DefiLlama) | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/9) |
 | 8 | AgentShare — Solana DeFi Intelligence | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/8) |
-| 7 | Analytics & event pipeline (pattern) | Analytics | — | — | — | [page](https://agentshare.dev/registry/7) |
-| 6 | Web scraper (agent pattern) | Data & commerce | — | — | — | [page](https://agentshare.dev/registry/6) |
-| 5 | Slack & chat (integration pattern) | Integrations | — | [site](https://api.slack.com) | — | [page](https://agentshare.dev/registry/5) |
-| 4 | MCP: filesystem (reference) | Agent tools | — | [site](https://modelcontextprotocol.io) | [repo](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | [page](https://agentshare.dev/registry/4) |
-| 3 | MCP: memory (reference) | Storage | — | [site](https://modelcontextprotocol.io) | [repo](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | [page](https://agentshare.dev/registry/3) |
-| 2 | MCP: fetch & web (reference) | Agent tools | — | [site](https://modelcontextprotocol.io) | [repo](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | [page](https://agentshare.dev/registry/2) |
-| 1 | MCP: GitHub (reference server) | Integrations | — | [site](https://modelcontextprotocol.io) | [repo](https://github.com/modelcontextprotocol/servers/tree/main/src/github) | [page](https://agentshare.dev/registry/1) |
 
 ## How this stays in sync
 
