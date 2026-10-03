@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-02T14:07:45Z`  
+- **Generated (UTC):** `2026-10-03T12:43:27Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 42 verified  
+- **Count:** 43 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 53 | Arvow | Agent tools | [mcp](https://arvow.com) | [site](https://arvow.com) | — | [page](https://agentshare.dev/registry/53) |
 | 52 | VERITY | Agent tools | [mcp](https://verity.basechainlabs.com/api/mcp) | [site](https://verity.basechainlabs.com) | [repo](https://github.com/Clawdio777/verity) | [page](https://agentshare.dev/registry/52) |
 | 51 | AEONOS | Agent tools | [mcp](https://aeonos.basechainlabs.com/api/mcp) | [site](https://aeonos.basechainlabs.com) | [repo](https://github.com/Clawdio777/aeonos) | [page](https://agentshare.dev/registry/51) |
 | 50 | Fungsi.id MCP | Data & commerce | [mcp](https://api.fungsi.id/mcp) | [site](https://fungsi.id/) | — | [page](https://agentshare.dev/registry/50) |
