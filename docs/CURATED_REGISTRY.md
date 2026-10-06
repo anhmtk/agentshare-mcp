@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-05T16:22:27Z`  
+- **Generated (UTC):** `2026-10-06T14:27:25Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 45 verified  
+- **Count:** 46 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 57 | Scout Packs — B2B lead data MCP | Data & commerce | [mcp](https://scout-packs-production.up.railway.app/mcp) | [site](https://scout-packs-production.up.railway.app) | [repo](https://github.com/tigerops-win/scout-packs) | [page](https://agentshare.dev/registry/57) |
 | 56 | Mini Accountant MCP — invoices, expenses and tax estimates | Integrations | [mcp](https://mcp.miniaccountant.app/v1beta) | [site](https://ad.miniaccountant.app) | [repo](https://github.com/miniaccountant/mcp-setup) | [page](https://agentshare.dev/registry/56) |
 | 54 | sol-defi-desk | Data & commerce | [mcp](https://95.216.126.169.sslip.io/mcp) | [site](https://95.216.126.169.sslip.io/buyer) | — | [page](https://agentshare.dev/registry/54) |
 | 53 | Arvow | Agent tools | [mcp](https://arvow.com) | [site](https://arvow.com) | — | [page](https://agentshare.dev/registry/53) |
