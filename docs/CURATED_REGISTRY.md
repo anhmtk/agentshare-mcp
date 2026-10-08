@@ -10,14 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-07T14:44:27Z`  
+- **Generated (UTC):** `2026-10-08T14:56:22Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 47 verified  
+- **Count:** 50 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 61 | PDF to Markdown MCP — PDF into clean Markdown, with a scan check first | Agent tools | [mcp](https://pdf2md.dudko.dev/mcp) | [site](https://pdf2md.dudko.dev) | [repo](https://github.com/dudko-dev/pdf-to-md-mcp-setup) | [page](https://agentshare.dev/registry/61) |
+| 60 | Vectorize MCP — raster images to editable SVG, EPS, PDF or DXF | Agent tools | [mcp](https://vectorize.dudko.dev/mcp) | [site](https://vectorize.dudko.dev) | [repo](https://github.com/dudko-dev/vectorize-mcp-setup) | [page](https://agentshare.dev/registry/60) |
+| 59 | Nacre MCP — permission-aware document search for agents | Agent tools | [mcp](https://playground.nacre.work/mcp) | [site](https://nacre.work) | [repo](https://github.com/nacre-work/nacre) | [page](https://agentshare.dev/registry/59) |
 | 58 | Astro Agents | Agent tools | [mcp](https://astro-agent.dev/mcp) | [site](https://astro-agent.dev) | [repo](https://github.com/aidatatools-dev/astro-agents-mcp) | [page](https://agentshare.dev/registry/58) |
 | 57 | Scout Packs — B2B lead data MCP | Data & commerce | [mcp](https://scout-packs-production.up.railway.app/mcp) | [site](https://scout-packs-production.up.railway.app) | [repo](https://github.com/tigerops-win/scout-packs) | [page](https://agentshare.dev/registry/57) |
 | 56 | Mini Accountant MCP — invoices, expenses and tax estimates | Integrations | [mcp](https://mcp.miniaccountant.app/v1beta) | [site](https://ad.miniaccountant.app) | [repo](https://github.com/miniaccountant/mcp-setup) | [page](https://agentshare.dev/registry/56) |
