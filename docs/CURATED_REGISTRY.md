@@ -10,14 +10,22 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-08T14:56:22Z`  
+- **Generated (UTC):** `2026-10-09T14:39:33Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 50 verified  
+- **Count:** 58 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
+| 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
+| 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
+| 66 | Penny Press | Data & commerce | [mcp](https://www.pennypress.org/mcp) | [site](https://www.pennypress.org) | — | [page](https://agentshare.dev/registry/66) |
+| 65 | Repostit MCP Connector | Integrations | [mcp](https://repostit-mcp-cfjcykgqda-uc.a.run.app/mcp/v1.1) | [site](https://repostit.io/) | — | [page](https://agentshare.dev/registry/65) |
+| 64 | iReceipt PRO MCP — render stored templates to PDF, JPG, PNG and WEBP | Agent tools | [mcp](https://mcp.ireceipt.pro/mcp) | [site](https://ireceipt.pro) | [repo](https://github.com/ireceipt-pro/mcp-setup) | [page](https://agentshare.dev/registry/64) |
+| 63 | Inkfree | Integrations | [mcp](https://api.inkfree.app/core/inkfree/mcp/) | [site](https://inkfree.app/) | — | [page](https://agentshare.dev/registry/63) |
+| 62 | Mailzzy | Integrations | [mcp](https://api.mailzzy.com/crm/mcp/) | [site](https://mailzzy.com/) | — | [page](https://agentshare.dev/registry/62) |
 | 61 | PDF to Markdown MCP — PDF into clean Markdown, with a scan check first | Agent tools | [mcp](https://pdf2md.dudko.dev/mcp) | [site](https://pdf2md.dudko.dev) | [repo](https://github.com/dudko-dev/pdf-to-md-mcp-setup) | [page](https://agentshare.dev/registry/61) |
 | 60 | Vectorize MCP — raster images to editable SVG, EPS, PDF or DXF | Agent tools | [mcp](https://vectorize.dudko.dev/mcp) | [site](https://vectorize.dudko.dev) | [repo](https://github.com/dudko-dev/vectorize-mcp-setup) | [page](https://agentshare.dev/registry/60) |
 | 59 | Nacre MCP — permission-aware document search for agents | Agent tools | [mcp](https://playground.nacre.work/mcp) | [site](https://nacre.work) | [repo](https://github.com/nacre-work/nacre) | [page](https://agentshare.dev/registry/59) |
