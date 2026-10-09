@@ -15,15 +15,16 @@ primary_focus=agent_paid_rails
 
 <p align="center">
   <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">
-    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — agent-paid API for AI agents" width="520">
+    <img src="https://agentshare.dev/static/brand/logo-wordmark.png?v=2026-05-12" alt="AgentShare — curated MCP registry" width="520">
   </a>
 </p>
 
 <h1 align="center">AgentShare MCP — public reference</h1>
 
 <p align="center">
-  <strong>Agent-paid API access</strong> for autonomous agents — dual-auth (API key or x402), free discovery, MCP Streamable HTTP.
-  Commerce procurement and Solana/Meteora DeFi tools are <strong>secondary modules</strong> on the same rails.
+  <strong>Curated MCP registry</strong> — discover and list remote MCP servers (editor-reviewed, not a dump).
+  AgentShare also runs its <strong>own</strong> agent-paid MCP (12 tools): dual-auth (API key or x402).
+  Commerce and Solana/Meteora DeFi are <strong>Lab/secondary</strong> on those rails.
 </p>
 
 <!-- Primary CTAs: one job each. UTM tracks GitHub README → agentshare.dev. -->
@@ -34,13 +35,11 @@ primary_focus=agent_paid_rails
 </p>
 
 <p align="center">
-  <a href="https://agentshare.dev/signup?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Start building agent-paid APIs</a>
+  <a href="https://agentshare.dev/signup?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Signup (API key)</a>
   ·
   <a href="https://agentshare.dev/pricing?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Pricing / x402</a>
   ·
   <a href="https://agentshare.dev/?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Website</a>
-  ·
-  <a href="https://agentshare.dev/market?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">Market</a>
   ·
   <a href="https://agentshare.dev/for-agents?utm_source=github&amp;utm_medium=agentshare-mcp&amp;utm_campaign=readme">For Agents</a>
   ·
@@ -84,18 +83,19 @@ primary_focus=agent_paid_rails
 | **MCP Registry (curated)** | https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme |
 | **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
-| **MCP server card (14 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **MCP server card (12 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Coverage (honest scope)** | https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme · [DEFI_POSITIONING.md](./docs/DEFI_POSITIONING.md) |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
 This repository is the **public, lightweight face** on GitHub. Production API implementation is private; behavior is defined by the live URLs above.
 
-**Primary product:** agent-paid rails (dual-auth + discovery + MCP).  
-**Secondary:** commerce procurement · Solana/Meteora DeFi demos (Lab — not the company backbone) · [Market experiment](https://agentshare.dev/market) ($1 list, no escrow).
+**Public face:** curated MCP registry at [agentshare.dev/registry](https://agentshare.dev/registry).  
+**Own paid tools (not the homepage):** dual-auth rails + commerce · Solana/Meteora DeFi demos (Lab — not the company backbone).  
+The Market classifieds experiment (`/market`, `market_browse` / `market_list`) was **removed 2026-10-03**.
 
 ---
 
-## MCP tools (14) — catalog v1.1.0
+## MCP tools (12) — catalog v1.1.0
 
 Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
 
@@ -110,8 +110,6 @@ Polymarket prediction-market tools are **not** on the public MCP catalog (legal 
 | `product_detail` | Full product by id from search |
 | `commerce_quote` | ACP / agent-buyer listings envelope |
 | `request_capability` | Custom Request Tool: structured capability gap → admin web inbox (auth + stake; no codegen) |
-| `market_browse` | Browse Market classifieds (live HTTPS URLs, bids, likes) — experiment, not escrow |
-| `market_list` | List a live web/app URL on Market ($1 x402 or API key). Store `manage_token` once. |
 
 ### DeFi demos (secondary)
 

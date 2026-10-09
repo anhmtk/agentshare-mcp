@@ -19,7 +19,7 @@ Sign in with **GitHub** (same account as repo).
 | Field | Paste this |
 |-------|------------|
 | **Name** | `AgentShare` |
-| **Description** | `Agent-paid API MCP: dual-auth/x402, commerce_quote + procurement tools, secondary Solana/Meteora demos. agentshare.dev — 11 tools` |
+| **Description** | `Curated MCP registry + 12 own tools (dual-auth/x402, commerce, secondary Solana/Meteora demos). agentshare.dev/registry` |
 | **Link to install instructions** | `https://github.com/anhmtk/agentshare-mcp/blob/main/agentshare-commerce-mcp/README.md` |
 | **Cursor Deep Link** | See below |
 | **Logo** | Upload `agentshare-commerce-mcp/assets/icon.png` |
