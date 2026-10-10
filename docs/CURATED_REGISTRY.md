@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-09T14:39:33Z`  
+- **Generated (UTC):** `2026-10-10T13:57:53Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 58 verified  
+- **Count:** 60 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
+| 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
 | 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
 | 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
