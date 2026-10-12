@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-11T14:21:39Z`  
+- **Generated (UTC):** `2026-10-12T17:00:09Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 63 verified  
+- **Count:** 64 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
 | 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | [repo](https://github.com/waynehamadi/datacircle-plugin) | [page](https://agentshare.dev/registry/72) |
