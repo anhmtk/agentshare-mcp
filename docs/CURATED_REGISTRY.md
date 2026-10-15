@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-13T15:16:04Z`  
+- **Generated (UTC):** `2026-10-15T12:51:23Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 66 verified  
+- **Count:** 70 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
+| 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
+| 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
+| 78 | BTC Intel | Data & commerce | [mcp](https://9eouter-0f49c8.abyte.my.id/mcp) | [site](https://9eouter-0f49c8.abyte.my.id) | — | [page](https://agentshare.dev/registry/78) |
 | 77 | Taskmill | Data & commerce | [mcp](https://3c18b2d704b6940881478ee13baabb5a-dev.ctonew.app/mcp) | [site](https://3c18b2d704b6940881478ee13baabb5a.ctonew.app) | — | [page](https://agentshare.dev/registry/77) |
 | 76 | BlazePhoenix MCP server | Agent tools | [mcp](https://blazephoenix.xyz/mcp) | [site](https://blazephoenix.xyz) | — | [page](https://agentshare.dev/registry/76) |
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
