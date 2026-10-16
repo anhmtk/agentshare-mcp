@@ -10,14 +10,41 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-15T12:51:23Z`  
+- **Generated (UTC):** `2026-10-16T12:43:21Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 70 verified  
+- **Count:** 97 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 108 | Prisma MCP | Storage | [mcp](https://mcp.prisma.io/mcp) | [site](https://www.prisma.io) | [repo](https://github.com/prisma/mcp) | [page](https://agentshare.dev/registry/108) |
+| 107 | PostHog MCP | Analytics | [mcp](https://mcp.posthog.com/mcp) | [site](https://posthog.com) | [repo](https://github.com/PostHog/mcp) | [page](https://agentshare.dev/registry/107) |
+| 106 | Grafana MCP | Analytics | [mcp](https://mcp.grafana.com/mcp) | [site](https://grafana.com) | [repo](https://github.com/grafana/mcp-grafana) | [page](https://agentshare.dev/registry/106) |
+| 105 | PayPal MCP | Integrations | [mcp](https://mcp.paypal.com/mcp) | [site](https://developer.paypal.com) | — | [page](https://agentshare.dev/registry/105) |
+| 104 | Firecrawl MCP | Agent tools | [mcp](https://mcp.firecrawl.dev/mcp) | [site](https://www.firecrawl.dev) | [repo](https://github.com/mendableai/firecrawl-mcp-server) | [page](https://agentshare.dev/registry/104) |
+| 103 | Exa MCP | Agent tools | [mcp](https://mcp.exa.ai/mcp) | [site](https://exa.ai) | [repo](https://github.com/exa-labs/exa-mcp-server) | [page](https://agentshare.dev/registry/103) |
+| 102 | Context7 MCP | Agent tools | [mcp](https://mcp.context7.com/mcp) | [site](https://context7.com) | [repo](https://github.com/upstash/context7) | [page](https://agentshare.dev/registry/102) |
+| 101 | DeepWiki MCP | Agent tools | [mcp](https://mcp.deepwiki.com/mcp) | [site](https://deepwiki.com) | — | [page](https://agentshare.dev/registry/101) |
+| 100 | Hugging Face MCP | Agent tools | [mcp](https://huggingface.co/mcp) | [site](https://huggingface.co) | [repo](https://github.com/huggingface/hf-mcp-server) | [page](https://agentshare.dev/registry/100) |
+| 99 | Neon MCP | Storage | [mcp](https://mcp.neon.tech/mcp) | [site](https://neon.tech/docs) | [repo](https://github.com/neondatabase/mcp-server-neon) | [page](https://agentshare.dev/registry/99) |
+| 98 | Supabase MCP | Storage | [mcp](https://mcp.supabase.com/mcp) | [site](https://supabase.com/docs) | [repo](https://github.com/supabase-community/supabase-mcp) | [page](https://agentshare.dev/registry/98) |
+| 97 | Shopify MCP | Data & commerce | [mcp](https://mcp.shopify.com/mcp) | [site](https://shopify.dev) | — | [page](https://agentshare.dev/registry/97) |
+| 96 | Atlassian MCP | Integrations | [mcp](https://mcp.atlassian.com/v1/mcp) | [site](https://www.atlassian.com) | — | [page](https://agentshare.dev/registry/96) |
+| 95 | Linear MCP | Integrations | [mcp](https://mcp.linear.app/mcp) | [site](https://linear.app) | — | [page](https://agentshare.dev/registry/95) |
+| 94 | Notion MCP | Storage | [mcp](https://mcp.notion.com/mcp) | [site](https://developers.notion.com) | [repo](https://github.com/makenotion/notion-mcp-server) | [page](https://agentshare.dev/registry/94) |
+| 93 | Square MCP | Data & commerce | [mcp](https://mcp.squareup.com/mcp) | [site](https://developer.squareup.com) | [repo](https://github.com/square/square-mcp-server) | [page](https://agentshare.dev/registry/93) |
+| 92 | Stripe MCP | Integrations | [mcp](https://mcp.stripe.com/) | [site](https://docs.stripe.com/mcp) | [repo](https://github.com/stripe/agent-toolkit) | [page](https://agentshare.dev/registry/92) |
+| 91 | Sentry MCP | Analytics | [mcp](https://mcp.sentry.dev/mcp) | [site](https://sentry.io) | [repo](https://github.com/getsentry/sentry-mcp) | [page](https://agentshare.dev/registry/91) |
+| 90 | GitHub MCP | Agent tools | [mcp](https://api.githubcopilot.com/mcp/) | [site](https://github.com/github/github-mcp-server) | [repo](https://github.com/github/github-mcp-server) | [page](https://agentshare.dev/registry/90) |
+| 89 | Cloudflare MCP | Integrations | [mcp](https://mcp.cloudflare.com/mcp) | [site](https://developers.cloudflare.com/agents/model-context-protocol/) | [repo](https://github.com/cloudflare/mcp-server-cloudflare) | [page](https://agentshare.dev/registry/89) |
+| 88 | CurlShot — website screenshots for AI agents | Agent tools | [mcp](https://curlshot.com/api/mcp) | [site](https://curlshot.com) | [repo](https://github.com/SergiuPogor/curlshot-mcp) | [page](https://agentshare.dev/registry/88) |
+| 87 | Alishahi Insurance Quote Requests | Agent tools | [mcp](https://alishahiinsurance.com/mcp) | [site](https://alishahiinsurance.com/ai-assistants) | — | [page](https://agentshare.dev/registry/87) |
+| 86 | WITHDRAW REQUEST — Drew's Xcode MCP (stdio only) | Agent tools | [mcp](https://github.com/drewster99/drews-xcode-mcp) | [site](https://pypi.org/project/drews-xcode-mcp/) | [repo](https://github.com/drewster99/drews-xcode-mcp) | [page](https://agentshare.dev/registry/86) |
+| 85 | Neume MCP | Agent tools | [mcp](https://api.neume.io/v1/mcp) | [site](https://neume.io) | — | [page](https://agentshare.dev/registry/85) |
+| 84 | AgentRXI — 455 pay-per-call tools for agents | Data & commerce | [mcp](https://mcp.agentrxi.com/mcp) | [site](https://agentrxi.com) | — | [page](https://agentshare.dev/registry/84) |
+| 83 | RobotTraining.jobs | Data & commerce | [mcp](https://robottraining.jobs/api/mcp) | [site](https://robottraining.jobs) | — | [page](https://agentshare.dev/registry/83) |
+| 82 | CareJobs.Now | Data & commerce | [mcp](https://carejobs.now/api/mcp) | [site](https://carejobs.now) | — | [page](https://agentshare.dev/registry/82) |
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
 | 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
 | 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
