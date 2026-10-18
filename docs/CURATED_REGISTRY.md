@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-17T11:44:37Z`  
+- **Generated (UTC):** `2026-10-18T12:11:03Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 94 verified  
+- **Count:** 96 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 112 | Bottally | Analytics | [mcp](https://www.bottally.com/api/mcp) | [site](https://www.bottally.com) | — | [page](https://agentshare.dev/registry/112) |
+| 111 | AIData.Broker | Data & commerce | [mcp](https://aidata.broker/mcp) | [site](https://aidata.broker/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-oct26) | — | [page](https://agentshare.dev/registry/111) |
 | 110 | 出口单 chukoudan | Data & commerce | [mcp](https://chukoudan.com/mcp) | [site](https://chukoudan.com) | — | [page](https://agentshare.dev/registry/110) |
 | 109 | Costory FinOps MCP | Agent tools | [mcp](https://app-api.costory.io/mcp) | [site](https://www.costory.io) | [repo](https://github.com/costory-io/costory-finops-mcp-skills) | [page](https://agentshare.dev/registry/109) |
 | 108 | Prisma MCP | Storage | [mcp](https://mcp.prisma.io/mcp) | [site](https://www.prisma.io) | [repo](https://github.com/prisma/mcp) | [page](https://agentshare.dev/registry/108) |
