@@ -10,14 +10,19 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-18T12:11:03Z`  
+- **Generated (UTC):** `2026-10-19T14:57:57Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 96 verified  
+- **Count:** 101 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 117 | Whale Coupons | Data & commerce | [mcp](https://whalecoupons.co/mcp) | [site](https://whalecoupons.co) | [repo](https://github.com/whalecoupons/whale-coupons-mcp) | [page](https://agentshare.dev/registry/117) |
+| 116 | Grey Ridge Signals (x402 DeFi/market data) | Integrations | [mcp](https://api.greyridgesignals.ai/mcp) | [site](https://api.greyridgesignals.ai) | [repo](https://github.com/rezearcher/x402-data-api) | [page](https://agentshare.dev/registry/116) |
+| 115 | Synmerco | Agent tools | [mcp](https://x402.ggez.my.id/pox) | [site](https://synmerco.com) | [repo](https://github.com/synmerco/integration) | [page](https://agentshare.dev/registry/115) |
+| 114 | Trades With AI + SaaS Price Watch | Data & commerce | [mcp](https://tradeswithai.com/mcp) | [site](https://tradeswithai.com/agents/?utm_source=agentshare&utm_medium=directory&utm_campaign=twa_mcp) | [repo](https://github.com/jeremyanichols/tradeswithai-mcp) | [page](https://agentshare.dev/registry/114) |
+| 113 | SkillsPicker | Agent tools | [mcp](https://skillspicker.com/mcp) | [site](https://skillspicker.com/?utm_source=agentshare&utm_medium=directory&utm_campaign=skp) | — | [page](https://agentshare.dev/registry/113) |
 | 112 | Bottally | Analytics | [mcp](https://www.bottally.com/api/mcp) | [site](https://www.bottally.com) | — | [page](https://agentshare.dev/registry/112) |
 | 111 | AIData.Broker | Data & commerce | [mcp](https://aidata.broker/mcp) | [site](https://aidata.broker/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-oct26) | — | [page](https://agentshare.dev/registry/111) |
 | 110 | 出口单 chukoudan | Data & commerce | [mcp](https://chukoudan.com/mcp) | [site](https://chukoudan.com) | — | [page](https://agentshare.dev/registry/110) |
@@ -58,6 +63,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
+| 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | [repo](https://github.com/waynehamadi/datacircle-plugin) | [page](https://agentshare.dev/registry/72) |
 | 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
 | 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
@@ -103,7 +109,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 25 | EasyGroupFlights MCP | Integrations | [mcp](https://mcp.easygroupflights.com/mcp) | [site](https://easygroupflights.com/) | [repo](https://github.com/codeblockssk/easygroupflights-mcp) | [page](https://agentshare.dev/registry/25) |
 | 24 | FrameThrower MCP | Agent tools | [mcp](https://framethrower.ai/api/mcp) | [site](https://framethrower.ai) | [repo](https://github.com/framethrower-ai/framethrower-mcp) | [page](https://agentshare.dev/registry/24) |
 | 23 | The AI Daily MCP — ranked AI news & enterprise AI cost estimates | Data & commerce | [mcp](https://theaidaily.in/mcp) | [site](https://theaidaily.in) | — | [page](https://agentshare.dev/registry/23) |
-| 22 | Hashnet MCP | Agent tools | [mcp](https://hol.org/mcp) | [site](https://hol.org/mcp) | [repo](https://github.com/hashgraph-online/hashnet-mcp-js) | [page](https://agentshare.dev/registry/22) |
 | 21 | Agent Control MCP — agent payments control + storefront | Agent tools | [mcp](https://agent-control.net/api/v1/mcp) | [site](https://agent-control.net) | [repo](https://github.com/Cobra-bit-prog/agent-guard) | [page](https://agentshare.dev/registry/21) |
 | 18 | Magic Hour MCP | Agent tools | [mcp](https://mcp.magichour.ai/) | [site](https://magichour.ai/mcp?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_distribution) | [repo](https://github.com/magichourhq/magic-hour-mcp) | [page](https://agentshare.dev/registry/18) |
 | 16 | AI Agents Archive | Agent tools | [mcp](https://aiagentsarchive.com/mcp) | [site](https://aiagentsarchive.com) | [repo](https://github.com/panagot/Ai-Agents-Archive) | [page](https://agentshare.dev/registry/16) |
