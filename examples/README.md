@@ -50,6 +50,6 @@ python buy_meteora_x402.py
 `meteora_brief` uses **dynamic** pricing (~$0.01–$0.30 USDC). Always read the live
 quote from `PAYMENT-REQUIRED` / `accepts[].amount` (USDC 6 decimals).
 
-Settlement network today: **Base mainnet** (`eip155:8453`) via Circle Gateway.
+Settlement today: **Base mainnet** (`eip155:8453`), one `exact` row. EIP-712 domain name is **USD Coin** version **2**. Do not filter `extra.name` on the string `USDC`.
 
 Full API / MCP docs: https://agentshare.dev/docs

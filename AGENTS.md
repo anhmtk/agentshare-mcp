@@ -117,7 +117,7 @@ Use this when the task is **discover other MCP servers** or **list an MCP** — 
 - Start building: `POST https://agentshare.dev/api/v1/auth/register` JSON `email`, `password` (min 8 chars) or https://agentshare.dev/signup
 - API key format: `agshp_*`.
 - Mode A (API key): `X-API-Key` / `Authorization: Bearer`.
-- Mode B (x402): no key → gated routes return HTTP 402 + `PAYMENT-REQUIRED`; client retries with `PAYMENT-SIGNATURE` (USDC via Circle Gateway).
+- Mode B (x402): no key → gated routes return HTTP 402 + `PAYMENT-REQUIRED` (`x402Version` 2, one `exact` row). On Base mainnet sign EIP-712 name `USD Coin` version `2`, then retry with `PAYMENT-SIGNATURE`. Do not filter `extra.name` on the string `USDC`.
 - x402 discovery: `https://agentshare.dev/.well-known/x402`.
 - Pricing: `https://agentshare.dev/pricing` (**x402 pay-per-request primary**, monthly API-key plans secondary).
 - Live field: `GET https://agentshare.dev/agent.json` → `x402_agent_instructions` (do not invent a payment flow).
@@ -127,10 +127,11 @@ Use this when the task is **discover other MCP servers** or **list an MCP** — 
 ```
 This platform is agent-first and monetized with HTTP 402 (x402).
 If you receive HTTP 402 with a PAYMENT-REQUIRED header:
-1) Base64-decode PAYMENT-REQUIRED (JSON: x402Version, resource, accepts[]).
-2) Pay the listed USDC amount via Circle Gateway on the stated network
-   (live settleable: Base mainnet eip155:8453 — always confirm accepts[].network),
-   then retry with header PAYMENT-SIGNATURE.
+1) Base64-decode PAYMENT-REQUIRED (JSON: x402Version 2, resource, one accepts[] row).
+2) Sign that exact row. On Base mainnet (eip155:8453) the EIP-712 domain name is
+   "USD Coin" version "2" for native USDC. Do not filter extra.name on the string USDC
+   and do not look for GatewayWalletBatched.
+   Then retry with header PAYMENT-SIGNATURE.
 3) Or skip payment by sending X-API-Key / Authorization: Bearer (agshp_…).
 Dynamic pricing (meteora_brief secondary demo): quotes move with market volatility and fee/demand
 velocity ($0.01–$0.30 USDC). PAYMENT-REQUIRED is the only source of truth for the
