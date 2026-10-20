@@ -10,14 +10,20 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-19T14:57:57Z`  
+- **Generated (UTC):** `2026-10-20T12:57:51Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 101 verified  
+- **Count:** 105 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 123 | Stivio | Agent tools | [mcp](https://stivio.ai/api/mcp) | [site](https://stivio.ai) | — | [page](https://agentshare.dev/registry/123) |
+| 122 | Vellm | Integrations | [mcp](https://api.vellm.app/mcp) | [site](https://vellm.app/mcp) | — | [page](https://agentshare.dev/registry/122) |
+| 121 | Seonix | Analytics | [mcp](https://api.seonix.ai/mcp) | [site](https://seonix.ai/mcp) | — | [page](https://agentshare.dev/registry/121) |
+| 120 | NeverApply | Agent tools | [mcp](https://neverapply.co/mcp) | [site](https://neverapply.co) | [repo](https://github.com/kasovy/neverapply-mcp) | [page](https://agentshare.dev/registry/120) |
+| 119 | Wealth Agent x402 API — pay-per-call machine tools | Integrations | [mcp](https://wealth-agent.wealthagent-app.workers.dev/mcp) | [site](https://wealth-agent.wealthagent-app.workers.dev) | — | [page](https://agentshare.dev/registry/119) |
+| 118 | Celestio | Agent tools | [mcp](https://celestio.ai/mcp) | [site](https://celestio.ai/?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_listings) | — | [page](https://agentshare.dev/registry/118) |
 | 117 | Whale Coupons | Data & commerce | [mcp](https://whalecoupons.co/mcp) | [site](https://whalecoupons.co) | [repo](https://github.com/whalecoupons/whale-coupons-mcp) | [page](https://agentshare.dev/registry/117) |
 | 116 | Grey Ridge Signals (x402 DeFi/market data) | Integrations | [mcp](https://api.greyridgesignals.ai/mcp) | [site](https://api.greyridgesignals.ai) | [repo](https://github.com/rezearcher/x402-data-api) | [page](https://agentshare.dev/registry/116) |
 | 115 | Synmerco | Agent tools | [mcp](https://x402.ggez.my.id/pox) | [site](https://synmerco.com) | [repo](https://github.com/synmerco/integration) | [page](https://agentshare.dev/registry/115) |
@@ -57,7 +63,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
 | 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
 | 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
-| 78 | BTC Intel | Data & commerce | [mcp](https://9eouter-0f49c8.abyte.my.id/mcp) | [site](https://9eouter-0f49c8.abyte.my.id) | — | [page](https://agentshare.dev/registry/78) |
 | 77 | Taskmill | Data & commerce | [mcp](https://3c18b2d704b6940881478ee13baabb5a-dev.ctonew.app/mcp) | [site](https://3c18b2d704b6940881478ee13baabb5a.ctonew.app) | — | [page](https://agentshare.dev/registry/77) |
 | 76 | BlazePhoenix MCP server | Agent tools | [mcp](https://blazephoenix.xyz/mcp) | [site](https://blazephoenix.xyz) | — | [page](https://agentshare.dev/registry/76) |
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
@@ -95,7 +100,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 41 | Agent Embassy | Agent tools | [mcp](https://aemb.pro/mcp) | [site](https://aemb.pro) | — | [page](https://agentshare.dev/registry/41) |
 | 40 | MindMap AI | Agent tools | [mcp](https://mindmapai.app/mcp) | [site](http://mindmapai.app) | [repo](https://github.com/MindMap-AI/mcp) | [page](https://agentshare.dev/registry/40) |
 | 38 | GigSoul x402 | Agent tools | [mcp](https://api.gigsoul.com/mcp) | [site](https://gigsoul.com/x402) | [repo](https://github.com/gigsoul-org/gigsoul-x402) | [page](https://agentshare.dev/registry/38) |
-| 37 | Vend API Merchant | Data & commerce | [mcp](https://extract.paypercall.dev/mcp) | [site](https://paypercall.dev) | [repo](https://github.com/PANDeveloper001/vend) | [page](https://agentshare.dev/registry/37) |
 | 36 | Zambo Trust Layer | Agent tools | [mcp](https://zambo.dev/api/mcp) | [site](https://zambo.dev) | — | [page](https://agentshare.dev/registry/36) |
 | 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
 | 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
