@@ -10,14 +10,26 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-20T12:57:51Z`  
+- **Generated (UTC):** `2026-10-21T13:13:12Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 105 verified  
+- **Count:** 116 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 135 | NameDrop MCP — Basenames paid in USDC | Agent tools | [mcp](https://namedrop.madebydevx.com/mcp) | [site](https://namedrop.madebydevx.com) | — | [page](https://agentshare.dev/registry/135) |
+| 134 | AgentGas MCP — cross-chain gas quotes for agents | Agent tools | [mcp](https://agentgas.madebydevx.com/mcp) | [site](https://agentgas.madebydevx.com) | — | [page](https://agentshare.dev/registry/134) |
+| 133 | HeroHunt.ai MCP — People search for AI agents | Data & commerce | [mcp](https://api.herohunt.ai/api/v1/mcp) | [site](https://www.herohunt.ai/?utm_source=agentshare-dev&utm_medium=listing&utm_campaign=directories) | [repo](https://github.com/herohunt-ai/herohunt-mcp) | [page](https://agentshare.dev/registry/133) |
+| 132 | Loppee MCP: look up and check US local pros | Data & commerce | [mcp](https://loppee.com/mcp/discovery) | [site](https://loppee.com) | — | [page](https://agentshare.dev/registry/132) |
+| 131 | SitePatent Directory | Data & commerce | [mcp](https://sitepatent.com/api/mcp) | [site](https://sitepatent.com/) | — | [page](https://agentshare.dev/registry/131) |
+| 130 | Vectoree Tool Hub | Agent tools | [mcp](https://vectoree.ai/mcp) | [site](https://vectoree.ai) | — | [page](https://agentshare.dev/registry/130) |
+| 129 | CorpusIQ | Analytics | [mcp](https://mcp2.corpusiq.io/mcp) | [site](https://www.corpusiq.io/) | [repo](https://github.com/CorpusIQ/corpusiq-docs) | [page](https://agentshare.dev/registry/129) |
+| 128 | The Commons — Dead Brands Collab Hub | Agent tools | [mcp](https://mcp.deadbrands.co/hub/mcp) | [site](https://mcp.deadbrands.co/hub/) | [repo](https://github.com/dstrausser83/db-collab-hub) | [page](https://agentshare.dev/registry/128) |
+| 127 | ExchangeRebel | Data & commerce | [mcp](https://exchangerebel.com/mcp) | [site](https://exchangerebel.com) | — | [page](https://agentshare.dev/registry/127) |
+| 126 | MEDIAPRONET Directory | Data & commerce | [mcp](https://mediapronet.com/api/mcp) | [site](https://mediapronet.com/) | — | [page](https://agentshare.dev/registry/126) |
+| 125 | CodeTrendy Directory | Data & commerce | [mcp](https://codetrendy.com/api/mcp) | [site](https://codetrendy.com/) | — | [page](https://agentshare.dev/registry/125) |
+| 124 | ClipTalk | Agent tools | [mcp](https://www.cliptalk.pro/mcp) | [site](https://www.cliptalk.pro) | — | [page](https://agentshare.dev/registry/124) |
 | 123 | Stivio | Agent tools | [mcp](https://stivio.ai/api/mcp) | [site](https://stivio.ai) | — | [page](https://agentshare.dev/registry/123) |
 | 122 | Vellm | Integrations | [mcp](https://api.vellm.app/mcp) | [site](https://vellm.app/mcp) | — | [page](https://agentshare.dev/registry/122) |
 | 121 | Seonix | Analytics | [mcp](https://api.seonix.ai/mcp) | [site](https://seonix.ai/mcp) | — | [page](https://agentshare.dev/registry/121) |
@@ -57,7 +69,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 87 | Alishahi Insurance Quote Requests | Agent tools | [mcp](https://alishahiinsurance.com/mcp) | [site](https://alishahiinsurance.com/ai-assistants) | — | [page](https://agentshare.dev/registry/87) |
 | 86 | WITHDRAW REQUEST — Drew's Xcode MCP (stdio only) | Agent tools | [mcp](https://github.com/drewster99/drews-xcode-mcp) | [site](https://pypi.org/project/drews-xcode-mcp/) | [repo](https://github.com/drewster99/drews-xcode-mcp) | [page](https://agentshare.dev/registry/86) |
 | 85 | Neume MCP | Agent tools | [mcp](https://api.neume.io/v1/mcp) | [site](https://neume.io) | — | [page](https://agentshare.dev/registry/85) |
-| 84 | AgentRXI — 455 pay-per-call tools for agents | Data & commerce | [mcp](https://mcp.agentrxi.com/mcp) | [site](https://agentrxi.com) | — | [page](https://agentshare.dev/registry/84) |
 | 83 | RobotTraining.jobs | Data & commerce | [mcp](https://robottraining.jobs/api/mcp) | [site](https://robottraining.jobs) | — | [page](https://agentshare.dev/registry/83) |
 | 82 | CareJobs.Now | Data & commerce | [mcp](https://carejobs.now/api/mcp) | [site](https://carejobs.now) | — | [page](https://agentshare.dev/registry/82) |
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
