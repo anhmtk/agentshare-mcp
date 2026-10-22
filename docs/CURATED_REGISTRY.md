@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-21T13:13:12Z`  
+- **Generated (UTC):** `2026-10-22T13:11:22Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 116 verified  
+- **Count:** 118 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 139 | NeuralVerge | Data & commerce | [mcp](https://mcp.neuralverge.ai/mcp) | [site](https://neuralverge.ai/) | [repo](https://github.com/neuralverge/neuralverge-mcp-server) | [page](https://agentshare.dev/registry/139) |
+| 138 | Vidmoat MCP — AI video editing | Agent tools | [mcp](https://api.vidmoat.com/api/mcp) | [site](https://www.vidmoat.com) | — | [page](https://agentshare.dev/registry/138) |
+| 137 | ScrapeAtlas MCP | Data & commerce | [mcp](https://api.scrapeatlas.com/mcp) | [site](https://scrapeatlas.com) | — | [page](https://agentshare.dev/registry/137) |
+| 136 | RWA Data MCP | Data & commerce | [mcp](https://rwa-data-mcp.dave-a-bear.workers.dev/mcp) | [site](https://rwa-data-api.dave-a-bear.workers.dev) | [repo](https://github.com/daveabear/rwa-data-mcp) | [page](https://agentshare.dev/registry/136) |
 | 135 | NameDrop MCP — Basenames paid in USDC | Agent tools | [mcp](https://namedrop.madebydevx.com/mcp) | [site](https://namedrop.madebydevx.com) | — | [page](https://agentshare.dev/registry/135) |
 | 134 | AgentGas MCP — cross-chain gas quotes for agents | Agent tools | [mcp](https://agentgas.madebydevx.com/mcp) | [site](https://agentgas.madebydevx.com) | — | [page](https://agentshare.dev/registry/134) |
 | 133 | HeroHunt.ai MCP — People search for AI agents | Data & commerce | [mcp](https://api.herohunt.ai/api/v1/mcp) | [site](https://www.herohunt.ai/?utm_source=agentshare-dev&utm_medium=listing&utm_campaign=directories) | [repo](https://github.com/herohunt-ai/herohunt-mcp) | [page](https://agentshare.dev/registry/133) |
@@ -38,7 +42,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 118 | Celestio | Agent tools | [mcp](https://celestio.ai/mcp) | [site](https://celestio.ai/?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_listings) | — | [page](https://agentshare.dev/registry/118) |
 | 117 | Whale Coupons | Data & commerce | [mcp](https://whalecoupons.co/mcp) | [site](https://whalecoupons.co) | [repo](https://github.com/whalecoupons/whale-coupons-mcp) | [page](https://agentshare.dev/registry/117) |
 | 116 | Grey Ridge Signals (x402 DeFi/market data) | Integrations | [mcp](https://api.greyridgesignals.ai/mcp) | [site](https://api.greyridgesignals.ai) | [repo](https://github.com/rezearcher/x402-data-api) | [page](https://agentshare.dev/registry/116) |
-| 115 | Synmerco | Agent tools | [mcp](https://x402.ggez.my.id/pox) | [site](https://synmerco.com) | [repo](https://github.com/synmerco/integration) | [page](https://agentshare.dev/registry/115) |
 | 114 | Trades With AI + SaaS Price Watch | Data & commerce | [mcp](https://tradeswithai.com/mcp) | [site](https://tradeswithai.com/agents/?utm_source=agentshare&utm_medium=directory&utm_campaign=twa_mcp) | [repo](https://github.com/jeremyanichols/tradeswithai-mcp) | [page](https://agentshare.dev/registry/114) |
 | 113 | SkillsPicker | Agent tools | [mcp](https://skillspicker.com/mcp) | [site](https://skillspicker.com/?utm_source=agentshare&utm_medium=directory&utm_campaign=skp) | — | [page](https://agentshare.dev/registry/113) |
 | 112 | Bottally | Analytics | [mcp](https://www.bottally.com/api/mcp) | [site](https://www.bottally.com) | — | [page](https://agentshare.dev/registry/112) |
@@ -114,7 +117,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 36 | Zambo Trust Layer | Agent tools | [mcp](https://zambo.dev/api/mcp) | [site](https://zambo.dev) | — | [page](https://agentshare.dev/registry/36) |
 | 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
 | 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
-| 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
 | 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/ChanghuLiu/england-works-watch) | [page](https://agentshare.dev/registry/32) |
 | 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
 | 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
