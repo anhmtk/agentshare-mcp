@@ -10,14 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-22T13:11:22Z`  
+- **Generated (UTC):** `2026-10-23T12:51:29Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 118 verified  
+- **Count:** 121 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 142 | Xquik | Data & commerce | [mcp](https://xquik.com/mcp) | [site](https://xquik.com/) | [repo](https://github.com/Xquik-dev/x-twitter-scraper) | [page](https://agentshare.dev/registry/142) |
+| 141 | Mubboo Flights MCP | Data & commerce | [mcp](https://mubboo.flights/api/mcp) | [site](https://mubboo.flights/mcp) | — | [page](https://agentshare.dev/registry/141) |
+| 140 | DevX Agent Hub: token safety check, speech to text, OCR, translate (x402) | Agent tools | [mcp](https://agents.madebydevx.com/mcp) | [site](https://agents.madebydevx.com) | — | [page](https://agentshare.dev/registry/140) |
 | 139 | NeuralVerge | Data & commerce | [mcp](https://mcp.neuralverge.ai/mcp) | [site](https://neuralverge.ai/) | [repo](https://github.com/neuralverge/neuralverge-mcp-server) | [page](https://agentshare.dev/registry/139) |
 | 138 | Vidmoat MCP — AI video editing | Agent tools | [mcp](https://api.vidmoat.com/api/mcp) | [site](https://www.vidmoat.com) | — | [page](https://agentshare.dev/registry/138) |
 | 137 | ScrapeAtlas MCP | Data & commerce | [mcp](https://api.scrapeatlas.com/mcp) | [site](https://scrapeatlas.com) | — | [page](https://agentshare.dev/registry/137) |
