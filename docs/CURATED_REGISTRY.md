@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-23T12:51:29Z`  
+- **Generated (UTC):** `2026-10-24T12:13:23Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 121 verified  
+- **Count:** 122 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 144 | datawebot | Data & commerce | [mcp](https://mcp.datawebot.com/mcp) | [site](https://www.datawebot.com) | [repo](https://github.com/datawebot/datawebot-mcp) | [page](https://agentshare.dev/registry/144) |
+| 143 | PrepLayer.ai | Agent tools | [mcp](https://api.maximusmediahouse.com/mcp) | [site](https://maximusmediahouse.com) | — | [page](https://agentshare.dev/registry/143) |
 | 142 | Xquik | Data & commerce | [mcp](https://xquik.com/mcp) | [site](https://xquik.com/) | [repo](https://github.com/Xquik-dev/x-twitter-scraper) | [page](https://agentshare.dev/registry/142) |
 | 141 | Mubboo Flights MCP | Data & commerce | [mcp](https://mubboo.flights/api/mcp) | [site](https://mubboo.flights/mcp) | — | [page](https://agentshare.dev/registry/141) |
 | 140 | DevX Agent Hub: token safety check, speech to text, OCR, translate (x402) | Agent tools | [mcp](https://agents.madebydevx.com/mcp) | [site](https://agents.madebydevx.com) | — | [page](https://agentshare.dev/registry/140) |
@@ -43,7 +45,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 120 | NeverApply | Agent tools | [mcp](https://neverapply.co/mcp) | [site](https://neverapply.co) | [repo](https://github.com/kasovy/neverapply-mcp) | [page](https://agentshare.dev/registry/120) |
 | 119 | Wealth Agent x402 API — pay-per-call machine tools | Integrations | [mcp](https://wealth-agent.wealthagent-app.workers.dev/mcp) | [site](https://wealth-agent.wealthagent-app.workers.dev) | — | [page](https://agentshare.dev/registry/119) |
 | 118 | Celestio | Agent tools | [mcp](https://celestio.ai/mcp) | [site](https://celestio.ai/?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_listings) | — | [page](https://agentshare.dev/registry/118) |
-| 117 | Whale Coupons | Data & commerce | [mcp](https://whalecoupons.co/mcp) | [site](https://whalecoupons.co) | [repo](https://github.com/whalecoupons/whale-coupons-mcp) | [page](https://agentshare.dev/registry/117) |
 | 116 | Grey Ridge Signals (x402 DeFi/market data) | Integrations | [mcp](https://api.greyridgesignals.ai/mcp) | [site](https://api.greyridgesignals.ai) | [repo](https://github.com/rezearcher/x402-data-api) | [page](https://agentshare.dev/registry/116) |
 | 114 | Trades With AI + SaaS Price Watch | Data & commerce | [mcp](https://tradeswithai.com/mcp) | [site](https://tradeswithai.com/agents/?utm_source=agentshare&utm_medium=directory&utm_campaign=twa_mcp) | [repo](https://github.com/jeremyanichols/tradeswithai-mcp) | [page](https://agentshare.dev/registry/114) |
 | 113 | SkillsPicker | Agent tools | [mcp](https://skillspicker.com/mcp) | [site](https://skillspicker.com/?utm_source=agentshare&utm_medium=directory&utm_campaign=skp) | — | [page](https://agentshare.dev/registry/113) |
