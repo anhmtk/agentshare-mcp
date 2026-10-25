@@ -10,14 +10,20 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-24T12:13:23Z`  
+- **Generated (UTC):** `2026-10-25T12:45:32Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 122 verified  
+- **Count:** 127 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 150 | 402post MCP — classified listings for AI agents | Data & commerce | [mcp](https://402post.com/mcp) | [site](https://402post.com) | [repo](https://github.com/paranormalen2/402post-mcp) | [page](https://agentshare.dev/registry/150) |
+| 149 | 402registry MCP — check whether AI crawlers can see a website | Analytics | [mcp](https://402registry.com/mcp) | [site](https://402registry.com) | [repo](https://github.com/paranormalen2/402registry-mcp) | [page](https://agentshare.dev/registry/149) |
+| 148 | Tanatasa Beauty Shopping MCP | Data & commerce | [mcp](https://tanatasa.sg/mcp) | [site](https://tanatasa.sg/ai-agent-docs) | — | [page](https://agentshare.dev/registry/148) |
+| 147 | 402cron MCP — paid cron with signed webhooks for AI agents | Integrations | [mcp](https://402cron.com/mcp) | [site](https://402cron.com) | [repo](https://github.com/paranormalen2/402cron-mcp) | [page](https://agentshare.dev/registry/147) |
+| 146 | AISkills402 MCP — search and buy tested AI agent skill files | Agent tools | [mcp](https://mcp.aiskills402.com/mcp) | [site](https://aiskills402.com) | [repo](https://github.com/paranormalen2/aiskills402-mcp) | [page](https://agentshare.dev/registry/146) |
+| 145 | HeyReagent: LinkedIn MCP server | Integrations | [mcp](https://api.heyreagent.com/mcp) | [site](https://heyreagent.com/linkedin-mcp?utm_source=agentshare&utm_medium=listing) | [repo](https://github.com/linglistack/heyreagent-linkedin-mcp) | [page](https://agentshare.dev/registry/145) |
 | 144 | datawebot | Data & commerce | [mcp](https://mcp.datawebot.com/mcp) | [site](https://www.datawebot.com) | [repo](https://github.com/datawebot/datawebot-mcp) | [page](https://agentshare.dev/registry/144) |
 | 143 | PrepLayer.ai | Agent tools | [mcp](https://api.maximusmediahouse.com/mcp) | [site](https://maximusmediahouse.com) | — | [page](https://agentshare.dev/registry/143) |
 | 142 | Xquik | Data & commerce | [mcp](https://xquik.com/mcp) | [site](https://xquik.com/) | [repo](https://github.com/Xquik-dev/x-twitter-scraper) | [page](https://agentshare.dev/registry/142) |
@@ -81,7 +87,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
 | 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
 | 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
-| 77 | Taskmill | Data & commerce | [mcp](https://3c18b2d704b6940881478ee13baabb5a-dev.ctonew.app/mcp) | [site](https://3c18b2d704b6940881478ee13baabb5a.ctonew.app) | — | [page](https://agentshare.dev/registry/77) |
 | 76 | BlazePhoenix MCP server | Agent tools | [mcp](https://blazephoenix.xyz/mcp) | [site](https://blazephoenix.xyz) | — | [page](https://agentshare.dev/registry/76) |
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
