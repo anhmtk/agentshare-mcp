@@ -10,14 +10,28 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-25T12:45:32Z`  
+- **Generated (UTC):** `2026-10-26T14:33:18Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 127 verified  
+- **Count:** 141 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 164 | BRIJ | Data & commerce | [mcp](https://travel.brij.fi/mcp) | [site](https://brij.fi) | — | [page](https://agentshare.dev/registry/164) |
+| 163 | OMOPHub | Data & commerce | [mcp](https://mcp.omophub.com) | [site](https://omophub.com) | [repo](https://github.com/OMOPHub/omophub-mcp) | [page](https://agentshare.dev/registry/163) |
+| 162 | Objective Trust | Agent tools | [mcp](https://agentshare.dev/mcp/objective-trust) | [site](https://agentshare.dev/docs#objective-trust) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/162) |
+| 161 | Waveleta Market Data MCP | Data & commerce | [mcp](https://api.waveleta.com/mcp) | [site](https://waveleta.com) | — | [page](https://agentshare.dev/registry/161) |
+| 160 | Provider Trust — ScriptMasterLabs | Agent tools | [mcp](https://provider-trust-mcp.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/160) |
+| 159 | Triple-Trigger — ScriptMasterLabs | Analytics | [mcp](https://squeezeos-api.onrender.com/triple-trigger/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/159) |
+| 158 | Calibration Court — ScriptMasterLabs | Analytics | [mcp](https://calibration-court.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/158) |
+| 157 | x402 Gateway (OMNIGATE) — ScriptMasterLabs | Agent tools | [mcp](https://mcp-x402.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/157) |
+| 156 | B20 Truth — ScriptMasterLabs | Agent tools | [mcp](https://b20.scriptmasterlabs.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/156) |
+| 155 | Robinhood RWA Intelligence — ScriptMasterLabs | Data & commerce | [mcp](https://sml-robinhood-rwa-intelligence.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/155) |
+| 154 | Cascade Graph — ScriptMasterLabs | Analytics | [mcp](https://sml-portfolio.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/154) |
+| 153 | MNEMOS — ScriptMasterLabs | Storage | [mcp](https://mnemos-agent.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/153) |
+| 152 | SqueezeOS — ScriptMasterLabs | Data & commerce | [mcp](https://squeezeos-api.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/152) |
+| 151 | Verdict Protocol — ScriptMasterLabs | Agent tools | [mcp](https://verdict.scriptmasterlabs.com/mcp) | [site](https://scriptmasterlabs.com/verdict-protocol) | — | [page](https://agentshare.dev/registry/151) |
 | 150 | 402post MCP — classified listings for AI agents | Data & commerce | [mcp](https://402post.com/mcp) | [site](https://402post.com) | [repo](https://github.com/paranormalen2/402post-mcp) | [page](https://agentshare.dev/registry/150) |
 | 149 | 402registry MCP — check whether AI crawlers can see a website | Analytics | [mcp](https://402registry.com/mcp) | [site](https://402registry.com) | [repo](https://github.com/paranormalen2/402registry-mcp) | [page](https://agentshare.dev/registry/149) |
 | 148 | Tanatasa Beauty Shopping MCP | Data & commerce | [mcp](https://tanatasa.sg/mcp) | [site](https://tanatasa.sg/ai-agent-docs) | — | [page](https://agentshare.dev/registry/148) |
@@ -91,7 +105,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
-| 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | [repo](https://github.com/waynehamadi/datacircle-plugin) | [page](https://agentshare.dev/registry/72) |
+| 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
 | 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
 | 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
