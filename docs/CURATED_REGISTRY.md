@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-26T14:33:18Z`  
+- **Generated (UTC):** `2026-10-27T13:33:26Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 141 verified  
+- **Count:** 143 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 166 | LifeVerse Product Discovery MCP | Agent tools | [mcp](https://lifeverse.gufreelancer.com/api/mcp) | [site](https://lifeverse.gufreelancer.com/mcp) | [repo](https://github.com/lifeversegu/lifeverse-mcp) | [page](https://agentshare.dev/registry/166) |
+| 165 | Locus Pro | Data & commerce | [mcp](https://api.paywithlocus.com/api/credits/mcp) | [site](https://paywithlocus.com) | [repo](https://github.com/locus-technologies/locus-pro-plugin) | [page](https://agentshare.dev/registry/165) |
 | 164 | BRIJ | Data & commerce | [mcp](https://travel.brij.fi/mcp) | [site](https://brij.fi) | — | [page](https://agentshare.dev/registry/164) |
 | 163 | OMOPHub | Data & commerce | [mcp](https://mcp.omophub.com) | [site](https://omophub.com) | [repo](https://github.com/OMOPHub/omophub-mcp) | [page](https://agentshare.dev/registry/163) |
 | 162 | Objective Trust | Agent tools | [mcp](https://agentshare.dev/mcp/objective-trust) | [site](https://agentshare.dev/docs#objective-trust) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/162) |
