@@ -10,14 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-28T14:30:16Z`  
+- **Generated (UTC):** `2026-10-29T14:38:40Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 147 verified  
+- **Count:** 149 verified  
 
-> Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
+> Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 174 | Ecommerce Data API MCP — Amazon research data | Data & commerce | [mcp](https://ecommercedataapi.com/mcp) | [site](https://ecommercedataapi.com) | — | [page](https://agentshare.dev/registry/174) |
+| 173 | Workmode MCP | Data & commerce | [mcp](https://api.workmode.co/mcp) | [site](https://workmode.co/mcp) | — | [page](https://agentshare.dev/registry/173) |
+| 172 | Jev Agent MCP - typed judgment tools | Agent tools | [mcp](https://jev-agent.com/api/mcp) | [site](https://jev-agent.com/jev-mcp) | — | [page](https://agentshare.dev/registry/172) |
 | 171 | GatePay — ScriptMasterLabs | Data & commerce | [mcp](https://gatepay.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/171) |
 | 170 | Agent Verify — ScriptMasterLabs | Data & commerce | [mcp](https://scriptmasterlabs.com/agent-verify/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/170) |
 | 169 | FlashCrafter Growth Briefs | Analytics | [mcp](https://briefs.flashcrafter.ai/mcp) | [site](https://www.flashcrafter.ai/growth-brief) | — | [page](https://agentshare.dev/registry/169) |
@@ -70,7 +73,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 122 | Vellm | Integrations | [mcp](https://api.vellm.app/mcp) | [site](https://vellm.app/mcp) | — | [page](https://agentshare.dev/registry/122) |
 | 121 | Seonix | Analytics | [mcp](https://api.seonix.ai/mcp) | [site](https://seonix.ai/mcp) | — | [page](https://agentshare.dev/registry/121) |
 | 120 | NeverApply | Agent tools | [mcp](https://neverapply.co/mcp) | [site](https://neverapply.co) | [repo](https://github.com/kasovy/neverapply-mcp) | [page](https://agentshare.dev/registry/120) |
-| 119 | Wealth Agent x402 API — pay-per-call machine tools | Integrations | [mcp](https://wealth-agent.wealthagent-app.workers.dev/mcp) | [site](https://wealth-agent.wealthagent-app.workers.dev) | — | [page](https://agentshare.dev/registry/119) |
 | 118 | Celestio | Agent tools | [mcp](https://celestio.ai/mcp) | [site](https://celestio.ai/?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_listings) | — | [page](https://agentshare.dev/registry/118) |
 | 116 | Grey Ridge Signals (x402 DeFi/market data) | Integrations | [mcp](https://api.greyridgesignals.ai/mcp) | [site](https://api.greyridgesignals.ai) | [repo](https://github.com/rezearcher/x402-data-api) | [page](https://agentshare.dev/registry/116) |
 | 114 | Trades With AI + SaaS Price Watch | Data & commerce | [mcp](https://tradeswithai.com/mcp) | [site](https://tradeswithai.com/agents/?utm_source=agentshare&utm_medium=directory&utm_campaign=twa_mcp) | [repo](https://github.com/jeremyanichols/tradeswithai-mcp) | [page](https://agentshare.dev/registry/114) |
