@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-29T14:38:40Z`  
+- **Generated (UTC):** `2026-10-30T14:30:52Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 149 verified  
+- **Count:** 154 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 178 | Grigora MCP | Agent tools | [mcp](https://mcp.grigora.co/mcp) | [site](https://www.grigora.co/mcp/) | — | [page](https://agentshare.dev/registry/178) |
+| 177 | Qovia MCP — Chinese social public data | Data & commerce | [mcp](https://api.qovia.ai/mcp) | [site](https://qovia.ai) | [repo](https://github.com/qovia/qovia-mcp) | [page](https://agentshare.dev/registry/177) |
+| 176 | DevX Repo Run Check | Agent tools | [mcp](https://repo-run-check.nextill-pos.workers.dev/mcp) | [site](https://repo-run-check.nextill-pos.workers.dev/) | [repo](https://github.com/devx-agent/repo-run-check) | [page](https://agentshare.dev/registry/176) |
+| 175 | G Maps Crawl | Data & commerce | [mcp](https://gmapscrawl.com/api/mcp) | [site](https://gmapscrawl.com/) | — | [page](https://agentshare.dev/registry/175) |
 | 174 | Ecommerce Data API MCP — Amazon research data | Data & commerce | [mcp](https://ecommercedataapi.com/mcp) | [site](https://ecommercedataapi.com) | — | [page](https://agentshare.dev/registry/174) |
 | 173 | Workmode MCP | Data & commerce | [mcp](https://api.workmode.co/mcp) | [site](https://workmode.co/mcp) | — | [page](https://agentshare.dev/registry/173) |
 | 172 | Jev Agent MCP - typed judgment tools | Agent tools | [mcp](https://jev-agent.com/api/mcp) | [site](https://jev-agent.com/jev-mcp) | — | [page](https://agentshare.dev/registry/172) |
@@ -148,6 +152,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 36 | Zambo Trust Layer | Agent tools | [mcp](https://zambo.dev/api/mcp) | [site](https://zambo.dev) | — | [page](https://agentshare.dev/registry/36) |
 | 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
 | 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
+| 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
 | 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/ChanghuLiu/england-works-watch) | [page](https://agentshare.dev/registry/32) |
 | 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
 | 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
