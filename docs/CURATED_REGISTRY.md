@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-30T14:30:52Z`  
+- **Generated (UTC):** `2026-10-31T13:52:49Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 154 verified  
+- **Count:** 155 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 179 | Lava MCP | Data & commerce | [mcp](https://lava.ai-dolphin.com/subscribe/v1/mcp) | [site](https://lava.ai-dolphin.com/subscribe/docs) | — | [page](https://agentshare.dev/registry/179) |
 | 178 | Grigora MCP | Agent tools | [mcp](https://mcp.grigora.co/mcp) | [site](https://www.grigora.co/mcp/) | — | [page](https://agentshare.dev/registry/178) |
 | 177 | Qovia MCP — Chinese social public data | Data & commerce | [mcp](https://api.qovia.ai/mcp) | [site](https://qovia.ai) | [repo](https://github.com/qovia/qovia-mcp) | [page](https://agentshare.dev/registry/177) |
 | 176 | DevX Repo Run Check | Agent tools | [mcp](https://repo-run-check.nextill-pos.workers.dev/mcp) | [site](https://repo-run-check.nextill-pos.workers.dev/) | [repo](https://github.com/devx-agent/repo-run-check) | [page](https://agentshare.dev/registry/176) |
