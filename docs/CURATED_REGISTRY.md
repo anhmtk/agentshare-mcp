@@ -10,19 +10,21 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-10-31T13:52:49Z`  
+- **Generated (UTC):** `2026-11-02T17:25:48Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 155 verified  
+- **Count:** 158 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 182 | SDSentry - Safety Data Sheets and OSHA HazCom | Data & commerce | [mcp](https://sdsentry.0xpi.com/mcp-sds) | — | [repo](https://github.com/daleweaver1981/sdsentry-hazcom) | [page](https://agentshare.dev/registry/182) |
+| 181 | Kite | Agent tools | [mcp](https://kite.new/api/mcp) | [site](https://kite.new) | [repo](https://github.com/itsloukman/kite-agent-plugins) | [page](https://agentshare.dev/registry/181) |
+| 180 | AdCreator AI - ad creatives and ad headlines | Agent tools | [mcp](https://adcreator-ai.com/mcp-ads) | — | [repo](https://github.com/daleweaver1981/adcreator-ads-plugin) | [page](https://agentshare.dev/registry/180) |
 | 179 | Lava MCP | Data & commerce | [mcp](https://lava.ai-dolphin.com/subscribe/v1/mcp) | [site](https://lava.ai-dolphin.com/subscribe/docs) | — | [page](https://agentshare.dev/registry/179) |
 | 178 | Grigora MCP | Agent tools | [mcp](https://mcp.grigora.co/mcp) | [site](https://www.grigora.co/mcp/) | — | [page](https://agentshare.dev/registry/178) |
 | 177 | Qovia MCP — Chinese social public data | Data & commerce | [mcp](https://api.qovia.ai/mcp) | [site](https://qovia.ai) | [repo](https://github.com/qovia/qovia-mcp) | [page](https://agentshare.dev/registry/177) |
 | 176 | DevX Repo Run Check | Agent tools | [mcp](https://repo-run-check.nextill-pos.workers.dev/mcp) | [site](https://repo-run-check.nextill-pos.workers.dev/) | [repo](https://github.com/devx-agent/repo-run-check) | [page](https://agentshare.dev/registry/176) |
-| 175 | G Maps Crawl | Data & commerce | [mcp](https://gmapscrawl.com/api/mcp) | [site](https://gmapscrawl.com/) | — | [page](https://agentshare.dev/registry/175) |
 | 174 | Ecommerce Data API MCP — Amazon research data | Data & commerce | [mcp](https://ecommercedataapi.com/mcp) | [site](https://ecommercedataapi.com) | — | [page](https://agentshare.dev/registry/174) |
 | 173 | Workmode MCP | Data & commerce | [mcp](https://api.workmode.co/mcp) | [site](https://workmode.co/mcp) | — | [page](https://agentshare.dev/registry/173) |
 | 172 | Jev Agent MCP - typed judgment tools | Agent tools | [mcp](https://jev-agent.com/api/mcp) | [site](https://jev-agent.com/jev-mcp) | — | [page](https://agentshare.dev/registry/172) |
@@ -121,6 +123,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
 | 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
 | 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
+| 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
 | 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
 | 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
