@@ -10,14 +10,19 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-02T17:25:48Z`  
+- **Generated (UTC):** `2026-11-03T15:27:51Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 158 verified  
+- **Count:** 164 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 188 | Courio | Integrations | [mcp](https://api.courio.si/mcp) | [site](https://courio.si/agents) | — | [page](https://agentshare.dev/registry/188) |
+| 186 | Duami | Agent tools | [mcp](https://duami.ai/mcp) | [site](https://duami.ai/?utm_source=agentshare) | — | [page](https://agentshare.dev/registry/186) |
+| 185 | Money Maker x402 tools | Agent tools | [mcp](https://ai-policy-kit.moneymaker-ai.workers.dev/mcp) | [site](https://ai-policy-kit.moneymaker-ai.workers.dev/) | — | [page](https://agentshare.dev/registry/185) |
+| 184 | compi | Integrations | [mcp](https://mcp.compi.ai/mcp) | [site](https://compi.ai) | — | [page](https://agentshare.dev/registry/184) |
+| 183 | Footalytics MCP — graded football predictions | Data & commerce | [mcp](https://footalytics.farvor.com/mcp) | [site](https://footalytics.farvor.com) | — | [page](https://agentshare.dev/registry/183) |
 | 182 | SDSentry - Safety Data Sheets and OSHA HazCom | Data & commerce | [mcp](https://sdsentry.0xpi.com/mcp-sds) | — | [repo](https://github.com/daleweaver1981/sdsentry-hazcom) | [page](https://agentshare.dev/registry/182) |
 | 181 | Kite | Agent tools | [mcp](https://kite.new/api/mcp) | [site](https://kite.new) | [repo](https://github.com/itsloukman/kite-agent-plugins) | [page](https://agentshare.dev/registry/181) |
 | 180 | AdCreator AI - ad creatives and ad headlines | Agent tools | [mcp](https://adcreator-ai.com/mcp-ads) | — | [repo](https://github.com/daleweaver1981/adcreator-ads-plugin) | [page](https://agentshare.dev/registry/180) |
@@ -117,6 +122,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
 | 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
 | 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
+| 77 | Taskmill | Data & commerce | [mcp](https://3c18b2d704b6940881478ee13baabb5a-dev.ctonew.app/mcp) | [site](https://3c18b2d704b6940881478ee13baabb5a.ctonew.app) | — | [page](https://agentshare.dev/registry/77) |
 | 76 | BlazePhoenix MCP server | Agent tools | [mcp](https://blazephoenix.xyz/mcp) | [site](https://blazephoenix.xyz) | — | [page](https://agentshare.dev/registry/76) |
 | 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
