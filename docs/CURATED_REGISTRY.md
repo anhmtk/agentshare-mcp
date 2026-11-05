@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-04T15:45:37Z`  
+- **Generated (UTC):** `2026-11-05T15:47:57Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 165 verified  
+- **Count:** 166 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 190 | Cassette | Data & commerce | [mcp](https://cassette.gg/mcp) | [site](https://cassette.gg) | — | [page](https://agentshare.dev/registry/190) |
 | 189 | Folklore Clinical Variant Interpretation MCP | Agent tools | [mcp](https://api.helena.bio/folklore/v1/mcp) | [site](https://folklore.helena.bio/integrations/mcp) | [repo](https://github.com/helena-bioinformatics/folklore-mcp) | [page](https://agentshare.dev/registry/189) |
 | 188 | Courio | Integrations | [mcp](https://api.courio.si/mcp) | [site](https://courio.si/agents) | — | [page](https://agentshare.dev/registry/188) |
 | 186 | Duami | Agent tools | [mcp](https://duami.ai/mcp) | [site](https://duami.ai/?utm_source=agentshare) | — | [page](https://agentshare.dev/registry/186) |
