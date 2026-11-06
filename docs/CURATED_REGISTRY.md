@@ -10,14 +10,20 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-05T15:47:57Z`  
+- **Generated (UTC):** `2026-11-06T15:22:51Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 166 verified  
+- **Count:** 171 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 196 | JobFinder Public Jobs MCP | Data & commerce | [mcp](https://www.jobfinder-ai.com/mcp) | [site](https://www.jobfinder-ai.com/developers) | — | [page](https://agentshare.dev/registry/196) |
+| 195 | Beggar Bot | Agent tools | [mcp](https://beggar-bot-demand.beggarbot.workers.dev/mcp) | [site](https://beggar-bot-demand.beggarbot.workers.dev) | — | [page](https://agentshare.dev/registry/195) |
+| 194 | Base Tx Preflight MCP (x402) | Agent tools | [mcp](https://preflight.madebydevx.com/mcp) | [site](https://preflight.madebydevx.com) | — | [page](https://agentshare.dev/registry/194) |
+| 193 | Base Approval Risk Check MCP (x402) | Agent tools | [mcp](https://approvals.madebydevx.com/mcp) | [site](https://approvals.madebydevx.com) | — | [page](https://agentshare.dev/registry/193) |
+| 192 | AgentReady MCP — Base wallet agent-readiness score (x402) | Agent tools | [mcp](https://agentready.madebydevx.com/mcp) | [site](https://agentready.madebydevx.com) | — | [page](https://agentshare.dev/registry/192) |
+| 191 | DevX Multichain Balances MCP | Agent tools | [mcp](https://balances.madebydevx.com/mcp) | [site](https://balances.madebydevx.com) | — | [page](https://agentshare.dev/registry/191) |
 | 190 | Cassette | Data & commerce | [mcp](https://cassette.gg/mcp) | [site](https://cassette.gg) | — | [page](https://agentshare.dev/registry/190) |
 | 189 | Folklore Clinical Variant Interpretation MCP | Agent tools | [mcp](https://api.helena.bio/folklore/v1/mcp) | [site](https://folklore.helena.bio/integrations/mcp) | [repo](https://github.com/helena-bioinformatics/folklore-mcp) | [page](https://agentshare.dev/registry/189) |
 | 188 | Courio | Integrations | [mcp](https://api.courio.si/mcp) | [site](https://courio.si/agents) | — | [page](https://agentshare.dev/registry/188) |
@@ -144,7 +150,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 60 | Vectorize MCP — raster images to editable SVG, EPS, PDF or DXF | Agent tools | [mcp](https://vectorize.dudko.dev/mcp) | [site](https://vectorize.dudko.dev) | [repo](https://github.com/dudko-dev/vectorize-mcp-setup) | [page](https://agentshare.dev/registry/60) |
 | 59 | Nacre MCP — permission-aware document search for agents | Agent tools | [mcp](https://playground.nacre.work/mcp) | [site](https://nacre.work) | [repo](https://github.com/nacre-work/nacre) | [page](https://agentshare.dev/registry/59) |
 | 58 | Astro Agents | Agent tools | [mcp](https://astro-agent.dev/mcp) | [site](https://astro-agent.dev) | [repo](https://github.com/aidatatools-dev/astro-agents-mcp) | [page](https://agentshare.dev/registry/58) |
-| 57 | Scout Packs — B2B lead data MCP | Data & commerce | [mcp](https://scout-packs-production.up.railway.app/mcp) | [site](https://scout-packs-production.up.railway.app) | [repo](https://github.com/tigerops-win/scout-packs) | [page](https://agentshare.dev/registry/57) |
 | 56 | Mini Accountant MCP — invoices, expenses and tax estimates | Integrations | [mcp](https://mcp.miniaccountant.app/v1beta) | [site](https://ad.miniaccountant.app) | [repo](https://github.com/miniaccountant/mcp-setup) | [page](https://agentshare.dev/registry/56) |
 | 54 | sol-defi-desk | Data & commerce | [mcp](https://95.216.126.169.sslip.io/mcp) | [site](https://95.216.126.169.sslip.io/buyer) | — | [page](https://agentshare.dev/registry/54) |
 | 52 | VERITY | Agent tools | [mcp](https://verity.basechainlabs.com/api/mcp) | [site](https://verity.basechainlabs.com) | [repo](https://github.com/Clawdio777/verity) | [page](https://agentshare.dev/registry/52) |
