@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-06T15:22:51Z`  
+- **Generated (UTC):** `2026-11-07T14:20:11Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 171 verified  
+- **Count:** 174 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 200 | GLPcompare | Data & commerce | [mcp](https://glpcompare.co/api/mcp) | [site](https://glpcompare.co/?utm_source=agentshare-registry&utm_medium=listing&utm_campaign=listings-2026-11) | — | [page](https://agentshare.dev/registry/200) |
+| 199 | PropertyIndex | Analytics | [mcp](https://www.propertyindex.ae/api/mcp) | [site](https://www.propertyindex.ae/mcp) | — | [page](https://agentshare.dev/registry/199) |
+| 198 | LuckPanda tools | Data & commerce | [mcp](https://luckpanda.app/mcp/public) | [site](https://luckpanda.app/agents) | — | [page](https://agentshare.dev/registry/198) |
+| 197 | Oneprofile | Integrations | [mcp](https://api.getoneprofile.ai/mcp) | [site](https://www.getoneprofile.ai) | [repo](https://github.com/getoneprofile/connectors) | [page](https://agentshare.dev/registry/197) |
 | 196 | JobFinder Public Jobs MCP | Data & commerce | [mcp](https://www.jobfinder-ai.com/mcp) | [site](https://www.jobfinder-ai.com/developers) | — | [page](https://agentshare.dev/registry/196) |
 | 195 | Beggar Bot | Agent tools | [mcp](https://beggar-bot-demand.beggarbot.workers.dev/mcp) | [site](https://beggar-bot-demand.beggarbot.workers.dev) | — | [page](https://agentshare.dev/registry/195) |
 | 194 | Base Tx Preflight MCP (x402) | Agent tools | [mcp](https://preflight.madebydevx.com/mcp) | [site](https://preflight.madebydevx.com) | — | [page](https://agentshare.dev/registry/194) |
@@ -44,7 +48,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 171 | GatePay — ScriptMasterLabs | Data & commerce | [mcp](https://gatepay.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/171) |
 | 170 | Agent Verify — ScriptMasterLabs | Data & commerce | [mcp](https://scriptmasterlabs.com/agent-verify/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/170) |
 | 169 | FlashCrafter Growth Briefs | Analytics | [mcp](https://briefs.flashcrafter.ai/mcp) | [site](https://www.flashcrafter.ai/growth-brief) | — | [page](https://agentshare.dev/registry/169) |
-| 168 | Bid-cast | Data & commerce | [mcp](https://bid-cast.onrender.com/mcp) | [site](https://scriptmasterlabs.com/bid-cast) | — | [page](https://agentshare.dev/registry/168) |
 | 167 | LinkedNav: LinkedIn outreach MCP server | Integrations | [mcp](https://mcp.linkednav.com/) | [site](https://www.linkednav.com/mcp?utm_source=agentshare&utm_medium=listing) | [repo](https://github.com/linglistack/linkednav-mcp) | [page](https://agentshare.dev/registry/167) |
 | 166 | LifeVerse Product Discovery MCP | Agent tools | [mcp](https://lifeverse.gufreelancer.com/api/mcp) | [site](https://lifeverse.gufreelancer.com/mcp) | [repo](https://github.com/lifeversegu/lifeverse-mcp) | [page](https://agentshare.dev/registry/166) |
 | 165 | Locus Pro | Data & commerce | [mcp](https://api.paywithlocus.com/api/credits/mcp) | [site](https://paywithlocus.com) | [repo](https://github.com/locus-technologies/locus-pro-plugin) | [page](https://agentshare.dev/registry/165) |
