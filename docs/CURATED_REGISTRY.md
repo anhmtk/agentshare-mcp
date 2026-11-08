@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-07T14:20:11Z`  
+- **Generated (UTC):** `2026-11-08T14:30:40Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 174 verified  
+- **Count:** 175 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 202 | AZPay Monetize | Data & commerce | [mcp](https://mcp.agents.trydak.com/mcp-monetize) | [site](https://agents.azpay.com.br/) | — | [page](https://agentshare.dev/registry/202) |
+| 201 | SimFuse eSIM Storefront | Data & commerce | [mcp](https://simfuse.app/agentic/mcp) | [site](https://simfuse.app/agent/) | [repo](https://github.com/qorinx/simfuse-mcp) | [page](https://agentshare.dev/registry/201) |
 | 200 | GLPcompare | Data & commerce | [mcp](https://glpcompare.co/api/mcp) | [site](https://glpcompare.co/?utm_source=agentshare-registry&utm_medium=listing&utm_campaign=listings-2026-11) | — | [page](https://agentshare.dev/registry/200) |
 | 199 | PropertyIndex | Analytics | [mcp](https://www.propertyindex.ae/api/mcp) | [site](https://www.propertyindex.ae/mcp) | — | [page](https://agentshare.dev/registry/199) |
 | 198 | LuckPanda tools | Data & commerce | [mcp](https://luckpanda.app/mcp/public) | [site](https://luckpanda.app/agents) | — | [page](https://agentshare.dev/registry/198) |
@@ -60,7 +62,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 158 | Calibration Court — ScriptMasterLabs | Analytics | [mcp](https://calibration-court.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/158) |
 | 157 | x402 Gateway (OMNIGATE) — ScriptMasterLabs | Agent tools | [mcp](https://mcp-x402.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/157) |
 | 156 | B20 Truth — ScriptMasterLabs | Agent tools | [mcp](https://b20.scriptmasterlabs.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/156) |
-| 155 | Robinhood RWA Intelligence — ScriptMasterLabs | Data & commerce | [mcp](https://sml-robinhood-rwa-intelligence.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/155) |
 | 154 | Cascade Graph — ScriptMasterLabs | Analytics | [mcp](https://sml-portfolio.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/154) |
 | 153 | MNEMOS — ScriptMasterLabs | Storage | [mcp](https://mnemos-agent.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/153) |
 | 152 | SqueezeOS — ScriptMasterLabs | Data & commerce | [mcp](https://squeezeos-api.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/152) |
