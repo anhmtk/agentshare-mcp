@@ -10,14 +10,19 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-08T14:30:40Z`  
+- **Generated (UTC):** `2026-11-09T17:48:18Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 175 verified  
+- **Count:** 180 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 207 | AlphaGrowth | Data & commerce | [mcp](https://alphagrowth.io/mcp) | [site](https://alphagrowth.io/mcp-server) | [repo](https://github.com/alphagrowth/alphagrowth-mcp) | [page](https://agentshare.dev/registry/207) |
+| 206 | SandBase | Agent tools | [mcp](https://mcp.sandbase.ai/mcp) | [site](https://www.sandbase.ai) | [repo](https://github.com/sandbaseai) | [page](https://agentshare.dev/registry/206) |
+| 205 | Example MCP Probe | Agent tools | [mcp](https://example.com/mcp) | [site](https://example.com) | — | [page](https://agentshare.dev/registry/205) |
+| 204 | AgentSEO — SEO API & MCP for AI Agents | Agent tools | [mcp](https://www.agentseo.dev/mcp) | [site](https://www.agentseo.dev) | [repo](https://github.com/AgentSEO-dev/agentseo-clients) | [page](https://agentshare.dev/registry/204) |
+| 203 | Statsnet MCP — company background checks | Data & commerce | [mcp](https://statsnet.co/mcp) | [site](https://statsnet.co) | — | [page](https://agentshare.dev/registry/203) |
 | 202 | AZPay Monetize | Data & commerce | [mcp](https://mcp.agents.trydak.com/mcp-monetize) | [site](https://agents.azpay.com.br/) | — | [page](https://agentshare.dev/registry/202) |
 | 201 | SimFuse eSIM Storefront | Data & commerce | [mcp](https://simfuse.app/agentic/mcp) | [site](https://simfuse.app/agent/) | [repo](https://github.com/qorinx/simfuse-mcp) | [page](https://agentshare.dev/registry/201) |
 | 200 | GLPcompare | Data & commerce | [mcp](https://glpcompare.co/api/mcp) | [site](https://glpcompare.co/?utm_source=agentshare-registry&utm_medium=listing&utm_campaign=listings-2026-11) | — | [page](https://agentshare.dev/registry/200) |
