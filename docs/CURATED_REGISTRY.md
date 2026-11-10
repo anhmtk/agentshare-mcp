@@ -10,14 +10,16 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-09T17:48:18Z`  
+- **Generated (UTC):** `2026-11-10T15:46:20Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 180 verified  
+- **Count:** 182 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 209 | Recipe One | Agent tools | [mcp](https://mcp.recipeone.app/mcp) | [site](https://www.recipeone.app) | [repo](https://github.com/recipeone/recipe-one) | [page](https://agentshare.dev/registry/209) |
+| 208 | ImageSVG for ChatGPT | Integrations | [mcp](https://imagesvg.com/mcp) | [site](https://imagesvg.com/en/developers) | — | [page](https://agentshare.dev/registry/208) |
 | 207 | AlphaGrowth | Data & commerce | [mcp](https://alphagrowth.io/mcp) | [site](https://alphagrowth.io/mcp-server) | [repo](https://github.com/alphagrowth/alphagrowth-mcp) | [page](https://agentshare.dev/registry/207) |
 | 206 | SandBase | Agent tools | [mcp](https://mcp.sandbase.ai/mcp) | [site](https://www.sandbase.ai) | [repo](https://github.com/sandbaseai) | [page](https://agentshare.dev/registry/206) |
 | 205 | Example MCP Probe | Agent tools | [mcp](https://example.com/mcp) | [site](https://example.com) | — | [page](https://agentshare.dev/registry/205) |
