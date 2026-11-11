@@ -10,14 +10,21 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-10T15:46:20Z`  
+- **Generated (UTC):** `2026-11-11T15:37:02Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 182 verified  
+- **Count:** 189 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
+| 215 | GoVisit Tools MCP | Data & commerce | [mcp](https://govisit.ai/mcp) | [site](https://govisit.ai/en/docs/developers/mcp/overview) | — | [page](https://agentshare.dev/registry/215) |
+| 214 | Parent Tech Forum | Agent tools | [mcp](https://parenttechforum.com/mcp) | [site](https://parenttechforum.com) | — | [page](https://agentshare.dev/registry/214) |
+| 213 | TravelAIAgent | Agent tools | [mcp](https://travelaiagent.org/mcp) | [site](https://travelaiagent.org) | — | [page](https://agentshare.dev/registry/213) |
+| 212 | AgentLedGrowth | Agent tools | [mcp](https://agentledgrowth.com/mcp) | [site](https://agentledgrowth.com) | — | [page](https://agentshare.dev/registry/212) |
+| 211 | OutreachBox | Integrations | [mcp](https://api.outreachbox.com/mcp) | [site](https://outreachbox.com/mcp-server) | [repo](https://github.com/pulsereal/outreachbox-mcp) | [page](https://agentshare.dev/registry/211) |
+| 210 | HIVE402 | Data & commerce | [mcp](https://hive402.scriptmasterlabs.com/mcp) | [site](https://hive402.scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/210) |
 | 209 | Recipe One | Agent tools | [mcp](https://mcp.recipeone.app/mcp) | [site](https://www.recipeone.app) | [repo](https://github.com/recipeone/recipe-one) | [page](https://agentshare.dev/registry/209) |
 | 208 | ImageSVG for ChatGPT | Integrations | [mcp](https://imagesvg.com/mcp) | [site](https://imagesvg.com/en/developers) | — | [page](https://agentshare.dev/registry/208) |
 | 207 | AlphaGrowth | Data & commerce | [mcp](https://alphagrowth.io/mcp) | [site](https://alphagrowth.io/mcp-server) | [repo](https://github.com/alphagrowth/alphagrowth-mcp) | [page](https://agentshare.dev/registry/207) |
