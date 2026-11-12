@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-11T15:37:02Z`  
+- **Generated (UTC):** `2026-11-12T16:14:30Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 189 verified  
+- **Count:** 193 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 221 | Fidget | Agent tools | [mcp](https://fidget.stayboba.com/mcp) | [site](https://fidget.stayboba.com) | — | [page](https://agentshare.dev/registry/221) |
+| 219 | WhitelistVideo | Agent tools | [mcp](https://whitelist.video) | [site](https://whitelist.video) | — | [page](https://agentshare.dev/registry/219) |
+| 218 | StringArt | Agent tools | [mcp](https://stringart.stayboba.com/mcp) | [site](https://stringart.stayboba.com) | — | [page](https://agentshare.dev/registry/218) |
+| 217 | @stayboba/autoblog | Agent tools | [mcp](https://stayboba.com/autoblog/mcp) | [site](https://stayboba.com/autoblog) | — | [page](https://agentshare.dev/registry/217) |
 | 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
 | 215 | GoVisit Tools MCP | Data & commerce | [mcp](https://govisit.ai/mcp) | [site](https://govisit.ai/en/docs/developers/mcp/overview) | — | [page](https://agentshare.dev/registry/215) |
 | 214 | Parent Tech Forum | Agent tools | [mcp](https://parenttechforum.com/mcp) | [site](https://parenttechforum.com) | — | [page](https://agentshare.dev/registry/214) |
@@ -29,7 +33,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 208 | ImageSVG for ChatGPT | Integrations | [mcp](https://imagesvg.com/mcp) | [site](https://imagesvg.com/en/developers) | — | [page](https://agentshare.dev/registry/208) |
 | 207 | AlphaGrowth | Data & commerce | [mcp](https://alphagrowth.io/mcp) | [site](https://alphagrowth.io/mcp-server) | [repo](https://github.com/alphagrowth/alphagrowth-mcp) | [page](https://agentshare.dev/registry/207) |
 | 206 | SandBase | Agent tools | [mcp](https://mcp.sandbase.ai/mcp) | [site](https://www.sandbase.ai) | [repo](https://github.com/sandbaseai) | [page](https://agentshare.dev/registry/206) |
-| 205 | Example MCP Probe | Agent tools | [mcp](https://example.com/mcp) | [site](https://example.com) | — | [page](https://agentshare.dev/registry/205) |
 | 204 | AgentSEO — SEO API & MCP for AI Agents | Agent tools | [mcp](https://www.agentseo.dev/mcp) | [site](https://www.agentseo.dev) | [repo](https://github.com/AgentSEO-dev/agentseo-clients) | [page](https://agentshare.dev/registry/204) |
 | 203 | Statsnet MCP — company background checks | Data & commerce | [mcp](https://statsnet.co/mcp) | [site](https://statsnet.co) | — | [page](https://agentshare.dev/registry/203) |
 | 202 | AZPay Monetize | Data & commerce | [mcp](https://mcp.agents.trydak.com/mcp-monetize) | [site](https://agents.azpay.com.br/) | — | [page](https://agentshare.dev/registry/202) |
@@ -143,6 +146,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 87 | Alishahi Insurance Quote Requests | Agent tools | [mcp](https://alishahiinsurance.com/mcp) | [site](https://alishahiinsurance.com/ai-assistants) | — | [page](https://agentshare.dev/registry/87) |
 | 86 | WITHDRAW REQUEST — Drew's Xcode MCP (stdio only) | Agent tools | [mcp](https://github.com/drewster99/drews-xcode-mcp) | [site](https://pypi.org/project/drews-xcode-mcp/) | [repo](https://github.com/drewster99/drews-xcode-mcp) | [page](https://agentshare.dev/registry/86) |
 | 85 | Neume MCP | Agent tools | [mcp](https://api.neume.io/v1/mcp) | [site](https://neume.io) | — | [page](https://agentshare.dev/registry/85) |
+| 84 | AgentRXI — 455 pay-per-call tools for agents | Data & commerce | [mcp](https://mcp.agentrxi.com/mcp) | [site](https://agentrxi.com) | — | [page](https://agentshare.dev/registry/84) |
 | 83 | RobotTraining.jobs | Data & commerce | [mcp](https://robottraining.jobs/api/mcp) | [site](https://robottraining.jobs) | — | [page](https://agentshare.dev/registry/83) |
 | 82 | CareJobs.Now | Data & commerce | [mcp](https://carejobs.now/api/mcp) | [site](https://carejobs.now) | — | [page](https://agentshare.dev/registry/82) |
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
