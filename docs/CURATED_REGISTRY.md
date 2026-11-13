@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-12T16:14:30Z`  
+- **Generated (UTC):** `2026-11-13T15:40:53Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 193 verified  
+- **Count:** 197 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 225 | BlockVectra Docs MCP | Agent tools | [mcp](https://docs.blockvectra.com/mcp/docs) | [site](https://docs.blockvectra.com/en/guides/mcp-server/?ref=agentshare-docs) | [repo](https://github.com/blockvectra/mcp) | [page](https://agentshare.dev/registry/225) |
+| 224 | TalkTo All | Agent tools | [mcp](https://talkto.stayboba.com/mcp) | [site](https://talkto.stayboba.com) | — | [page](https://agentshare.dev/registry/224) |
+| 223 | StayBoba Studio | Agent tools | [mcp](https://studio.stayboba.com/api/mcp) | [site](https://studio.stayboba.com) | — | [page](https://agentshare.dev/registry/223) |
+| 222 | Biology.digital | Agent tools | [mcp](https://biology.digital/mcp) | [site](https://biology.digital) | — | [page](https://agentshare.dev/registry/222) |
 | 221 | Fidget | Agent tools | [mcp](https://fidget.stayboba.com/mcp) | [site](https://fidget.stayboba.com) | — | [page](https://agentshare.dev/registry/221) |
 | 219 | WhitelistVideo | Agent tools | [mcp](https://whitelist.video) | [site](https://whitelist.video) | — | [page](https://agentshare.dev/registry/219) |
 | 218 | StringArt | Agent tools | [mcp](https://stringart.stayboba.com/mcp) | [site](https://stringart.stayboba.com) | — | [page](https://agentshare.dev/registry/218) |
