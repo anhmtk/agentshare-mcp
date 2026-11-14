@@ -10,14 +10,20 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-13T15:40:53Z`  
+- **Generated (UTC):** `2026-11-14T14:30:10Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 197 verified  
+- **Count:** 199 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 231 | Kling AI MCP (Global) | Agent tools | [mcp](https://kling.ai/mcp/plugin) | [site](https://kling.ai/) | [repo](https://github.com/klingai-tech/claude-plugin) | [page](https://agentshare.dev/registry/231) |
+| 230 | Family App Picks | Agent tools | [mcp](https://familypicks.app/mcp) | [site](https://familypicks.app) | — | [page](https://agentshare.dev/registry/230) |
+| 229 | Parental Control Review | Analytics | [mcp](https://parentalcontrolreview.com/mcp) | [site](https://parentalcontrolreview.com) | — | [page](https://agentshare.dev/registry/229) |
+| 228 | Digital Parenting Today | Agent tools | [mcp](https://digitalparentingtoday.com/mcp) | [site](https://digitalparentingtoday.com) | — | [page](https://agentshare.dev/registry/228) |
+| 227 | Swaplume | Agent tools | [mcp](https://api.swaplume.com/mcp) | [site](https://swaplume.com) | — | [page](https://agentshare.dev/registry/227) |
+| 226 | Talk To Jesus Christ | Agent tools | [mcp](https://talktojesus.stayboba.com/mcp) | [site](https://talktojesus.stayboba.com) | — | [page](https://agentshare.dev/registry/226) |
 | 225 | BlockVectra Docs MCP | Agent tools | [mcp](https://docs.blockvectra.com/mcp/docs) | [site](https://docs.blockvectra.com/en/guides/mcp-server/?ref=agentshare-docs) | [repo](https://github.com/blockvectra/mcp) | [page](https://agentshare.dev/registry/225) |
 | 224 | TalkTo All | Agent tools | [mcp](https://talkto.stayboba.com/mcp) | [site](https://talkto.stayboba.com) | — | [page](https://agentshare.dev/registry/224) |
 | 223 | StayBoba Studio | Agent tools | [mcp](https://studio.stayboba.com/api/mcp) | [site](https://studio.stayboba.com) | — | [page](https://agentshare.dev/registry/223) |
@@ -28,9 +34,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 217 | @stayboba/autoblog | Agent tools | [mcp](https://stayboba.com/autoblog/mcp) | [site](https://stayboba.com/autoblog) | — | [page](https://agentshare.dev/registry/217) |
 | 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
 | 215 | GoVisit Tools MCP | Data & commerce | [mcp](https://govisit.ai/mcp) | [site](https://govisit.ai/en/docs/developers/mcp/overview) | — | [page](https://agentshare.dev/registry/215) |
-| 214 | Parent Tech Forum | Agent tools | [mcp](https://parenttechforum.com/mcp) | [site](https://parenttechforum.com) | — | [page](https://agentshare.dev/registry/214) |
-| 213 | TravelAIAgent | Agent tools | [mcp](https://travelaiagent.org/mcp) | [site](https://travelaiagent.org) | — | [page](https://agentshare.dev/registry/213) |
-| 212 | AgentLedGrowth | Agent tools | [mcp](https://agentledgrowth.com/mcp) | [site](https://agentledgrowth.com) | — | [page](https://agentshare.dev/registry/212) |
 | 211 | OutreachBox | Integrations | [mcp](https://api.outreachbox.com/mcp) | [site](https://outreachbox.com/mcp-server) | [repo](https://github.com/pulsereal/outreachbox-mcp) | [page](https://agentshare.dev/registry/211) |
 | 210 | HIVE402 | Data & commerce | [mcp](https://hive402.scriptmasterlabs.com/mcp) | [site](https://hive402.scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/210) |
 | 209 | Recipe One | Agent tools | [mcp](https://mcp.recipeone.app/mcp) | [site](https://www.recipeone.app) | [repo](https://github.com/recipeone/recipe-one) | [page](https://agentshare.dev/registry/209) |
@@ -163,7 +166,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
 | 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
 | 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
-| 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
 | 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
 | 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
