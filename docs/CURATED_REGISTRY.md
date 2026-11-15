@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-14T14:30:10Z`  
+- **Generated (UTC):** `2026-11-15T14:57:43Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 199 verified  
+- **Count:** 200 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 235 | Scrapewise | Data & commerce | [mcp](https://mcp.scrapewise.ai/mcp) | [site](https://scrapewise.ai/mcp) | [repo](https://github.com/BEBOTECH-OU/scrapewise-mcp) | [page](https://agentshare.dev/registry/235) |
+| 234 | RealtyCrawl | Data & commerce | [mcp](https://realtycrawl.dev/mcp) | [site](https://realtycrawl.dev/) | [repo](https://github.com/realtycrawl/realtycrawl-mcp) | [page](https://agentshare.dev/registry/234) |
+| 233 | OpenAxia MCP — blind, shutter & awning motor specs | Data & commerce | [mcp](https://openaxia.com/api/mcp) | [site](https://openaxia.com) | — | [page](https://agentshare.dev/registry/233) |
+| 232 | Surface | Agent tools | [mcp](https://nova-otter-delta-cloud.grok.me/mcp) | [site](https://otter-sand-wolf-spring.grok.me) | — | [page](https://agentshare.dev/registry/232) |
 | 231 | Kling AI MCP (Global) | Agent tools | [mcp](https://kling.ai/mcp/plugin) | [site](https://kling.ai/) | [repo](https://github.com/klingai-tech/claude-plugin) | [page](https://agentshare.dev/registry/231) |
 | 230 | Family App Picks | Agent tools | [mcp](https://familypicks.app/mcp) | [site](https://familypicks.app) | — | [page](https://agentshare.dev/registry/230) |
 | 229 | Parental Control Review | Analytics | [mcp](https://parentalcontrolreview.com/mcp) | [site](https://parentalcontrolreview.com) | — | [page](https://agentshare.dev/registry/229) |
@@ -28,10 +32,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 224 | TalkTo All | Agent tools | [mcp](https://talkto.stayboba.com/mcp) | [site](https://talkto.stayboba.com) | — | [page](https://agentshare.dev/registry/224) |
 | 223 | StayBoba Studio | Agent tools | [mcp](https://studio.stayboba.com/api/mcp) | [site](https://studio.stayboba.com) | — | [page](https://agentshare.dev/registry/223) |
 | 222 | Biology.digital | Agent tools | [mcp](https://biology.digital/mcp) | [site](https://biology.digital) | — | [page](https://agentshare.dev/registry/222) |
-| 221 | Fidget | Agent tools | [mcp](https://fidget.stayboba.com/mcp) | [site](https://fidget.stayboba.com) | — | [page](https://agentshare.dev/registry/221) |
-| 219 | WhitelistVideo | Agent tools | [mcp](https://whitelist.video) | [site](https://whitelist.video) | — | [page](https://agentshare.dev/registry/219) |
-| 218 | StringArt | Agent tools | [mcp](https://stringart.stayboba.com/mcp) | [site](https://stringart.stayboba.com) | — | [page](https://agentshare.dev/registry/218) |
-| 217 | @stayboba/autoblog | Agent tools | [mcp](https://stayboba.com/autoblog/mcp) | [site](https://stayboba.com/autoblog) | — | [page](https://agentshare.dev/registry/217) |
 | 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
 | 215 | GoVisit Tools MCP | Data & commerce | [mcp](https://govisit.ai/mcp) | [site](https://govisit.ai/en/docs/developers/mcp/overview) | — | [page](https://agentshare.dev/registry/215) |
 | 211 | OutreachBox | Integrations | [mcp](https://api.outreachbox.com/mcp) | [site](https://outreachbox.com/mcp-server) | [repo](https://github.com/pulsereal/outreachbox-mcp) | [page](https://agentshare.dev/registry/211) |
@@ -86,7 +86,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 158 | Calibration Court — ScriptMasterLabs | Analytics | [mcp](https://calibration-court.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/158) |
 | 157 | x402 Gateway (OMNIGATE) — ScriptMasterLabs | Agent tools | [mcp](https://mcp-x402.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/157) |
 | 156 | B20 Truth — ScriptMasterLabs | Agent tools | [mcp](https://b20.scriptmasterlabs.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/156) |
-| 154 | Cascade Graph — ScriptMasterLabs | Analytics | [mcp](https://sml-portfolio.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/154) |
 | 153 | MNEMOS — ScriptMasterLabs | Storage | [mcp](https://mnemos-agent.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/153) |
 | 152 | SqueezeOS — ScriptMasterLabs | Data & commerce | [mcp](https://squeezeos-api.onrender.com/mcp) | [site](https://scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/152) |
 | 151 | Verdict Protocol — ScriptMasterLabs | Agent tools | [mcp](https://verdict.scriptmasterlabs.com/mcp) | [site](https://scriptmasterlabs.com/verdict-protocol) | — | [page](https://agentshare.dev/registry/151) |
@@ -166,6 +165,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
 | 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
 | 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
+| 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
 | 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
 | 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
 | 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
@@ -194,6 +194,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 41 | Agent Embassy | Agent tools | [mcp](https://aemb.pro/mcp) | [site](https://aemb.pro) | — | [page](https://agentshare.dev/registry/41) |
 | 40 | MindMap AI | Agent tools | [mcp](https://mindmapai.app/mcp) | [site](http://mindmapai.app) | [repo](https://github.com/MindMap-AI/mcp) | [page](https://agentshare.dev/registry/40) |
 | 38 | GigSoul x402 | Agent tools | [mcp](https://api.gigsoul.com/mcp) | [site](https://gigsoul.com/x402) | [repo](https://github.com/gigsoul-org/gigsoul-x402) | [page](https://agentshare.dev/registry/38) |
+| 37 | Vend API Merchant | Data & commerce | [mcp](https://extract.paypercall.dev/mcp) | [site](https://paypercall.dev) | [repo](https://github.com/PANDeveloper001/vend) | [page](https://agentshare.dev/registry/37) |
 | 36 | Zambo Trust Layer | Agent tools | [mcp](https://zambo.dev/api/mcp) | [site](https://zambo.dev) | — | [page](https://agentshare.dev/registry/36) |
 | 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
 | 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
