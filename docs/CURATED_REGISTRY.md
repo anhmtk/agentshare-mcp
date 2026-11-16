@@ -10,14 +10,17 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-15T14:57:43Z`  
+- **Generated (UTC):** `2026-11-16T17:26:05Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 200 verified  
+- **Count:** 199 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 238 | XGR MCP Gateway | Agent tools | [mcp](https://mcp.xgr.network/mcp) | [site](https://xgr.network/docs/mcp_overview/) | [repo](https://github.com/xgr-network/xgr-mcp) | [page](https://agentshare.dev/registry/238) |
+| 237 | Agentosaurus | Agent tools | [mcp](https://agentosaurus.com/mcp) | [site](https://agentosaurus.com) | — | [page](https://agentshare.dev/registry/237) |
+| 236 | copy.top | Analytics | [mcp](https://copy.top/mcp) | [site](https://copy.top) | [repo](https://github.com/copydottop/mcp) | [page](https://agentshare.dev/registry/236) |
 | 235 | Scrapewise | Data & commerce | [mcp](https://mcp.scrapewise.ai/mcp) | [site](https://scrapewise.ai/mcp) | [repo](https://github.com/BEBOTECH-OU/scrapewise-mcp) | [page](https://agentshare.dev/registry/235) |
 | 234 | RealtyCrawl | Data & commerce | [mcp](https://realtycrawl.dev/mcp) | [site](https://realtycrawl.dev/) | [repo](https://github.com/realtycrawl/realtycrawl-mcp) | [page](https://agentshare.dev/registry/234) |
 | 233 | OpenAxia MCP — blind, shutter & awning motor specs | Data & commerce | [mcp](https://openaxia.com/api/mcp) | [site](https://openaxia.com) | — | [page](https://agentshare.dev/registry/233) |
@@ -27,11 +30,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 229 | Parental Control Review | Analytics | [mcp](https://parentalcontrolreview.com/mcp) | [site](https://parentalcontrolreview.com) | — | [page](https://agentshare.dev/registry/229) |
 | 228 | Digital Parenting Today | Agent tools | [mcp](https://digitalparentingtoday.com/mcp) | [site](https://digitalparentingtoday.com) | — | [page](https://agentshare.dev/registry/228) |
 | 227 | Swaplume | Agent tools | [mcp](https://api.swaplume.com/mcp) | [site](https://swaplume.com) | — | [page](https://agentshare.dev/registry/227) |
-| 226 | Talk To Jesus Christ | Agent tools | [mcp](https://talktojesus.stayboba.com/mcp) | [site](https://talktojesus.stayboba.com) | — | [page](https://agentshare.dev/registry/226) |
 | 225 | BlockVectra Docs MCP | Agent tools | [mcp](https://docs.blockvectra.com/mcp/docs) | [site](https://docs.blockvectra.com/en/guides/mcp-server/?ref=agentshare-docs) | [repo](https://github.com/blockvectra/mcp) | [page](https://agentshare.dev/registry/225) |
-| 224 | TalkTo All | Agent tools | [mcp](https://talkto.stayboba.com/mcp) | [site](https://talkto.stayboba.com) | — | [page](https://agentshare.dev/registry/224) |
-| 223 | StayBoba Studio | Agent tools | [mcp](https://studio.stayboba.com/api/mcp) | [site](https://studio.stayboba.com) | — | [page](https://agentshare.dev/registry/223) |
-| 222 | Biology.digital | Agent tools | [mcp](https://biology.digital/mcp) | [site](https://biology.digital) | — | [page](https://agentshare.dev/registry/222) |
 | 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
 | 215 | GoVisit Tools MCP | Data & commerce | [mcp](https://govisit.ai/mcp) | [site](https://govisit.ai/en/docs/developers/mcp/overview) | — | [page](https://agentshare.dev/registry/215) |
 | 211 | OutreachBox | Integrations | [mcp](https://api.outreachbox.com/mcp) | [site](https://outreachbox.com/mcp-server) | [repo](https://github.com/pulsereal/outreachbox-mcp) | [page](https://agentshare.dev/registry/211) |
