@@ -10,11 +10,12 @@ Official MCP community Discord. Post **once** in an appropriate channel (`#showc
 Hi everyone — sharing AgentShare MCP: agent-paid API access for autonomous agents.
 
 What it does:
-• Primary: dual-auth (API key or x402) + MCP Streamable HTTP + free discovery
-• Commerce: search_products, best_offer, best_offer_under_budget, product_detail, commerce_quote (ACP)
-• Secondary DeFi demos: dex_overview, solana_dex_brief, meteora_brief (+ pool detail)
-• service_meta for discovery
-• 11 tools on public MCP (v1.0.9) — Polymarket tools NOT on public catalog
+• Primary: curated MCP registry. Default path search_listing → check_health → evidence_pack → connect to mcp_url yourself
+• Dual-auth (API key or x402) + MCP Streamable HTTP. Live serverInfo name agentshare-registry
+• Commerce when asked: search_products, best_offer, best_offer_under_budget, product_detail, commerce_quote (ACP)
+• Secondary DeFi demos when asked: dex_overview, solana_dex_brief, meteora_brief (+ pool detail)
+• request_capability when current tools cannot finish the task (human-review ticket, no codegen)
+• 15 tools on public MCP — Polymarket tools NOT on public catalog
 
 Connect:
 • Streamable HTTP: https://agentshare.dev/mcp (X-API-Key / Bearer or settle x402)

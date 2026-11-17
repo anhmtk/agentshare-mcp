@@ -2,7 +2,7 @@
 # Canonical live API: https://agentshare.dev
 # GitHub: https://github.com/anhmtk/agentshare-mcp
 # Structured JSON mirror: https://raw.githubusercontent.com/anhmtk/agentshare-mcp/main/AI_DISCOVERY.json
-# MCP catalog version: 1.1.0 (12 tools)
+# Live MCP: https://agentshare.dev/mcp — serverInfo name agentshare-registry — 15 tools
 # Public face: curated MCP registry; own paid MCP is secondary
 
 ## ENTITY
@@ -20,7 +20,7 @@ Curated MCP registry (editor-reviewed remote MCP listings) plus AgentShare's own
 3. https://agentshare.dev/.well-known/discovery.json
 4. https://agentshare.dev/for-agents — use Accept: application/json (no text/html) for compact JSON kind agentshare_for_agents_discovery
 5. https://agentshare.dev/api/v1/examples?template=managed-agent — Gemini Managed Agents / Antigravity MCP JSON template
-6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (12 tools on public catalog)
+6. https://agentshare.dev/.well-known/mcp/server-card.json — static MCP tool schemas (15 tools; serverInfo name agentshare-registry)
 7. https://agentshare.dev/api/v1/public/mcp-registry/trends — curated MCP registry hot list (engagement rank; no free platform pin)
 8. https://agentshare.dev/api/v1/public/mcp-registry/summary — compact verified MCP listings
 9. https://agentshare.dev/openapi.json
@@ -29,13 +29,25 @@ Curated MCP registry (editor-reviewed remote MCP listings) plus AgentShare's own
 ## MCP_ENDPOINT
 - transport: streamable_http
 - url: https://agentshare.dev/mcp
+- server_info_name: agentshare-registry
 - auth: dual — X-API-Key / Authorization: Bearer OR (REST) x402 PAYMENT-SIGNATURE after HTTP 402
 - signup: https://agentshare.dev/signup — Start building agent-paid APIs
 - x402_discovery: https://agentshare.dev/.well-known/x402
-- catalog_version: 1.1.0
+- public_tool_count: 15
 
-## MCP_TOOLS (twelve — public catalog)
+## DEFAULT_PATH (another MCP)
+1. search_listing — verified listings by keyword, at most 10; active Featured sort first and are marked sponsored
+2. check_health — stored probe and schema_status; about a day old; not a 7-day success percent; does not ping
+3. evidence_pack, or GET /api/v1/registry/directory/evidence — observed / inferred / unknown, with limitations; not a Trust Score; does not ping
+4. Connect to mcp_url yourself. This server does not proxy the other MCP.
+5. To score 1-8 candidates you already have, call rank_tools_for_task on https://agentshare.dev/mcp/objective-trust. The score uses this API key's own history and excludes sponsored, featured, and click_count.
+6. If the task cannot be completed with the tools on this server, call request_capability with capability, desired_input, desired_output, why_insufficient, budget_usd. That stores a human-review ticket. It does not generate code.
+
+## MCP_TOOLS (fifteen — public catalog)
 | tool_name | use_when | rest_upstream | layer |
+| search_listing | find a verified MCP by keyword (at most 10) | GET /api/v1/registry/directory/search | registry |
+| check_health | stored health and schema_status; does not ping | GET /api/v1/registry/directory/health | registry |
+| evidence_pack | Verified Evidence Pack; not a Trust Score; does not ping | GET /api/v1/registry/directory/evidence | registry |
 | search_products | compare multiple listings | GET /api/v1/search | commerce |
 | best_offer | one cheapest in-stock offer | GET /api/v1/offers/best | commerce |
 | best_offer_under_budget | budget cap / under $X | GET /api/v1/offers/best-under-budget | commerce |
@@ -72,7 +84,11 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 
 ## MCP_REGISTRY_FOR_BUILDERS_AND_AGENTS
 - landing: https://agentshare.dev/registry
-- entries_json: https://agentshare.dev/api/v1/registry/entries
+- entries_json: https://agentshare.dev/api/v1/registry/entries?limit=&offset= — limit 1-200; meta.total_listed is the full public count; meta.matched is the count after filters; meta.next_offset is null on the last page
+- directory_search: GET https://agentshare.dev/api/v1/registry/directory/search
+- directory_health: GET https://agentshare.dev/api/v1/registry/directory/health
+- directory_evidence: GET https://agentshare.dev/api/v1/registry/directory/evidence
+- objective_trust: https://agentshare.dev/mcp/objective-trust — rank_tools_for_task only when the caller already has 1-8 candidates
 - summary_json: https://agentshare.dev/api/v1/public/mcp-registry/summary
 - trends_json: https://agentshare.dev/api/v1/public/mcp-registry/trends
 - trends_note: ranked by human + MCP-client engagement; no free platform pin
@@ -87,7 +103,7 @@ Polymarket tools (polymarket_markets, polymarket_market_detail, polymarket_top_m
 - approved_listing_public_url_pattern: https://agentshare.dev/registry/{id}
 - approved_listing_owner_stats: GET https://agentshare.dev/api/v1/mcp/stats/{id}?token={submission_token}
 - approved_listing_share_actions: X, LinkedIn, Facebook, GitHub README snippet, copy-link
-- when_to_use_registry: discover curated MCP servers; prefer trends_json then entries_json; submit your own MCP via agent_submit_flow; optional paid Featured after approval
+- when_to_use_registry: discover another MCP with search_listing, then check_health, then evidence_pack, then connect to mcp_url yourself; submit your own MCP via agent_submit_flow; optional paid Featured after approval
 
 ## MARKET_EXPERIMENT
 - ended: 2026-10-03 — /market, /api/v1/market/*, market_browse, market_list removed from the public product. Do not call those URLs or tools.

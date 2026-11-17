@@ -23,7 +23,7 @@ primary_focus=agent_paid_rails
 
 <p align="center">
   <strong>Curated MCP registry</strong> — discover and list remote MCP servers (editor-reviewed, not a dump).
-  AgentShare also runs its <strong>own</strong> agent-paid MCP (12 tools): dual-auth (API key or x402).
+  AgentShare also runs its <strong>own</strong> agent-paid MCP (15 tools, serverInfo name <code>agentshare-registry</code>): dual-auth (API key or x402).
   Commerce and Solana/Meteora DeFi are <strong>Lab/secondary</strong> on those rails.
 </p>
 
@@ -83,7 +83,7 @@ primary_focus=agent_paid_rails
 | **MCP Registry (curated)** | https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme |
 | **MCP Registry trends (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | **MCP Registry summary (JSON)** | https://agentshare.dev/api/v1/public/mcp-registry/summary |
-| **MCP server card (12 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
+| **MCP server card (15 tools)** | https://agentshare.dev/.well-known/mcp/server-card.json |
 | **Coverage (honest scope)** | https://agentshare.dev/coverage?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme · [DEFI_POSITIONING.md](./docs/DEFI_POSITIONING.md) |
 | **Antigravity skill manifest** | https://agentshare.dev/.well-known/antigravity-skills.json |
 
@@ -95,9 +95,21 @@ The Market classifieds experiment (`/market`, `market_browse` / `market_list`) w
 
 ---
 
-## MCP tools (12) — catalog v1.1.0
+## MCP tools (15)
 
-Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam). Live production exposes the tools below.
+Live serverInfo name: `agentshare-registry`. Polymarket prediction-market tools are **not** on the public MCP catalog (legal review for Vietnam).
+
+**Default path when looking for another MCP:** `search_listing` → `check_health` → `evidence_pack` (or `GET /api/v1/registry/directory/evidence`) → connect to `mcp_url` yourself. This server does not proxy the other MCP. `check_health` and `evidence_pack` read the stored probe (about a day old). They do not ping. Evidence is observed, inferred, or unknown, with limitations. Not a Trust Score. To score 1–8 candidates you already have, call `rank_tools_for_task` on `https://agentshare.dev/mcp/objective-trust`. If the task cannot be completed with the tools on this server, call `request_capability` with a clear description (`capability`, `desired_input`, `desired_output`, `why_insufficient`, `budget_usd`). That stores a human-review ticket. It does not generate code.
+
+### Registry
+
+| Tool | Purpose |
+|------|---------|
+| `search_listing` | Verified listings by keyword, at most 10. Active Featured listings sort first and are marked sponsored. |
+| `check_health` | Stored `health_status`, `last_checked_at`, and `schema_status`. Does not ping. |
+| `evidence_pack` | Verified Evidence Pack. Not a Trust Score. Does not ping. |
+
+REST twins: `GET /api/v1/registry/directory/search`, `GET /api/v1/registry/directory/health`, `GET /api/v1/registry/directory/evidence`.
 
 ### Agent-paid rails & commerce (highlight)
 
@@ -167,11 +179,16 @@ AgentShare also runs a **curated MCP Registry** at
 **GitHub mirror (auto-synced, verified only):** [docs/CURATED_REGISTRY.md](./docs/CURATED_REGISTRY.md)  
 Regenerated daily from `GET /api/v1/registry/entries` — discovery table only, **not** the AgentShare product MCP tool catalog above.
 
-**Agents discovering other MCPs — fetch order:**
+**Agents discovering other MCPs — default path on `https://agentshare.dev/mcp`:**
 
-1. Hot list: `GET https://agentshare.dev/api/v1/public/mcp-registry/trends`
-2. Compact verified list: `GET https://agentshare.dev/api/v1/public/mcp-registry/summary`
-3. Full entries: `GET https://agentshare.dev/api/v1/registry/entries`
+1. `search_listing`
+2. `check_health`
+3. `evidence_pack`, or `GET https://agentshare.dev/api/v1/registry/directory/evidence`
+4. Connect to `mcp_url` yourself
+
+Full catalog pages: `GET https://agentshare.dev/api/v1/registry/entries?limit=&offset=` with limit 1–200. `meta.total_listed` is the full public count. `meta.matched` is the count after filters. `meta.next_offset` is null on the last page.
+
+Hot list and compact list remain available: `GET https://agentshare.dev/api/v1/public/mcp-registry/trends`, `GET https://agentshare.dev/api/v1/public/mcp-registry/summary`.
 
 - Human submit page: https://agentshare.dev/registry?utm_source=github&utm_medium=agentshare-mcp&utm_campaign=readme#submit
 - Agent/self-serve submit API: `POST https://agentshare.dev/api/v1/registry/submit`

@@ -2,7 +2,7 @@
   "name": "agentshare-commerce-mcp",
   "version": "1.0.8",
   "private": true,
-  "description": "Cursor Marketplace plugin — AgentShare MCP v1.0.8 (10 tools)",
+  "description": "Cursor plugin bridge to the live agentshare-registry MCP (15 tools) at agentshare.dev/mcp",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"

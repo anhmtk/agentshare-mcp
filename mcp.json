@@ -2,8 +2,8 @@
   "schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "name": "agentshare",
   "displayName": "AgentShare — curated MCP registry + own MCP",
-  "description": "Curated MCP registry (editor-reviewed listings) plus 12 own MCP tools on dual-auth rails (API key or x402): commerce, request_capability, secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog. Streamable HTTP at agentshare.dev/mcp.",
-  "version": "1.1.0",
+  "description": "Curated MCP registry. Live serverInfo name agentshare-registry, 15 tools, Streamable HTTP at agentshare.dev/mcp. Default path: search_listing, check_health, evidence_pack, then connect to mcp_url yourself. Own tools on dual-auth rails (API key or x402): request_capability, commerce, secondary Solana/Meteora DeFi demos. Polymarket is not on the public MCP catalog.",
+  "version": "1.2.0",
   "author": "AgentShare",
   "homepage": "https://agentshare.dev",
   "license": "MIT",
@@ -30,6 +30,9 @@
     "streamable-http": "https://agentshare.dev/mcp"
   },
   "tools": [
+    "search_listing",
+    "check_health",
+    "evidence_pack",
     "dex_overview",
     "dex_top_movers",
     "solana_dex_brief",

@@ -96,7 +96,7 @@ Placeholder credentials only — start building at https://agentshare.dev/signup
 
 
 
-**MCP catalog:** 10 tools — commerce prices, ACP `commerce_quote`, DefiLlama DEX, Solana & Meteora briefs. See [agentshare-mcp README](../README.md).
+**MCP catalog:** 15 tools on live serverInfo `agentshare-registry`. Default path: `search_listing` → `check_health` → `evidence_pack` → connect to `mcp_url` yourself. See [agentshare-mcp README](../README.md).
 
 
 

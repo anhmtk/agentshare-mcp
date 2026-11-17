@@ -2,8 +2,8 @@
   "manifest_version": "0.3",
   "name": "agentshare-price-mcp",
   "display_name": "AgentShare — curated MCP registry + own MCP",
-  "version": "1.1.0",
-  "description": "Curated MCP registry plus 12 own MCP tools on dual-auth rails (API key or x402): commerce, request_capability, secondary Solana/Meteora DeFi demos. Polymarket is not on the public catalog. Live at https://agentshare.dev/mcp.",
+  "version": "1.2.0",
+  "description": "Curated MCP registry. Live serverInfo name agentshare-registry, 15 tools at https://agentshare.dev/mcp. Default path: search_listing, check_health, evidence_pack, then connect to mcp_url yourself. Own tools on dual-auth rails (API key or x402): request_capability, commerce, secondary Solana/Meteora DeFi demos. Polymarket is not on the public catalog.",
   "author": {
     "name": "AgentShare",
     "url": "https://agentshare.dev"
@@ -34,6 +34,18 @@
   "license": "MIT",
   "tools_generated": true,
   "tools": [
+    {
+      "name": "search_listing",
+      "description": "Search verified MCP listings by keyword. At most 10. Active Featured listings sort first and are marked sponsored. Does not ping."
+    },
+    {
+      "name": "check_health",
+      "description": "Read one listing's stored health_status, last_checked_at, and schema_status. The probe is about a day old. Does not ping."
+    },
+    {
+      "name": "evidence_pack",
+      "description": "Verified Evidence Pack for one listing: observed, inferred, or unknown, with limitations. Not a Trust Score. Does not ping."
+    },
     {
       "name": "dex_overview",
       "description": "DEX protocol rankings by 24h volume (DefiLlama)"

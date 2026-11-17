@@ -4,8 +4,8 @@
   "purpose": "Machine-readable index for AI agents and code search crawlers. Authoritative live contract: https://agentshare.dev/agent.json",
   "name": "AgentShare",
   "type": "curated_mcp_registry_and_agent_paid_mcp",
-  "mcp_catalog_version": "1.1.0",
-  "mcp_tool_count": 12,
+  "mcp_server_info_name": "agentshare-registry",
+  "mcp_tool_count": 15,
   "primary_focus": "curated_mcp_registry",
   "summary": "Curated MCP registry (editor-reviewed remote MCP listings) plus AgentShare's own agent-paid MCP: dual-auth (API key or x402), free discovery, Streamable HTTP + REST. Secondary: commerce procurement and Solana/Meteora DeFi demos. Market classifieds experiment ended 2026-10-03. Polymarket is not exposed on the public MCP catalog.",
   "canonical_urls": {
@@ -28,6 +28,10 @@
     "meteora_brief": "https://agentshare.dev/api/v1/agent/defi/meteora/brief",
     "mcp_registry": "https://agentshare.dev/registry",
     "mcp_registry_entries": "https://agentshare.dev/api/v1/registry/entries",
+    "mcp_registry_directory_search": "https://agentshare.dev/api/v1/registry/directory/search",
+    "mcp_registry_directory_health": "https://agentshare.dev/api/v1/registry/directory/health",
+    "mcp_registry_directory_evidence": "https://agentshare.dev/api/v1/registry/directory/evidence",
+    "objective_trust_mcp": "https://agentshare.dev/mcp/objective-trust",
     "mcp_registry_summary": "https://agentshare.dev/api/v1/public/mcp-registry/summary",
     "mcp_registry_trends": "https://agentshare.dev/api/v1/public/mcp-registry/trends",
     "mcp_registry_submit": "https://agentshare.dev/api/v1/registry/submit",
@@ -85,10 +89,17 @@
     },
     "featured_flow": "After approval, POST featured_purchase_urls.{week|month|year} with JSON {\"token\":\"<submission_token>\"}. Dual-auth (API key or x402) for humans and agents. Experiment: week $3 / 7d, month $9 / 30d, year $49 / 365d. Max 3 concurrent Featured slots; renew stacks; poll status → data.featured.expires_soon within 72h.",
     "submit_review_policy": "all listings are editor-reviewed before publish",
+    "default_path": "search_listing, then check_health, then evidence_pack or GET /api/v1/registry/directory/evidence, then connect to mcp_url yourself. This server does not proxy the other MCP. check_health and evidence_pack read a stored probe about a day old and do not ping. Evidence is observed, inferred, or unknown, with limitations. Not a Trust Score. Score 1-8 candidates you already have with rank_tools_for_task on /mcp/objective-trust. If the task cannot be completed with the tools on this server, call request_capability with capability, desired_input, desired_output, why_insufficient, and budget_usd. That stores a human-review ticket. It does not generate code.",
+    "entries_page": "GET /api/v1/registry/entries?limit=&offset= with limit 1-200. meta.total_listed is the full public count. meta.matched is the count after filters. meta.next_offset is null on the last page.",
     "agent_fetch_order": [
+      "MCP search_listing on https://agentshare.dev/mcp",
+      "MCP check_health",
+      "MCP evidence_pack or GET /api/v1/registry/directory/evidence",
+      "connect to the listing mcp_url yourself",
+      "optional rank_tools_for_task on https://agentshare.dev/mcp/objective-trust when you already have 1-8 candidates",
+      "GET /api/v1/registry/entries?limit=&offset=",
       "GET /api/v1/public/mcp-registry/trends",
       "GET /api/v1/public/mcp-registry/summary",
-      "GET /api/v1/registry/entries",
       "GET /api/v1/registry/feature/packs",
       "GET /registry (HTML for humans)"
     ],
@@ -108,6 +119,24 @@
     ]
   },
   "mcp_tools": [
+    {
+      "name": "search_listing",
+      "intent": "find_verified_mcp_by_keyword",
+      "rest": "GET /api/v1/registry/directory/search",
+      "notes": "At most 10 verified listings. Active Featured sort first and are marked sponsored. Does not ping."
+    },
+    {
+      "name": "check_health",
+      "intent": "read_stored_listing_health",
+      "rest": "GET /api/v1/registry/directory/health",
+      "notes": "Stored health_status, last_checked_at, schema_status. Probe is about a day old. Does not ping. Not a 7-day success percent."
+    },
+    {
+      "name": "evidence_pack",
+      "intent": "verified_evidence_pack",
+      "rest": "GET /api/v1/registry/directory/evidence",
+      "notes": "Observed, inferred, or unknown claims with limitations. Not a Trust Score. Does not ping."
+    },
     {
       "name": "search_products",
       "intent": "compare_multiple_listings",

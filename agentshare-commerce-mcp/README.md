@@ -1,14 +1,22 @@
 # AgentShare — Agent-paid API MCP (Cursor plugin)
 
-Connect Cursor to **agent-paid API access** on [agentshare.dev](https://agentshare.dev): dual-auth (API key or x402), commerce procurement tools, and secondary Solana/Meteora DeFi demos — all through MCP.
+Connect Cursor to the live MCP at [agentshare.dev/mcp](https://agentshare.dev/mcp). serverInfo name `agentshare-registry`. **15 tools**. Dual-auth (API key or x402). Polymarket tools are **not** on the public catalog.
 
-**Catalog version:** `1.0.9` · **11 tools** on the public MCP endpoint. Polymarket tools are **not** on the public catalog.
+**Default path when looking for another MCP:** `search_listing` → `check_health` → `evidence_pack` → connect to `mcp_url` yourself. `check_health` and `evidence_pack` do not ping. Evidence is not a Trust Score. If current tools cannot finish the task, call `request_capability` (human-review ticket, no codegen).
 
 **Start building:** [agentshare.dev/signup](https://agentshare.dev/signup) for free-tier dual-auth credentials, or settle **x402** per request with no key.
 
 ---
 
 ## Features
+
+### Registry (default path)
+
+| Tool | Description |
+|------|-------------|
+| **`search_listing`** | Verified MCP listings by keyword, at most 10. Active Featured listings sort first and are marked sponsored. |
+| **`check_health`** | Stored health and schema status for one listing. The probe is about a day old. Does not ping. |
+| **`evidence_pack`** | Verified Evidence Pack: observed, inferred, or unknown, with limitations. Not a Trust Score. Does not ping. |
 
 ### Commerce & pricing tools
 
@@ -20,6 +28,7 @@ Connect Cursor to **agent-paid API access** on [agentshare.dev](https://agentsha
 | **`product_detail`** | Full product details and per-source prices by numeric `product_id` from a prior search. |
 | **`commerce_quote`** | **ACP / agent-buyer** quote envelope (`agentshare.price.v1`). Use `mode=search` for multiple listings or `mode=best_offer` for one pick; optional `max_price_usd` for budget agents. |
 | **`service_meta`** | API capabilities, rate limits, and integration hints (calls public `GET /api/v1/meta`). |
+| **`request_capability`** | When the tools on this server cannot finish the task: structured gap for a human-review ticket. Does not generate code. |
 
 ### Macro scout (optional context)
 

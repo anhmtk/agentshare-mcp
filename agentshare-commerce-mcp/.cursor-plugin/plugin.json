@@ -1,7 +1,7 @@
 {
   "name": "agentshare-commerce-mcp",
   "displayName": "AgentShare — Agent-paid API MCP",
-  "description": "11 MCP tools on agent-paid rails: dual-auth / x402, commerce procurement (search, best_offer, commerce_quote), secondary Solana/Meteora demos. Start building at agentshare.dev/signup.",
+  "description": "Live agentshare-registry MCP (15 tools) at agentshare.dev/mcp. Default path: search_listing, check_health, evidence_pack, then connect to mcp_url yourself. Dual-auth / x402. Start building at agentshare.dev/signup.",
   "version": "1.0.8",
   "author": {
     "name": "AgentShare",

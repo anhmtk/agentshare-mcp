@@ -14,7 +14,7 @@
 4. Insert **one line** alphabetically after `[agentlux/agentlux-mcp]` and before `[BuyWhere/buywhere-mcp]`:
 
 ```markdown
-- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Agent-paid API MCP (dual-auth / x402): `search_products`, `best_offer`, `commerce_quote` (ACP), plus secondary Solana/Meteora demos. 11 tools at [agentshare.dev/mcp](https://agentshare.dev/mcp). Start building: [agentshare.dev/signup](https://agentshare.dev/signup).
+- [anhmtk/agentshare-mcp](https://github.com/anhmtk/agentshare-mcp) [![anhmtk/agentshare-mcp MCP server](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp/badges/score.svg)](https://glama.ai/mcp/servers/anhmtk/agentshare-mcp) 📇 ☁️ 🍎 🪟 🐧 - Curated MCP registry. Live server `agentshare-registry`: `search_listing`, `check_health`, `evidence_pack`, then connect to `mcp_url` yourself. 15 tools at [agentshare.dev/mcp](https://agentshare.dev/mcp). Start building: [agentshare.dev/signup](https://agentshare.dev/signup).
 ```
 
 5. Open PR with title:

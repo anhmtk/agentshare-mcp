@@ -1,5 +1,9 @@
 """
-Shared FastMCP app for Agent Price API — tools + factory for stdio / Streamable HTTP.
+Local subset of the AgentShare MCP tools for stdio experiments.
+
+The live server is https://agentshare.dev/mcp (serverInfo name agentshare-registry, 15 tools).
+This file does not implement search_listing, check_health, or evidence_pack.
+Shared FastMCP app — tools + factory for stdio / Streamable HTTP.
 
 Tool handlers return list[TextContent]: (1) one-line summary, (2) JSON envelope with full payload.
 """

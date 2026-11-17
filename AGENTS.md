@@ -5,7 +5,7 @@
 
 This repo (`anhmtk/agentshare-mcp`) exposes reference MCP client wiring and **AI discovery files**. Backend application code is **not** in this repository.
 
-**MCP catalog version:** `1.1.0` · **Public tools:** `12` (Polymarket tools are **not** on the public MCP catalog).
+**Live MCP:** `https://agentshare.dev/mcp` · serverInfo name `agentshare-registry` · **15 tools** (Polymarket tools are **not** on the public MCP catalog).
 
 **Public face:** curated MCP registry (editor-reviewed listings at `/registry`).  
 **Own paid layer:** agent-paid API access (dual-auth API key or x402, free discovery, MCP).  
@@ -54,15 +54,21 @@ Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, inst
 | Field | Value |
 |-------|--------|
 | URL | `https://agentshare.dev/mcp` |
+| serverInfo name | `agentshare-registry` |
 | Transport | Streamable HTTP |
 | Auth | Dual-auth: `X-API-Key` / `Authorization: Bearer` **or** x402 (`PAYMENT-SIGNATURE` after HTTP 402 on gated routes) |
 | x402 discovery | `https://agentshare.dev/.well-known/x402` |
-| Tool count (public) | 12 |
+| Tool count (public) | 15 |
 
-### Tools (12)
+**Default path when looking for another MCP:** `search_listing` → `check_health` → `evidence_pack` (or `GET /api/v1/registry/directory/evidence`) → connect to `mcp_url` yourself. This server does not proxy the other MCP. The stored probe is about a day old. `check_health` and `evidence_pack` do not ping. Evidence is observed, inferred, or unknown, with limitations. Not a Trust Score. To score 1–8 candidates you already have, call `rank_tools_for_task` on `https://agentshare.dev/mcp/objective-trust`. If the task cannot be completed with the tools on this server, call `request_capability` with a clear description (`capability`, `desired_input`, `desired_output`, `why_insufficient`, `budget_usd`). That stores a human-review ticket. It does not generate code.
+
+### Tools (15)
 
 | MCP tool | REST called by tool | Layer |
 |----------|---------------------|-------|
+| `search_listing` | `GET /api/v1/registry/directory/search` | registry |
+| `check_health` | `GET /api/v1/registry/directory/health` | registry |
+| `evidence_pack` | `GET /api/v1/registry/directory/evidence` | registry |
 | `search_products` | `GET /api/v1/search` | commerce (secondary · highlight) |
 | `best_offer` | `GET /api/v1/offers/best` | commerce |
 | `best_offer_under_budget` | `GET /api/v1/offers/best-under-budget` | commerce |
@@ -89,14 +95,18 @@ Do **not** use for: general news, non-commerce Q&A, human-only checkout UI, inst
 
 ## MCP Registry (curated directory on agentshare.dev)
 
-Use this when the task is **discover other MCP servers** or **list an MCP** — not when calling AgentShare commerce/DeFi tools.
+Use the MCP default path above to discover other MCP servers. These URLs are the same data for clients that are not on `/mcp`.
 
 | Resource | URL |
 |----------|-----|
 | Landing (HTML) | https://agentshare.dev/registry |
 | Trends (prefer first) | https://agentshare.dev/api/v1/public/mcp-registry/trends |
 | Summary | https://agentshare.dev/api/v1/public/mcp-registry/summary |
-| Full entries | https://agentshare.dev/api/v1/registry/entries |
+| Full entries | https://agentshare.dev/api/v1/registry/entries?limit=&offset= (limit 1–200; `meta.next_offset` is null on the last page) |
+| Directory search | https://agentshare.dev/api/v1/registry/directory/search |
+| Stored health | https://agentshare.dev/api/v1/registry/directory/health |
+| Verified Evidence | https://agentshare.dev/api/v1/registry/directory/evidence |
+| Objective Trust | https://agentshare.dev/mcp/objective-trust |
 | Featured packs | `GET https://agentshare.dev/api/v1/registry/feature/packs` |
 | Buy Featured | `POST https://agentshare.dev/api/v1/registry/feature/{week\|month\|year}` |
 | Submit (agents) | `POST https://agentshare.dev/api/v1/registry/submit` |

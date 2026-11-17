@@ -2,8 +2,8 @@
 
 Expose AgentShare as MCP tools for Cursor, Claude Desktop, etc.
 
-**Live catalog:** **11 tools** · version **1.0.9** · Polymarket tools **not** on public MCP.  
-**Primary:** agent-paid rails (dual-auth / x402 / discovery). **Secondary:** commerce + Solana/Meteora demos.
+**Live catalog:** **15 tools** at `https://agentshare.dev/mcp`. serverInfo name `agentshare-registry`. Polymarket tools **not** on public MCP.  
+This Python file is an older local subset. It is not the live server and it does not include `search_listing`, `check_health`, or `evidence_pack`. Prefer the remote URL.
 
 **AI agent onboarding (repo root):** see [`../../AGENTS.md`](../../AGENTS.md) and [`../../AI_DISCOVERY.json`](../../AI_DISCOVERY.json).
 
@@ -19,7 +19,7 @@ python integrations/mcp_server/server.py
 
 Prefer **Node bridge** (`server/bridge.mjs` or `agentshare-commerce-mcp/`) for Cursor — see [README](../../README.md).
 
-## Tools (public MCP — 11)
+## Tools in this local subset
 
 | Tool | Auth | Description | Layer |
 |------|------|-------------|-------|
