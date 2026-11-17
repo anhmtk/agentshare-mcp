@@ -10,14 +10,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-16T17:26:05Z`  
+- **Generated (UTC):** `2026-11-17T17:03:31Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 199 verified  
+- **Count:** 196 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 239 | OpenAny | Integrations | [mcp](https://mcp.openany.si) | [site](https://openany.si) | [repo](https://github.com/openanysi/openany-mcp) | [page](https://agentshare.dev/registry/239) |
 | 238 | XGR MCP Gateway | Agent tools | [mcp](https://mcp.xgr.network/mcp) | [site](https://xgr.network/docs/mcp_overview/) | [repo](https://github.com/xgr-network/xgr-mcp) | [page](https://agentshare.dev/registry/238) |
 | 237 | Agentosaurus | Agent tools | [mcp](https://agentosaurus.com/mcp) | [site](https://agentosaurus.com) | — | [page](https://agentshare.dev/registry/237) |
 | 236 | copy.top | Analytics | [mcp](https://copy.top/mcp) | [site](https://copy.top) | [repo](https://github.com/copydottop/mcp) | [page](https://agentshare.dev/registry/236) |
@@ -26,9 +27,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 233 | OpenAxia MCP — blind, shutter & awning motor specs | Data & commerce | [mcp](https://openaxia.com/api/mcp) | [site](https://openaxia.com) | — | [page](https://agentshare.dev/registry/233) |
 | 232 | Surface | Agent tools | [mcp](https://nova-otter-delta-cloud.grok.me/mcp) | [site](https://otter-sand-wolf-spring.grok.me) | — | [page](https://agentshare.dev/registry/232) |
 | 231 | Kling AI MCP (Global) | Agent tools | [mcp](https://kling.ai/mcp/plugin) | [site](https://kling.ai/) | [repo](https://github.com/klingai-tech/claude-plugin) | [page](https://agentshare.dev/registry/231) |
-| 230 | Family App Picks | Agent tools | [mcp](https://familypicks.app/mcp) | [site](https://familypicks.app) | — | [page](https://agentshare.dev/registry/230) |
-| 229 | Parental Control Review | Analytics | [mcp](https://parentalcontrolreview.com/mcp) | [site](https://parentalcontrolreview.com) | — | [page](https://agentshare.dev/registry/229) |
-| 228 | Digital Parenting Today | Agent tools | [mcp](https://digitalparentingtoday.com/mcp) | [site](https://digitalparentingtoday.com) | — | [page](https://agentshare.dev/registry/228) |
 | 227 | Swaplume | Agent tools | [mcp](https://api.swaplume.com/mcp) | [site](https://swaplume.com) | — | [page](https://agentshare.dev/registry/227) |
 | 225 | BlockVectra Docs MCP | Agent tools | [mcp](https://docs.blockvectra.com/mcp/docs) | [site](https://docs.blockvectra.com/en/guides/mcp-server/?ref=agentshare-docs) | [repo](https://github.com/blockvectra/mcp) | [page](https://agentshare.dev/registry/225) |
 | 216 | Loice | Data & commerce | [mcp](https://app.loice.ai/mcp) | [site](https://loice.ai/) | [repo](https://github.com/loice-ai/loice-mcp-server) | [page](https://agentshare.dev/registry/216) |
@@ -138,7 +136,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 100 | Hugging Face MCP | Agent tools | [mcp](https://huggingface.co/mcp) | [site](https://huggingface.co) | [repo](https://github.com/huggingface/hf-mcp-server) | [page](https://agentshare.dev/registry/100) |
 | 99 | Neon MCP | Storage | [mcp](https://mcp.neon.tech/mcp) | [site](https://neon.tech/docs) | [repo](https://github.com/neondatabase/mcp-server-neon) | [page](https://agentshare.dev/registry/99) |
 | 98 | Supabase MCP | Storage | [mcp](https://mcp.supabase.com/mcp) | [site](https://supabase.com/docs) | [repo](https://github.com/supabase-community/supabase-mcp) | [page](https://agentshare.dev/registry/98) |
-| 97 | Shopify MCP | Data & commerce | [mcp](https://mcp.shopify.com/mcp) | [site](https://shopify.dev) | — | [page](https://agentshare.dev/registry/97) |
 | 96 | Atlassian MCP | Integrations | [mcp](https://mcp.atlassian.com/v1/mcp) | [site](https://www.atlassian.com) | — | [page](https://agentshare.dev/registry/96) |
 | 95 | Linear MCP | Integrations | [mcp](https://mcp.linear.app/mcp) | [site](https://linear.app) | — | [page](https://agentshare.dev/registry/95) |
 | 94 | Notion MCP | Storage | [mcp](https://mcp.notion.com/mcp) | [site](https://developers.notion.com) | [repo](https://github.com/makenotion/notion-mcp-server) | [page](https://agentshare.dev/registry/94) |
