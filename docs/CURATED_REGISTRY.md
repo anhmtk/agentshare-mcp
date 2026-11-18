@@ -10,14 +10,18 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-17T17:03:31Z`  
+- **Generated (UTC):** `2026-11-18T16:42:43Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
-- **Count:** 196 verified  
+- **Count:** 200 verified  
 
 > Paid Featured (opt-in) sorts above organic. sort=new (newest) or sort=popular (opens). Featured does not change health_status and is not a trust rank. Buy: POST /api/v1/registry/feature/{week|month|year} (JSON {"token":"<submission_token>"}; dual-auth API key or x402).
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 243 | StalkChain Data | Analytics | [mcp](https://data.stalkchain.com/mcp/directory) | [site](https://data.stalkchain.com/) | [repo](https://github.com/StalkChain/fomo-mcp-api) | [page](https://agentshare.dev/registry/243) |
+| 242 | SendHQ | Integrations | [mcp](https://mcp.sendhq.cc/mcp) | [site](https://sendhq.cc) | — | [page](https://agentshare.dev/registry/242) |
+| 241 | WordRadar | Analytics | [mcp](https://www.wordradar.dev/mcp) | [site](https://www.wordradar.dev/) | — | [page](https://agentshare.dev/registry/241) |
+| 240 | Ledgo CRM MCP server | Integrations | [mcp](https://ledgo.io/api/mcp) | [site](https://ledgo.io) | [repo](https://github.com/ledgocrm/ledgo-mcp) | [page](https://agentshare.dev/registry/240) |
 | 239 | OpenAny | Integrations | [mcp](https://mcp.openany.si) | [site](https://openany.si) | [repo](https://github.com/openanysi/openany-mcp) | [page](https://agentshare.dev/registry/239) |
 | 238 | XGR MCP Gateway | Agent tools | [mcp](https://mcp.xgr.network/mcp) | [site](https://xgr.network/docs/mcp_overview/) | [repo](https://github.com/xgr-network/xgr-mcp) | [page](https://agentshare.dev/registry/238) |
 | 237 | Agentosaurus | Agent tools | [mcp](https://agentosaurus.com/mcp) | [site](https://agentosaurus.com) | — | [page](https://agentshare.dev/registry/237) |
