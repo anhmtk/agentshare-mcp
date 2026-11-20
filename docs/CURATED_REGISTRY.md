@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-18T16:42:43Z`  
+- **Generated (UTC):** `2026-11-20T16:21:39Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,13 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 250 | BRAINIAC Cybersecurity & CVE Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/cybersecurity-intelligence) | [site](https://www.brainiac.software/api/cybersecurity-intelligence) | — | [page](https://agentshare.dev/registry/250) |
+| 249 | BRAINIAC Wallet Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/wallet-intelligence) | [site](https://www.brainiac.software/api/wallet-intelligence) | — | [page](https://agentshare.dev/registry/249) |
+| 248 | BRAINIAC Token Security & Risk Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/token-security) | [site](https://www.brainiac.software/api/token-security) | — | [page](https://agentshare.dev/registry/248) |
+| 247 | BRAINIAC API Catalog MCP | Agent tools | [mcp](https://www.brainiac.software/mcp) | [site](https://www.brainiac.software) | — | [page](https://agentshare.dev/registry/247) |
+| 246 | Live Face Swap MCP | Integrations | [mcp](https://live-face-swap.net/api/mcp) | [site](https://live-face-swap.net/mcp) | — | [page](https://agentshare.dev/registry/246) |
+| 245 | EveryInfra MCP Server | Data & commerce | [mcp](https://api.everyinfra.com/mcp) | [site](https://everyinfra.com/en/mcp-server) | [repo](https://github.com/everyinfra/everyinfra-agent-plugins) | [page](https://agentshare.dev/registry/245) |
+| 244 | Wavegrain | Agent tools | [mcp](https://wavegrain.com/api/mcp) | [site](https://wavegrain.com/mcp?utm_source=agentshare) | [repo](https://github.com/wavegrain/wavegrain-mcp) | [page](https://agentshare.dev/registry/244) |
 | 243 | StalkChain Data | Analytics | [mcp](https://data.stalkchain.com/mcp/directory) | [site](https://data.stalkchain.com/) | [repo](https://github.com/StalkChain/fomo-mcp-api) | [page](https://agentshare.dev/registry/243) |
 | 242 | SendHQ | Integrations | [mcp](https://mcp.sendhq.cc/mcp) | [site](https://sendhq.cc) | — | [page](https://agentshare.dev/registry/242) |
 | 241 | WordRadar | Analytics | [mcp](https://www.wordradar.dev/mcp) | [site](https://www.wordradar.dev/) | — | [page](https://agentshare.dev/registry/241) |
@@ -68,7 +75,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 179 | Lava MCP | Data & commerce | [mcp](https://lava.ai-dolphin.com/subscribe/v1/mcp) | [site](https://lava.ai-dolphin.com/subscribe/docs) | — | [page](https://agentshare.dev/registry/179) |
 | 178 | Grigora MCP | Agent tools | [mcp](https://mcp.grigora.co/mcp) | [site](https://www.grigora.co/mcp/) | — | [page](https://agentshare.dev/registry/178) |
 | 177 | Qovia MCP — Chinese social public data | Data & commerce | [mcp](https://api.qovia.ai/mcp) | [site](https://qovia.ai) | [repo](https://github.com/qovia/qovia-mcp) | [page](https://agentshare.dev/registry/177) |
-| 176 | DevX Repo Run Check | Agent tools | [mcp](https://repo-run-check.nextill-pos.workers.dev/mcp) | [site](https://repo-run-check.nextill-pos.workers.dev/) | [repo](https://github.com/devx-agent/repo-run-check) | [page](https://agentshare.dev/registry/176) |
 | 174 | Ecommerce Data API MCP — Amazon research data | Data & commerce | [mcp](https://ecommercedataapi.com/mcp) | [site](https://ecommercedataapi.com) | — | [page](https://agentshare.dev/registry/174) |
 | 173 | Workmode MCP | Data & commerce | [mcp](https://api.workmode.co/mcp) | [site](https://workmode.co/mcp) | — | [page](https://agentshare.dev/registry/173) |
 | 172 | Jev Agent MCP - typed judgment tools | Agent tools | [mcp](https://jev-agent.com/api/mcp) | [site](https://jev-agent.com/jev-mcp) | — | [page](https://agentshare.dev/registry/172) |
@@ -212,12 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 18 | Magic Hour MCP | Agent tools | [mcp](https://mcp.magichour.ai/) | [site](https://magichour.ai/mcp?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_distribution) | [repo](https://github.com/magichourhq/magic-hour-mcp) | [page](https://agentshare.dev/registry/18) |
 | 16 | AI Agents Archive | Agent tools | [mcp](https://aiagentsarchive.com/mcp) | [site](https://aiagentsarchive.com) | [repo](https://github.com/panagot/Ai-Agents-Archive) | [page](https://agentshare.dev/registry/16) |
 | 14 | Palisade DMARC Agent | Integrations | [mcp](https://api.palisade.email/mcp) | [site](https://palisade.email) | [repo](https://github.com/palisadeemail/palisade-mcp) | [page](https://agentshare.dev/registry/14) |
-| 13 | AgentShare — Agent-paid API | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/13) |
-| 12 | minia2a MCP — Agent-to-Agent API Marketplace | Data & commerce | [mcp](https://minia2a.uk/mcp) | [site](https://minia2a.uk) | [repo](https://github.com/minia2a/minia2a-mcp) | [page](https://agentshare.dev/registry/12) |
-| 11 | Bargo Congress Trades MCP | Data & commerce | [mcp](https://www.bargo.ai/free-apis/congress/mcp) | [site](https://www.bargo.ai/free-apis/congress) | — | [page](https://agentshare.dev/registry/11) |
-| 10 | BeachFinder | Data & commerce | [mcp](https://getbeachfinder.com/mcp) | [site](https://getbeachfinder.com/ai-search) | [repo](https://github.com/troulin-a11y/BeachFinder-mcp) | [page](https://agentshare.dev/registry/10) |
-| 9 | DEX Scout (DefiLlama) | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/9) |
-| 8 | AgentShare — Solana DeFi Intelligence | Data & commerce | [mcp](https://agentshare.dev/mcp) | [site](https://agentshare.dev) | [repo](https://github.com/anhmtk/agentshare-mcp) | [page](https://agentshare.dev/registry/8) |
 
 ## How this stays in sync
 
