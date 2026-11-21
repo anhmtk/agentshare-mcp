@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-20T16:21:39Z`  
+- **Generated (UTC):** `2026-11-21T15:36:15Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,43 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 287 | Geonode MCP Server | Agent tools | [mcp](https://mcp.geonode.com/mcp) | [site](https://geonode.com/integrations/mcp) | [repo](https://github.com/geonodecom/mcp) | [page](https://agentshare.dev/registry/287) |
+| 286 | Stock Screener by ValuEdge | Data & commerce | [mcp](https://valuedge.app/mcp/screener) | [site](https://valuedge.app/connect/stock-screener-mcp) | — | [page](https://agentshare.dev/registry/286) |
+| 285 | AutoPay by Synairo | Agent tools | [mcp](https://api.synairo.com/mcp) | [site](https://api.synairo.com) | — | [page](https://agentshare.dev/registry/285) |
+| 284 | Token Verdict | Data & commerce | [mcp](https://token-verdict.scriptmasterlabs.com/mcp) | [site](https://token-verdict.scriptmasterlabs.com) | — | [page](https://agentshare.dev/registry/284) |
+| 283 | BRAINIAC Equity Analytics | Agent tools | [mcp](https://www.brainiac.software/mcp/equity-analytics) | [site](https://www.brainiac.software/api/equity-analytics) | — | [page](https://agentshare.dev/registry/283) |
+| 282 | BRAINIAC Bank Account Identifiers & Payment Files | Agent tools | [mcp](https://www.brainiac.software/mcp/bank-payments) | [site](https://www.brainiac.software/api/bank-payments) | — | [page](https://agentshare.dev/registry/282) |
+| 281 | BRAINIAC Financial Schedule & Credit Calculations | Agent tools | [mcp](https://www.brainiac.software/mcp/fintech) | [site](https://www.brainiac.software/api/fintech) | — | [page](https://agentshare.dev/registry/281) |
+| 280 | BRAINIAC Energy Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/energy-intelligence) | [site](https://www.brainiac.software/api/energy-intelligence) | — | [page](https://agentshare.dev/registry/280) |
+| 279 | BRAINIAC Data Quality Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/data-quality) | [site](https://www.brainiac.software/api/data-quality) | — | [page](https://agentshare.dev/registry/279) |
+| 278 | BRAINIAC CRM Data Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/crm-intelligence) | [site](https://www.brainiac.software/api/crm-intelligence) | — | [page](https://agentshare.dev/registry/278) |
+| 277 | BRAINIAC Content & Keyword Analytics | Agent tools | [mcp](https://www.brainiac.software/mcp/seo-content) | [site](https://www.brainiac.software/api/seo-content) | — | [page](https://agentshare.dev/registry/277) |
+| 276 | BRAINIAC Web & Page Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/web-intelligence) | [site](https://www.brainiac.software/api/web-intelligence) | — | [page](https://agentshare.dev/registry/276) |
+| 275 | BRAINIAC Indirect Tax Calculations | Agent tools | [mcp](https://www.brainiac.software/mcp/indirect-tax) | [site](https://www.brainiac.software/api/indirect-tax) | — | [page](https://agentshare.dev/registry/275) |
+| 274 | BRAINIAC Procurement Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/procurement-intelligence) | [site](https://www.brainiac.software/api/procurement-intelligence) | — | [page](https://agentshare.dev/registry/274) |
+| 273 | BRAINIAC Crypto Tax Computation | Agent tools | [mcp](https://www.brainiac.software/mcp/crypto-tax) | [site](https://www.brainiac.software/api/crypto-tax) | — | [page](https://agentshare.dev/registry/273) |
+| 272 | BRAINIAC DeFi Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/defi-intelligence) | [site](https://www.brainiac.software/api/defi-intelligence) | — | [page](https://agentshare.dev/registry/272) |
+| 271 | BRAINIAC Tokenomics | Agent tools | [mcp](https://www.brainiac.software/mcp/tokenomics) | [site](https://www.brainiac.software/api/tokenomics) | — | [page](https://agentshare.dev/registry/271) |
+| 270 | BRAINIAC Crypto Governance | Agent tools | [mcp](https://www.brainiac.software/mcp/crypto-governance) | [site](https://www.brainiac.software/api/crypto-governance) | — | [page](https://agentshare.dev/registry/270) |
+| 269 | BRAINIAC Staking Operations | Agent tools | [mcp](https://www.brainiac.software/mcp/staking-operations) | [site](https://www.brainiac.software/api/staking-operations) | — | [page](https://agentshare.dev/registry/269) |
+| 268 | BRAINIAC Contract Security | Agent tools | [mcp](https://www.brainiac.software/mcp/contract-security) | [site](https://www.brainiac.software/api/contract-security) | — | [page](https://agentshare.dev/registry/268) |
+| 267 | BRAINIAC Token Due Diligence | Agent tools | [mcp](https://www.brainiac.software/mcp/token-due-diligence) | [site](https://www.brainiac.software/api/token-due-diligence) | — | [page](https://agentshare.dev/registry/267) |
+| 266 | BRAINIAC Application & Pipeline Security Checks | Agent tools | [mcp](https://www.brainiac.software/mcp/appsec-config) | [site](https://www.brainiac.software/api/appsec-config) | — | [page](https://agentshare.dev/registry/266) |
+| 265 | BRAINIAC Ad Fraud Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/ad-fraud) | [site](https://www.brainiac.software/api/ad-fraud) | — | [page](https://agentshare.dev/registry/265) |
+| 264 | BRAINIAC Email & Domain Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/email-domain) | [site](https://www.brainiac.software/api/email-domain) | — | [page](https://agentshare.dev/registry/264) |
+| 263 | BRAINIAC Threat Intelligence & Public Signals | Agent tools | [mcp](https://www.brainiac.software/mcp/threat-intelligence) | [site](https://www.brainiac.software/api/threat-intelligence) | — | [page](https://agentshare.dev/registry/263) |
+| 262 | BRAINIAC Payload Safety & Architecture Control Checks | Agent tools | [mcp](https://www.brainiac.software/mcp/security) | [site](https://www.brainiac.software/api/security) | — | [page](https://agentshare.dev/registry/262) |
+| 261 | BRAINIAC SOAP Security | Agent tools | [mcp](https://www.brainiac.software/mcp/soap-security) | [site](https://www.brainiac.software/api/soap-security) | — | [page](https://agentshare.dev/registry/261) |
+| 260 | BRAINIAC Official Property & Energy Lookups | Agent tools | [mcp](https://www.brainiac.software/mcp/property-official) | [site](https://www.brainiac.software/api/property-official) | — | [page](https://agentshare.dev/registry/260) |
+| 259 | BRAINIAC Pay, Tax & Employment Calendars | Agent tools | [mcp](https://www.brainiac.software/mcp/labour-tax) | [site](https://www.brainiac.software/api/labour-tax) | — | [page](https://agentshare.dev/registry/259) |
+| 258 | BRAINIAC Company Registries & Supervision | Agent tools | [mcp](https://www.brainiac.software/mcp/registry-intelligence) | [site](https://www.brainiac.software/api/registry-intelligence) | — | [page](https://agentshare.dev/registry/258) |
+| 257 | BRAINIAC Regulatory Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/regulatory-intelligence) | [site](https://www.brainiac.software/api/regulatory-intelligence) | — | [page](https://agentshare.dev/registry/257) |
+| 256 | BRAINIAC Privacy Operations | Agent tools | [mcp](https://www.brainiac.software/mcp/privacy-operations) | [site](https://www.brainiac.software/api/privacy-operations) | — | [page](https://agentshare.dev/registry/256) |
+| 255 | BRAINIAC Vendor & Contractor Compliance | Agent tools | [mcp](https://www.brainiac.software/mcp/vendor-compliance) | [site](https://www.brainiac.software/api/vendor-compliance) | — | [page](https://agentshare.dev/registry/255) |
+| 254 | BRAINIAC Claims Assist | Agent tools | [mcp](https://www.brainiac.software/mcp/claims) | [site](https://www.brainiac.software/api/claims) | — | [page](https://agentshare.dev/registry/254) |
+| 253 | BRAINIAC Prevailing Wage | Agent tools | [mcp](https://www.brainiac.software/mcp/prevailing-wage) | [site](https://www.brainiac.software/api/prevailing-wage) | — | [page](https://agentshare.dev/registry/253) |
+| 252 | BRAINIAC OFAC & UK Sanctions Screening | Agent tools | [mcp](https://www.brainiac.software/mcp/exclusion) | [site](https://www.brainiac.software) | — | [page](https://agentshare.dev/registry/252) |
+| 251 | SwapGate | Data & commerce | [mcp](https://sml-swapgate.timothy-walton45.workers.dev/mcp) | [site](https://scriptmasterlabs.com/swapgate) | — | [page](https://agentshare.dev/registry/251) |
 | 250 | BRAINIAC Cybersecurity & CVE Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/cybersecurity-intelligence) | [site](https://www.brainiac.software/api/cybersecurity-intelligence) | — | [page](https://agentshare.dev/registry/250) |
 | 249 | BRAINIAC Wallet Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/wallet-intelligence) | [site](https://www.brainiac.software/api/wallet-intelligence) | — | [page](https://agentshare.dev/registry/249) |
 | 248 | BRAINIAC Token Security & Risk Intelligence | Agent tools | [mcp](https://www.brainiac.software/mcp/token-security) | [site](https://www.brainiac.software/api/token-security) | — | [page](https://agentshare.dev/registry/248) |
@@ -181,43 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 63 | Inkfree | Integrations | [mcp](https://api.inkfree.app/core/inkfree/mcp/) | [site](https://inkfree.app/) | — | [page](https://agentshare.dev/registry/63) |
 | 62 | Mailzzy | Integrations | [mcp](https://api.mailzzy.com/crm/mcp/) | [site](https://mailzzy.com/) | — | [page](https://agentshare.dev/registry/62) |
 | 61 | PDF to Markdown MCP — PDF into clean Markdown, with a scan check first | Agent tools | [mcp](https://pdf2md.dudko.dev/mcp) | [site](https://pdf2md.dudko.dev) | [repo](https://github.com/dudko-dev/pdf-to-md-mcp-setup) | [page](https://agentshare.dev/registry/61) |
-| 60 | Vectorize MCP — raster images to editable SVG, EPS, PDF or DXF | Agent tools | [mcp](https://vectorize.dudko.dev/mcp) | [site](https://vectorize.dudko.dev) | [repo](https://github.com/dudko-dev/vectorize-mcp-setup) | [page](https://agentshare.dev/registry/60) |
-| 59 | Nacre MCP — permission-aware document search for agents | Agent tools | [mcp](https://playground.nacre.work/mcp) | [site](https://nacre.work) | [repo](https://github.com/nacre-work/nacre) | [page](https://agentshare.dev/registry/59) |
-| 58 | Astro Agents | Agent tools | [mcp](https://astro-agent.dev/mcp) | [site](https://astro-agent.dev) | [repo](https://github.com/aidatatools-dev/astro-agents-mcp) | [page](https://agentshare.dev/registry/58) |
-| 56 | Mini Accountant MCP — invoices, expenses and tax estimates | Integrations | [mcp](https://mcp.miniaccountant.app/v1beta) | [site](https://ad.miniaccountant.app) | [repo](https://github.com/miniaccountant/mcp-setup) | [page](https://agentshare.dev/registry/56) |
-| 54 | sol-defi-desk | Data & commerce | [mcp](https://95.216.126.169.sslip.io/mcp) | [site](https://95.216.126.169.sslip.io/buyer) | — | [page](https://agentshare.dev/registry/54) |
-| 52 | VERITY | Agent tools | [mcp](https://verity.basechainlabs.com/api/mcp) | [site](https://verity.basechainlabs.com) | [repo](https://github.com/Clawdio777/verity) | [page](https://agentshare.dev/registry/52) |
-| 51 | AEONOS | Agent tools | [mcp](https://aeonos.basechainlabs.com/api/mcp) | [site](https://aeonos.basechainlabs.com) | [repo](https://github.com/Clawdio777/aeonos) | [page](https://agentshare.dev/registry/51) |
-| 50 | Fungsi.id MCP | Data & commerce | [mcp](https://api.fungsi.id/mcp) | [site](https://fungsi.id/) | — | [page](https://agentshare.dev/registry/50) |
-| 49 | Argorant MCP | Agent tools | [mcp](https://mcp.argorant.com/mcp) | [site](https://argorant.com) | [repo](https://github.com/argorant/argorant-mcp) | [page](https://agentshare.dev/registry/49) |
-| 48 | Ads Lighthouse MCP | Analytics | [mcp](https://adslighthouse.com/api/v1/mcp) | [site](https://adslighthouse.com/mcp) | — | [page](https://agentshare.dev/registry/48) |
-| 47 | Jithox | Agent tools | [mcp](https://jithox.com/api/mcp) | [site](https://jithox.com) | [repo](https://github.com/victor-emmanuel-c/jithox-mcp) | [page](https://agentshare.dev/registry/47) |
-| 46 | Exchange.news Offers | Data & commerce | [mcp](https://exchange.news/api/mcp) | [site](https://exchange.news/developers/) | — | [page](https://agentshare.dev/registry/46) |
-| 45 | LinkedBoost | Integrations | [mcp](https://mcp.linkedboost.ai/mcp) | [site](https://linkedboost.ai/) | — | [page](https://agentshare.dev/registry/45) |
-| 44 | Clera | Integrations | [mcp](https://mcp.getclera.com) | [site](https://www.getclera.com/mcp) | [repo](https://github.com/getclera/mcp) | [page](https://agentshare.dev/registry/44) |
-| 43 | SalesTouch | Integrations | [mcp](https://www.salestouch.io/api/mcp) | [site](https://www.salestouch.io) | [repo](https://github.com/antoineDsh/salestouch) | [page](https://agentshare.dev/registry/43) |
-| 42 | AurasPay Merchant MCP | Data & commerce | [mcp](https://mcp.auraspay.com/api/mcp) | [site](https://auraspay.com/mcp) | — | [page](https://agentshare.dev/registry/42) |
-| 41 | Agent Embassy | Agent tools | [mcp](https://aemb.pro/mcp) | [site](https://aemb.pro) | — | [page](https://agentshare.dev/registry/41) |
-| 40 | MindMap AI | Agent tools | [mcp](https://mindmapai.app/mcp) | [site](http://mindmapai.app) | [repo](https://github.com/MindMap-AI/mcp) | [page](https://agentshare.dev/registry/40) |
-| 38 | GigSoul x402 | Agent tools | [mcp](https://api.gigsoul.com/mcp) | [site](https://gigsoul.com/x402) | [repo](https://github.com/gigsoul-org/gigsoul-x402) | [page](https://agentshare.dev/registry/38) |
-| 37 | Vend API Merchant | Data & commerce | [mcp](https://extract.paypercall.dev/mcp) | [site](https://paypercall.dev) | [repo](https://github.com/PANDeveloper001/vend) | [page](https://agentshare.dev/registry/37) |
-| 36 | Zambo Trust Layer | Agent tools | [mcp](https://zambo.dev/api/mcp) | [site](https://zambo.dev) | — | [page](https://agentshare.dev/registry/36) |
-| 35 | AgentBrief | Agent tools | [mcp](https://agentbrief-edge.vercel.app/mcp) | [site](https://agentbrief-edge.vercel.app) | — | [page](https://agentshare.dev/registry/35) |
-| 34 | send21 | Agent tools | [mcp](https://send21.io/mcp) | [site](https://send21.io) | [repo](https://github.com/send21io/mcp) | [page](https://agentshare.dev/registry/34) |
-| 33 | Valet | Agent tools | [mcp](https://api.valet.dev/mcp) | [site](https://valet.dev) | [repo](https://github.com/valetdotdev/skills) | [page](https://agentshare.dev/registry/33) |
-| 32 | England Works Watch | Agent tools | [mcp](https://england-works-watch-production.up.railway.app/mcp) | — | [repo](https://github.com/ChanghuLiu/england-works-watch) | [page](https://agentshare.dev/registry/32) |
-| 30 | 0xHumans | Integrations | [mcp](https://0xhumans-mcp-proxy.vercel.app/api/mcp) | [site](https://0xhumans.com) | [repo](https://github.com/0xhumans) | [page](https://agentshare.dev/registry/30) |
-| 29 | DESK LEAD x402 | Agent tools | [mcp](https://desk-x402.desk-x402-gh.workers.dev/mcp) | [site](https://desk-x402.desk-x402-gh.workers.dev) | — | [page](https://agentshare.dev/registry/29) |
-| 28 | HYPERneobroker | Agent tools | [mcp](https://mcp.hyperneobroker.com/mcp) | [site](https://mcp.hyperneobroker.com) | — | [page](https://agentshare.dev/registry/28) |
-| 27 | Entergram Telegram MCP | Integrations | [mcp](https://mcp.entergram.com/mcp) | [site](https://www.entergram.com/telegram-mcp) | [repo](https://github.com/EntergramCRM/Telegram-MCP) | [page](https://agentshare.dev/registry/27) |
-| 26 | Motomarks | Agent tools | [mcp](https://motomarks.io/api/mcp) | [site](https://motomarks.io) | [repo](https://github.com/motomarks/motomarks-mcp) | [page](https://agentshare.dev/registry/26) |
-| 25 | EasyGroupFlights MCP | Integrations | [mcp](https://mcp.easygroupflights.com/mcp) | [site](https://easygroupflights.com/) | [repo](https://github.com/codeblockssk/easygroupflights-mcp) | [page](https://agentshare.dev/registry/25) |
-| 24 | FrameThrower MCP | Agent tools | [mcp](https://framethrower.ai/api/mcp) | [site](https://framethrower.ai) | [repo](https://github.com/framethrower-ai/framethrower-mcp) | [page](https://agentshare.dev/registry/24) |
-| 23 | The AI Daily MCP — ranked AI news & enterprise AI cost estimates | Data & commerce | [mcp](https://theaidaily.in/mcp) | [site](https://theaidaily.in) | — | [page](https://agentshare.dev/registry/23) |
-| 21 | Agent Control MCP — agent payments control + storefront | Agent tools | [mcp](https://agent-control.net/api/v1/mcp) | [site](https://agent-control.net) | [repo](https://github.com/Cobra-bit-prog/agent-guard) | [page](https://agentshare.dev/registry/21) |
-| 18 | Magic Hour MCP | Agent tools | [mcp](https://mcp.magichour.ai/) | [site](https://magichour.ai/mcp?utm_source=agentshare&utm_medium=referral&utm_campaign=directory_distribution) | [repo](https://github.com/magichourhq/magic-hour-mcp) | [page](https://agentshare.dev/registry/18) |
-| 16 | AI Agents Archive | Agent tools | [mcp](https://aiagentsarchive.com/mcp) | [site](https://aiagentsarchive.com) | [repo](https://github.com/panagot/Ai-Agents-Archive) | [page](https://agentshare.dev/registry/16) |
-| 14 | Palisade DMARC Agent | Integrations | [mcp](https://api.palisade.email/mcp) | [site](https://palisade.email) | [repo](https://github.com/palisadeemail/palisade-mcp) | [page](https://agentshare.dev/registry/14) |
 
 ## How this stays in sync
 
