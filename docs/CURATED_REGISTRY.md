@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-21T15:36:15Z`  
+- **Generated (UTC):** `2026-11-22T15:40:25Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,10 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 291 | CanarySeal — AI-Run Agent Security & Solana x402 Safety MCP | Agent tools | [mcp](https://canaryseal.xyz/mcp) | [site](https://canaryseal.xyz/) | — | [page](https://agentshare.dev/registry/291) |
+| 290 | cryptofeed402 MCP — Hyperliquid funding and perps context | Data & commerce | [mcp](https://cryptofeed402.site/mcp?ref=agentshare) | [site](https://cryptofeed402.site) | [repo](https://github.com/stovepipes55-jpg/-cryptofeed402-mcp-) | [page](https://agentshare.dev/registry/290) |
+| 289 | floGPT | Integrations | [mcp](https://api.flogpt.com/mcp) | [site](https://flogpt.com) | — | [page](https://agentshare.dev/registry/289) |
+| 288 | Macaroon Network | Data & commerce | [mcp](https://api.macaroonnetwork.com/mcp) | [site](https://www.macaroonnetwork.com) | [repo](https://github.com/kevmoz/macaroonnetwork-mcp) | [page](https://agentshare.dev/registry/288) |
 | 287 | Geonode MCP Server | Agent tools | [mcp](https://mcp.geonode.com/mcp) | [site](https://geonode.com/integrations/mcp) | [repo](https://github.com/geonodecom/mcp) | [page](https://agentshare.dev/registry/287) |
 | 286 | Stock Screener by ValuEdge | Data & commerce | [mcp](https://valuedge.app/mcp/screener) | [site](https://valuedge.app/connect/stock-screener-mcp) | — | [page](https://agentshare.dev/registry/286) |
 | 285 | AutoPay by Synairo | Agent tools | [mcp](https://api.synairo.com/mcp) | [site](https://api.synairo.com) | — | [page](https://agentshare.dev/registry/285) |
@@ -214,10 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 67 | Haulest | Agent tools | [mcp](https://haulest.com/mcp) | [site](https://haulest.com) | [repo](https://github.com/Panaweb-LLC/haulest-mcp) | [page](https://agentshare.dev/registry/67) |
 | 66 | Penny Press | Data & commerce | [mcp](https://www.pennypress.org/mcp) | [site](https://www.pennypress.org) | — | [page](https://agentshare.dev/registry/66) |
 | 65 | Repostit MCP Connector | Integrations | [mcp](https://repostit-mcp-cfjcykgqda-uc.a.run.app/mcp/v1.1) | [site](https://repostit.io/) | — | [page](https://agentshare.dev/registry/65) |
-| 64 | iReceipt PRO MCP — render stored templates to PDF, JPG, PNG and WEBP | Agent tools | [mcp](https://mcp.ireceipt.pro/mcp) | [site](https://ireceipt.pro) | [repo](https://github.com/ireceipt-pro/mcp-setup) | [page](https://agentshare.dev/registry/64) |
-| 63 | Inkfree | Integrations | [mcp](https://api.inkfree.app/core/inkfree/mcp/) | [site](https://inkfree.app/) | — | [page](https://agentshare.dev/registry/63) |
-| 62 | Mailzzy | Integrations | [mcp](https://api.mailzzy.com/crm/mcp/) | [site](https://mailzzy.com/) | — | [page](https://agentshare.dev/registry/62) |
-| 61 | PDF to Markdown MCP — PDF into clean Markdown, with a scan check first | Agent tools | [mcp](https://pdf2md.dudko.dev/mcp) | [site](https://pdf2md.dudko.dev) | [repo](https://github.com/dudko-dev/pdf-to-md-mcp-setup) | [page](https://agentshare.dev/registry/61) |
 
 ## How this stays in sync
 
