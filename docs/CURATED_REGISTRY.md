@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-23T19:28:35Z`  
+- **Generated (UTC):** `2026-11-24T19:05:02Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,10 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 298 | Valmera MCP — AI Video Editing | Agent tools | [mcp](https://valmera.io/mcp/server) | [site](https://valmera.io/mcp?utm_source=agentshare.dev&utm_medium=directory&utm_campaign=video_editing_agent_buyers) | [repo](https://github.com/ABO3SKRALMASAOODI/valmera-mcp) | [page](https://agentshare.dev/registry/298) |
+| 297 | Reporters.io MCP | Agent tools | [mcp](https://reporters.io/api/mcp) | [site](https://reporters.io/mcp) | [repo](https://github.com/ricciflow-api/reporters-mcp) | [page](https://agentshare.dev/registry/297) |
+| 296 | MAK Immigration Source Guide | Agent tools | [mcp](https://mak-public-rcic-mcp.vercel.app/mcp) | [site](https://mak-public-rcic-mcp.vercel.app/sources) | — | [page](https://agentshare.dev/registry/296) |
+| 295 | Beket AI Audit (ai.beket/audit) | Analytics | [mcp](https://mcp.beket.ai/mcp) | [site](https://beket.ai) | — | [page](https://agentshare.dev/registry/295) |
 | 294 | Useful MCP Ads | Analytics | [mcp](https://usefulmcphub.com/api/mcp/ads) | [site](https://usefulmcphub.com/services#ads) | — | [page](https://agentshare.dev/registry/294) |
 | 293 | Useful MCP GSC | Analytics | [mcp](https://usefulmcphub.com/api/mcp/gsc) | [site](https://usefulmcphub.com/services) | — | [page](https://agentshare.dev/registry/293) |
 | 292 | PulseReal | Analytics | [mcp](https://pulsereal.com/mcp) | [site](https://pulsereal.com) | — | [page](https://agentshare.dev/registry/292) |
@@ -214,10 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
 | 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
 | 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
-| 71 | Claude Resets | Agent tools | [mcp](https://claude-resets.com/mcp) | [site](https://claude-resets.com) | — | [page](https://agentshare.dev/registry/71) |
-| 70 | Metal Mantra | Agent tools | [mcp](https://metalmantra.io/mcp) | [site](https://metalmantra.io) | — | [page](https://agentshare.dev/registry/70) |
-| 69 | agent-exec | Agent tools | [mcp](https://agent-exec.448c.org/mcp?via=111) | [site](https://agent-exec.448c.org/?via=111) | — | [page](https://agentshare.dev/registry/69) |
-| 68 | NanoParse MCP | Agent tools | [mcp](https://nanoparse.app/mcp) | [site](https://nanoparse.app) | [repo](https://github.com/nanoparse-dev/nanoparse-mcp) | [page](https://agentshare.dev/registry/68) |
 
 ## How this stays in sync
 
