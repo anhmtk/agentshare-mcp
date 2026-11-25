@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-24T19:05:02Z`  
+- **Generated (UTC):** `2026-11-25T18:10:43Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,12 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 304 | ASO Studio GEO & AI-Visibility MCP | Analytics | [mcp](https://aso-studio-edge.asostudio.workers.dev/mcp) | [site](https://asostudio.dev/) | — | [page](https://agentshare.dev/registry/304) |
+| 303 | Nano Banana | Data & commerce | [mcp](https://nanobanana.tech) | [site](https://nanobanana.tech) | — | [page](https://agentshare.dev/registry/303) |
+| 302 | Create Image | Data & commerce | [mcp](https://createimage.online) | [site](https://createimage.online) | — | [page](https://agentshare.dev/registry/302) |
+| 301 | Segmara SEC EDGAR Venture Fund Index MCP | Data & commerce | [mcp](https://segmara.com/mcp) | [site](https://segmara.com/edgar-venture-index/) | — | [page](https://agentshare.dev/registry/301) |
+| 300 | Tapetide (Indian Stock Market MCP) | Data & commerce | [mcp](https://mcp.tapetide.com/mcp) | [site](https://tapetide.com/) | [repo](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) | [page](https://agentshare.dev/registry/300) |
+| 299 | EdgeScreen x402 Security Screening MCP | Agent tools | [mcp](https://aso-x402-screen.asostudio.workers.dev/mcp) | [site](https://aso-x402-screen.asostudio.workers.dev/) | — | [page](https://agentshare.dev/registry/299) |
 | 298 | Valmera MCP — AI Video Editing | Agent tools | [mcp](https://valmera.io/mcp/server) | [site](https://valmera.io/mcp?utm_source=agentshare.dev&utm_medium=directory&utm_campaign=video_editing_agent_buyers) | [repo](https://github.com/ABO3SKRALMASAOODI/valmera-mcp) | [page](https://agentshare.dev/registry/298) |
 | 297 | Reporters.io MCP | Agent tools | [mcp](https://reporters.io/api/mcp) | [site](https://reporters.io/mcp) | [repo](https://github.com/ricciflow-api/reporters-mcp) | [page](https://agentshare.dev/registry/297) |
 | 296 | MAK Immigration Source Guide | Agent tools | [mcp](https://mak-public-rcic-mcp.vercel.app/mcp) | [site](https://mak-public-rcic-mcp.vercel.app/sources) | — | [page](https://agentshare.dev/registry/296) |
@@ -212,12 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
 | 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
 | 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
-| 77 | Taskmill | Data & commerce | [mcp](https://3c18b2d704b6940881478ee13baabb5a-dev.ctonew.app/mcp) | [site](https://3c18b2d704b6940881478ee13baabb5a.ctonew.app) | — | [page](https://agentshare.dev/registry/77) |
-| 76 | BlazePhoenix MCP server | Agent tools | [mcp](https://blazephoenix.xyz/mcp) | [site](https://blazephoenix.xyz) | — | [page](https://agentshare.dev/registry/76) |
-| 75 | Rooms by Aurmada MCP — shared rooms for people and their AIs | Integrations | [mcp](https://rooms.aurmada.com/mcp) | [site](https://rooms.aurmada.com) | — | [page](https://agentshare.dev/registry/75) |
-| 74 | AITraining.jobs | Data & commerce | [mcp](https://aitraining.jobs/api/mcp) | [site](https://aitraining.jobs/?utm_source=agentshare&utm_medium=listing&utm_campaign=directories-2026-10) | — | [page](https://agentshare.dev/registry/74) |
-| 73 | UI Discovery | Agent tools | [mcp](https://uidiscovery.com/mcp) | [site](https://uidiscovery.com/) | — | [page](https://agentshare.dev/registry/73) |
-| 72 | Datacircle | Data & commerce | [mcp](https://api.datacircle.dev/mcp) | [site](https://datacircle.dev) | — | [page](https://agentshare.dev/registry/72) |
 
 ## How this stays in sync
 
