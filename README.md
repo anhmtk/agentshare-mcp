@@ -66,6 +66,12 @@ primary_focus=agent_paid_rails
   </a>
 </p>
 
+<p align="center">
+  <a href="https://glama.ai/mcp/connectors/dev.agentshare/objective-trust">
+    <img src="https://glama.ai/mcp/connectors/dev.agentshare/objective-trust/badges/score.svg" alt="Objective Trust MCP connector" />
+  </a>
+</p>
+
 ---
 
 ## AI agents — start here
