@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-25T18:10:43Z`  
+- **Generated (UTC):** `2026-11-26T17:53:11Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,6 +18,12 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 310 | OmniMedia Studio AI — MAGI-2 Cinema Video, Base Alpha & Security MCP | Agent tools | [mcp](https://149-28-69-249.sslip.io/mcp) | [site](https://149-28-69-249.sslip.io/card) | [repo](https://github.com/woodfuturebj-boop/omnimedia-acp-x402-mcp) | [page](https://agentshare.dev/registry/310) |
+| 309 | TESI Agent Computer (1-8 vCPU Linux + Chrome) | Agent tools | [mcp](https://toolsenabled.ai/api/v1/agents/mcp) | [site](https://toolsenabled.ai/agents/) | — | [page](https://agentshare.dev/registry/309) |
+| 308 | KeepBal | Agent tools | [mcp](https://keepbal.com/mcp) | [site](https://keepbal.com) | [repo](https://github.com/Digidai/keepbal-mcp) | [page](https://agentshare.dev/registry/308) |
+| 307 | ModernCV | Agent tools | [mcp](https://genedai.cv/mcp) | [site](https://genedai.cv) | [repo](https://github.com/Digidai/modern-ai-resume-builder) | [page](https://agentshare.dev/registry/307) |
+| 306 | BatchData MCP Server | Data & commerce | [mcp](https://mcp.batchdata.com) | [site](https://batchdata.io/mcp-server) | [repo](https://github.com/batchdataco/batchdata-mcp-server) | [page](https://agentshare.dev/registry/306) |
+| 305 | Company Finders | Data & commerce | [mcp](https://companyfinders.com/mcp) | [site](https://companyfinders.com/?utm_source=agentshare&utm_medium=directory) | — | [page](https://agentshare.dev/registry/305) |
 | 304 | ASO Studio GEO & AI-Visibility MCP | Analytics | [mcp](https://aso-studio-edge.asostudio.workers.dev/mcp) | [site](https://asostudio.dev/) | — | [page](https://agentshare.dev/registry/304) |
 | 303 | Nano Banana | Data & commerce | [mcp](https://nanobanana.tech) | [site](https://nanobanana.tech) | — | [page](https://agentshare.dev/registry/303) |
 | 302 | Create Image | Data & commerce | [mcp](https://createimage.online) | [site](https://createimage.online) | — | [page](https://agentshare.dev/registry/302) |
@@ -210,14 +216,8 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 89 | Cloudflare MCP | Integrations | [mcp](https://mcp.cloudflare.com/mcp) | [site](https://developers.cloudflare.com/agents/model-context-protocol/) | [repo](https://github.com/cloudflare/mcp-server-cloudflare) | [page](https://agentshare.dev/registry/89) |
 | 88 | CurlShot — website screenshots for AI agents | Agent tools | [mcp](https://curlshot.com/api/mcp) | [site](https://curlshot.com) | [repo](https://github.com/SergiuPogor/curlshot-mcp) | [page](https://agentshare.dev/registry/88) |
 | 87 | Alishahi Insurance Quote Requests | Agent tools | [mcp](https://alishahiinsurance.com/mcp) | [site](https://alishahiinsurance.com/ai-assistants) | — | [page](https://agentshare.dev/registry/87) |
-| 86 | WITHDRAW REQUEST — Drew's Xcode MCP (stdio only) | Agent tools | [mcp](https://github.com/drewster99/drews-xcode-mcp) | [site](https://pypi.org/project/drews-xcode-mcp/) | [repo](https://github.com/drewster99/drews-xcode-mcp) | [page](https://agentshare.dev/registry/86) |
 | 85 | Neume MCP | Agent tools | [mcp](https://api.neume.io/v1/mcp) | [site](https://neume.io) | — | [page](https://agentshare.dev/registry/85) |
 | 84 | AgentRXI — 455 pay-per-call tools for agents | Data & commerce | [mcp](https://mcp.agentrxi.com/mcp) | [site](https://agentrxi.com) | — | [page](https://agentshare.dev/registry/84) |
-| 83 | RobotTraining.jobs | Data & commerce | [mcp](https://robottraining.jobs/api/mcp) | [site](https://robottraining.jobs) | — | [page](https://agentshare.dev/registry/83) |
-| 82 | CareJobs.Now | Data & commerce | [mcp](https://carejobs.now/api/mcp) | [site](https://carejobs.now) | — | [page](https://agentshare.dev/registry/82) |
-| 81 | ScreensDesign MCP | Agent tools | [mcp](https://api.screensdesign.com/v1/mcp) | [site](https://screensdesign.com/mcp/) | [repo](https://github.com/screensdesign-com/screensdesign-agent-skill) | [page](https://agentshare.dev/registry/81) |
-| 80 | Remy Research Ordering MCP | Data & commerce | [mcp](https://remyresearch.com/mcp) | [site](https://remyresearch.com/developers/mcp) | — | [page](https://agentshare.dev/registry/80) |
-| 79 | Mortgage Tools by Jenny | Data & commerce | [mcp](https://mcp.jenny.mortgage/mcp) | [site](https://jenny.mortgage/mortgage-tools/) | [repo](https://github.com/JennyTate/jenny-mortgage-tools) | [page](https://agentshare.dev/registry/79) |
 
 ## How this stays in sync
 
