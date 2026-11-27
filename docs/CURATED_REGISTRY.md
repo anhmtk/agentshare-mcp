@@ -10,7 +10,7 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 **This is a discovery mirror only.** It is **not** the AgentShare product MCP tool list (see [README](../README.md) § MCP tools). Third-party servers require their own auth; AgentShare does not proxy or custody them.
 
-- **Generated (UTC):** `2026-11-26T17:53:11Z`  
+- **Generated (UTC):** `2026-11-27T17:38:56Z`  
 - **Live JSON:** `https://agentshare.dev/api/v1/registry/entries?limit=200&sort=new`  
 - **Count:** 200 verified  
 
@@ -18,8 +18,15 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 
 | ID | Name | Category | MCP | Website | GitHub | Hub |
 |---:|------|----------|-----|---------|--------|-----|
+| 315 | Mirage Decomp [Featured] | Agent tools | [mcp](https://mirage.fyi/mcp) | [site](https://mirage.fyi) | — | [page](https://agentshare.dev/registry/315) |
+| 317 | QuickStatus.dev MCP — uptime monitoring & status pages | Analytics | [mcp](https://api.quickstatus.dev/mcp) | [site](https://quickstatus.dev) | — | [page](https://agentshare.dev/registry/317) |
+| 316 | Groundsocial | Data & commerce | [mcp](https://api.groundsocial.dev/mcp) | [site](https://groundsocial.dev) | [repo](https://github.com/shivanshmehendiratta/groundsocial-mcp) | [page](https://agentshare.dev/registry/316) |
+| 314 | Base Address Quick-Scan (x402 MCP) | Data & commerce | [mcp](https://base-address-scan.survival-desk.workers.dev/mcp) | [site](https://base-address-scan.survival-desk.workers.dev) | — | [page](https://agentshare.dev/registry/314) |
+| 313 | Postqued | Integrations | [mcp](https://mcp.postqued.com/mcp) | [site](https://postqued.com/mcp) | [repo](https://github.com/postqued/postqued-agent) | [page](https://agentshare.dev/registry/313) |
+| 312 | Fork | Agent tools | [mcp](https://fork.zone/api/mcp/core) | [site](https://fork.zone/from/agentshare-registry) | [repo](https://github.com/moxclaw/fork-skill) | [page](https://agentshare.dev/registry/312) |
+| 311 | RungLab DevTools MCP | Agent tools | [mcp](https://mcp-server.runglab.dev/mcp) | [site](https://mcp-server.runglab.dev/) | — | [page](https://agentshare.dev/registry/311) |
 | 310 | OmniMedia Studio AI — MAGI-2 Cinema Video, Base Alpha & Security MCP | Agent tools | [mcp](https://149-28-69-249.sslip.io/mcp) | [site](https://149-28-69-249.sslip.io/card) | [repo](https://github.com/woodfuturebj-boop/omnimedia-acp-x402-mcp) | [page](https://agentshare.dev/registry/310) |
-| 309 | TESI Agent Computer (1-8 vCPU Linux + Chrome) | Agent tools | [mcp](https://toolsenabled.ai/api/v1/agents/mcp) | [site](https://toolsenabled.ai/agents/) | — | [page](https://agentshare.dev/registry/309) |
+| 309 | TESI Agent Computer — 1–8 vCPU Linux + Chrome MCP ($2.50 Free Trial) | Agent tools | [mcp](https://toolsenabled.ai/mcp) | [site](https://toolsenabled.ai/agents/) | — | [page](https://agentshare.dev/registry/309) |
 | 308 | KeepBal | Agent tools | [mcp](https://keepbal.com/mcp) | [site](https://keepbal.com) | [repo](https://github.com/Digidai/keepbal-mcp) | [page](https://agentshare.dev/registry/308) |
 | 307 | ModernCV | Agent tools | [mcp](https://genedai.cv/mcp) | [site](https://genedai.cv) | [repo](https://github.com/Digidai/modern-ai-resume-builder) | [page](https://agentshare.dev/registry/307) |
 | 306 | BatchData MCP Server | Data & commerce | [mcp](https://mcp.batchdata.com) | [site](https://batchdata.io/mcp-server) | [repo](https://github.com/batchdataco/batchdata-mcp-server) | [page](https://agentshare.dev/registry/306) |
@@ -31,7 +38,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 300 | Tapetide (Indian Stock Market MCP) | Data & commerce | [mcp](https://mcp.tapetide.com/mcp) | [site](https://tapetide.com/) | [repo](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp) | [page](https://agentshare.dev/registry/300) |
 | 299 | EdgeScreen x402 Security Screening MCP | Agent tools | [mcp](https://aso-x402-screen.asostudio.workers.dev/mcp) | [site](https://aso-x402-screen.asostudio.workers.dev/) | — | [page](https://agentshare.dev/registry/299) |
 | 298 | Valmera MCP — AI Video Editing | Agent tools | [mcp](https://valmera.io/mcp/server) | [site](https://valmera.io/mcp?utm_source=agentshare.dev&utm_medium=directory&utm_campaign=video_editing_agent_buyers) | [repo](https://github.com/ABO3SKRALMASAOODI/valmera-mcp) | [page](https://agentshare.dev/registry/298) |
-| 297 | Reporters.io MCP | Agent tools | [mcp](https://reporters.io/api/mcp) | [site](https://reporters.io/mcp) | [repo](https://github.com/ricciflow-api/reporters-mcp) | [page](https://agentshare.dev/registry/297) |
 | 296 | MAK Immigration Source Guide | Agent tools | [mcp](https://mak-public-rcic-mcp.vercel.app/mcp) | [site](https://mak-public-rcic-mcp.vercel.app/sources) | — | [page](https://agentshare.dev/registry/296) |
 | 295 | Beket AI Audit (ai.beket/audit) | Analytics | [mcp](https://mcp.beket.ai/mcp) | [site](https://beket.ai) | — | [page](https://agentshare.dev/registry/295) |
 | 294 | Useful MCP Ads | Analytics | [mcp](https://usefulmcphub.com/api/mcp/ads) | [site](https://usefulmcphub.com/services#ads) | — | [page](https://agentshare.dev/registry/294) |
@@ -212,12 +218,6 @@ Editor-reviewed listings from [agentshare.dev/registry](https://agentshare.dev/r
 | 93 | Square MCP | Data & commerce | [mcp](https://mcp.squareup.com/mcp) | [site](https://developer.squareup.com) | [repo](https://github.com/square/square-mcp-server) | [page](https://agentshare.dev/registry/93) |
 | 92 | Stripe MCP | Integrations | [mcp](https://mcp.stripe.com/) | [site](https://docs.stripe.com/mcp) | [repo](https://github.com/stripe/agent-toolkit) | [page](https://agentshare.dev/registry/92) |
 | 91 | Sentry MCP | Analytics | [mcp](https://mcp.sentry.dev/mcp) | [site](https://sentry.io) | [repo](https://github.com/getsentry/sentry-mcp) | [page](https://agentshare.dev/registry/91) |
-| 90 | GitHub MCP | Agent tools | [mcp](https://api.githubcopilot.com/mcp/) | [site](https://github.com/github/github-mcp-server) | [repo](https://github.com/github/github-mcp-server) | [page](https://agentshare.dev/registry/90) |
-| 89 | Cloudflare MCP | Integrations | [mcp](https://mcp.cloudflare.com/mcp) | [site](https://developers.cloudflare.com/agents/model-context-protocol/) | [repo](https://github.com/cloudflare/mcp-server-cloudflare) | [page](https://agentshare.dev/registry/89) |
-| 88 | CurlShot — website screenshots for AI agents | Agent tools | [mcp](https://curlshot.com/api/mcp) | [site](https://curlshot.com) | [repo](https://github.com/SergiuPogor/curlshot-mcp) | [page](https://agentshare.dev/registry/88) |
-| 87 | Alishahi Insurance Quote Requests | Agent tools | [mcp](https://alishahiinsurance.com/mcp) | [site](https://alishahiinsurance.com/ai-assistants) | — | [page](https://agentshare.dev/registry/87) |
-| 85 | Neume MCP | Agent tools | [mcp](https://api.neume.io/v1/mcp) | [site](https://neume.io) | — | [page](https://agentshare.dev/registry/85) |
-| 84 | AgentRXI — 455 pay-per-call tools for agents | Data & commerce | [mcp](https://mcp.agentrxi.com/mcp) | [site](https://agentrxi.com) | — | [page](https://agentshare.dev/registry/84) |
 
 ## How this stays in sync
 
